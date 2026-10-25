@@ -17,7 +17,7 @@
   "caption_type": "short_humor",
   "source_image": "records/originals/2026-10-25-imagegen.json",
   "sources": [],
-  "status": "publishing",
+  "status": "published_unverified",
   "slot": "2026-10-25T19:30",
   "reserved_at": "2026-10-25T10:21:48.690223+08:00",
   "purpose": "acceptance",
@@ -29,5 +29,8 @@
     "bytes": 381951,
     "sha256": "8a03f2907a375cd12ecc218ada031a52890aba2d8849692aeb95900c5918a507",
     "checked_at": "2026-10-25T10:21:48.681893+08:00"
-  }
+  },
+  "post_id": "1346385028565797_122104687647515576",
+  "published_at": "2026-10-25T10:22:23.944995+08:00",
+  "receipt": "Published photo post to Facebook Page 1346385028565797. Photo id: 122104687611515576. Post id: 1346385028565797_122104687647515576.\n"
 }
