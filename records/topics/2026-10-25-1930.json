@@ -1,0 +1,118 @@
+{
+  "observed_at": "2026-10-25T11:34:43.638Z",
+  "run_slot": "2026-10-25T19:30",
+  "timezone": "Asia/Taipei",
+  "experiment_id": "intl-20261026-14d",
+  "experiment_active": false,
+  "slot_language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "excluded_markets": [
+    "ID"
+  ],
+  "decision": "RESEARCH_ONLY_SLOT_ALREADY_VERIFIED",
+  "sources_checked": {
+    "google_trends_us": "https://trends.google.com/trending?geo=US",
+    "google_trends_jp": "https://trends.google.com/trending?geo=JP",
+    "google_trends_tw": "https://trends.google.com/trending?geo=TW",
+    "public_threads": "Search attempted; no independently verifiable post engagement in the prior 24-48h",
+    "public_facebook": "Search attempted; no independently verifiable post engagement in the prior 24-48h"
+  },
+  "signal_caveat": "Search-volume bands refer to Google searches, not Facebook or Threads engagement, and may change. Original creative angles are proposals, not claims that cat versions are trending.",
+  "candidates": [
+    {
+      "topic": "Cat watches the ball, not the game",
+      "market": [
+        "US",
+        "PH"
+      ],
+      "language": "en",
+      "source": "https://trends.google.com/trending?geo=US",
+      "signal": "spurs vs mavericks 200K+ US searches, active in displayed past 24h",
+      "source_event_date": "2026-10-25",
+      "creative": "Original cat mesmerized by bouncing toy ball while humans watch TV; no team logos, results, or copied jokes",
+      "decision": "candidate"
+    },
+    {
+      "topic": "Weekend sports fan cat",
+      "market": [
+        "US",
+        "PH"
+      ],
+      "language": "en",
+      "source": "https://trends.google.com/trending?geo=US",
+      "signal": "texas vs ole miss 500K+ US searches, active in displayed past 24h",
+      "source_event_date": "2026-10-25",
+      "creative": "Original cat asleep in fan chair while a game plays indistinctly; no branded jerseys",
+      "decision": "candidate"
+    },
+    {
+      "topic": "Black cat chooses Halloween costume",
+      "market": [
+        "TW",
+        "US",
+        "JP"
+      ],
+      "language": "zh-Hant",
+      "source": "https://trends.google.com/trending?geo=TW",
+      "signal": "桃園萬聖城 2K+ TW searches, active in displayed past 24h",
+      "source_event_date": "2026-10-25",
+      "creative": "Original black cat rejects costume and sits in pumpkin-shaped cardboard box; no claims about local event",
+      "decision": "candidate"
+    },
+    {
+      "topic": "Halloween cat insists on candy inspection",
+      "market": [
+        "TW",
+        "US"
+      ],
+      "language": "zh-Hant",
+      "source": "https://trends.google.com/trending?geo=TW",
+      "signal": "天母萬聖節 2K+ TW searches, active in displayed past 24h",
+      "source_event_date": "2026-10-25",
+      "creative": "Original cat checks treats with exaggerated serious expression; do not reproduce event imagery or give unverified details",
+      "decision": "candidate"
+    },
+    {
+      "topic": "Earnings season vs cat appetite",
+      "market": [
+        "TW"
+      ],
+      "language": "zh-Hant",
+      "source": "https://trends.google.com/trending?geo=TW",
+      "signal": "每股盈餘 5K+ TW searches, active in displayed past 24h",
+      "source_event_date": "2026-10-25",
+      "creative": "Original earnings acronym humor with cat food bowl; no unverified financial numbers or investment recommendations",
+      "decision": "candidate"
+    },
+    {
+      "topic": "Quiet cat diary without celebrity cat claims",
+      "market": [
+        "JP"
+      ],
+      "language": "ja",
+      "source": "https://trends.google.com/trending?geo=JP",
+      "signal": "もちまる日記 10K+ JP searches, active in displayed past 24h; related query 引退 unverified",
+      "source_event_date": "2026-10-25",
+      "creative": "Independent original healing diary: cat stretches in morning sunlight, no imitation of named account, no mention of retirement",
+      "decision": "evergreen_idea_only"
+    },
+    {
+      "topic": "Cat named after food",
+      "market": [
+        "US",
+        "PH"
+      ],
+      "language": "en",
+      "source": "https://people.com/list-of-the-most-popular-and-trending-pet-names-released-with-chicken-nugget-surging-12184962",
+      "signal": "2026 annual pet-name report article published Oct 20; not verified as 24-48h social trend",
+      "source_event_date": "2026-10-20",
+      "creative": "Original fictional cat imagines food-name choices; no logos or copied images",
+      "decision": "background_evergreen"
+    }
+  ],
+  "selected_for_publication": null,
+  "reason_no_publication": "2026-10-25 19:30 slot was already occupied by a verified post published earlier today; daily two-slot limit already reached"
+}
