@@ -1,0 +1,11 @@
+{
+ "checked_on":"2026-10-25",
+ "active_choice":"Existing ChatGPT built-in imagegen inside scheduled task; no external paid API",
+ "history":"2026-10-20 single scheduled built-in image generation succeeded; V3 end-to-end run pending",
+ "alternatives":[
+  {"provider":"Hugging Face Inference Providers","source":"https://huggingface.co/docs/inference-providers/pricing","published_free_credit_usd_month":0.10,"result":"Not accepted as a proven stable twice-daily zero-budget solution; tiny trial-like monthly quota, account/token and actual image-model consumption not validated. No account or paid service enabled."},
+  {"provider":"Pollinations","sources":["https://gen.pollinations.ai/","https://enter.pollinations.ai/privacy"],"result":"Official current docs describe Pollen-priced authenticated APIs; privacy also mentions no-account Free API Classic. Free classic quality, model license, availability and reliable background throughput not validated. Not enabled or claimed as a working substitute."},
+  {"provider":"Local open image model","result":"No persistent free GPU runtime established; do not assume user's Plus membership or GitHub Actions supplies one."}
+ ],
+ "failure_policy":"If built-in background imagegen is unavailable or quota exhausted, keep draft mode or skip the post, report B failure; do not buy credits, steal images, or publish low-quality repeats."
+}

@@ -1,16 +1,78 @@
 {
- "checked_date":"2026-10-25",
- "source":"Meta Business Suite visible UI",
- "asset_id":"1346385028565797",
- "page_name":"貓咪投資筆記",
- "overview_url":"https://business.facebook.com/latest/insights/overview?asset_id=1346385028565797",
- "displayed_period":"2026-09-26 to 2026-10-23",
- "observations":{"views":593,"viewers":6,"follows":0,"unfollows":0,"net_follows":0,"content_interactions":3},
- "metric_notice":"Meta UI states new viewers metrics apply to content published after 2025-07-31 and reach is no longer shown in Business Suite.",
- "post_list_crosschecks":[
-  {"post_id":"1346385028565797_122103045567515576","visible_values":[13,1,0,0],"connector_values":{"post_impressions":13,"post_reactions_total":1,"post_comments_with_reply":0,"post_activity_by_action_type_share":0},"status":"list values agree, viewers not verified in this list"},
-  {"post_id":"1346385028565797_122102245389515576","visible_values":[21,1,0,0],"connector_values":{"post_impressions":21,"post_reactions_total":1,"post_comments_with_reply":0,"post_activity_by_action_type_share":0},"status":"list values agree, viewers not verified in this list"}
- ],
- "limits":["Page-level unique viewers cannot be compared with sum of per-post uniques","Overview views is not automatically the same metric as API post_views, which currently returns zero","An onboarding weekly recap showed zero posts despite visible content, so do not treat that recap as authoritative"],
- "next":"Inspect the same post's object-insights viewers details, retain deprecated reach separately and avoid unsupported efficiency ratios."
+  "checked_date": "2026-10-25",
+  "source": "Meta Business Suite visible UI",
+  "asset_id": "1346385028565797",
+  "page_name": "貓咪投資筆記",
+  "overview_url": "https://business.facebook.com/latest/insights/overview?asset_id=1346385028565797",
+  "displayed_period": "2026-09-26 to 2026-10-23",
+  "observations": {
+    "views": 593,
+    "viewers": 6,
+    "follows": 0,
+    "unfollows": 0,
+    "net_follows": 0,
+    "content_interactions": 3
+  },
+  "metric_notice": "Meta UI states new viewers metrics apply to content published after 2025-07-31 and reach is no longer shown in Business Suite.",
+  "post_list_crosschecks": [
+    {
+      "post_id": "1346385028565797_122103045567515576",
+      "visible_values": [
+        13,
+        1,
+        0,
+        0
+      ],
+      "connector_values": {
+        "post_impressions": 13,
+        "post_reactions_total": 1,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "status": "list values agree, viewers not verified in this list"
+    },
+    {
+      "post_id": "1346385028565797_122102245389515576",
+      "visible_values": [
+        21,
+        1,
+        0,
+        0
+      ],
+      "connector_values": {
+        "post_impressions": 21,
+        "post_reactions_total": 1,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "status": "list values agree, viewers not verified in this list"
+    }
+  ],
+  "limits": [
+    "Page-level unique viewers cannot be compared with sum of per-post uniques",
+    "Overview views is not automatically the same metric as API post_views, which currently returns zero",
+    "An onboarding weekly recap showed zero posts despite visible content, so do not treat that recap as authoritative"
+  ],
+  "next": "Keep viewers separate from deprecated reach; sample 122102245389515576 verified. Do not assume every post is checked.",
+  "single_post_verified": {
+    "post_id": "1346385028565797_122102245389515576",
+    "title": "放假啦 明天不開盤 可以算閃崩嗎?",
+    "views": 21,
+    "viewers": 2,
+    "interactions": 1,
+    "reactions": 1,
+    "comments": 0,
+    "shares": 0,
+    "saves": 0,
+    "followers": 0,
+    "link_clicks": null,
+    "connector_match": {
+      "post_impressions": true,
+      "post_total_media_view_unique": true,
+      "post_reactions_total": true,
+      "post_comments_with_reply": true,
+      "post_activity_by_action_type_share": true
+    },
+    "conclusion": "This sample agrees with Meta UI. Low unique-viewer count is real for this sample, not proven to be a connector error."
+  }
 }

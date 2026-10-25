@@ -54,3 +54,13 @@
 - Meta Business Suite已成功讀取：9/26–10/23瀏覽593、瀏覽者6、互動3、追蹤/取消/淨新增均0；舊兩篇21/1/0/0與13/1/0/0清單值符合Windsor。Meta告知改用viewers，Suite不再顯示舊reach，勿混用口徑。安全文字證據records/meta-suite-check-2026-10-25.json。
 - 每週既有任務已接入資料保存/analyze.py/7-14-30規則與兩個單變因實驗。週期性實跑仍待既有下一個週日，不冒充已執行。
 - stale expected_sha實測呼叫遭GitHub UNKNOWN/GraphQL錯誤拒絕，未據此斷言具體錯誤原因；正常CAS寫入已成功，仍保留force=false與失敗即停止策略。
+
+### Meta單篇疑點已局部釐清
+- 10/22短文122102245389515576的Suite詳細頁實測：瀏覽21、瀏覽者2、互動1、心情1、留言0、分享0、儲存0、追蹤0；與Windsor相符。此樣本的低獨立觀眾是真實UI數值，不再斷言Connector異常；其餘逐篇待核。
+
+## 第六階段完成 — 中斷續作實測
+- 獨立乾淨目錄重新clone，成功讀回唯一status、真實發布回條；重送同篇被DUPLICATE_OR_UNCERTAIN拒絕。證據records/resume-check-2026-10-25.json。
+- canonical位置：https://github.com/gxaawill2-ui/cat-page-autopilot/blob/main/CAT-PAGE-STATUS.md ；同一Library入口libfile_eb843306062c81919a18f9a9efc211f9。程式catflow.py、connector_commit.js、bundle.py、analyze.py；執行程序RUNBOOK.md。
+- 機密保護：僅既有connector授權；無密碼/Token寫入repo；private/與.env被排除，FB暫時CDN網址只在private回讀檔，不公開。
+- 下個精確步驟：peek一次性task6ad6ec1845d48191938f06790c91fe8a，核對scheduled_for=2026-10-25T02:16:00Z的新run；舊10/20結果不算。若未完成維持draft；若完成只依A–E和repo真實receipt判定，不憑completed字樣升級。
+- 無人值守宣稱目前仍未通過，待本次排程實際執行。

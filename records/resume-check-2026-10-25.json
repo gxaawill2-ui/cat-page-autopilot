@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-10-25T10:15:23.787923+08:00",
+  "clone_exit_code": 0,
+  "fresh_clone_commit": "ac6c16ce5bbec4c47bd1b5ef50f028f6ef4fad0f",
+  "duplicate_attempt_exit_code": 1,
+  "duplicate_attempt_error": "DUPLICATE_OR_UNCERTAIN: do not republish same text or image",
+  "resumable_status_present": true,
+  "durable_receipt_present": true
+}
