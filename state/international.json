@@ -1,0 +1,40 @@
+{
+  "version": "3.1",
+  "start": "2026-10-26",
+  "end": "2026-11-08",
+  "markets": {
+    "US": {
+      "language": "en",
+      "priority": 1
+    },
+    "JP": {
+      "language": "ja",
+      "priority": 2
+    },
+    "PH": {
+      "language": "en",
+      "priority": 3
+    },
+    "TW": {
+      "language": "zh-Hant",
+      "priority": 4
+    }
+  },
+  "excluded": [
+    "ID",
+    "id"
+  ],
+  "slots": {
+    "12:30": "zh-Hant",
+    "19:30": "en"
+  },
+  "japanese_trial_days": [
+    9,
+    12
+  ],
+  "max_posts_daily": 2,
+  "country_delivery": "unknown until measured; target is not observed audience",
+  "brand_name": "貓咪投資筆記",
+  "brand_changes": "hold during initial experiment",
+  "experiment_id": "intl-20261026-14d"
+}

@@ -1,0 +1,30 @@
+{
+  "id": "intl-20261026-14d",
+  "start": "2026-10-26",
+  "end": "2026-11-08",
+  "status": "scheduled_not_results",
+  "week1": "baseline: 7 zh-Hant and up to 7 en; quality failures may reduce posts",
+  "week2": "7 zh-Hant; up to 5 en and 2 ja replacing en on experiment days9,12; never add slots",
+  "confounding": "language initially coupled to slot; observational comparison, not causal language effect. No time changes during baseline. Hold topic/style comparable where possible.",
+  "snapshot_ages_hours": [
+    48,
+    168
+  ],
+  "min_mature_posts_per_group": 5,
+  "countries": [
+    "US",
+    "JP",
+    "PH",
+    "TW"
+  ],
+  "baseline": {
+    "overseas_reach_share": null,
+    "US_reach": null,
+    "JP_reach": null,
+    "PH_reach": null,
+    "new_followers_by_language": null
+  },
+  "missing_display": "N/A",
+  "two_week_rule": "If two comparable mature weeks show no material growth, inspect distribution/data then change one variable. Insufficient sample means extend observation, not invent success.",
+  "brand": "keep name; no full rebrand based on a single post"
+}

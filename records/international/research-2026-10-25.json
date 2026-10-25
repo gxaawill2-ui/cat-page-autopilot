@@ -1,0 +1,80 @@
+{
+  "observed_date": "2026-10-25",
+  "sources": {
+    "US": "https://trends.google.com/trending?geo=US",
+    "JP": "https://trends.google.com/trending?geo=JP",
+    "TW": "https://trends.google.com/trending?geo=TW",
+    "PH": "https://www.facebook.com/groups/531910504913562/",
+    "Threads": "https://www.threads.com/@funnythingsofcats"
+  },
+  "candidates": [
+    {
+      "topic": "Watching the ball instead of the game",
+      "markets": [
+        "US",
+        "PH"
+      ],
+      "language": "en",
+      "signal": "US spurs vs mavericks 200K+ Google searches, active",
+      "decision": "sport-inspired original cat play; no team logos, scores or copied jokes"
+    },
+    {
+      "topic": "Screen time versus cat attention",
+      "markets": [
+        "US",
+        "PH"
+      ],
+      "language": "en",
+      "signal": null,
+      "decision": "original evergreen life humor; not labelled trending"
+    },
+    {
+      "topic": "静かな休日と猫",
+      "markets": [
+        "JP"
+      ],
+      "language": "ja",
+      "signal": null,
+      "decision": "original healing scene for week2, no fabricated popularity"
+    },
+    {
+      "topic": "散步與留在家的貓",
+      "markets": [
+        "TW"
+      ],
+      "language": "zh-Hant",
+      "signal": "鈴蘭通 5K+ Google searches active",
+      "decision": "do not give unverified event details"
+    },
+    {
+      "topic": "Cat ignores expensive gadgets",
+      "markets": [
+        "JP",
+        "US",
+        "PH"
+      ],
+      "language": "en",
+      "signal": "JP apple iphone duo 10K+ searches; product claim unverified",
+      "decision": "generic unbranded gadget humor only; not product news"
+    },
+    {
+      "topic": "市場情緒與午睡",
+      "markets": [
+        "TW",
+        "US"
+      ],
+      "language": "zh-Hant",
+      "signal": "TW 每股盈餘 2K+ searches active",
+      "decision": "no invented earnings or trading advice"
+    }
+  ],
+  "fresh_public_social_engagement": null,
+  "social_limit": "Search returned public cat profiles/groups, but fresh post timestamps and comparable 24–48h engagement not obtained. No copied text or images. PH local trend signal not obtained; English strategy is a hypothesis, not audience evidence.",
+  "market_hypotheses": {
+    "US": "plain conversational English, visual joke understandable without local context; priority reflects user instruction, not observed demand",
+    "JP": "short natural Japanese healing captions, text-free visuals; small week2 test",
+    "PH": "same English creative may reach PH; no claim that English guarantees PH or US delivery",
+    "TW": "keep one Traditional Chinese slot; retain local audience"
+  },
+  "revenue": "No revenue or eligibility proven; future original IP/licensing/Meta monetization review only after actual audience growth and current eligibility checks."
+}
