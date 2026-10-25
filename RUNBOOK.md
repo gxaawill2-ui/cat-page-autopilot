@@ -22,3 +22,11 @@
 先讀 get_fields；用 post_total_media_view_unique（舊post_impressions_unique已deprecated）、post_impressions、post_views、post_reactions_total、post_comments_with_reply、post_activity_by_action_type_share；Page用page_follows/page_daily_follows/page_daily_unfollows。缺值null，回傳0保留0並標資料品質，不填造。
 保存 records/insights/DATE.json 與 records/reviews/DATE.json，按post id與已知主題/圖風/文案分類JOIN。新增追蹤只能用Page層級，無法歸因單篇不可分配。至少比較兩個完整7日窗及48小時成熟貼文；沒有前週或樣本少就不稱成效差異。
 異常先讀Meta Business Suite（若需登入，記錄待使用者正常授權），未核對前不用可疑觸及算效率。7天先檢查發布/數據/觸及限制，再做單變因測試；14天擴大題材畫風形式；30天且每個對比組至少5篇成熟貼文才評估定位，不每日改名。先用2個小實驗：短三句 vs 情境故事；暖色手繪 vs 自然寫實。主題及時段保持可比，不用當前小樣本斷言勝負。
+
+## V3.1 國際實驗（優先於舊台灣單市場選題段落）
+先執行 international.py SLOT，依state/international.json取得語言/市場/實驗ID。12:30繁中；19:30英文優先US、其次PH；第2週第9/12天晚間以日文JP替換英文。排除ID/id。不得假設目標市場就是實際觸及市場。既有slot/兩篇上限及mode gate全部保留，任何未知發布先核對。
+每輪看美日台Google Trends、可取得的公開FB/Threads、官方新聞與全球寵物/娛樂，至少存5候選含來源/日期/市場/訊號；常青原創題可沒有熱度，寫null。重要新聞核實，不複製迷因文案/品牌圖。英文用自然簡短生活幽默，日文用自然療癒短句；圖片儘量無字跨文化可理解，不強迫投資梗或固定角色。每篇內建ImageGen最多2次並目視QA，不合格留草稿。
+prepare加 --language --target-markets --experiment-id（依plan回傳）；保留這些metadata至state/posts。檢查外部今日貼文及全repo未知狀態，CAS預約後才單次發布。隔離fixture不可作未發布新圖再送。
+每輪收集已發文48h/168h成熟快照並標observed_at/age_hours/source_metric。用international.measures保留缺值null展示N/A；只有真的reach才計每千觸及互動/分享率，不用viewers冒充reach。國家觸及若無授權欄位/後台資料就N/A，page_fans_country是按讚者國籍，不是貼文國家觸及。新增追蹤只有Page層級就不能分配語言。48h比48h，168h比168h；語言與時段初期混雜，不做因果結論。
+每週沿用原任務，把post metadata JOIN快照，按語言/主題/圖風/實際觀測市場比較，至少5篇成熟樣本才評估，仍不稱統計證明。第7天存基準，第14天比較；無成長先查資料/分發，再改一個變因。保留名稱；不因單篇成功轉型、不購買廣告或假流量。成長後才核對Meta限制/資格探索原創IP等營利，未驗資格不宣稱可營利。
+本系統依賴已啟用ChatGPT任務與工具權限/額度。Repository與Pages可獨立留存；沒有部署外部免費LLM/ImageGen執行器，不能保證Work/訂閱終止後內容生產仍運作。授權/額度失效記錄並留草稿，不升付費。

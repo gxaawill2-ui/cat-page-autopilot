@@ -42,7 +42,7 @@ def prepare(args):
     key=digest((PAGE+'\n'+norm(caption)+'\n'+image_sha).encode())
     asset='assets/'+image_sha+'.jpg'
     (ROOT/'docs/assets').mkdir(parents=True,exist_ok=True); (ROOT/'docs'/asset).write_bytes(data)
-    draft={'key':key,'page_id':PAGE,'caption':caption,'caption_sha256':digest(norm(caption).encode()),'image_sha256':image_sha,'image_url':BASE+asset,'asset_path':'docs/'+asset,'bytes':len(data),'dimensions':list(size),'created_at':now(),'topic':args.topic,'style':args.style,'caption_type':args.caption_type,'source_image':args.source,'sources':args.sources,'status':'draft'}
+    draft={'key':key,'page_id':PAGE,'caption':caption,'caption_sha256':digest(norm(caption).encode()),'image_sha256':image_sha,'image_url':BASE+asset,'asset_path':'docs/'+asset,'bytes':len(data),'dimensions':list(size),'created_at':now(),'topic':args.topic,'style':args.style,'caption_type':args.caption_type,'source_image':args.source,'sources':args.sources,'status':'draft','language':getattr(args,'language',None),'target_markets':getattr(args,'target_markets',[]),'experiment_id':getattr(args,'experiment_id',None)}
     write(ROOT/'records/drafts'/f'{key}.json',draft)
     # Human-readable static project art gallery, not a commerce/SaaS host.
     gallery=[]
@@ -71,6 +71,11 @@ def reserve(args):
     day=dt.datetime.now(TZ).date().isoformat()
     if not args.slot.startswith(day): raise ValueError('Stale slot cannot publish')
     if sum(x.get('reserved_at','').startswith(day) for x in entries())>=2: raise ValueError('DAILY_LIMIT: two content posts already reserved')
+    if any(x.get('status') in ('publishing','published_unverified') for x in entries()): raise ValueError('UNRESOLVED_PUBLICATION: reconcile before any new post')
+    if args.purpose=='regular':
+        from international import plan
+        expected=plan(args.slot)
+        if d.get('language')!=expected['language'] or d.get('target_markets')!=expected['target_markets'] or d.get('experiment_id')!=expected['experiment_id']: raise ValueError('INTERNATIONAL_METADATA_MISMATCH')
     proof=url_check(d['image_url'],d['image_sha256'])
     d.update(status='publishing',slot=args.slot,reserved_at=now(),purpose=args.purpose,task_id=args.task_id,image_check=proof)
     write(ROOT/'state/posts'/f'{d["key"]}.json',d)
@@ -100,6 +105,7 @@ def verify(args):
 def main():
     p=argparse.ArgumentParser(); sub=p.add_subparsers(dest='cmd',required=True)
     s=sub.add_parser('prepare'); s.add_argument('--image',required=True); s.add_argument('--caption',required=True); s.add_argument('--topic',required=True); s.add_argument('--style',required=True); s.add_argument('--caption-type',default='short_humor'); s.add_argument('--source',required=True); s.add_argument('--sources',nargs='*',default=[])
+    s.add_argument('--language',choices=['en','ja','zh-Hant']); s.add_argument('--target-markets',nargs='*',default=[]); s.add_argument('--experiment-id')
     s=sub.add_parser('check-url'); s.add_argument('--draft',required=True)
     s=sub.add_parser('checkpoint'); s.add_argument('--message',required=True)
     s=sub.add_parser('reserve'); s.add_argument('--draft',required=True); s.add_argument('--slot',required=True); s.add_argument('--purpose',choices=['bootstrap','acceptance','regular'],default='regular'); s.add_argument('--task-id'); s.add_argument('--durable',action='store_true')

@@ -67,3 +67,5 @@
 - 階段1完成：讀取最新repo/policy/RUNBOOK/兩筆verified posts及12:30 skip紀錄；mode=live，今日兩slot已占用，無未知發布。沿用每日與每週任務。
 
 - V3.1階段2/3完成：四市場研究與6候選已保存 records/international/research-2026-10-25.json；英文優先，日文第2週替換2個英文名額，排除印尼；14天10/26–11/8。未知海外觸及留N/A。
+
+- V3.1階段4/5完成：prepare保留language/target_markets/experiment_id；加入regular語言路由與全域未知發布阻擋。13個隔離/回歸測試通過，Facebook寫入0；既有原創圖只在臨時目錄作JPEG整合fixture，未新生圖或重發。證據records/international/isolation-2026-10-25.json。
