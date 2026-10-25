@@ -1,1 +1,28 @@
-{"timezone":"Asia/Taipei","daily":{"task_id":"6add4bc872c88191bea8e6d2cf3dc016","times":["12:30","19:30"],"enabled":true,"release_gate":"state/policy.json mode must be live"},"weekly":{"task_id":"6add4bde3d6881919ff5037351dd44d4","day":"SU","time":"20:00","timing_mode":"flexible_schedule","enabled":true},"one_off_acceptance":{"task_id":"6ad6ec1845d48191938f06790c91fe8a","scheduled_for":"2026-10-25T10:16:00+08:00","reused_existing_task":true,"not_yet_accepted":true}}
+{
+  "timezone": "Asia/Taipei",
+  "daily": {
+    "task_id": "6add4bc872c88191bea8e6d2cf3dc016",
+    "times": [
+      "12:30",
+      "19:30"
+    ],
+    "enabled": true,
+    "release_gate": "state/policy.json mode must be live"
+  },
+  "weekly": {
+    "task_id": "6add4bde3d6881919ff5037351dd44d4",
+    "day": "SU",
+    "time": "20:00",
+    "timing_mode": "flexible_schedule",
+    "enabled": true
+  },
+  "one_off_acceptance": {
+    "task_id": "6ad6ec1845d48191938f06790c91fe8a",
+    "scheduled_for": "2026-10-25T10:16:00+08:00",
+    "reused_existing_task": true,
+    "not_yet_accepted": false,
+    "run_id": "c06bac0f-078c-8323-b584-9cc126995bde",
+    "completed_at": "2026-10-25T02:25:44.653112Z",
+    "passed": true
+  }
+}

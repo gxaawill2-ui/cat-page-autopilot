@@ -3,8 +3,8 @@
   "run_id": "c06bac0f-078c-8323-b584-9cc126995bde",
   "scheduled_for": "2026-10-25T02:16:00Z",
   "started_at": "2026-10-25T02:17:22.298809Z",
-  "completed_at": null,
-  "completed_at_note": "Runtime run still in_progress at observation; null retained. acceptance_checks_completed_at is a separate local observation.",
+  "completed_at": "2026-10-25T02:25:44.653112Z",
+  "completed_at_note": "Verified after completion by root through automations.peek; last_run.id matches this acceptance run.",
   "acceptance_checks_completed_at": "2026-10-25T10:24:53.233786+08:00",
   "passed": true,
   "budget_ntd": 0,
@@ -70,5 +70,12 @@
   "limitations": [
     "Single scheduled end-to-end run passed; daily image generation quota and long-term availability remain unproven",
     "Windsor account_name still returns former page label; immutable allowed Page ID matches"
-  ]
+  ],
+  "runtime_recorded_status": "completed",
+  "independent_root_readback": {
+    "observed_at": "2026-10-25T10:25:00+08:00",
+    "caption_match": true,
+    "image_download_status": 200,
+    "image_visual_check": "passed"
+  }
 }

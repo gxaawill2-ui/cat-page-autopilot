@@ -1,77 +1,64 @@
 # 貓咪投資筆記 V3.0｜唯一續作狀態
 
-更新：2026-10-25 台灣時間。Page 1346385028565797；connector facebook_organic。額外預算 NT$0。
+更新：2026-10-25 台灣時間；以下為目前狀態，上版歷史請見 Git commit history。
 
-## 已確認
-- 已讀 baseline 最新 v4，沿用 URL 發布成功證據：1346385028565797_122104663947515576。
-- 新增的 V3.0 工作以本檔為準；baseline 保留歷史，不再各自維護相衝突狀態。
-- 每日任務 6add4bc872c88191bea8e6d2cf3dc016：12:30、19:30 Asia/Taipei，啟用；目前須維持草稿模式直到端到端定時驗收。
-- 每週任務 6add4bde3d6881919ff5037351dd44d4：週日，啟用；舊喵星送審任務已停用。
-- 背景生圖歷史驗收：6ad6ec1845d48191938f06790c91fe8a，run 7088131a-b420-8329-aab7-0edd49ec3f7e，2026-10-20 12:25:39–12:27:40 台灣時間，completed；結果記載內建生圖無人工確認成功。此僅為生圖單項，非完整定時發布。
-- 找到可用未發布原創圖：橘貓蓋毯封印筆電.png，libfile_55d3c4ba51948191b413459541221e4c，2,470,396 bytes。
+## 目前結論
+- Page ID：1346385028565797；Windsor connector：facebook_organic。粉專為「貓咪投資筆記」，連線舊名稱不影響已核實Page ID。
+- **policy.mode=live**。一次真正無人操作的完整排程驗收已通過，既有每日任務可自主執行，不需逐篇批准。額外預算NT$0，未開通付費服務、未新增秘密、未改其他專案。
+- 今天兩個內容名額已用完。12:30、19:30 slot都已占用，今天不再發；下一個未占用時段為2026-10-26 12:30（台灣時間）。時段代表觸發目標，實際發出時間須記錄，不保證準點到秒。
 
-## 當前階段
-1. 公開圖片儲存：進行中；優先建立專用 GitHub repository。GitHub connector 無 create-repository action；gh CLI 未安裝，改用 GitHub 網頁。
-2. 完整發布：待圖片 HTTPS 直連通過後執行一篇新文案；先保存意圖、發布回條、回讀結果。未知結果不重送。
-3. 定時發布：未通過。沿用既有任務，不建立重複每日/週任務。安排一次隔離驗收後才可升級。
-4. 每日選題：既有任務已存在；本輪將保存真實來源與選題結果，不能捏造 Threads/Facebook 熱度。
-5. 每週分析：既有任務已存在；待抓取並保存真實數據及缺值。
-6. 續作：本檔已建立；程式與實測證據逐階段同步，所有公開檔案不得含秘密。
+## 階段與實測證據
+| 階段 | 完成/設定時間（台灣） | 狀態與證據 |
+|---|---|---|
+| 1 圖片公開儲存 | 10/25 10:05 | 已完成。GitHub Pages main/docs。JPEG匿名GET 200、image/jpeg、373439 bytes、1122×1402、SHA一致。records/url-checks/c53a963e6a5bed0a203b3813bce8a4dc38dde95974ccfc5a91c584a9212546a7.json |
+| 2 完整圖文流程 | 10/25 10:09 | 已完成。原創圖取回→轉JPEG→公開URL→保存意圖→單次發布→回條→回讀文字圖片及目視均通過。Post 122104674921515576。 |
+| 3 真正無人排程 | 10/25 10:25:44 | 已完成。Run c06bac0f-078c-8323-b584-9cc126995bde，A文案/B新生圖/C公開URL/D發文回讀/E持久紀錄全通過。records/acceptance/2026-10-25.json。 |
+| 4 每日選題 | 10/25 10:13 | 流程實跑並接入既有每日任務，保存7候選及真實來源。日常自主趨勢選題首輪仍待既有任務觸發；不能把固定生活題排程驗收冒充已完成每日趨勢研究。records/topics/2026-10-25.json。 |
+| 5 流量分析 | 10/25 10:14 | 本輪實跑、週任務已接入。20筆原始貼文、14日Page資料、17筆滿48小時可描述比較；無前週樣本，不下畫風/時段勝負結論。records/insights、records/reviews。週期性自動分析首輪尚待11/1。 |
+| 6 中斷續作 | 10/25 10:17 | 已完成。另建乾淨目錄clone後可讀回status/回條，同篇重送被DUPLICATE_OR_UNCERTAIN拒絕。8項防護測試通過。records/resume-check-2026-10-25.json。 |
 
-## 下一步
-開啟 GitHub new repository 頁，建立獨立免費公開素材/程式庫；下載上述已生成圖片，轉成合規 JPEG 後上傳；匿名 GET 驗 SHA 與格式。
+## 真正定時驗收
+- 任務：6ad6ec1845d48191938f06790c91fe8a（沿用舊的一次性測試，無新增重複每日任務）。
+- 預定：2026-10-25 10:16:00；實際開始：10:17:22.298809；Facebook建立：10:22:17；全部執行結束：10:25:44.653112。以上來自實際排程及回讀紀錄。
+- Run ID：c06bac0f-078c-8323-b584-9cc126995bde，runtime狀態completed。
+- A：60字原創繁體文案。B：內建imagegen一次生成全新原創貓床/紙箱圖，原圖與提示詞在records/originals。
+- C：https://gxaawill2-ui.github.io/cat-page-autopilot/assets/8a03f2907a375cd12ecc218ada031a52890aba2d8849692aeb95900c5918a507.jpg ，381951 bytes、1122×1402、200/image/jpeg、SHA一致，無立即過期參數。
+- D/E：單次Windsor發布，先存publishing意圖、再存真實Post ID/回條，回讀文字一致、圖片存在且目視通過；全部以GitHub工具expected_sha、force=false保存。
+- 404部署等待及新貼文回讀延遲均有限重查後通過，未重送發文。
 
-## V3.0 建置進度
-- 2026-10-25 10:00：專用 repository 建立成功 https://github.com/gxaawill2-ui/cat-page-autopilot ，其餘專案未修改。
-- 原創圖完成 JPEG 轉檔：1122×1402、373439 bytes；公開網址及完整發布待驗。
-- catflow.py 已實作準備、匿名URL驗SHA、持久預約、回條、回讀檢查；目前 policy.mode=draft。
+## 真實已發布內容
+- 全流程首次驗收（手動啟動工具鏈，非定時證據）：https://www.facebook.com/122104619793515576/posts/122104674921515576 。
+- 真正定時無人操作驗收：https://www.facebook.com/122104619793515576/posts/122104687647515576 。Post ID 1346385028565797_122104687647515576，state/posts/280d36a9590bddd7540ae3584abdd6c4bb2211bf28f65f408a5529961db8f11d.json=verified。
 
-## 第一階段完成 — 2026-10-25T10:05:55.384973+08:00
-- 公開原創圖： https://gxaawill2-ui.github.io/cat-page-autopilot/assets/e4c7cacd2cbc30a2cbc0115e6c41b4ba84aea6750e2efccc96c3a78881610fc7.jpg
-- 匿名GET實測200、image/jpeg、373439 bytes、1122×1402；SHA256與上傳檔一致；無登入、無簽名/立即過期參數。證據 records/url-checks/c53a963e6a5bed0a203b3813bce8a4dc38dde95974ccfc5a91c584a9212546a7.json。
-- Pages來源main/docs，作品集用途；保守JPEG4MB上限（Meta官方Page Photos10MB規格內）。資料來源 https://developers.facebook.com/docs/graph-api/reference/page/photos/ 、 https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits 。
-- 寫入git push失敗：could not read Username；已改用現有GitHub create_blob/create_tree/create_commit/update_ref，expected_sha+force=false實測成功，不新增憑證。適配器connector_commit.js，操作程序RUNBOOK.md。
-- 下一步：發布前保存publishing意圖→單次Windsor發文→保存回條→回讀。
+## 既有排程（未建立重複）
+- 每日：6add4bc872c88191bea8e6d2cf3dc016，12:30及19:30 Asia/Taipei；讀RUNBOOK/policy/state後決定發布，最多每日2篇，已用slot跳過。
+- 每週：6add4bde3d6881919ff5037351dd44d4，週日20:00 flexible_schedule；下一個正常週次11/1。已接入Insights持久保存、analyze.py、單變因實驗與7/14/30天規則。
+- 舊「喵星圖文送審」停用；不重建。
+- 單次驗收已完成，不再觸發新測試貼文。
 
-## 第二階段完成 — 2026-10-25T10:09:14.748426+08:00
-- 既有原創圖取回→JPEG→GitHub Pages→URL匿名驗SHA→發布前CAS保存publishing→單次Windsor發文→真實回條持久保存→回讀文字/圖片→圖片目視，全部成功。
-- Post ID 1346385028565797_122104674921515576；永久網址 https://www.facebook.com/122104619793515576/posts/122104674921515576 ；Facebook建立時間2026-10-25T02:06:38+0000（台灣10:06:38）。
-- state/posts/c53a963e6a5bed0a203b3813bce8a4dc38dde95974ccfc5a91c584a9212546a7.json 為verified；records/bootstrap-receipt.txt保留真實回條。已占用2026-10-25T12:30內容名額，並非宣稱12:30觸發。
-- 相同文案/圖片/時段、未知結果、每日兩篇、錯誤Page、草稿gate及錯誤回讀文字等8個防護測試通過。
+## 成效核對與改善
+- Meta Suite 9/26–10/23總覽：瀏覽593、瀏覽者6、內容互動3、追蹤/取消追蹤/淨新增均0。
+- 10/22短文122102245389515576詳細頁：瀏覽21、瀏覽者2、互動1、留言0、分享0、追蹤0；與Windsor相符。此樣本低觀眾是實際UI數值，不再稱擷取錯誤。
+- Meta已改用viewers，Suite不顯示舊reach。保留source metric名稱，缺值null，0照實保留，API post_views=0不擅自視為UI views。
+- 歷史畫風未知則unknown，不猜；不將Page unique加總歸因單篇。資料與樣本不足不評勝負，不頻繁改名。
+- 7日無改善先查發布/資料/分發，14日擴大題材畫風，30日且每組至少5篇成熟貼文才評估定位。兩個實驗：短文vs情境故事、暖色插畫vs自然寫實，保持其他條件可比。
 
-## 第三階段待驗 — 排程已設定
-- 沿用舊一次性task 6ad6ec1845d48191938f06790c91fe8a，改為貓咪V3完整發布驗收，2026-10-25 10:16 Asia/Taipei；不新增重複任務。
-- 初次relative update回傳unexpected error；peek確認未更動後，改明確DTSTART單次重試成功。
-- 每日task提示已改為讀RUNBOOK/policy，mode=draft時禁止發文。完整A–E+回讀+持久記錄通過才可live。
-- 待觀察真正scheduled run；不能用本輪手動發布或10/20生圖成功代填。
+## 程式與保存位置
+- 唯一repo：https://github.com/gxaawill2-ui/cat-page-autopilot 。只有這個repo在本輪建立/修改。
+- catflow.py：圖文驗證、JPEG、永久hash網址、查重/時段/每日上限、意圖/回條/回讀。
+- connector_commit.js + bundle.py：現有GitHub工具寫入。終端git push無認證，禁止為此尋找/公開憑證；改用現有connector CAS。
+- RUNBOOK.md：每輪精確操作；analyze.py：真實數據分析；state/policy.json=live；state/schedules.json：任務識別。
+- 唯一Library狀態：libfile_eb843306062c81919a18f9a9efc211f9，與本檔同一內容；baseline僅保留歷史與入口。
+- 公開repo無密碼/Access Token。暫時FB CDN網址只在private回讀檔，公開只保存永久貼文/原創素材網址。
 
-## 第四階段完成（流程及本輪選題已驗，排程自主選題待首次觸發）
-- records/topics/2026-10-25.json 保存7個候選與Google Trends真實訊號；財務自由5000+、海安路萬聖節2000+、鈴蘭通2000+、消費券1萬+、世界黃金協會1000+，均為Google搜尋級距非FB熱度。Threads/Facebook未取得足以證明當日熱門的互動數，明確留null，不造數。
-- 每日既有任務已接入RUNBOOK、policy與去重/證據流程；未通過定時驗收時維持草稿。
+## 尚未證明與處理原則
+- 單次無人排程成功，不等於長期生圖額度及服務可用性已驗。額度/工具失敗就保留草稿，不啟用付費API、不用劣質重複圖。
+- Windsor現為Trial、is_paid=false；官方有一來源/一帳號Forever Free，本專案僅用一來源/一Page，但試用後實際發文資格須屆時驗證，禁止自動升級付費。
+- 首次自主趨勢選題、下一個完整週次檢討仍待既有任務實跑。未取得的Threads/Facebook熱門互動數留null，不編造。
+- 發布未知結果保持publishing，先回讀查重，絕不重送。CAS衝突先讀最新，不覆蓋其他worker。
 
-## 第五階段完成（數據保存與分析實跑，週任務已更新）
-- records/insights/2026-10-25-posts.json 保存20筆貼文；page.json保存14日資料。analyze.py實跑，排除當日與未滿48小時等後17筆成熟；無前週對比樣本，不能判斷畫風/時段贏家。缺值null、回傳0分別記錄。
-- Meta Business Suite已成功讀取：9/26–10/23瀏覽593、瀏覽者6、互動3、追蹤/取消/淨新增均0；舊兩篇21/1/0/0與13/1/0/0清單值符合Windsor。Meta告知改用viewers，Suite不再顯示舊reach，勿混用口徑。安全文字證據records/meta-suite-check-2026-10-25.json。
-- 每週既有任務已接入資料保存/analyze.py/7-14-30規則與兩個單變因實驗。週期性實跑仍待既有下一個週日，不冒充已執行。
-- stale expected_sha實測呼叫遭GitHub UNKNOWN/GraphQL錯誤拒絕，未據此斷言具體錯誤原因；正常CAS寫入已成功，仍保留force=false與失敗即停止策略。
-
-### Meta單篇疑點已局部釐清
-- 10/22短文122102245389515576的Suite詳細頁實測：瀏覽21、瀏覽者2、互動1、心情1、留言0、分享0、儲存0、追蹤0；與Windsor相符。此樣本的低獨立觀眾是真實UI數值，不再斷言Connector異常；其餘逐篇待核。
-
-## 第六階段完成 — 中斷續作實測
-- 獨立乾淨目錄重新clone，成功讀回唯一status、真實發布回條；重送同篇被DUPLICATE_OR_UNCERTAIN拒絕。證據records/resume-check-2026-10-25.json。
-- canonical位置：https://github.com/gxaawill2-ui/cat-page-autopilot/blob/main/CAT-PAGE-STATUS.md ；同一Library入口libfile_eb843306062c81919a18f9a9efc211f9。程式catflow.py、connector_commit.js、bundle.py、analyze.py；執行程序RUNBOOK.md。
-- 機密保護：僅既有connector授權；無密碼/Token寫入repo；private/與.env被排除，FB暫時CDN網址只在private回讀檔，不公開。
-- 下個精確步驟：peek一次性task6ad6ec1845d48191938f06790c91fe8a，核對scheduled_for=2026-10-25T02:16:00Z的新run；舊10/20結果不算。若未完成維持draft；若完成只依A–E和repo真實receipt判定，不憑completed字樣升級。
-- 無人值守宣稱目前仍未通過，待本次排程實際執行。
-
-## 第三階段已通過 — 真正定時無人操作驗收 2026-10-25T10:24:53.233786+08:00
-- 本輪run c06bac0f-078c-8323-b584-9cc126995bde；scheduled_for=2026-10-25T02:16:00Z；started_at=2026-10-25T02:17:22.298809Z；runtime completed_at尚不可見，保留null，不杜撰。
-- A自然繁體文案／B本輪內建imagegen全新原創圖（1次）／C公開JPEG匿名200、381951 bytes、SHA一致／D單次發布及文字圖片回讀目視／E發布前意圖、回條與證據CAS持久保存，均通過。
-- 真實Post ID：1346385028565797_122104687647515576；網址：https://www.facebook.com/122104619793515576/posts/122104687647515576；Facebook時間 2026-10-25T02:22:17+0000（台灣10:22:17）。
-- 已占用2026-10-25T19:30內容名額，今天中午與晚間不重發；不是宣稱19:30觸發。
-- 完整證據 records/acceptance/2026-10-25.json；原圖、提示詞、文案與來源 records/originals/2026-10-25-*；state/posts/280d36a9590bddd7540ae3584abdd6c4bb2211bf28f65f408a5529961db8f11d.json=verified。
-- Pages初查404，限次等待後成功；首查Facebook新ID尚未出現，間隔至少60秒第二查通過，未重送。8項防護測試通過。
-- policy.mode=live；既有每日任務沿用，不新增排程。單次定時完整驗收通過，長期生圖額度與服務穩定性仍須觀察；失敗保留草稿、未知發布結果禁止重送。
-- 下一步：既有每日任務讀最新policy及state，今日跳過已占用slot；下一個尚未占用時段依RUNBOOK執行。既有週任務持續分析真實數據。
-- 本節取代上方歷史「第三階段待驗／無人值守未通過」狀態；歷史保留供追溯。
+## 下個精確步驟
+1. 先讀本檔、RUNBOOK、state/policy及state/posts，不重新研究/建任務。
+2. 今日兩個slot皆verified，不發第三篇內容。
+3. 下個未占用時段依既有每日任務執行真實趨勢選題→新原創圖→公開URL→CAS預約→單次發布→回讀→保存；有問題留下精確錯誤及下一步。
+4. 11/1既有週任務讀兩個7日窗與已保存快照，樣本不足如實說明。持續補足分類與時段證據。
