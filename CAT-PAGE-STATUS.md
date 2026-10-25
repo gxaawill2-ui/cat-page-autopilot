@@ -32,3 +32,15 @@
 - Pages來源main/docs，作品集用途；保守JPEG4MB上限（Meta官方Page Photos10MB規格內）。資料來源 https://developers.facebook.com/docs/graph-api/reference/page/photos/ 、 https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits 。
 - 寫入git push失敗：could not read Username；已改用現有GitHub create_blob/create_tree/create_commit/update_ref，expected_sha+force=false實測成功，不新增憑證。適配器connector_commit.js，操作程序RUNBOOK.md。
 - 下一步：發布前保存publishing意圖→單次Windsor發文→保存回條→回讀。
+
+## 第二階段完成 — 2026-10-25T10:09:14.748426+08:00
+- 既有原創圖取回→JPEG→GitHub Pages→URL匿名驗SHA→發布前CAS保存publishing→單次Windsor發文→真實回條持久保存→回讀文字/圖片→圖片目視，全部成功。
+- Post ID 1346385028565797_122104674921515576；永久網址 https://www.facebook.com/122104619793515576/posts/122104674921515576 ；Facebook建立時間2026-10-25T02:06:38+0000（台灣10:06:38）。
+- state/posts/c53a963e6a5bed0a203b3813bce8a4dc38dde95974ccfc5a91c584a9212546a7.json 為verified；records/bootstrap-receipt.txt保留真實回條。已占用2026-10-25T12:30內容名額，並非宣稱12:30觸發。
+- 相同文案/圖片/時段、未知結果、每日兩篇、錯誤Page、草稿gate及錯誤回讀文字等8個防護測試通過。
+
+## 第三階段待驗 — 排程已設定
+- 沿用舊一次性task 6ad6ec1845d48191938f06790c91fe8a，改為貓咪V3完整發布驗收，2026-10-25 10:16 Asia/Taipei；不新增重複任務。
+- 初次relative update回傳unexpected error；peek確認未更動後，改明確DTSTART單次重試成功。
+- 每日task提示已改為讀RUNBOOK/policy，mode=draft時禁止發文。完整A–E+回讀+持久記錄通過才可live。
+- 待觀察真正scheduled run；不能用本輪手動發布或10/20生圖成功代填。
