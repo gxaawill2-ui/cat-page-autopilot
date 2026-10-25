@@ -1,4 +1,4 @@
-# 貓咪投資筆記 V3.0｜唯一續作狀態
+# 貓咪投資筆記 V3.1｜唯一續作狀態
 
 更新：2026-10-25 台灣時間；以下為目前狀態，上版歷史請見 Git commit history。
 
@@ -69,3 +69,10 @@
 - V3.1階段2/3完成：四市場研究與6候選已保存 records/international/research-2026-10-25.json；英文優先，日文第2週替換2個英文名額，排除印尼；14天10/26–11/8。未知海外觸及留N/A。
 
 - V3.1階段4/5完成：prepare保留language/target_markets/experiment_id；加入regular語言路由與全域未知發布阻擋。13個隔離/回歸測試通過，Facebook寫入0；既有原創圖只在臨時目錄作JPEG整合fixture，未新生圖或重發。證據records/international/isolation-2026-10-25.json。
+
+- V3.1階段6完成（設定承接驗證，非國際貼文定時實跑）：既有每日6add4bc872c88191bea8e6d2cf3dc016與每週6add4bde3d6881919ff5037351dd44d4提示已更新成功；未改schedule、未新建任務。V3.0無人定時驗收仍沿用，V3.1國際首篇定時驗收尚未發生。
+- V3.1階段7完成：state/international.json、records/experiments/intl-20261026-14d.json、intl-calendar.json定義10/26–11/8，28個最大slot（不是已發布）。experiment_snapshot.py已執行20筆真實歷史基準；英文/日文成效與國家觸及全部N/A，不推算海外推薦。
+- V3.1下一次任務：今日19:30應因slot已占用而不發文；下一個可發布時段10/26 12:30繁中、10/26 19:30英文。日文替換11/3與11/6晚間。11/1、11/8週檢討。每輪須保留至少5候選，缺訊號寫未取得。
+- 持續運作邊界：內容生產/發布仍依賴已啟用ChatGPT任務、帳號權限與生圖額度。GitHub/Pages獨立保存素材，不是獨立AI經營伺服器；Work或訂閱結束後不保證生文/生圖/工具發布續行。未部署外部付費或免費替代LLM API。
+- 國際成果尚待：首篇英文/日文定時實跑、14天成熟數據、可用國家觸及；不能把13項隔離測試或中文舊驗收冒充海外成長證據。品牌名稱保留，未申請營利、未宣稱資格。
+- 下次續作先讀本檔、RUNBOOK V3.1段、state/international.json與policy/posts；每週同齡48h/168h比較，不同時改語言/時段/畫風。兩週無成長先檢查資料與分發，樣本不足就延長觀察。

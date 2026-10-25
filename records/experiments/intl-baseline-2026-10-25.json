@@ -1,0 +1,473 @@
+{
+  "created_at": "2026-10-25T07:44:09.738525+00:00",
+  "baseline_only": true,
+  "experiment_results": null,
+  "reason": "International experiment not started; no country reach or per-language follower attribution available. Preserve viewers separately from reach.",
+  "observations": [
+    {
+      "post_id": "1346385028565797_122100598785515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 107.93277777777777,
+      "viewers": 1,
+      "views_source_metric": {
+        "post_impressions": 44
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122100496401515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 110.42472222222223,
+      "viewers": 1,
+      "views_source_metric": {
+        "post_impressions": 46
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_1823005662451349",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 114.11777777777777,
+      "viewers": 1,
+      "views_source_metric": {
+        "post_impressions": 51
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122100316647515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 115.10527777777777,
+      "viewers": 2,
+      "views_source_metric": {
+        "post_impressions": 51
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122100314451515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 115.20444444444445,
+      "viewers": 1,
+      "views_source_metric": {
+        "post_impressions": 38
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122100287241515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 115.7475,
+      "viewers": 1,
+      "views_source_metric": {
+        "post_impressions": 39
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122100182103515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 118.17916666666666,
+      "viewers": 1,
+      "views_source_metric": {
+        "post_impressions": 28
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122100127611515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 119.94027777777778,
+      "viewers": 1,
+      "views_source_metric": {
+        "post_impressions": 27
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122101851873515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 74.18694444444445,
+      "viewers": 1,
+      "views_source_metric": {
+        "post_impressions": 23
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122101825257515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 75.0813888888889,
+      "viewers": 1,
+      "views_source_metric": {
+        "post_impressions": 22
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122101406853515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 85.97611111111111,
+      "viewers": 1,
+      "views_source_metric": {
+        "post_impressions": 38
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122101400235515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 86.13527777777777,
+      "viewers": 2,
+      "views_source_metric": {
+        "post_impressions": 34
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122101211169515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 90.59944444444444,
+      "viewers": 1,
+      "views_source_metric": {
+        "post_impressions": 38
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122100971295515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 97.10666666666667,
+      "viewers": 2,
+      "views_source_metric": {
+        "post_impressions": 46
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122102245389515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 62.05361111111111,
+      "viewers": 2,
+      "views_source_metric": {
+        "post_impressions": 21
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122102088399515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 66.59722222222223,
+      "viewers": 2,
+      "views_source_metric": {
+        "post_impressions": 17
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122102043999515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 67.92083333333333,
+      "viewers": 1,
+      "views_source_metric": {
+        "post_impressions": 14
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122103045567515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 41.538333333333334,
+      "viewers": 1,
+      "views_source_metric": {
+        "post_impressions": 13
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122104674921515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 0.027777777777777776,
+      "viewers": 0,
+      "views_source_metric": {
+        "post_impressions": 0
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    },
+    {
+      "post_id": "1346385028565797_122104663947515576",
+      "language": null,
+      "target_markets": null,
+      "experiment_id": null,
+      "observed_at": "2026-10-25T02:08:18",
+      "age_hours_at_snapshot": 0.28555555555555556,
+      "viewers": 0,
+      "views_source_metric": {
+        "post_impressions": 0
+      },
+      "metrics": {
+        "reach": null,
+        "engagement_per_1000_reach": null,
+        "share_rate": null,
+        "overseas_share": null,
+        "US_reach": null,
+        "JP_reach": null,
+        "PH_reach": null,
+        "followers_attributed_to_language": null
+      },
+      "source": "records/insights/2026-10-25-posts.json"
+    }
+  ],
+  "review_due": [
+    "2026-11-01",
+    "2026-11-08"
+  ],
+  "next": "Future runs load their newly saved raw snapshot, retain original observed_at and compare only same-age cohorts. No historical language guessed."
+}

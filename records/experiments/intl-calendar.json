@@ -1,0 +1,322 @@
+[
+  {
+    "slot": "2026-10-26T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 1,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-10-26T19:30",
+    "language": "en",
+    "target_markets": [
+      "US",
+      "PH"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 1,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-10-27T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 2,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-10-27T19:30",
+    "language": "en",
+    "target_markets": [
+      "US",
+      "PH"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 2,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-10-28T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 3,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-10-28T19:30",
+    "language": "en",
+    "target_markets": [
+      "US",
+      "PH"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 3,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-10-29T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 4,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-10-29T19:30",
+    "language": "en",
+    "target_markets": [
+      "US",
+      "PH"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 4,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-10-30T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 5,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-10-30T19:30",
+    "language": "en",
+    "target_markets": [
+      "US",
+      "PH"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 5,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-10-31T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 6,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-10-31T19:30",
+    "language": "en",
+    "target_markets": [
+      "US",
+      "PH"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 6,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-01T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 7,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-01T19:30",
+    "language": "en",
+    "target_markets": [
+      "US",
+      "PH"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 7,
+    "week": 1,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-02T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 8,
+    "week": 2,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-02T19:30",
+    "language": "en",
+    "target_markets": [
+      "US",
+      "PH"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 8,
+    "week": 2,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-03T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 9,
+    "week": 2,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-03T19:30",
+    "language": "ja",
+    "target_markets": [
+      "JP"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 9,
+    "week": 2,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-04T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 10,
+    "week": 2,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-04T19:30",
+    "language": "en",
+    "target_markets": [
+      "US",
+      "PH"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 10,
+    "week": 2,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-05T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 11,
+    "week": 2,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-05T19:30",
+    "language": "en",
+    "target_markets": [
+      "US",
+      "PH"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 11,
+    "week": 2,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-06T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 12,
+    "week": 2,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-06T19:30",
+    "language": "ja",
+    "target_markets": [
+      "JP"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 12,
+    "week": 2,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-07T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 13,
+    "week": 2,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-07T19:30",
+    "language": "en",
+    "target_markets": [
+      "US",
+      "PH"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 13,
+    "week": 2,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-08T12:30",
+    "language": "zh-Hant",
+    "target_markets": [
+      "TW"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 14,
+    "week": 2,
+    "status": "planned_not_published"
+  },
+  {
+    "slot": "2026-11-08T19:30",
+    "language": "en",
+    "target_markets": [
+      "US",
+      "PH"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "experiment_day": 14,
+    "week": 2,
+    "status": "planned_not_published"
+  }
+]
