@@ -35,6 +35,10 @@
   "max_posts_daily": 2,
   "country_delivery": "unknown until measured; target is not observed audience",
   "brand_name": "貓咪投資筆記",
-  "brand_changes": "hold during initial experiment",
-  "experiment_id": "intl-20261026-14d"
+  "brand_changes": "user_authorized_now; no longer hold for initial experiment",
+  "experiment_id": "intl-20261026-14d",
+  "brand_rename_authorized_at": "2026-10-25T15:55:41+08:00",
+  "brand_rename_status": "approved_to_request_via_Meta_Page_admin_UI; not_yet_submitted_or_verified",
+  "brand_rename_recommendation": "喵星日常 Daily Meow",
+  "brand_rename_rules": "Check name/brand conflicts and Meta naming rules; submit via authorized Page administrator UI; preserve existing Page ID, do not break scheduled posting, do not change username without verifying links; after Meta approval update brand_name and covers/bio/status; record results. No paid tools."
 }
