@@ -78,3 +78,6 @@
 - 下次續作先讀本檔、RUNBOOK V3.1段、state/international.json與policy/posts；每週同齡48h/168h比較，不同時改語言/時段/畫風。兩週無成長先檢查資料與分發，樣本不足就延長觀察。
 
 - V3.1階段8完成：專用repo分階段CAS提交成功，同一Library狀態入口已升v8；最終同步時保留版本防衝突。每日任務回讀確認V3.1提示已存在，啟用與12:30/19:30原schedule不變；無新增Facebook貼文或重複任務。
+
+## V3.1 品牌更名授權（2026-10-25 15:55 Asia/Taipei）
+使用者已明確同意現在就可更換粉專名稱，不再受最初14天國際實驗「hold during initial experiment」限制。state/international.json 已標記品牌更名授權並建議新名「喵星日常 Daily Meow」（僅候選，需先查重與Meta名稱規範）；**目前真實Facebook名稱仍為「貓咪投資筆記」，尚未提交或驗證更名**。請經具有Facebook粉專完整管理權限的正式介面操作；Windsor只有貼文動作，不能用發文權限冒充更名權限。可一併更新繁中／英文簡介、原創頭貼及封面；先保存舊版並回讀確認。維持原Page ID、既有兩篇每日排程與防重複機制，GitHub/Meta新名稱同步待實際更名成功後再更新brand_name欄位。額外費用NT$0。
