@@ -86,3 +86,11 @@
 - 已由正式Facebook介面核對Page ID 1346385028565797，原名稱與簡介已保存，舊頭貼及封面下載位於 records/brand/2026-10-25/previous。
 - Daily Meow撞名較多；選擇較具辨識度的「喵星日常 Meowday Orbit」，搜尋未見完整同名結果，但不是商標權保證。Meta規範與來源在research.json。尚未提交更名。
 - 正在製作原創頭貼與封面；不修改既有policy、slots、排程及14天實驗日曆。
+
+## 品牌續作實績（2026-10-25 16:45 Asia/Taipei）
+- 原創頭貼與封面已找回並保存於commit 68d436a，docs/brand/2026-10-25/及records/brand/2026-10-25/，未重生圖。
+- Facebook新頭貼已成功套用（成功提示已回讀）；封面已儲存並重新開啟確認photo 122104939179515576；雙語簡介已儲存回讀。
+- 最終選名「喵星日常 Meowday Orbit」，真實Facebook仍為貓咪投資筆記；正式更名表單要求密碼重新驗證，尚未送出、不是審核中。
+- Windsor連線仍回傳同一Page ID。每日任務enabled、原12:30/19:30排程保留，最新午間skip已完成；未重測發文。國際實驗日期/市場/slot/日文替換未改。
+- Facebook自動產生封面更新動態；記為管理性品牌變更，排除內容實驗，不修改既有slot鎖。
+- 精確續作：完成Meta安全密碼驗證送出更名，讀回審核/生效狀態，再更新brand_name。不要重新生圖或上傳。詳見records/brand/2026-10-25/result.json。
