@@ -25,3 +25,10 @@
 - 2026-10-25 10:00：專用 repository 建立成功 https://github.com/gxaawill2-ui/cat-page-autopilot ，其餘專案未修改。
 - 原創圖完成 JPEG 轉檔：1122×1402、373439 bytes；公開網址及完整發布待驗。
 - catflow.py 已實作準備、匿名URL驗SHA、持久預約、回條、回讀檢查；目前 policy.mode=draft。
+
+## 第一階段完成 — 2026-10-25T10:05:55.384973+08:00
+- 公開原創圖： https://gxaawill2-ui.github.io/cat-page-autopilot/assets/e4c7cacd2cbc30a2cbc0115e6c41b4ba84aea6750e2efccc96c3a78881610fc7.jpg
+- 匿名GET實測200、image/jpeg、373439 bytes、1122×1402；SHA256與上傳檔一致；無登入、無簽名/立即過期參數。證據 records/url-checks/c53a963e6a5bed0a203b3813bce8a4dc38dde95974ccfc5a91c584a9212546a7.json。
+- Pages來源main/docs，作品集用途；保守JPEG4MB上限（Meta官方Page Photos10MB規格內）。資料來源 https://developers.facebook.com/docs/graph-api/reference/page/photos/ 、 https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits 。
+- 寫入git push失敗：could not read Username；已改用現有GitHub create_blob/create_tree/create_commit/update_ref，expected_sha+force=false實測成功，不新增憑證。適配器connector_commit.js，操作程序RUNBOOK.md。
+- 下一步：發布前保存publishing意圖→單次Windsor發文→保存回條→回讀。
