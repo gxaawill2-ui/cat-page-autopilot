@@ -1,0 +1,33 @@
+{
+  "key": "c53a963e6a5bed0a203b3813bce8a4dc38dde95974ccfc5a91c584a9212546a7",
+  "page_id": "1346385028565797",
+  "caption": "主人說要練習長期投資，少看一點盤。\n我直接把他的筆電壓住。\n陪他養成好習慣這件事，我可以躺著做。😼",
+  "caption_sha256": "01d0d3b2d4394d44c1653e62169d53fcf73a5cf06762890417ee417097aa11af",
+  "image_sha256": "e4c7cacd2cbc30a2cbc0115e6c41b4ba84aea6750e2efccc96c3a78881610fc7",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/e4c7cacd2cbc30a2cbc0115e6c41b4ba84aea6750e2efccc96c3a78881610fc7.jpg",
+  "asset_path": "docs/assets/e4c7cacd2cbc30a2cbc0115e6c41b4ba84aea6750e2efccc96c3a78881610fc7.jpg",
+  "bytes": 373439,
+  "dimensions": [
+    1122,
+    1402
+  ],
+  "created_at": "2026-10-25T10:00:31.709808+08:00",
+  "topic": "少盯盤與貓佔筆電",
+  "style": "暖色手繪插畫",
+  "caption_type": "short_humor",
+  "source_image": "libfile_55d3c4ba51948191b413459541221e4c",
+  "sources": [],
+  "status": "publishing",
+  "slot": "2026-10-25T12:30",
+  "reserved_at": "2026-10-25T10:06:13.234712+08:00",
+  "purpose": "bootstrap",
+  "task_id": null,
+  "image_check": {
+    "url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/e4c7cacd2cbc30a2cbc0115e6c41b4ba84aea6750e2efccc96c3a78881610fc7.jpg",
+    "http_status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 373439,
+    "sha256": "e4c7cacd2cbc30a2cbc0115e6c41b4ba84aea6750e2efccc96c3a78881610fc7",
+    "checked_at": "2026-10-25T10:06:13.226057+08:00"
+  }
+}
