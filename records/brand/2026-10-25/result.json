@@ -13,6 +13,13 @@
   "daily_task": "6add4bc872c88191bea8e6d2cf3dc016 enabled; original 12:30/19:30 Asia/Taipei RRULE preserved; latest noon run completed skip; no new publish test",
   "experiment": "dates/markets/slots/Japanese days unchanged",
   "note": "Facebook auto-created cover update story is administrative branding, not international experiment content. Do not delete original slot locks or duplicate publishing. No additional editorial post created.",
-  "next": "Do not resend rejected bilingual name. Evaluate a materially different compliant name or official support; avatar, cover and bio already applied.",
-  "exact_error": "不允許使用此名稱建立內容，請使用其他名稱。"
+  "next": "Stop name submissions. Ask Meta official support to identify Page rename restriction; do not attribute to mixed languages.",
+  "exact_error": "不允許使用此名稱建立內容，請使用其他名稱。",
+  "second_attempt": {
+    "name": "喵星生活日記",
+    "result": "rejected",
+    "error": "不允許使用此名稱建立內容，請使用其他名稱。",
+    "authenticated": true,
+    "attempts_this_round": 1
+  }
 }
