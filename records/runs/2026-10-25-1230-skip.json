@@ -1,0 +1,27 @@
+{
+  "run_date": "2026-10-25",
+  "slot": "2026-10-25T12:30",
+  "timezone": "Asia/Taipei",
+  "page_id": "1346385028565797",
+  "policy_mode": "live",
+  "decision": "SKIP_NO_POST",
+  "reason": "Both daily slots 12:30 and 19:30 were already allocated before this run; daily limit 2. No new reservation or Facebook write allowed.",
+  "sources_checked": [
+    "CAT-PAGE-STATUS.md",
+    "RUNBOOK.md",
+    "state/policy.json",
+    "state/posts/280d36a9590bddd7540ae3584abdd6c4bb2211bf28f65f408a5529961db8f11d.json",
+    "records/acceptance/2026-10-25.json",
+    "records/topics/2026-10-25.json"
+  ],
+  "existing_verified_post_id": "1346385028565797_122104687647515576",
+  "existing_verified_post_url": "https://www.facebook.com/122104619793515576/posts/122104687647515576",
+  "topic_candidates_already_saved": 7,
+  "topic_candidates_file": "records/topics/2026-10-25.json",
+  "fresh_web_search": "Attempted 2026-10-24–25 Taiwan trends/news search; search results mostly stale, so no new trend rank or engagement signal asserted.",
+  "image_generated": false,
+  "facebook_write_calls": 0,
+  "new_tasks_created": 0,
+  "next_available_slot": "2026-10-26T12:30",
+  "note": "Status and Library status snapshot remain unchanged because no posting state changed."
+}
