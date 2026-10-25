@@ -38,7 +38,7 @@
   "brand_changes": "user_authorized_now; no longer hold for initial experiment",
   "experiment_id": "intl-20261026-14d",
   "brand_rename_authorized_at": "2026-10-25T15:55:41+08:00",
-  "brand_rename_status": "blocked_on_Meta_password_reauthentication; not_submitted",
+  "brand_rename_status": "Meta_rejected_name_after_authenticated_submission",
   "brand_rename_recommendation": "喵星日常 Meowday Orbit",
   "brand_rename_rules": "Check name/brand conflicts and Meta naming rules; submit via authorized Page administrator UI; preserve existing Page ID, do not break scheduled posting, do not change username without verifying links; after Meta approval update brand_name and covers/bio/status; record results. No paid tools."
 }
