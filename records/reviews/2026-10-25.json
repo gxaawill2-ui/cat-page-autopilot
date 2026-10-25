@@ -1,0 +1,721 @@
+{
+  "generated_at": "2026-10-25T10:13:18.085719+08:00",
+  "period_days": 14,
+  "rows": [
+    {
+      "post_id": "1346385028565797_122100598785515576",
+      "created_at": "2026-10-20T22:12:20+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 20,
+      "time_bucket": "other",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 44,
+        "post_total_media_view_unique": 1,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122100598785515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122100496401515576",
+      "created_at": "2026-10-20T19:42:49+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 559,
+      "time_bucket": "evening",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 46,
+        "post_total_media_view_unique": 1,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122100496401515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_1823005662451349",
+      "created_at": "2026-10-20T16:01:14+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 0,
+      "time_bucket": "other",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 51,
+        "post_total_media_view_unique": 1,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/1823005662451349?substory_index=1823005662451349",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122100316647515576",
+      "created_at": "2026-10-20T15:01:59+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 0,
+      "time_bucket": "other",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 51,
+        "post_total_media_view_unique": 2,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/photo.php?fbid=122100316647515576&set=a.122100127641515576&type=3",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122100314451515576",
+      "created_at": "2026-10-20T14:56:02+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 287,
+      "time_bucket": "noon",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 38,
+        "post_total_media_view_unique": 1,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122100314451515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122100287241515576",
+      "created_at": "2026-10-20T14:23:27+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 42,
+      "time_bucket": "noon",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 39,
+        "post_total_media_view_unique": 1,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122100287241515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122100182103515576",
+      "created_at": "2026-10-20T11:57:33+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 0,
+      "time_bucket": "noon",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 28,
+        "post_total_media_view_unique": 1,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/photo.php?fbid=122100182103515576&set=a.122100127641515576&type=3",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122100127611515576",
+      "created_at": "2026-10-20T10:11:53+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 0,
+      "time_bucket": "other",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 27,
+        "post_total_media_view_unique": 1,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/photo.php?fbid=122100127611515576&set=a.122100127641515576&type=3",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122101851873515576",
+      "created_at": "2026-10-22T07:57:05+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 16,
+      "time_bucket": "other",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 23,
+        "post_total_media_view_unique": 1,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122101851873515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122101825257515576",
+      "created_at": "2026-10-22T07:03:25+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 146,
+      "time_bucket": "other",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 22,
+        "post_total_media_view_unique": 1,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122101825257515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122101406853515576",
+      "created_at": "2026-10-21T20:09:44+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 1071,
+      "time_bucket": "evening",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 38,
+        "post_total_media_view_unique": 1,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122101406853515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122101400235515576",
+      "created_at": "2026-10-21T20:00:11+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 70,
+      "time_bucket": "evening",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 34,
+        "post_total_media_view_unique": 2,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122101400235515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122101211169515576",
+      "created_at": "2026-10-21T15:32:20+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 4,
+      "time_bucket": "other",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 38,
+        "post_total_media_view_unique": 1,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122101211169515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122100971295515576",
+      "created_at": "2026-10-21T09:01:54+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 1603,
+      "time_bucket": "other",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 46,
+        "post_total_media_view_unique": 2,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122100971295515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122102245389515576",
+      "created_at": "2026-10-22T20:05:05+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 17,
+      "time_bucket": "evening",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 21,
+        "post_total_media_view_unique": 2,
+        "post_views": 0,
+        "post_reactions_total": 1,
+        "post_reactions_no_shares": 1,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122102245389515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122102088399515576",
+      "created_at": "2026-10-22T15:32:28+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 611,
+      "time_bucket": "other",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 17,
+        "post_total_media_view_unique": 2,
+        "post_views": 0,
+        "post_reactions_total": 0,
+        "post_reactions_no_shares": 0,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122102088399515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122102043999515576",
+      "created_at": "2026-10-22T14:13:03+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 1651,
+      "time_bucket": "noon",
+      "mature_48h": true,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 14,
+        "post_total_media_view_unique": 1,
+        "post_views": 0,
+        "post_reactions_total": 1,
+        "post_reactions_no_shares": 1,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122102043999515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    },
+    {
+      "post_id": "1346385028565797_122103045567515576",
+      "created_at": "2026-10-23T16:36:00+08:00",
+      "topic": null,
+      "style": null,
+      "caption_type": null,
+      "classification": "unknown",
+      "caption_length": 10,
+      "time_bucket": "other",
+      "mature_48h": false,
+      "window": "recent",
+      "is_transport_test": false,
+      "metrics": {
+        "post_impressions": 13,
+        "post_total_media_view_unique": 1,
+        "post_views": 0,
+        "post_reactions_total": 1,
+        "post_reactions_no_shares": 1,
+        "post_comments_with_reply": 0,
+        "post_activity_by_action_type_share": 0
+      },
+      "post_url": "https://www.facebook.com/122104619793515576/posts/122103045567515576",
+      "data_fetched_at": "2026-10-25T02:08:18"
+    }
+  ],
+  "recent_mature": {
+    "n": 17,
+    "post_impressions": {
+      "reported_sum": 577,
+      "reported_median": 38,
+      "missing": 0,
+      "zeros": 0
+    },
+    "post_total_media_view_unique": {
+      "reported_sum": 22,
+      "reported_median": 1,
+      "missing": 0,
+      "zeros": 0
+    },
+    "post_views": {
+      "reported_sum": 0,
+      "reported_median": 0,
+      "missing": 0,
+      "zeros": 17
+    },
+    "post_reactions_total": {
+      "reported_sum": 2,
+      "reported_median": 0,
+      "missing": 0,
+      "zeros": 15
+    },
+    "post_reactions_no_shares": {
+      "reported_sum": 2,
+      "reported_median": 0,
+      "missing": 0,
+      "zeros": 15
+    },
+    "post_comments_with_reply": {
+      "reported_sum": 0,
+      "reported_median": 0,
+      "missing": 0,
+      "zeros": 17
+    },
+    "post_activity_by_action_type_share": {
+      "reported_sum": 0,
+      "reported_median": 0,
+      "missing": 0,
+      "zeros": 17
+    }
+  },
+  "prior_mature": {
+    "n": 0,
+    "post_impressions": {
+      "reported_sum": null,
+      "reported_median": null,
+      "missing": 0,
+      "zeros": 0
+    },
+    "post_total_media_view_unique": {
+      "reported_sum": null,
+      "reported_median": null,
+      "missing": 0,
+      "zeros": 0
+    },
+    "post_views": {
+      "reported_sum": null,
+      "reported_median": null,
+      "missing": 0,
+      "zeros": 0
+    },
+    "post_reactions_total": {
+      "reported_sum": null,
+      "reported_median": null,
+      "missing": 0,
+      "zeros": 0
+    },
+    "post_reactions_no_shares": {
+      "reported_sum": null,
+      "reported_median": null,
+      "missing": 0,
+      "zeros": 0
+    },
+    "post_comments_with_reply": {
+      "reported_sum": null,
+      "reported_median": null,
+      "missing": 0,
+      "zeros": 0
+    },
+    "post_activity_by_action_type_share": {
+      "reported_sum": null,
+      "reported_median": null,
+      "missing": 0,
+      "zeros": 0
+    }
+  },
+  "ranking_metric": "reported post_impressions; descriptive only",
+  "top5_ids": [
+    "1346385028565797_1823005662451349",
+    "1346385028565797_122100316647515576",
+    "1346385028565797_122100496401515576",
+    "1346385028565797_122100971295515576",
+    "1346385028565797_122100598785515576"
+  ],
+  "bottom5_ids": [
+    "1346385028565797_122101851873515576",
+    "1346385028565797_122101825257515576",
+    "1346385028565797_122102245389515576",
+    "1346385028565797_122102088399515576",
+    "1346385028565797_122102043999515576"
+  ],
+  "data_quality": {
+    "reach": "suspect; new post_total_media_view_unique also returns 1–2 on older posts; Meta Suite comparison required",
+    "page_follows": "connector reports zero; do not substitute for unavailable data",
+    "missing_kept_null": true,
+    "style_comparison": "older image style unknown, cannot attribute differences"
+  },
+  "conclusions": {
+    "best_topic": null,
+    "best_image_style": null,
+    "best_shareable_caption": null,
+    "best_time": null,
+    "follower_growth": null,
+    "reason": "No comparable prior mature window; insufficient labelled samples; suspect reach."
+  },
+  "improvement_rules": {
+    "elapsed_days_supported_by_snapshots": null,
+    "7_day": "check publishing, source completeness, reach limitations, then single-variable experiments",
+    "14_day": "broaden subjects/styles/formats only with comparable evidence",
+    "30_day": "positioning review only after 30 days and >=5 mature posts per comparison group",
+    "triggered": false,
+    "reason": "first persisted V3 snapshot; no invented historical trend"
+  },
+  "next_experiments": [
+    {
+      "variable": "caption_type",
+      "levels": [
+        "short_humor",
+        "short_story"
+      ],
+      "hold_constant": [
+        "topic",
+        "image_style",
+        "time_bucket"
+      ],
+      "min_mature_posts_per_level": 5
+    },
+    {
+      "variable": "image_style",
+      "levels": [
+        "warm_illustration",
+        "natural_realism"
+      ],
+      "hold_constant": [
+        "topic",
+        "caption_type",
+        "time_bucket"
+      ],
+      "min_mature_posts_per_level": 5
+    }
+  ],
+  "page_daily": [
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-12",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    },
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-13",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    },
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-14",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    },
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-15",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    },
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-16",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    },
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-17",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    },
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-18",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    },
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-19",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    },
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-20",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    },
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-21",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    },
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-22",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    },
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-23",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    },
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-24",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    },
+    {
+      "account_id": "1346385028565797",
+      "date": "2026-10-25",
+      "page_name": "貓咪投資筆記",
+      "page_follows": 0,
+      "page_daily_follows": 0,
+      "page_daily_unfollows": 0,
+      "data_fetched_at": "2026-10-25T02:04:13"
+    }
+  ]
+}

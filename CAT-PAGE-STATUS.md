@@ -44,3 +44,13 @@
 - 初次relative update回傳unexpected error；peek確認未更動後，改明確DTSTART單次重試成功。
 - 每日task提示已改為讀RUNBOOK/policy，mode=draft時禁止發文。完整A–E+回讀+持久記錄通過才可live。
 - 待觀察真正scheduled run；不能用本輪手動發布或10/20生圖成功代填。
+
+## 第四階段完成（流程及本輪選題已驗，排程自主選題待首次觸發）
+- records/topics/2026-10-25.json 保存7個候選與Google Trends真實訊號；財務自由5000+、海安路萬聖節2000+、鈴蘭通2000+、消費券1萬+、世界黃金協會1000+，均為Google搜尋級距非FB熱度。Threads/Facebook未取得足以證明當日熱門的互動數，明確留null，不造數。
+- 每日既有任務已接入RUNBOOK、policy與去重/證據流程；未通過定時驗收時維持草稿。
+
+## 第五階段完成（數據保存與分析實跑，週任務已更新）
+- records/insights/2026-10-25-posts.json 保存20筆貼文；page.json保存14日資料。analyze.py實跑，排除當日與未滿48小時等後17筆成熟；無前週對比樣本，不能判斷畫風/時段贏家。缺值null、回傳0分別記錄。
+- Meta Business Suite已成功讀取：9/26–10/23瀏覽593、瀏覽者6、互動3、追蹤/取消/淨新增均0；舊兩篇21/1/0/0與13/1/0/0清單值符合Windsor。Meta告知改用viewers，Suite不再顯示舊reach，勿混用口徑。安全文字證據records/meta-suite-check-2026-10-25.json。
+- 每週既有任務已接入資料保存/analyze.py/7-14-30規則與兩個單變因實驗。週期性實跑仍待既有下一個週日，不冒充已執行。
+- stale expected_sha實測呼叫遭GitHub UNKNOWN/GraphQL錯誤拒絕，未據此斷言具體錯誤原因；正常CAS寫入已成功，仍保留force=false與失敗即停止策略。

@@ -1,0 +1,22 @@
+{
+ "observed_date":"2026-10-25",
+ "timezone":"Asia/Taipei",
+ "trend_source":"https://trends.google.com/trending?geo=TW&hl=zh-TW",
+ "signal_definition":"Google Trends public past-24-hour approximate search-volume bands, not Facebook popularity",
+ "candidates":[
+  {"topic":"財務自由","signal":"5000+ 次搜尋，活躍","decision":"採用一般投資生活幽默方向；不聲稱特定財經事件，不加入行情數字","content":"少看盤，貓把筆電壓住"},
+  {"topic":"海安路萬聖節","signal":"2000+ 次搜尋，活躍","decision":"留作原創黑貓情境候選；未核實活動細節，不發布活動時間票價"},
+  {"topic":"鈴蘭通散步納涼會","signal":"2000+ 次搜尋，活躍","decision":"有生活共鳴，活動細節未核對，暫緩"},
+  {"topic":"消費券","signal":"1萬+ 次搜尋，活躍","decision":"涉及補助資格，詞義未確認，暫緩"},
+  {"topic":"世界黃金協會","signal":"1000+ 次搜尋，活躍","decision":"待查事件原文，不冒充黃金行情或投資建議"},
+  {"topic":"光復連假與休市","signal":"官方日曆背景資訊；不宣稱本輪熱搜量","source":"https://wwwc.twse.com.tw/zh/trading/holiday.html","decision":"既有baseline已有查證，不重複寫同一篇"},
+  {"topic":"貓選紙箱而非新床","signal":null,"decision":"原創常青生活題，作排程端到端驗收，不能稱今日熱門梗"}
+ ],
+ "other_public_sources":{
+  "threads":{"retrieved":"https://www.threads.com/@carton_queen","freshness":"未取得可證明最近24–48小時的互動數，僅檢索到公開資料；不能宣稱熱門","popularity":null},
+  "facebook":{"retrieved":"https://www.facebook.com/100064383054221/videos/1240236605837998/","freshness":"搜尋回傳2026-07-25舊內容；不當本日熱門","popularity":null},
+  "finance":{"retrieved":"https://www.fsc.gov.tw/ch/home.jsp?id=2&parentpath=0","topic":"TISA相關10/22官方新聞索引","decision":"未深入核實政策細節，本次不發布政策文"},
+  "entertainment":{"topic":"萬聖節黑貓商品","decision":"只作季節靈感；品牌造型及廣告圖不挪用、不臨摹"}
+ },
+ "test_result":"本輪人工工具串接已保存候選；每日排程自己選題仍待實際觸發紀錄。"
+}
