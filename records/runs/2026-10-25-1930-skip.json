@@ -1,0 +1,48 @@
+{
+  "run_date": "2026-10-25",
+  "slot": "2026-10-25T19:30",
+  "timezone": "Asia/Taipei",
+  "run_observed_at": "2026-10-25T11:35:35.878Z",
+  "page_id": "1346385028565797",
+  "policy_mode": "live",
+  "experiment_version": "3.1",
+  "experiment_id": "intl-20261026-14d",
+  "slot_language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "experiment_start": "2026-10-26",
+  "decision": "SKIP_NO_POST",
+  "reason": "19:30 slot was already reserved and verified in state/posts; 12:30 slot also verified. Two editorial slots for 2026-10-25 are already used. Never send a third post or replay the 19:30 acceptance post.",
+  "existing_slots": [
+    {
+      "slot": "2026-10-25T12:30",
+      "status": "verified",
+      "post_id": "1346385028565797_122104674921515576"
+    },
+    {
+      "slot": "2026-10-25T19:30",
+      "status": "verified",
+      "post_id": "1346385028565797_122104687647515576"
+    }
+  ],
+  "unknown_state_found": false,
+  "facebook_live_readback": "Windsor facebook_organic 23 rows in 2026-10-17..2026-10-25; both verified editorial post IDs present; additional 10/25 posts include administrative brand changes and earlier tests, not available slot.",
+  "research_record": "records/topics/2026-10-25-1930.json",
+  "research_candidate_count": 7,
+  "insights_record": "records/insights/2026-10-25-1930.json",
+  "insights_posts_read": 23,
+  "insights_48h_mature": 18,
+  "insights_168h_mature": 0,
+  "reach": null,
+  "overseas_reach": null,
+  "images_generated": 0,
+  "facebook_write_calls": 0,
+  "new_tasks_created": 0,
+  "other_repos_changed": 0,
+  "reason_no_image": "No available publishing slot; no need to create an unpublishable duplicate asset.",
+  "next_available_slot": "2026-10-26T12:30",
+  "next_action": "Read latest policy and all post states, use international.py for 12:30 zh-Hant, research fresh trends and original image, then follow CAS single-write protocol only if slot remains free. 19:30 first English V3.1 trial if unoccupied.",
+  "status_note": "No publishing state or canonical CAT-PAGE-STATUS.md changed; existing Library snapshot remains unchanged. This run's new research and insights are recorded separately, without contradictory status file."
+}
