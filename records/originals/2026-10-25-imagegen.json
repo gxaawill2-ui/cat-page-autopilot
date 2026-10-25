@@ -1,0 +1,23 @@
+{
+  "tool": "image_gen.imagegen",
+  "prompt": "Use case: illustration-story. Create a brand-new original high-quality editorial cat illustration for a Taiwan Facebook page, portrait aspect ratio 4:5. Complete cozy small apartment living room scene in soft late-morning natural light: a fluffy cream-and-gray tabby cat is blissfully curled inside a plain open corrugated delivery cardboard box on the floor; directly beside it sits a beautiful brand-new plush sage-green cat bed, conspicuously empty. A person's hands and lower legs in casual home clothes are visible nearby, one hand holding the removed plain wrapping, gently conveying amused resignation. Warm subtle humor, believable cat anatomy, expressive face, tactile fur, refined hand-painted illustration with rich natural textures and cinematic composition. Both box and unused bed clearly visible, scene edges complete. No writing, text, letters, numbers, labels, logos, watermark, branded design, or copyrighted characters.",
+  "attempts": 1,
+  "result": "generated successfully",
+  "original_path": "records/originals/2026-10-25-box-cat.png",
+  "tool_reported_source": "generated_images/exec-fc975fcd-3926-4b71-b724-322b2e41cb00.png",
+  "run": {
+    "id": "c06bac0f-078c-8323-b584-9cc126995bde",
+    "recorded_status": "in_progress",
+    "scheduled_for": "2026-10-25T02:16:00Z",
+    "started_at": "2026-10-25T02:17:22.298809Z",
+    "completed_at": null,
+    "chat_ref": null
+  },
+  "visual_qa": {
+    "passed": true,
+    "scene": "cat sleeping in cardboard box beside unused green cat bed",
+    "text_or_logos": false,
+    "anatomy": "no visible abnormal limbs"
+  },
+  "budget_ntd": 0
+}

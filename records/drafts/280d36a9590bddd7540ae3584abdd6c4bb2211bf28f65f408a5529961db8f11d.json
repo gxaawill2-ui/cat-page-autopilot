@@ -1,0 +1,21 @@
+{
+  "key": "280d36a9590bddd7540ae3584abdd6c4bb2211bf28f65f408a5529961db8f11d",
+  "page_id": "1346385028565797",
+  "caption": "新貓床挑了三天，顏色還特地配家裡的沙發。\n拆箱不到三分鐘，牠就睡進紙箱。\n看來我買的是一個附贈貓床的紙箱，運費還免了。😼",
+  "caption_sha256": "c16bd7f7a0e4751dc32e5766c0c874ca89ddfeba85d87df44fe60934219a391b",
+  "image_sha256": "8a03f2907a375cd12ecc218ada031a52890aba2d8849692aeb95900c5918a507",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/8a03f2907a375cd12ecc218ada031a52890aba2d8849692aeb95900c5918a507.jpg",
+  "asset_path": "docs/assets/8a03f2907a375cd12ecc218ada031a52890aba2d8849692aeb95900c5918a507.jpg",
+  "bytes": 381951,
+  "dimensions": [
+    1122,
+    1402
+  ],
+  "created_at": "2026-10-25T10:19:42.836316+08:00",
+  "topic": "新貓床與送貨紙箱",
+  "style": "自然寫實暖光",
+  "caption_type": "short_humor",
+  "source_image": "records/originals/2026-10-25-imagegen.json",
+  "sources": [],
+  "status": "draft"
+}
