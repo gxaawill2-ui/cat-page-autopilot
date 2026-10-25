@@ -81,3 +81,8 @@
 
 ## V3.1 品牌更名授權（2026-10-25 15:55 Asia/Taipei）
 使用者已明確同意現在就可更換粉專名稱，不再受最初14天國際實驗「hold during initial experiment」限制。state/international.json 已標記品牌更名授權並建議新名「喵星日常 Daily Meow」（僅候選，需先查重與Meta名稱規範）；**目前真實Facebook名稱仍為「貓咪投資筆記」，尚未提交或驗證更名**。請經具有Facebook粉專完整管理權限的正式介面操作；Windsor只有貼文動作，不能用發文權限冒充更名權限。可一併更新繁中／英文簡介、原創頭貼及封面；先保存舊版並回讀確認。維持原Page ID、既有兩篇每日排程與防重複機制，GitHub/Meta新名稱同步待實際更名成功後再更新brand_name欄位。額外費用NT$0。
+
+## 品牌全面更新進度（2026-10-25）
+- 已由正式Facebook介面核對Page ID 1346385028565797，原名稱與簡介已保存，舊頭貼及封面下載位於 records/brand/2026-10-25/previous。
+- Daily Meow撞名較多；選擇較具辨識度的「喵星日常 Meowday Orbit」，搜尋未見完整同名結果，但不是商標權保證。Meta規範與來源在research.json。尚未提交更名。
+- 正在製作原創頭貼與封面；不修改既有policy、slots、排程及14天實驗日曆。
