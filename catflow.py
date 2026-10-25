@@ -23,11 +23,7 @@ def git(*args):
     if r.returncode: raise RuntimeError('git operation failed: '+args[0]+'; inspect local error privately; do not publish tokens')
     return r.stdout.strip()
 def checkpoint(message):
-    # The non-forced push is the shared compare-and-swap. A rejected push MUST stop publishing.
-    git('add','docs','state','records','CAT-PAGE-STATUS.md')
-    if git('diff','--cached','--name-only'):
-        git('-c','user.name=cat-page-autopilot','-c','user.email=cat-page-autopilot@users.noreply.github.com','commit','-m',message)
-        git('push','origin','HEAD:main')
+    raise ValueError('Use the connected GitHub adapter in connector_commit.js; terminal push is unauthenticated. Never publish before its successful CAS receipt.')
 def sync():
     if git('status','--porcelain'): raise ValueError('Working tree not clean; preserve local work before sync')
     git('pull','--ff-only')
@@ -79,7 +75,7 @@ def reserve(args):
     d.update(status='publishing',slot=args.slot,reserved_at=now(),purpose=args.purpose,task_id=args.task_id,image_check=proof)
     write(ROOT/'state/posts'/f'{d["key"]}.json',d)
     if args.durable: checkpoint('Reserve Facebook slot '+args.slot)
-    return {'key':d['key'],'execute_action':{'connector':'facebook_organic','account':PAGE,'action':'create_photo_post','params':{'image_url':d['image_url'],'caption':d['caption']}},'warning':'Call once ONLY after the durable reserve push succeeds. Unknown outcome stays blocked.'}
+    return {'key':d['key'],'execute_action':{'connector':'facebook_organic','account':PAGE,'action':'create_photo_post','params':{'image_url':d['image_url'],'caption':d['caption']}},'warning':'LOCAL_INTENT_ONLY: use connector_commit.js to save this state with expected parent SHA; call once ONLY after CAS success. Unknown outcome stays blocked.'}
 def receipt(args):
     p=ROOT/'state/posts'/f'{args.key}.json'; d=read(p)
     if d['status']!='publishing': raise ValueError('Receipt cannot overwrite completed state')
