@@ -1,0 +1,24 @@
+{
+  "url_checks": [
+    {
+      "url": "https://gxaawill2-ui.github.io/cat-page-autopilot/brand/2026-10-25/avatar.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "sha_match": true
+    },
+    {
+      "url": "https://gxaawill2-ui.github.io/cat-page-autopilot/brand/2026-10-25/cover.jpg",
+      "status": 200,
+      "mime": "image/jpeg",
+      "sha_match": true
+    }
+  ],
+  "tests": {
+    "passed": 13,
+    "seconds": 0.055
+  },
+  "daily_enabled": true,
+  "weekly_enabled": true,
+  "new_tasks_created": 0,
+  "extra_budget_ntd": 0
+}

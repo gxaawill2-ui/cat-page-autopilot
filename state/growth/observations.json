@@ -1,0 +1,37 @@
+{
+  "observed_date": "2026-10-25",
+  "facebook_followers_ui": 0,
+  "external_posts_published": 0,
+  "external_referrals": null,
+  "country_reach": null,
+  "language_follow_attribution": null,
+  "brand_change": "avatar/cover/bio on Oct25; name unchanged",
+  "confounding": "International experiment, branding, topics and later external promotion overlap; not causal name uplift",
+  "cohorts_hours": [
+    48,
+    168
+  ],
+  "review_rules": {
+    "7d": "check publishing exposure distribution data quality",
+    "14d": "vary one content/style/language/promotion factor",
+    "30d": "reassess only with sufficient mature samples"
+  },
+  "required_observation_fields": [
+    "observed_at",
+    "platform",
+    "post_id",
+    "language",
+    "topic",
+    "style",
+    "age_hours",
+    "source_metric",
+    "followers",
+    "reach",
+    "interactions",
+    "shares",
+    "referral_source",
+    "country",
+    "evidence_url"
+  ],
+  "missing": "null => N/A; no zero imputation"
+}

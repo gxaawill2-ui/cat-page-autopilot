@@ -1,0 +1,20 @@
+[
+  {
+    "id": "threads-intro-001",
+    "platform": "Threads",
+    "status": "blocked_account_authorization",
+    "asset": "docs/brand/2026-10-25/cover.jpg",
+    "caption": "The cat has a plan. The plan is mostly naps.\nOriginal cat art from Meowday Orbit. What is your cat supervising today?",
+    "purpose": "one-time original brand introduction; not duplicate daily FB story",
+    "published_url": null
+  },
+  {
+    "id": "instagram-intro-001",
+    "platform": "Instagram",
+    "status": "blocked_professional_account_authorization",
+    "asset": "docs/brand/2026-10-25/avatar.jpg",
+    "caption": "今天的待辦：放鬆、吸貓，剩下的明天再說。\nA tiny orbit of cats, calm, and everyday chaos. Original AI-assisted cat art.",
+    "purpose": "one-time original brand introduction",
+    "published_url": null
+  }
+]

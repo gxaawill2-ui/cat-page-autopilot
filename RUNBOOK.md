@@ -30,3 +30,6 @@ prepare加 --language --target-markets --experiment-id（依plan回傳）；保�
 每輪收集已發文48h/168h成熟快照並標observed_at/age_hours/source_metric。用international.measures保留缺值null展示N/A；只有真的reach才計每千觸及互動/分享率，不用viewers冒充reach。國家觸及若無授權欄位/後台資料就N/A，page_fans_country是按讚者國籍，不是貼文國家觸及。新增追蹤只有Page層級就不能分配語言。48h比48h，168h比168h；語言與時段初期混雜，不做因果結論。
 每週沿用原任務，把post metadata JOIN快照，按語言/主題/圖風/實際觀測市場比較，至少5篇成熟樣本才評估，仍不稱統計證明。第7天存基準，第14天比較；無成長先查資料/分發，再改一個變因。保留名稱；不因單篇成功轉型、不購買廣告或假流量。成長後才核對Meta限制/資格探索原創IP等營利，未驗資格不宣稱可營利。
 本系統依賴已啟用ChatGPT任務與工具權限/額度。Repository與Pages可獨立留存；沒有部署外部免費LLM/ImageGen執行器，不能保證Work/訂閱終止後內容生產仍運作。授權/額度失效記錄並留草稿，不升付費。
+
+## 免費成長追蹤補充（2026-10-25）
+每週同時讀state/growth/observations.json、queue.json。Threads/Instagram未授權前僅備稿，禁止以FB權限冒充跨平台權限。每次跨平台發布先核對帳號、權限、平台+內容hash與未知狀態，保存真實回條/網址再回讀；不得使用留言洗版或假互動。新增平台不新增重複FB排程。外部成效只有原生來源/點擊證據可歸因，UTM存在不等於可量測點擊；無證據留N/A。品牌視覺10/25已改、名稱未改，與國際實驗混雜，不稱名稱帶動成長。7/14/30天按既有規則處理。

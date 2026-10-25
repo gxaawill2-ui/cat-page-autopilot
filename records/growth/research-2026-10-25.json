@@ -1,0 +1,75 @@
+{
+  "date": "2026-10-25",
+  "priority": [
+    "Threads",
+    "Instagram"
+  ],
+  "connected_accounts_observed": [
+    "facebook_organic:1346385028565797"
+  ],
+  "platforms": {
+    "Threads": {
+      "ai": "Original AI art possible subject to Meta rules and disclosure; no guarantee of recommendations",
+      "links": "Own profile/post context only; no unrelated promotional replies",
+      "cost": "No paid service planned",
+      "automation": "Official Threads API exists; account OAuth and threads_content_publish needed; no connector account currently connected",
+      "next": "Connect authorized Threads account and verify read/write scope before one image test"
+    },
+    "Instagram": {
+      "ai": "Original art subject to Meta AI disclosure and recommendation rules",
+      "links": "Use profile destination after login/UI verifies Links; do not claim feed caption URL clickability",
+      "cost": "No paid service planned",
+      "automation": "Official professional account publishing API; requires authorized professional account and permissions, none connected",
+      "next": "Connect creator/business Instagram account then verify image readback"
+    },
+    "Facebook cat groups": {
+      "ai": "Each group rules must explicitly be checked; not assumed permitted",
+      "links": "Group-specific; no promotional posting until rules and Page participation checked",
+      "automation": "No group publishing capability exposed by connected Windsor; Page feed permission is not group permission",
+      "next": "Read chosen group rules and seek admin permission where needed; no posting yet"
+    },
+    "Facebook investment/life groups": {
+      "ai": "Group-specific",
+      "links": "Cat entertainment may be off-topic in investment groups; deprioritize",
+      "automation": "No authorized group publisher",
+      "next": "Do not use as ad-comment channel"
+    },
+    "YouTube Shorts": {
+      "ai": "Original edited video and synthetic-media disclosures as applicable; no generic repeated slideshow",
+      "links": "Shorts comments/descriptions URLs nonclickable",
+      "automation": "No channel OAuth or video publisher connected; image workflow not a video workflow",
+      "next": "Defer until original motion/audio production and channel authorization"
+    },
+    "Other": {
+      "selection": "No extra platform selected; avoid spreading limited effort"
+    }
+  },
+  "sources": [
+    "https://www.facebook.com/help/519912414718764",
+    "https://www.facebook.com/help/271607792873806",
+    "https://about.fb.com/news/2024/02/labeling-ai-generated-images-on-facebook-instagram-and-threads/",
+    "https://developers.facebook.com/documentation/instagram-platform/content-publishing",
+    "https://www.postman.com/meta/threads/collection/dht3nzz/threads-api",
+    "https://www.facebook.com/help/232426073439303",
+    "https://support.google.com/youtube/answer/13748639",
+    "https://support.google.com/youtube/answer/2801973"
+  ],
+  "name_comparison": {
+    "喵星漫遊": "Short and international orbit fit; existing phrase/site usage, could evoke pet loss in search results",
+    "喵星生活日記": "Selected: clear daily cat entertainment, simple Chinese; exact search no clear same brand result, not trademark clearance",
+    "喵咪小宇宙": "Cute but 喵咪 spelling less intuitive for searching",
+    "貓貓日常研究所": "Distinctive humorous tone but longer, institutional implication unnecessary"
+  },
+  "rejection_analysis": {
+    "confirmed": "Both bilingual and Chinese requests rejected with same generic message",
+    "unconfirmed": [
+      "language mix",
+      "word filter",
+      "conflict",
+      "recent rename cooldown",
+      "Page restriction",
+      "transient UI error"
+    ],
+    "conclusion": "Cannot isolate cause. No more name submissions; official Meta support needed. Do not use personal-profile name policy as Page policy."
+  }
+}
