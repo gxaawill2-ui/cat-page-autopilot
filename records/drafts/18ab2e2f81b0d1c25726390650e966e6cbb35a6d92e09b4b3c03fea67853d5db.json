@@ -1,0 +1,28 @@
+{
+  "key": "18ab2e2f81b0d1c25726390650e966e6cbb35a6d92e09b4b3c03fea67853d5db",
+  "page_id": "1346385028565797",
+  "caption": "年度最佳演技獎，得獎的是——\n明明剛吃完飯，卻演得像三天沒吃的那隻貓。\n評審：牠的眼神，真的太有說服力了。🏆🐱",
+  "caption_sha256": "af1d94fdd6eac85c1c064b0f19b529793087e74247d67826c6d2ef6a1d84d633",
+  "image_sha256": "931faa51cf67a9aee8211e295a2b1d159a51840877edb106aaa148cf9c3c5157",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/931faa51cf67a9aee8211e295a2b1d159a51840877edb106aaa148cf9c3c5157.jpg",
+  "asset_path": "docs/assets/931faa51cf67a9aee8211e295a2b1d159a51840877edb106aaa148cf9c3c5157.jpg",
+  "bytes": 436080,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "created_at": "2026-10-26T12:33:49.167200+08:00",
+  "topic": "貓咪年度最佳演技獎：剛吃飽卻裝餓",
+  "style": "暖色手繪幽默插畫",
+  "caption_type": "short_humor",
+  "source_image": "imagegen:62b06088-a392-4c9a-8111-12eab18d2775",
+  "sources": [
+    "https://trends.google.com/trending?geo=TW"
+  ],
+  "status": "draft",
+  "language": "zh-Hant",
+  "target_markets": [
+    "TW"
+  ],
+  "experiment_id": "intl-20261026-14d"
+}
