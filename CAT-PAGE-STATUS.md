@@ -105,3 +105,11 @@ Meta安全密碼驗證已完成，實際送出要求後遭拒。原文：「不�
 - 免費推廣研究與兩平台首篇原創介紹稿已完成：records/growth/research-2026-10-25.json、state/growth/queue.json；Threads/Instagram尚缺帳號OAuth與發布授權，實際跨平台發布0、外部流量N/A。YouTube與社團暫不啟動。
 - 成長觀測格式與7/14/30天規則已接入RUNBOOK：state/growth/observations.json。原頭貼/封面/簡介保留，不重製。品牌視覺與國際化變因混雜，不歸因更名。
 - 下一步：Meta官方支援釐清兩次同訊息更名拒絕；連接Threads或Instagram授權帳號後先單篇安全測試，不重建排程；10/26既有時段執行國際內容。
+
+## V3.1 正式首日午間續作（2026-10-26 12:30 Asia/Taipei）
+- policy.mode=live；10/26 12:30 slot 在檢查時未占用，既有兩筆 state/posts 均為 verified，無 publishing/published_unverified。Windsor 同一 Page ID 連線與 create_photo_post 動作存在，今日查無新貼文。
+- 實查美／日／台 Google Trends 過去24小時及近期官方寵物資料，保存8個候選於 records/topics/2026-10-26-1230.json；Threads/Facebook公開互動熱度未取得，記 null，沒有捏造。
+- 選擇繁中「貓咪年度最佳演技獎」，內建 ImageGen 新生成原創圖片一次並目視通過，JPEG 436080 bytes、1254×1254、SHA256=931faa51cf67a9aee8211e295a2b1d159a51840877edb106aaa148cf9c3c5157。圖片與草稿已保存 docs/assets、records/drafts，GitHub讀回原始JPEG位元組一致。
+- **本輪未發布 Facebook**：現有執行環境無法完成 GitHub Pages 匿名 GET 的 200/MIME/SHA 驗證；網頁擷取對新舊 Pages 圖片均回傳不可存取，容器無外網DNS。這是驗證工具限制，不能認定Pages本身404，也不能以GitHub原始檔驗證冒充Pages驗證。依安全規則保留草稿，不建立 publishing 意圖、不呼叫 Windsor 發文。
+- Windsor讀取23筆貼文，18筆達48小時、0筆達168小時；post_total_media_view_unique 僅為 viewers，不當成 reach，國家觸及及語言追蹤歸因均 N/A。詳 records/insights/2026-10-26-1230.json。
+- 精確回條：records/runs/2026-10-26-1230-held.json。下一輪先重查全部狀態與外部貼文；僅在完整驗證公開圖片、CAS預約成功且時段仍有效後才可單次發布。10/26 19:30 為英文 US/PH 測試時段，不得為補發午間草稿而繞過slot或安全門檻。
