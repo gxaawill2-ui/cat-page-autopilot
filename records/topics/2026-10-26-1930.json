@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-26",
+  "slot": "2026-10-26T19:30",
+  "timezone": "Asia/Taipei",
+  "language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "experiment_id": "intl-20261026-14d",
+  "research_window": "2026-10-25 to 2026-10-26 (Google Trends past 24 hours, as displayed 2026-10-26)",
+  "method": "Google Trends 24h country pages, dated pet news; public Threads/Facebook engagement unavailable; search volume reflects keyword, not cat-content demand",
+  "candidates": [
+    {
+      "topic": "US football game: cat takes over couch referee duties",
+      "market": "US",
+      "signal": "Google Trends chiefs: 1M+ searches, active, started ~10h earlier",
+      "source": "https://trends.google.com/trending?geo=US",
+      "event_date": "2026-10-26",
+      "original_concept": true
+    },
+    {
+      "topic": "US game-day cat: cheering louder than the humans",
+      "market": "US",
+      "signal": "Google Trends giants vs texans: 500K+ searches, active, ~22h earlier",
+      "source": "https://trends.google.com/trending?geo=US",
+      "event_date": "2026-10-25",
+      "original_concept": true
+    },
+    {
+      "topic": "Halloween ghost cat scares itself in a mirror",
+      "market": "US/PH",
+      "signal": null,
+      "context_signal": "Halloween seasonal interest; Japan Halloween Jumbo 50K+ searches in past 24h; US candy search report published Oct 23. Neither measures cat-topic virality.",
+      "source": "https://trends.google.com/trending?geo=JP",
+      "context_source": "https://www.ourmidland.com/lifestyles/article/sour-patch-kids-tops-halloween-candy-searches-22484477.php",
+      "event_date": "2026-10-26",
+      "original_concept": true,
+      "selected": true
+    },
+    {
+      "topic": "Cat wants a plate of sushi but gets plain dinner",
+      "market": "JP",
+      "signal": "Google Trends くら寿司 コラボ: 20K+ searches, active, ~7h earlier",
+      "source": "https://trends.google.com/trending?geo=JP",
+      "event_date": "2026-10-26",
+      "original_concept": true,
+      "no_brand_assets": true
+    },
+    {
+      "topic": "Cat tries to win best actor award",
+      "market": "TW",
+      "signal": "Google Trends 金鐘獎得獎名單: 10K+ searches, active, ~23h earlier",
+      "source": "https://trends.google.com/trending?geo=TW",
+      "event_date": "2026-10-25",
+      "original_concept": true,
+      "rejected": "Similar award-themed cat post already published at 12:30 slot; avoid repetition"
+    },
+    {
+      "topic": "Cat baseball fan knocks over its own cheering sign",
+      "market": "TW",
+      "signal": "Google Trends 味全龍: 20K+ searches, active, ~1h earlier",
+      "source": "https://trends.google.com/trending?geo=TW",
+      "event_date": "2026-10-26",
+      "original_concept": true,
+      "no_team_logo": true
+    },
+    {
+      "topic": "Cat supervises trash-truck pickup from window",
+      "market": "TW",
+      "signal": "Google Trends 10/26有垃圾車嗎: 5K+ searches, active, ~23h earlier",
+      "source": "https://trends.google.com/trending?geo=TW",
+      "event_date": "2026-10-25",
+      "original_concept": true
+    },
+    {
+      "topic": "Cat's costume rehearsal ends with a startled jump",
+      "market": "US/PH",
+      "signal": null,
+      "source": "https://trends.google.com/trending?geo=US",
+      "event_date": "2026-10-26",
+      "original_concept": true
+    }
+  ],
+  "public_threads_signal": null,
+  "public_facebook_signal": null,
+  "selected_key": "f269fed6aaffbe02af467fe8b7759144aa9a479bce2fb626899a26bdfaa59ba1",
+  "notes": "All numbers are Google Trends search volumes of the named terms, not proof of viral cat content. No copied memes or copyrighted characters. Original seasonal humor chosen on cross-cultural readability."
+}
