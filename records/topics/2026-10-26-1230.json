@@ -1,0 +1,153 @@
+{
+  "date": "2026-10-26",
+  "slot": "2026-10-26T12:30",
+  "observed_at": "2026-10-26T12:30:58+08:00",
+  "experiment_id": "intl-20261026-14d",
+  "language": "zh-Hant",
+  "target_markets": [
+    "TW"
+  ],
+  "sources_checked": {
+    "google_trends": [
+      "https://trends.google.com/trending?geo=TW",
+      "https://trends.google.com/trending?geo=US",
+      "https://trends.google.com/trending?geo=JP"
+    ],
+    "public_threads": null,
+    "public_facebook": null,
+    "official_news": [
+      "https://www.peta.org/media/news-releases/keep-halloween-fun-not-frightful-for-animals-with-petas-safety-tips/",
+      "https://www.rover.com/blog/press-release/pet-names-2026/"
+    ]
+  },
+  "note": "Google Trends past-24h search volumes are search-interest signals, not Facebook engagement or cat-topic popularity. Search results for public Threads/Facebook engagement were not independently obtainable. No Indonesia.",
+  "candidates": [
+    {
+      "id": 1,
+      "topic": "貓咪年度最佳演技獎：剛吃飽卻裝餓",
+      "markets": [
+        "TW"
+      ],
+      "language": "zh-Hant",
+      "type": "original_award_parody",
+      "event_date": "2026-10-25",
+      "source_url": "https://trends.google.com/trending?geo=TW",
+      "source_signal": "金鐘獎得獎名單 20K+ searches, active, ~16h ago at lookup",
+      "topic_heat": null,
+      "claim": "Fictional pet comedy; does not assert real award result",
+      "selected": true
+    },
+    {
+      "id": 2,
+      "topic": "貓咪參加飢餓遊戲：明明才剛吃飯",
+      "markets": [
+        "TW"
+      ],
+      "language": "zh-Hant",
+      "type": "original_food_comedy",
+      "event_date": "2026-10-25",
+      "source_url": "https://trends.google.com/trending?geo=TW",
+      "source_signal": "飢餓遊戲 10K+ searches, active, ~17h ago",
+      "topic_heat": null,
+      "claim": "Original pet hunger joke; no copyrighted character/image"
+    },
+    {
+      "id": 3,
+      "topic": "球賽開打貓咪搶沙發",
+      "markets": [
+        "US",
+        "PH"
+      ],
+      "language": "en",
+      "type": "sports_adjacent_evergreen",
+      "event_date": "2026-10-25",
+      "source_url": "https://trends.google.com/trending?geo=US",
+      "source_signal": "chiefs vs seahawks 1M+ searches, active, ~21h ago",
+      "topic_heat": null,
+      "claim": "No team logos/athletes or scores"
+    },
+    {
+      "id": 4,
+      "topic": "貓咪主場守門員",
+      "markets": [
+        "US",
+        "PH"
+      ],
+      "language": "en",
+      "type": "sports_adjacent_evergreen",
+      "event_date": "2026-10-25",
+      "source_url": "https://trends.google.com/trending?geo=US",
+      "source_signal": "49ers vs falcons 1M+ searches, active, ~23h ago",
+      "topic_heat": null,
+      "claim": "No team logos/athletes or scores"
+    },
+    {
+      "id": 5,
+      "topic": "日本貓咪球賽觀眾：電視前不讓座",
+      "markets": [
+        "JP"
+      ],
+      "language": "ja",
+      "type": "sports_adjacent_evergreen",
+      "event_date": "2026-10-25",
+      "source_url": "https://trends.google.com/trending?geo=JP",
+      "source_signal": "バルセロナ 対 rマドリード 100K+ searches, active, ~14h ago",
+      "topic_heat": null,
+      "claim": "No official event images"
+    },
+    {
+      "id": 6,
+      "topic": "日本貓咪賽跑：搶罐頭冠軍",
+      "markets": [
+        "JP"
+      ],
+      "language": "ja",
+      "type": "original_cat_race",
+      "event_date": "2026-10-25",
+      "source_url": "https://trends.google.com/trending?geo=JP",
+      "source_signal": "武豊 200K+ searches, active, ~21h ago",
+      "topic_heat": null,
+      "claim": "No use of real athlete likeness"
+    },
+    {
+      "id": 7,
+      "topic": "萬聖節紙箱南瓜屋，貓咪自己選房",
+      "markets": [
+        "TW",
+        "US",
+        "JP",
+        "PH"
+      ],
+      "language": "multilingual",
+      "type": "original_seasonal_comedy",
+      "event_date": "2026-10-23",
+      "source_url": "https://www.peta.org/media/news-releases/keep-halloween-fun-not-frightful-for-animals-with-petas-safety-tips/",
+      "source_signal": "Oct 23 2026 animal Halloween safety press release; social heat unavailable",
+      "topic_heat": null,
+      "claim": "No costumes forced on animals; safe illustration"
+    },
+    {
+      "id": 8,
+      "topic": "貓咪取名食物系：小雞塊",
+      "markets": [
+        "US",
+        "PH",
+        "TW"
+      ],
+      "language": "en",
+      "type": "original_pet_naming",
+      "event_date": "2026-10-20",
+      "source_url": "https://www.rover.com/blog/press-release/pet-names-2026/",
+      "source_signal": "Rover 2026 cat name Chicken Nugget +82% YoY in Rover dataset; not a past-48h trend",
+      "topic_heat": null,
+      "claim": "Yearly report, not current 24h viral claim"
+    }
+  ],
+  "selected": {
+    "id": 1,
+    "caption": "年度最佳演技獎，得獎的是——\n明明剛吃完飯，卻演得像三天沒吃的那隻貓。\n評審：牠的眼神，真的太有說服力了。🏆🐱",
+    "style": "暖色手繪幽默插畫",
+    "visual_brief": "Original cozy illustration of a cat dramatically pretending to starve beside a just-used food bowl while receiving a tiny generic golden trophy on a whimsical home-made award podium; no text, no trademarks, no real award likeness.",
+    "source_image": "new_original_imagegen_required"
+  }
+}
