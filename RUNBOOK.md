@@ -16,7 +16,7 @@
 11. 更新 CAT-PAGE-STATUS.md、state/posts、實測證據，同步唯一 Library status file libfile_eb843306062c81919a18f9a9efc211f9（有版本防衝突）。無論哪階段失敗都留下錯誤與下一步。只將安全摘要放公開repo。
 
 ## 一次排程驗收
-沿用既有6ad6ec1845d48191938f06790c91fe8a，不新增重複每日任務。完整驗收要有 scheduled_for/start/end、A文案、B新原創生圖、C非到期HTTPS URL、D真實post id、E持久記錄、文字/圖片回讀與目視。任一缺失保持mode=draft。成功後可由驗收任務將policy改live並保存證據，既有每日任務會讀policy執行，不需新任務。每日上限2篇（含本輪bootstrap與驗收）；跳過已占用時段。
+沿用既有6ad6ec1845d48191938f06790c91fe8a，不新增重複每日任務。完整驗收要有 scheduled_for/start/end、A文案、B新原創生圖、C非到期HTTPS URL、D真實post id、E持久記錄、文字/圖片回讀與目視。任一缺失保持mode=draft。成功後可由驗收任務將policy改live並保存證據，既有每日任務會讀policy執行，不需新任務。每日上限依policy.daily_limit（現為4篇）（含本輪bootstrap與驗收）；跳過已占用時段。
 
 ## 每週成效與異常
 先讀 get_fields；用 post_total_media_view_unique（舊post_impressions_unique已deprecated）、post_impressions、post_views、post_reactions_total、post_comments_with_reply、post_activity_by_action_type_share；Page用page_follows/page_daily_follows/page_daily_unfollows。缺值null，回傳0保留0並標資料品質，不填造。
@@ -24,7 +24,7 @@
 異常先讀Meta Business Suite（若需登入，記錄待使用者正常授權），未核對前不用可疑觸及算效率。7天先檢查發布/數據/觸及限制，再做單變因測試；14天擴大題材畫風形式；30天且每個對比組至少5篇成熟貼文才評估定位，不每日改名。先用2個小實驗：短三句 vs 情境故事；暖色手繪 vs 自然寫實。主題及時段保持可比，不用當前小樣本斷言勝負。
 
 ## V3.1 國際實驗（優先於舊台灣單市場選題段落）
-先執行 international.py SLOT，依state/international.json取得語言/市場/實驗ID。12:30繁中；19:30英文優先US、其次PH；第2週第9/12天晚間以日文JP替換英文。排除ID/id。不得假設目標市場就是實際觸及市場。既有slot/兩篇上限及mode gate全部保留，任何未知發布先核對。
+先執行 international.py SLOT，依state/international.json取得語言/市場/實驗ID。12:30繁中；19:30英文優先US、其次PH；第2週第9/12天晚間以日文JP替換英文。排除ID/id。不得假設目標市場就是實際觸及市場。既有slot/policy每日上限及mode gate全部保留，任何未知發布先核對。
 每輪看美日台Google Trends、可取得的公開FB/Threads、官方新聞與全球寵物/娛樂，至少存5候選含來源/日期/市場/訊號；常青原創題可沒有熱度，寫null。重要新聞核實，不複製迷因文案/品牌圖。英文用自然簡短生活幽默，日文用自然療癒短句；圖片儘量無字跨文化可理解，不強迫投資梗或固定角色。每篇內建ImageGen最多2次並目視QA，不合格留草稿。
 prepare加 --language --target-markets --experiment-id（依plan回傳）；保留這些metadata至state/posts。檢查外部今日貼文及全repo未知狀態，CAS預約後才單次發布。隔離fixture不可作未發布新圖再送。
 每輪收集已發文48h/168h成熟快照並標observed_at/age_hours/source_metric。用international.measures保留缺值null展示N/A；只有真的reach才計每千觸及互動/分享率，不用viewers冒充reach。國家觸及若無授權欄位/後台資料就N/A，page_fans_country是按讚者國籍，不是貼文國家觸及。新增追蹤只有Page層級就不能分配語言。48h比48h，168h比168h；語言與時段初期混雜，不做因果結論。
@@ -38,3 +38,7 @@ prepare加 --language --target-markets --experiment-id（依plan回傳）；保�
 新草稿CAS上傳會自動啟動 .github/workflows/pages-probe.yml，純驗證、不發FB、不含FB憑證。先用check-url；只有DNS/timeout/連線類錯誤時可讀1小時內同url/hash的Actions回條。HTTP失敗/MIME錯/SHA錯一律停止。主要工具失敗不代表Pages真的故障。
 讀GitHub Actions run及verify job成功證據，fetch最新repo的records/pages-proofs；來源須為本repo main上的官方workflow成功run，不能手寫成功JSON。run/source_commit/URL/hash/時間需對應。若新草稿未觸發或回條過期，CAS新增records/pages-requests/唯一請求.json（僅含draft key與時間）會觸發；最多等待3輪、每輪至少30秒。Actions驗證/保存失敗就保留草稿；CAS衝突重新讀最新狀態，不覆蓋。
 取得回條後重新檢查policy/posts/外部真實貼文/時段資格，再reserve並CAS存publishing才單次Windsor。不清除鎖、不補第三篇、不跨日補發、不占19:30英文名額。Actions不是新增FB排程，也不會在Work結束後自行發布。若connector新貼文快取未更新，可由正式Facebook貼文UI核對真實ID、全文、圖片並目視，以明確source保存UI驗證，不冒充API full_picture回讀。未知狀態不可重發。
+
+## 使用者提高頻率（2026-10-26，優先於舊每日兩篇描述）
+每日最多4篇，台灣09:30英文、12:30繁中、16:30繁中、19:30英文；日文仍只在11/3、11/6的19:30替換。新增時段從10/27開始，不補今天已過09:30/16:30；今天只保留19:30。沿用同一每日task，不新增任務。每slot最多一篇，CAS/未知狀態/圖片URL/原創QA皆保留，生圖額度不足或內容不佳留草稿，不湊數。
+7天檢查單篇48h觸及/互動/分享及Page追蹤變化，也看每日總量。比較原12:30/19:30與新增slot，記頻率及語言/題材混雜；總曝光因篇數增加不代表單篇改善。若樣本足且單篇表現或追蹤惡化，週檢討可減量，禁止加量後忽略品質或洗版。既有14天實驗保留歷史，另記頻率介入，不把舊28slot計畫當新上限。

@@ -1,0 +1,21 @@
+{
+  "authorized_on": "2026-10-26",
+  "start": "2026-10-27",
+  "review_after_days": 7,
+  "max_posts_daily": 4,
+  "slots": [
+    "09:30",
+    "12:30",
+    "16:30",
+    "19:30"
+  ],
+  "previous_daily_limit": 2,
+  "results": null,
+  "confounding": [
+    "frequency",
+    "time",
+    "language",
+    "topic"
+  ],
+  "quality_gate": "no quota filling; retain original image, URL, CAS and duplicate protections"
+}

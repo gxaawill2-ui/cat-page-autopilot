@@ -25,14 +25,16 @@
     "id"
   ],
   "slots": {
+    "09:30": "en",
     "12:30": "zh-Hant",
+    "16:30": "zh-Hant",
     "19:30": "en"
   },
   "japanese_trial_days": [
     9,
     12
   ],
-  "max_posts_daily": 2,
+  "max_posts_daily": 4,
   "country_delivery": "unknown until measured; target is not observed audience",
   "brand_name": "貓咪投資筆記",
   "brand_changes": "user_authorized_now; no longer hold for initial experiment",
@@ -40,5 +42,7 @@
   "brand_rename_authorized_at": "2026-10-25T15:55:41+08:00",
   "brand_rename_status": "Meta_rejected_name_after_authenticated_submission",
   "brand_rename_recommendation": "喵星日常 Meowday Orbit",
-  "brand_rename_rules": "Check name/brand conflicts and Meta naming rules; submit via authorized Page administrator UI; preserve existing Page ID, do not break scheduled posting, do not change username without verifying links; after Meta approval update brand_name and covers/bio/status; record results. No paid tools."
+  "brand_rename_rules": "Check name/brand conflicts and Meta naming rules; submit via authorized Page administrator UI; preserve existing Page ID, do not break scheduled posting, do not change username without verifying links; after Meta approval update brand_name and covers/bio/status; record results. No paid tools.",
+  "frequency_phase": "four_slots_from_2026-10-27; Oct26 only remaining 19:30; no retroactive catchup",
+  "frequency_confounding": "User requested higher frequency Oct26. Preserve original 12:30/19:30 cohort and separately analyze extra slots; do not attribute changes solely to language or name."
 }

@@ -84,7 +84,7 @@ def reserve(args):
         if old['slot']==args.slot: raise ValueError('SLOT_RESERVED: another worker already claimed this slot')
     day=dt.datetime.now(TZ).date().isoformat()
     if not args.slot.startswith(day): raise ValueError('Stale slot cannot publish')
-    if sum(x.get('reserved_at','').startswith(day) for x in entries())>=2: raise ValueError('DAILY_LIMIT: two content posts already reserved')
+    if sum(x.get('reserved_at','').startswith(day) for x in entries())>=policy.get('daily_limit',2): raise ValueError('DAILY_LIMIT: configured daily content cap reached')
     if any(x.get('status') in ('publishing','published_unverified') for x in entries()): raise ValueError('UNRESOLVED_PUBLICATION: reconcile before any new post')
     if args.purpose=='regular':
         from international import plan

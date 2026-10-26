@@ -3,7 +3,9 @@
   "daily": {
     "task_id": "6add4bc872c88191bea8e6d2cf3dc016",
     "times": [
+      "09:30",
       "12:30",
+      "16:30",
       "19:30"
     ],
     "enabled": true,

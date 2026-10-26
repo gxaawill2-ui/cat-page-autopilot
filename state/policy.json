@@ -1,7 +1,7 @@
 {
   "mode": "live",
   "page_id": "1346385028565797",
-  "daily_limit": 2,
+  "daily_limit": 4,
   "timezone": "Asia/Taipei",
   "acceptance_task_id": "6ad6ec1845d48191938f06790c91fe8a",
   "acceptance_required": [
@@ -16,5 +16,6 @@
   "unknown_outcome": "hold_and_reconcile_no_retry",
   "accepted_run_id": "c06bac0f-078c-8323-b584-9cc126995bde",
   "acceptance_record": "records/acceptance/2026-10-25.json",
-  "enabled_at": "2026-10-25T10:24:53.233786+08:00"
+  "enabled_at": "2026-10-25T10:24:53.233786+08:00",
+  "frequency_change_authorized": "2026-10-26 user request; no catch-up for elapsed new slots"
 }
