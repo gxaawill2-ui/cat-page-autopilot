@@ -58,6 +58,20 @@ def url_check(url, expected):
     if result['http_status']!=200 or not result['content_type'].startswith('image/jpeg') or len(b)>4_000_000 or digest(b)!=expected: raise ValueError('Anonymous image GET validation failed: '+json.dumps(result))
     with Image.open(io.BytesIO(b)) as im: im.verify()
     return result
+def release_check(d):
+    try:
+        return url_check(d['image_url'],d['image_sha256'])
+    except urllib.error.HTTPError:
+        raise  # real HTTP failure is never replaced by stale evidence
+    except (urllib.error.URLError, TimeoutError, OSError) as exc:
+        proof=read(ROOT/'records/pages-proofs'/f'{d["key"]}.json')
+        age=(dt.datetime.now(dt.timezone.utc)-dt.datetime.fromisoformat(proof['checked_at'])).total_seconds()
+        if not (0 <= age <= 3600 and proof.get('validator')=='github-actions-pages-probe' and proof.get('run_id') and re.fullmatch(r'[0-9a-f]{40}',proof.get('source_commit','')) and proof['url']==d['image_url'] and proof['sha256']==d['image_sha256'] and proof['http_status']==200 and proof['content_type']=='image/jpeg'):
+            raise ValueError('No fresh matching Actions Pages evidence') from exc
+        if digest((ROOT/d['asset_path']).read_bytes())!=proof['sha256']:
+            raise ValueError('Local asset differs from verified Pages bytes')
+        return proof
+
 def reserve(args):
     if args.durable: sync()
     d=read(args.draft)
@@ -76,7 +90,7 @@ def reserve(args):
         from international import plan
         expected=plan(args.slot)
         if d.get('language')!=expected['language'] or d.get('target_markets')!=expected['target_markets'] or d.get('experiment_id')!=expected['experiment_id']: raise ValueError('INTERNATIONAL_METADATA_MISMATCH')
-    proof=url_check(d['image_url'],d['image_sha256'])
+    proof=release_check(d)
     d.update(status='publishing',slot=args.slot,reserved_at=now(),purpose=args.purpose,task_id=args.task_id,image_check=proof)
     write(ROOT/'state/posts'/f'{d["key"]}.json',d)
     if args.durable: checkpoint('Reserve Facebook slot '+args.slot)
