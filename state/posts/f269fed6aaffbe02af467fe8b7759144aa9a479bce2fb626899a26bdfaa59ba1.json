@@ -1,0 +1,45 @@
+{
+  "key": "f269fed6aaffbe02af467fe8b7759144aa9a479bce2fb626899a26bdfaa59ba1",
+  "page_id": "1346385028565797",
+  "caption": "My cat practiced being scary for Halloween. 👻\nThen it saw its own reflection.\nNow we're both hiding. 🎃🐾",
+  "caption_sha256": "437819321206f7c95c62721eda4ec067dd70c51fc06be99bbbcd2a1f307b4fc0",
+  "image_sha256": "753629ef376fb0e7acabec04afc6223b3bbf0da5938194e71c3b758ba8ba0a5e",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/753629ef376fb0e7acabec04afc6223b3bbf0da5938194e71c3b758ba8ba0a5e.jpg",
+  "asset_path": "docs/assets/753629ef376fb0e7acabec04afc6223b3bbf0da5938194e71c3b758ba8ba0a5e.jpg",
+  "bytes": 174899,
+  "dimensions": [
+    768,
+    768
+  ],
+  "created_at": "2026-10-26T19:35:34.785155+08:00",
+  "topic": "Halloween ghost cat startled by its own reflection",
+  "style": "warm textured painterly storybook Halloween humor",
+  "caption_type": "short_humor",
+  "source_image": "imagegen:bb6490ec-eb8e-4e18-8d35-00c94e295cf7",
+  "sources": [
+    "https://trends.google.com/trending?geo=US",
+    "https://www.ourmidland.com/lifestyles/article/sour-patch-kids-tops-halloween-candy-searches-22484477.php"
+  ],
+  "status": "publishing",
+  "language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "experiment_id": "intl-20261026-14d",
+  "slot": "2026-10-26T19:30",
+  "reserved_at": "2026-10-26T11:39:05.031Z",
+  "purpose": "regular",
+  "task_id": null,
+  "image_check": {
+    "url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/753629ef376fb0e7acabec04afc6223b3bbf0da5938194e71c3b758ba8ba0a5e.jpg",
+    "http_status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 174899,
+    "sha256": "753629ef376fb0e7acabec04afc6223b3bbf0da5938194e71c3b758ba8ba0a5e",
+    "checked_at": "2026-10-26T11:37:59.765044+00:00",
+    "validator": "github-actions-pages-probe",
+    "run_id": "40316407324",
+    "source_commit": "001a4a22eb7f3f00732713f8a1b596d59911ef58"
+  }
+}

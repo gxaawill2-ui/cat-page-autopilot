@@ -17,15 +17,19 @@
   "asset_path": "docs/assets/753629ef376fb0e7acabec04afc6223b3bbf0da5938194e71c3b758ba8ba0a5e.jpg",
   "draft_path": "records/drafts/f269fed6aaffbe02af467fe8b7759144aa9a479bce2fb626899a26bdfaa59ba1.json",
   "topic_path": "records/topics/2026-10-26-1930.json",
-  "stage": "ASSET_AND_DRAFT_COMMITTED_PENDING_PAGES_PROOF",
+  "stage": "PUBLISHING_INTENT_DURABLY_RESERVED",
   "facebook_write_calls": 0,
   "post_id": null,
-  "slot_claimed": false,
+  "slot_claimed": true,
   "existing_today_slots": [
     "12:30"
   ],
   "unknown_states_found": false,
   "proof_required": "Anonymous Pages GET 200 image/jpeg SHA match, GitHub Actions verified evidence allowed only under RUNBOOK",
   "other_repos_changed": 0,
-  "new_tasks_created": 0
+  "new_tasks_created": 0,
+  "proof_run_id": "40316407324",
+  "proof_verified_at": "2026-10-26T11:37:59.765044+00:00",
+  "proof_source_commit": "001a4a22eb7f3f00732713f8a1b596d59911ef58",
+  "reserved_at": "2026-10-26T11:39:05.031Z"
 }
