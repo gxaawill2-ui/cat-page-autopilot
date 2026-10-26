@@ -113,3 +113,10 @@ Meta安全密碼驗證已完成，實際送出要求後遭拒。原文：「不�
 - **本輪未發布 Facebook**：現有執行環境無法完成 GitHub Pages 匿名 GET 的 200/MIME/SHA 驗證；網頁擷取對新舊 Pages 圖片均回傳不可存取，容器無外網DNS。這是驗證工具限制，不能認定Pages本身404，也不能以GitHub原始檔驗證冒充Pages驗證。依安全規則保留草稿，不建立 publishing 意圖、不呼叫 Windsor 發文。
 - Windsor讀取23筆貼文，18筆達48小時、0筆達168小時；post_total_media_view_unique 僅為 viewers，不當成 reach，國家觸及及語言追蹤歸因均 N/A。詳 records/insights/2026-10-26-1230.json。
 - 精確回條：records/runs/2026-10-26-1230-held.json。下一輪先重查全部狀態與外部貼文；僅在完整驗證公開圖片、CAS預約成功且時段仍有效後才可單次發布。10/26 19:30 為英文 US/PH 測試時段，不得為補發午間草稿而繞過slot或安全門檻。
+
+## 10/26公開圖片驗證故障修復與補發
+- 原因：午間Work環境無法做匿名HTTP驗證，原reserve亦強制同一環境再次GET；非圖片SHA錯或已證實Pages404。
+- 免費GitHub Actions獨立實跑成功：https://github.com/gxaawill2-ui/cat-page-autopilot/actions/runs/40272275625 ，job121407459181 success。HTTP200、image/jpeg、436080bytes、SHA931faa51cf67a9aee8211e295a2b1d159a51840877edb106aaa148cf9c3c5157一致；回條records/pages-proofs/18ab2e2f81b0d1c25726390650e966e6cbb35a6d92e09b4b3c03fea67853d5db.json。人工模擬URLError成功使用真實Actions回條，非偽造網路實測。
+- CAS保存午間publishing後單次Windsor補發成功，真實Post ID1346385028565797_122105388507515576，13:06左右實際發布，非12:30準點。https://www.facebook.com/122104619793515576/posts/122105388507515576 。正式FB UI回讀全文、photo122105388483515576與目視通過；Windsor快取兩次仍空，不偽造API資料。state已verified並註明UI來源，晚間不被未知鎖誤擋。
+- 同日補發符合目前程式同日slot規則；12:30已占用，19:30仍空、保留英文。未重生圖、未建新FB任務、policy仍live/每日2篇。原13項回歸通過。
+- 明日既有任務會讀新RUNBOOK自動走備援；尚未完成新備援整合後的下一次無人定時實跑，不保證服務/權限/配額永遠可用。所有驗證失敗仍停止。

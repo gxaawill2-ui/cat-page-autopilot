@@ -19,7 +19,7 @@
   "sources": [
     "https://trends.google.com/trending?geo=TW"
   ],
-  "status": "published_unverified",
+  "status": "verified",
   "language": "zh-Hant",
   "target_markets": [
     "TW"
@@ -39,5 +39,15 @@
   },
   "post_id": "1346385028565797_122105388507515576",
   "published_at": "2026-10-26T13:06:16.472849+08:00",
-  "receipt": "{\n  \"content\": [\n    {\n      \"type\": \"text\",\n      \"text\": \"Published photo post to Facebook Page 1346385028565797. Photo id: 122105388483515576. Post id: 1346385028565797_122105388507515576.\"\n    }\n  ],\n  \"structuredContent\": {\n    \"result\": \"Published photo post to Facebook Page 1346385028565797. Photo id: 122105388483515576. Post id: 1346385028565797_122105388507515576.\"\n  },\n  \"isError\": false\n}\n"
+  "receipt": "{\n  \"content\": [\n    {\n      \"type\": \"text\",\n      \"text\": \"Published photo post to Facebook Page 1346385028565797. Photo id: 122105388483515576. Post id: 1346385028565797_122105388507515576.\"\n    }\n  ],\n  \"structuredContent\": {\n    \"result\": \"Published photo post to Facebook Page 1346385028565797. Photo id: 122105388483515576. Post id: 1346385028565797_122105388507515576.\"\n  },\n  \"isError\": false\n}\n",
+  "verified_at": "2026-10-26T05:08:02.645961+00:00",
+  "post_url": "https://www.facebook.com/122104619793515576/posts/122105388507515576",
+  "readback": {
+    "source": "Facebook official post UI",
+    "caption_match": true,
+    "full_picture_present": true,
+    "image_visual_check": "passed",
+    "photo_id": "122105388483515576",
+    "connector_readback": "empty cached rows; UI independently verified, not fabricated connector result"
+  }
 }

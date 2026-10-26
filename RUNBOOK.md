@@ -33,3 +33,8 @@ prepare加 --language --target-markets --experiment-id（依plan回傳）；保�
 
 ## 免費成長追蹤補充（2026-10-25）
 每週同時讀state/growth/observations.json、queue.json。Threads/Instagram未授權前僅備稿，禁止以FB權限冒充跨平台權限。每次跨平台發布先核對帳號、權限、平台+內容hash與未知狀態，保存真實回條/網址再回讀；不得使用留言洗版或假互動。新增平台不新增重複FB排程。外部成效只有原生來源/點擊證據可歸因，UTM存在不等於可量測點擊；無證據留N/A。品牌視覺10/25已改、名稱未改，與國際實驗混雜，不稱名稱帶動成長。7/14/30天按既有規則處理。
+
+## Pages驗證備援（2026-10-26）
+新草稿CAS上傳會自動啟動 .github/workflows/pages-probe.yml，純驗證、不發FB、不含FB憑證。先用check-url；只有DNS/timeout/連線類錯誤時可讀1小時內同url/hash的Actions回條。HTTP失敗/MIME錯/SHA錯一律停止。主要工具失敗不代表Pages真的故障。
+讀GitHub Actions run及verify job成功證據，fetch最新repo的records/pages-proofs；來源須為本repo main上的官方workflow成功run，不能手寫成功JSON。run/source_commit/URL/hash/時間需對應。若新草稿未觸發或回條過期，CAS新增records/pages-requests/唯一請求.json（僅含draft key與時間）會觸發；最多等待3輪、每輪至少30秒。Actions驗證/保存失敗就保留草稿；CAS衝突重新讀最新狀態，不覆蓋。
+取得回條後重新檢查policy/posts/外部真實貼文/時段資格，再reserve並CAS存publishing才單次Windsor。不清除鎖、不補第三篇、不跨日補發、不占19:30英文名額。Actions不是新增FB排程，也不會在Work結束後自行發布。若connector新貼文快取未更新，可由正式Facebook貼文UI核對真實ID、全文、圖片並目視，以明確source保存UI驗證，不冒充API full_picture回讀。未知狀態不可重發。

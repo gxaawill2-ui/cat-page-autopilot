@@ -128,7 +128,7 @@ def main():
     a=p.parse_args()
     if a.cmd=='prepare': result=prepare(a)
     elif a.cmd=='check-url':
-        d=read(a.draft); result=url_check(d['image_url'],d['image_sha256']); write(ROOT/'records/url-checks'/f'{d["key"]}.json',result)
+        d=read(a.draft); result=release_check(d); write(ROOT/'records/url-checks'/f'{d["key"]}.json',result)
     elif a.cmd=='checkpoint': checkpoint(a.message); result={'checkpoint':'pushed','at':now()}
     else: result=globals()[a.cmd](a)
     print(json.dumps(result,ensure_ascii=False,indent=2))
