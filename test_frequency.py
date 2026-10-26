@@ -10,7 +10,7 @@ class Frequency(unittest.TestCase):
   with tempfile.TemporaryDirectory() as t,patch.object(f,'ROOT',Path(t)),patch.object(f,'url_check',return_value={'http_status':200}):
    f.write(f.ROOT/'state/policy.json',{'mode':'live','daily_limit':4,'acceptance_task_id':'test'})
    for n in range(5):
-    d={'key':str(n),'page_id':f.PAGE,'caption_sha256':str(n),'image_sha256':str(n),'image_url':'unused'}
+    d={'key':str(n),'page_id':f.PAGE,'caption':'fixture '+str(n),'caption_sha256':str(n),'image_sha256':str(n),'image_url':'unused'}
     p=f.ROOT/'draft.json';f.write(p,d)
     a=argparse.Namespace(draft=p,slot=f.now()[:10]+'T'+str(n),purpose='acceptance',task_id='test',durable=False)
     if n==4:
