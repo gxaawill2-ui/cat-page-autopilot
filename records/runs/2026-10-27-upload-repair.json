@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-27T13:39:07.055414+08:00",
+  "observed_at": "2026-10-27T13:43:23.810748+08:00",
   "image_recovery": "source_image_file_ref materialized; same prepare JPEG algorithm; exact SHA/bytes match",
   "image_sha256": "8bbd66eccbb16d879b435afa21e691e210dc0d850ca0310538ff8ad0a61e1b23",
   "bytes": 399114,
@@ -20,5 +20,34 @@
     "result_text": "",
     "reason": "platform did not provide tool/error/cause"
   },
-  "publication": "not attempted; 12:30 expired, next configured16:30"
+  "publication": "not attempted; 12:30 expired, next configured16:30",
+  "binary_upload": {
+    "commit": "bd5f8aba8e7b29faa3354c274a85a39780e286b2",
+    "remote_git_blob_sha": "13994a8a63181b263905561ffc8b4886c0fd48d8",
+    "remote_bytes": 399114,
+    "remote_sha256": "8bbd66eccbb16d879b435afa21e691e210dc0d850ca0310538ff8ad0a61e1b23",
+    "encoding": "base64",
+    "bridge": "23 bounded stdout chunks reassembled inside code mode; no content printed"
+  },
+  "pages": {
+    "url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/8bbd66eccbb16d879b435afa21e691e210dc0d850ca0310538ff8ad0a61e1b23.jpg",
+    "http_status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 399114,
+    "sha256": "8bbd66eccbb16d879b435afa21e691e210dc0d850ca0310538ff8ad0a61e1b23",
+    "checked_at": "2026-10-27T13:41:35.364835+08:00"
+  },
+  "tests": {
+    "python": "30 passed",
+    "binary_bridge": "real recovered JPEG chunk roundtrip passed; mock GitHub SHA mismatch prevents tree/commit",
+    "dispatch_js": "concurrent CAS/unknown/replay passed; no real FB calls"
+  },
+  "permissions": {
+    "github": "Allow all actions, app override",
+    "windsor": "Use default; global Allow low-risk actions",
+    "changed": false,
+    "conclusion": "No direct proof these permissions caused runtime user_action. Platform provides no offending tool or raw approval error."
+  },
+  "facebook_publication_acceptance": "not performed: current time before next16:30 and12:30 expired; no extra/catch-up publication",
+  "facebook_fetch_acceptance": "not yet proven by Meta; anonymous HTTPS proof passed"
 }

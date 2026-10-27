@@ -26,10 +26,13 @@
     "TW"
   ],
   "experiment_id": "intl-20261026-14d",
-  "asset_upload_state": "cas_upload_pending",
-  "pages_proof_status": "not_started",
+  "asset_upload_state": "committed_and_anonymous_url_verified",
+  "pages_proof_status": "passed",
   "facebook_write_calls": 0,
   "not_published": true,
   "visual_qa": "passed",
-  "original_recovered_without_regeneration": true
+  "original_recovered_without_regeneration": true,
+  "asset_commit": "bd5f8aba8e7b29faa3354c274a85a39780e286b2",
+  "pages_check_record": "records/url-checks/ac245d27aff62a26cc66e789f3b6ae301317b65ec96054d4abf8aa9141c62b56.json",
+  "publication_eligibility": "expired_1230_do_not_backfill"
 }

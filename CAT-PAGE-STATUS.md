@@ -1,3 +1,10 @@
+## 2026-10-27 13:xx 圖片修復實測（最高優先）
+- 12:30原圖已由source_image_file_ref找回，JPEG SHA8bbd66ec...e1b23/399114 bytes完全相同，沒有重新生成。GitHub CAS commit bd5f8aba已保存JPEG，遠端Git讀回SHA一致；Pages匿名200/image/jpeg/SHA於13:41:35通過。證據records/url-checks/ac245d...json及records/runs/2026-10-27-upload-repair.json。
+- 新connector_bundle.js＋bundle.py manifest/chunk補上可重用binary bridge；connector_commit.js比Git blob SHA防截斷。30 Python項、JS真JPEG分段重建/錯SHA停止、CAS並行未知重跑測試通過。
+- 12:30錯誤紀錄沒有GitHub API拒絕，僅宣告無verified binary bridge；目前實測工具可提交399114-byte JPEG，不是已證實的網路/檔案大小/權限問題。
+- 真daily原先再次disabled，run de17439b完成、requires_user_action=true、結果空。平台未提供是哪個工具/授權/額度/時間限制；不可斷言根因。GitHub app允許所有動作；Windsor跟隨低風險預設，未改權限，背景可否通過仍需排程實跑。
+- 12:30草稿保留但不補過期slot；下一正常16:30繁中。尚未有新正常排程Post ID，Facebook取圖及發文回讀仍未驗收。舊f269精確隔離保留、品牌修改暫停。
+
 ## 2026-10-27 圖片上傳修復進行中（最新）
 12:30原始image file_ref已找回；沿原Pillow流程重建JPEG，SHA8bbd66ec...e1b23、399114 bytes完全一致，沒有重新生圖。正在使用GitHub base64 Blob＋原CAS適配器提交。原每日任務真實disabled、12:30 requires_user_action=true且結果空；平台未提供具體原因，不將它直接歸因於GitHub。12:30不得補發，下一個設定16:30；真實發文仍未驗收。舊f269精確隔離保留。
 

@@ -9,6 +9,7 @@ async function connectorCommit(tools, bundle) {
     if(f.path.startsWith('/')||f.path.split('/').includes('..')||/(^|\/)(\.env|private)(\/|$)/.test(f.path))throw Error('Unsafe path');
     const b=ok(await tools.mcp__codex_apps__github_create_blob({repository_full_name,content:f.content,encoding:f.encoding||'utf-8'}));
     if(!b.sha)throw Error('Blob receipt missing');
+    if(f.expected_blob_sha && b.sha!==f.expected_blob_sha)throw Error('Binary blob SHA mismatch; do not create tree or publish');
     tree_elements.push({path:f.path,mode:'100644',type:'blob',sha:b.sha});
   }
   const tree=ok(await tools.mcp__codex_apps__github_create_tree({repository_full_name,base_tree_sha:bundle.baseTree,tree_elements}));

@@ -60,3 +60,12 @@ protocol2工具整合：bundle.py對JSON使用utf-8，供publish_once.js核對CA
 10/26 英文事故 f269fed6aaffbe02af467fe8b7759144aa9a479bce2fb626899a26bdfaa59ba1 仍為 publishing/unknown，不能結案、不能重送、不能補發過期時段。使用者要求更換方法，不可再因此把所有未來全新內容永久封鎖。僅當 state/legacy_quarantine.json 明確 enabled、精確 key/slot/caption SHA/image SHA/證據檔全部吻合、舊文 reconciliation.classification=unknown 且 closure_allowed=false/resend_allowed=false、舊記錄是未採 protocol2 的 publishing、且舊 slot 嚴格早於新 slot 日期，catflow.reserve 才將該筆舊未知排除於「全域阻擋」判斷。原始檔保持 publishing，所有文字/圖片hash查重、相同slot查重、每日上限、當日及其他未知的全域阻擋維持原樣。
 新的每個正常時段使用完全不同的原創圖與文字；每輪先查 Facebook/Meta/Windsor 最新真實貼文與最近一次slot，驗證沒有新重複、Windsor權限、Pages公開驗證，依 protocol2 reserved CAS→armed publishing CAS→同一Work工具執行單次 create_photo_post→真實回條→FB UI/API回讀。若外部查詢失敗、Meta出現不明/延遲的舊文、CAS衝突或其他未解新鎖，停止並記錄，不能自動重試。歷史f269保持隔離並等待後端審計；不能改為verified/not_published，不能「全域清鎖」。舊文即使晚到也不會被重送，但仍有平台不可見延遲的殘餘風險，不能宣稱絕對零風險。
 此改動只適用10/27以後新時段，不追補已過期slot；同一每日task、不新增重複排程，4篇上限且不為了湊量降品質。品牌更名維持暫停。首次新的 unattended 完整發文+回讀仍須真實驗收，程式規則更新不可當驗收成功。
+
+## 2026-10-27 二進位傳輸修復（最新）
+1. 每篇圖片生成後立即保存source_image_file_ref、文案、來源與草稿key；prepare後立即CAS保存JPEG+草稿，先於後續Insights與長篇分析。素材未上傳前不得標公開URL已通過。
+2. 優先復原：已有JPEG先比SHA；僅有source_image_file_ref時用Library正常prepare_materialize取原圖，再用同一prepare的JPEG參數重建並比原SHA。不要無條件重生圖。原12:30圖已重建且精確SHA一致。
+3. 大型binary bundle不能直接印出整個stdout，避免工具輸出截斷。使用新增connector_bundle.js的loadConnectorBundle(tools,workdir,message,paths)：內部呼叫bundle.py --manifest，對每個binary以--chunk分段24000字元取回base64，Promise.allSettled逐段確認；組裝結果只在functions.exec記憶體中，不text()/notify()全內容。text metadata only。
+4. 同一functions.exec讀原connector_commit.js與connector_bundle.js組成函式；await loadConnectorBundle後await connectorCommit。adapter會比較GitHub回傳blob SHA與原始bytes計算的Git blob SHA，通過才建tree/commit並expected_sha CAS。不用git push、不把JPEG當UTF8、不把截斷base64貼回對話修補。CAS敗重讀最新repo重判斷，不重送Facebook。
+5. 成功CAS後以原catflow check-url驗Pages匿名200/image/jpeg/SHA；無網路才用既有Actions可信證據。上傳成功不等於公開驗證，更不等於Meta已取圖。
+6. 真工具失敗先保存tool_name、公開安全的實際error、stage、run_id、requires_user_action（若平台只回flag但無原因則寫平台未提供），再回報；不得杜撰是權限/配額/超時。真授權提示不可繞過。GitHub目前Allow all actions，Windsor繼承低風險預設；未更改權限，不能僅憑預設判定它造成停用。
+7. 下一個正常slot重新研究/去重/驗原創及圖URL→原protocol2 CAS→單次Windsor→即存回條→回讀文字圖/目視；12:30已過不補。全新內容不受精確歷史f269隔離阻擋，所有其他未知照舊阻擋。
