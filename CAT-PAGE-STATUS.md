@@ -1,6 +1,17 @@
 # 貓咪投資筆記 V3.1｜唯一續作狀態
 
-更新：2026-10-25 台灣時間；以下為目前狀態，上版歷史請見 Git commit history。
+## 最新執行摘要（2026-10-27，優先於全部歷史段落）
+- 品牌修改全部暫停；名稱仍貓咪投資筆記，頭貼/封面/簡介保留。
+- 原daily真實enabled，四時段Asia/Taipei09:30/12:30/16:30/19:30、每天最多4篇；週日20:00原任務保留。
+- 10/27 09:30真實run391e157e已完成，requires_user_action=false，有清楚阻擋結果；沒有發布。state/schedules已更新，舊事故requires_user_action=true不再冒充當前狀態。
+- 舊f269 publishing尚未安全結案：Windsor6列、Meta已發布/已排程/含故障日草稿均未見英文，但完整工具呼叫審計仍無法取得。保留鎖與全部hash，沒有補發/偽造回條。
+- 本輪不重做25項既有測試、不生圖、不新增任務、不額外發文。protocol2 dispatch_guard/publish_once保持不變；修復後真實排程發文仍「未驗收」。
+- 下一個設定slot10/27 12:30繁中；平台next_run_time=null，不保證準點；舊鎖未結案時仍不具備正式發布資格。可研究/草稿/分析。
+- 精確續作：取得records/reconciliation/provider-audit-request.txt所列Windsor後端操作紀錄或ChatGPT舊run工具trace，依新證據CAS結案/補真實ID；沒有新證據不反覆查同樣資料。查詢稿已備妥、未代送客服。
+- 10/29 19:30首次三天檢討與週日完整分析保留；未發布內容排除成效樣本，標記故障缺漏。
+
+
+更新：2026-10-27 台灣時間。最上方摘要為最新狀態；下方各日期段落為歷史，不可覆蓋最新摘要。
 
 ## 目前結論
 - Page ID：1346385028565797；Windsor connector：facebook_organic。粉專為「貓咪投資筆記」，連線舊名稱不影響已核實Page ID。

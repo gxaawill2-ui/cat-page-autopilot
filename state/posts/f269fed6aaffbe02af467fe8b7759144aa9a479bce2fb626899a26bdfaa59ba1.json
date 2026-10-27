@@ -41,5 +41,13 @@
     "validator": "github-actions-pages-probe",
     "run_id": "40316407324",
     "source_commit": "001a4a22eb7f3f00732713f8a1b596d59911ef58"
+  },
+  "reconciliation": {
+    "classification": "unknown",
+    "checked_at": "2026-10-27T09:46:28.511749+08:00",
+    "evidence_record": "records/reconciliation/2026-10-27-legacy.json",
+    "closure_allowed": false,
+    "resend_allowed": false,
+    "awaiting": "provider tool-call audit or authoritative terminal no-post evidence"
   }
 }

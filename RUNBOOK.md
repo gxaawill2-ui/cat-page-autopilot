@@ -52,3 +52,6 @@ regular reserve只建立reserved(protocol2)，先CAS保存。欲發送時dispatc
 三天檢討使用review_due.py判斷到期；即使發文被鎖仍執行研究/檢討。CAS建立records/reviews/cycle-日期.json（running）後才分析；完成保存結果與下一策略，重跑讀running續作、不建立第二份或再套策略。從10/29 19:30起每3天，錯過則下輪補檢討；資料不足不造數據。週日仍保留。
 
 protocol2工具整合：bundle.py對JSON使用utf-8，供publish_once.js核對CAS內容；二進位圖片仍base64。先使用最新同一parent/tree重新檢查policy、所有posts、真實Facebook清單與slot，再prepare arm bundle。publishOnce必須在同一次functions.exec await CAS及單次Windsor，不得把已成功CAS bundle拿到另一輪重播。CAS後中斷的armed狀態仍需人工/外部證據核對，不能自動推定未發送。
+
+## 2026-10-27 最新續作限制
+所有更名/名稱研究/頭貼封面簡介修改暫停，直到使用者另行授權。舊f269 publishing結果仍unknown，核對證據見records/reconciliation/2026-10-27-legacy.json；所需後端審計與已備妥未送的查詢內容見provider-audit-request.txt。沒有新證據不無限重做舊查詢；不得清鎖/標verified/繞過全域安全門。任務可繼續研究、草稿與三天/週日分析；只有成功發布的Post ID納入成效樣本，故障缺樣明確標記。Meta UI日期可能為太平洋時間，核對日期須涵蓋原始UTC事件，不把預設截至昨天的空列表當完整否定證明。

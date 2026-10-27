@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-27T09:44:17.819189+08:00",
+  "observed_at": "2026-10-27T09:46:28.511749+08:00",
   "scope": "legacy lock reconciliation; branding paused by user",
   "legacy_key": "f269fed6aaffbe02af467fe8b7759144aa9a479bce2fb626899a26bdfaa59ba1",
   "classification": "unknown",
@@ -21,7 +21,8 @@
       "page_id": "1346385028565797",
       "published_past_90_days": "latest Oct26 13:06 local, ID122105388507515576; older rows Oct25 and Oct23; no Halloween English caption or image observed",
       "scheduled": "no scheduled posts; selected tab confirmed",
-      "drafts": "inspection pending"
+      "drafts": "No activity in month Oct1-Oct26 Pacific Time; includes Oct26 11:30UTC failure window",
+      "date_caution": "Initial draft preset ended Oct25 Pacific and excluded failure window; changed to This Month through Oct26 before concluding"
     }
   },
   "new_publication_acceptance": "not performed; blocked by unknown legacy outcome",
