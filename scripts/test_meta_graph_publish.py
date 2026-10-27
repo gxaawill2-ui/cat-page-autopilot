@@ -85,6 +85,13 @@ class OfficialMetaSafetyTests(unittest.TestCase):
         response["attachments"]["data"][0]["target"]["id"]="photo"
         self.assertTrue(p.readback_matches(response,"post","photo",self.q["caption"]))
 
+    def test_external_posts_plus_local_unknown_count_together(self):
+        p.write(p.ROOT/"state/posts/unknown.json",{"slot":self.day+"T09:30","status":"publishing"})
+        remote={"data":[{"id":str(i),"message":"different", "created_time":self.day+"T04:00:00Z"} for i in range(3)]}
+        with patch.object(p,"graph",side_effect=[{"id":p.PAGE_ID},remote]):
+            with self.assertRaisesRegex(ValueError,"REMOTE_DAILY_LIMIT"):
+                p.remote_dedup(self.q,"fake")
+
     def test_cas_failure_prevents_post(self):
         with patch.dict("os.environ", {"META_PUBLISH_ENABLED":"true", "META_PAGE_ACCESS_TOKEN":"fake"}):
             with patch.object(p,"remote_dedup"),patch.object(p,"verify_image"),patch.object(p,"persist",side_effect=RuntimeError("CAS rejected")),patch.object(p,"graph") as graph:

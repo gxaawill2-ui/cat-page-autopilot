@@ -138,7 +138,19 @@ def remote_dedup(q, token):
     day = q["slot"].split("T")[0]
     today = [p for p in posts["data"] if dt.datetime.fromisoformat(
         p["created_time"].replace("Z", "+00:00")).astimezone(TZ).date().isoformat() == day]
-    if len(today) >= min(4, read(ROOT / "state/policy.json")["daily_limit"]):
+    observed_ids = {p["id"] for p in today}
+    potential = set()
+    for folder in ("state/posts", "state/meta_dispatch"):
+        for path in (ROOT / folder).glob("*.json"):
+            old = read(path)
+            if not old.get("slot"):
+                continue
+            stamp = dt.datetime.fromisoformat(old["slot"])
+            stamp = (stamp.replace(tzinfo=TZ) if stamp.tzinfo is None else stamp.astimezone(TZ))
+            post_id = old.get("meta_post_id") or old.get("post_id")
+            if stamp.date().isoformat() == day and post_id not in observed_ids:
+                potential.add(old["slot"])
+    if len(observed_ids) + len(potential) >= min(4, read(ROOT / "state/policy.json")["daily_limit"]):
         raise ValueError("REMOTE_DAILY_LIMIT reached")
 
 def readback_matches(p, post_id, photo_id, caption):

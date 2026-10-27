@@ -9,8 +9,8 @@
       "19:30"
     ],
     "enabled": false,
-    "release_gate": "live; exact historical f269 quarantine allowed for NEW unique future content; all protocol2 CAS, image proof and dedup gates still mandatory",
-    "observed_at": "2026-10-27T16:56:11.894335+08:00",
+    "release_gate": "Meta developer authorization + secret + explicit enable + live safety checks required",
+    "observed_at": "2026-10-27T18:04:10+08:00",
     "last_runtime_run": "c2aef589-fbd4-8323-bee5-57094bd8e395",
     "runtime_requires_user_action": true,
     "disabled_reason": "unknown; platform does not expose offending tool/action review/cause",
@@ -22,7 +22,10 @@
     "quarantine_rollout": "2026-10-27 new future slots only; unattended post success not yet proven",
     "binary_bridge": "connector_bundle.js loadConnectorBundle → connector_commit.js expected blob SHA + CAS",
     "latest_repair_commit": "4a77f1a59c9bbffdaf747108e0bc67dee97c42e0",
-    "unattended_acceptance": "failed_to_complete; no blind resume"
+    "unattended_acceptance": "not_tested_for_Meta_Graph",
+    "role": "prepare_future_queue_only",
+    "publication_tool": "disabled in Work; existing GitHub Actions meta-graph-publish.yml is sole publisher",
+    "lead_time_minutes": 30
   },
   "weekly": {
     "task_id": "6add4bde3d6881919ff5037351dd44d4",
@@ -39,5 +42,19 @@
     "run_id": "c06bac0f-078c-8323-b584-9cc126995bde",
     "completed_at": "2026-10-25T02:25:44.653112Z",
     "passed": true
+  },
+  "meta_actions": {
+    "workflow": ".github/workflows/meta-graph-publish.yml",
+    "timezone": "Asia/Taipei",
+    "times": [
+      "09:30",
+      "12:30",
+      "16:30",
+      "19:30"
+    ],
+    "authorization_status": "blocked_developer_registration_terms",
+    "secret_present": false,
+    "publish_enabled": false,
+    "no_duplicate_workflow_created": true
   }
 }

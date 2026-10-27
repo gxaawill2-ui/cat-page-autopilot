@@ -1,3 +1,10 @@
+## 官方 Meta API 切換（2026-10-27，優先於全部 Windsor 發文段落）
+- 原 ChatGPT daily 僅提前準備未來 slot 的 queue，完全禁止 Windsor/Meta/UI 發布。原ID及時段保留，目前 disabled 等待授權；不要將舊歷史提示當發布授權。
+- 讀 docs/meta-official-alternative.md。正式發布唯一 executor 為既有 .github/workflows/meta-graph-publish.yml。公開 repo無 token；只准 META_PAGE_ACCESS_TOKEN Actions Secret。正式開關未設置視為關閉。
+- Work 每輪至少提前30分鐘準備下一個未到、未占用的 slot；草稿/原圖/JPEG先持久保存，再驗公開URL，成功才寫queue/meta/YYYY-MM-DD/HHMM.json。不要與當輪Actions同時生圖，也不補發過期內容。
+- 兩筆歷史 unknown 永久保留不復用。官方新 executor 對圖文/slot精確去重、每日上限含未知嘗試、token Page身分核對、CAS armed後單次POST；未知不重送。API verified需文字與attachment photo ID/full_picture一致，目視未完成仍明標。
+- 目前Meta管理員未完成developer註冊（條款頁）；未取得App/Token/發布權限，不能啟用或宣稱恢復。原 weekly enabled、三天設定保留，但 daily disabled 期間不能保證三天檢討自動觸發。
+
 # 執行程序（由 ChatGPT Work 工具執行；不是外部免費生圖 API）
 
 唯一 repository：gxaawill2-ui/cat-page-autopilot。先讀 CAT-PAGE-STATUS.md、state/policy.json 及本檔。GitHub 是 canonical；Library 的 CAT-PAGE-STATUS.md 為對應入口快照。
