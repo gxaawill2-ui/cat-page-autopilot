@@ -25,8 +25,45 @@
     "who or what disabled task",
     "timeout/quota vs approval/interruption"
   ],
-  "decision": "No resend, no closure, no legacy quarantine exception for armed protocol2; keep disabled until concrete remediation",
+  "decision": "Keep daily disabled; weekly unchanged; no blind re-enable, no real Facebook writes or alternative scheduling",
   "new_facebook_calls_this_audit": 0,
   "old_f269": "unchanged exact legacy quarantine",
-  "next_step": "Inspect normal product approval request if available; otherwise provider/backend tool trace needed. Never infer no dispatch from absent post."
+  "next_step": "Inspect normal product approval request if available; otherwise provider/backend tool trace needed. Never infer no dispatch from absent post.",
+  "official_documentation": {
+    "scheduled_tasks": "https://learn.chatgpt.com/docs/automations",
+    "finding": "Work scheduled tasks can use plugins; approvals and workspace restrictions still apply; no blanket prohibition on all plugin writes established"
+  },
+  "provider_ui": {
+    "windsor": "1 connected facebook_organic account; Full access ends Nov19 2026, 23 days left; no action audit history exposed in inspected connector screen",
+    "trial_expired": false
+  },
+  "provider_catalog": {
+    "source": "Plugin Management search_plugins live metadata",
+    "windsor_description": "Making a change ... always asks for your confirmation first",
+    "interpretation": "Published provider behavior is a confirmation dependency; not a raw trace proving this run was blocked by it; app Allow all is not proven to override provider policy"
+  },
+  "alternatives": {
+    "B": {
+      "connected_replacement_found": false,
+      "Metricool": "not installed/authorized; Free MCP20 posts/month, APIAdvanced/Custom; not suitable for120/month NT$0 target",
+      "source": "https://help.metricool.com/mcp-limits-and-plan-requirements-h72jg"
+    },
+    "C": {
+      "Meta_Business_Suite": "Signed-in published and scheduled lists accessible; no scheduled posts; create/schedule entry clicks did not produce actionable composer during this bounded check",
+      "actual_scheduled_post_id": null,
+      "acceptance": "not deployed or validated; if manually arranged then semi-automatic only"
+    }
+  },
+  "user_visible_trace": {
+    "attempt": "opened exact conversation returned by automation chat_ref in cloud browser",
+    "result": "not signed in; original request not accessible through available task API or this browser",
+    "next_operation": "In user signed-in ChatGPT: Scheduled → existing cat task → Oct27 16:30 run → inspect request details. Do not approve old expired publish. If it explicitly shows an unexecuted Windsor create_photo_post awaiting approval, reject/cancel it and retain the denial receipt. Do not infer unexecuted solely from requires_user_action flag. Otherwise request OpenAI/Windsor trace for run/account/window."
+  },
+  "minimal_fix": {
+    "file": "publish_once.js",
+    "change": "check Windsor function exists BEFORE CAS; otherwise no dispatch attempted",
+    "test": "test_dispatch_tool_preflight.js PASS; zero CAS/external calls",
+    "limitation": "not a workaround for approval policy; does not prove cause of16:30"
+  },
+  "next_slot": "2026-10-27T19:30:00+08:00; task disabled and protocol2 hold; not eligible"
 }

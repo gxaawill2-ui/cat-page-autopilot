@@ -1,6 +1,7 @@
 // Run only in Work code mode. bundle CAS parent/tree must be current. No credentials.
 // caller supplies the reserved state file bundle and an armed state produced by dispatch_guard.arm.
 async function publishOnce(tools, bundle, armed, connectorCommit) {
+ if(typeof tools.mcp__codex_apps__windsor_ai_execute_action!=='function')throw Error('WINDSOR_TOOL_UNAVAILABLE_BEFORE_CAS: no dispatch attempted');
  if(armed.status!=='publishing'||armed.dispatch_protocol!==2||!armed.dispatch_nonce||!armed.dispatch_owner||!armed.dispatch_started_at)throw Error('Missing armed dispatch fence');
  const file=bundle.files.find(x=>x.path==='state/posts/'+armed.key+'.json');
  if(!file||file.encoding==='base64'||JSON.stringify(JSON.parse(file.content))!==JSON.stringify(armed))throw Error('CAS bundle does not match armed intent');

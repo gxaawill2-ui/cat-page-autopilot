@@ -69,3 +69,10 @@ protocol2工具整合：bundle.py對JSON使用utf-8，供publish_once.js核對CA
 5. 成功CAS後以原catflow check-url驗Pages匿名200/image/jpeg/SHA；無網路才用既有Actions可信證據。上傳成功不等於公開驗證，更不等於Meta已取圖。
 6. 真工具失敗先保存tool_name、公開安全的實際error、stage、run_id、requires_user_action（若平台只回flag但無原因則寫平台未提供），再回報；不得杜撰是權限/配額/超時。真授權提示不可繞過。GitHub目前Allow all actions，Windsor繼承低風險預設；未更改權限，不能僅憑預設判定它造成停用。
 7. 下一個正常slot重新研究/去重/驗原創及圖URL→原protocol2 CAS→單次Windsor→即存回條→回讀文字圖/目視；12:30已過不補。全新內容不受精確歷史f269隔離阻擋，所有其他未知照舊阻擋。
+
+## 2026-10-27 16:30 發布授權故障（最新）
+8b6bf1...屬protocol2已armed未知，與f269舊例外分開；不得套legacy_quarantine、不得重送、不得依查不到文就結案。原daily目前真實disabled，先保留，不再盲目重啟。新函式僅新增Windsor工具是否存在的CAS前檢查；工具存在不代表已獲背景發布批准。
+原始requires_user_action原因/Request ID由工具未提供。GitHub在本輪無人模式已成功寫入，不能歸咎GitHub；Windsor連線/Action/schema/試用有效，但外掛目錄明載寫入需確認，仍要核對當次原始提示。不能把更改權限/拆分任務/換瀏覽器作繞過確認手段。
+需要使用者在原已登入ChatGPT的Scheduled→原任務→10/27 16:30紀錄查看待處理工具名稱/提示。不要批准過期貼文。只有畫面明確證明Windsor呼叫尚待執行時，拒絕/取消該待批准動作並保存真實否決回條，才可作結案證據；若無該提示，請OpenAI/Windsor提供原始工具trace/後端action audit。拒絕pending並非刪鎖；仍須依真實回條CAS結案，保留hash/slot，禁止歷史重送。
+未確認需要重新OAuth時不盲目重連。Windsor目前Use default/低風險，若要改成Allow all actions，需使用者明確指定該模式；它會擴及該外掛全部動作，不能保證覆蓋provider/platform必需確認。只在實際權限問題處理且未知紀錄安全處置後，恢復原四時段。
+Metricool未連接且Free20篇/月不承接4篇/日；Meta官方排程僅見入口，未成功建立或驗收。沒有免費替代已部署，不能宣稱半自動也已成功。每週日分析仍保留enabled；每日停用期間三天檢討設定保留但依賴daily的執行會受阻，10/29前仍需恢復或由使用者明確發起檢討，不偷偷建立重複任務。

@@ -1,3 +1,12 @@
+## 2026-10-27 發布故障本輪最終結果（優先於所有成功/啟用報告）
+- 16:30是否呼叫Windsor仍unknown：armed CAS445c332成功、runtime空結果/needs user action/停用，無原始工具trace、Request ID、Post ID；FB/Windsor均未見新文但不當作未呼叫證明。兩筆事故保留，不重送/不清鎖/不新增protocol2隔離例外。
+- GitHub本次無人Blob/Tree/Commit/CAS已成功，Windsor工具名/參數符合即時schema、連線存在、Trial full access到11/19，非已證實試用過期。GitHub Allow all；Windsor Use default/low-risk，provider目錄寫明寫入需要確認；這是實際授權限制線索，不是本run原始錯誤。
+- 官方文件允許Work排程使用plugins，仍受應用程式/平台審核；不能宣稱全部FB寫入一律禁止。平台未提供此次停止原因。原daily保持disabled，不繼續啟用→新未知循環。週日enabled保留，三天檢討設定保留但daily停用時不保證觸發。
+- publish_once.js僅新增CAS前工具存在檢查，test_dispatch_tool_preflight.js通過，沒有重做圖片或舊安全測試。它不能繞過授權，也不等於修復無人發文。
+- 替代：未找到其他已授權連線；Metricool未連接且免費20篇/月不符4篇/日；Meta排程入口存在但本輪無可提交編輯器/真排程回條，沒有部署成功替代。
+- 必要下一步：使用者在已登入ChatGPT的Scheduled→原任務→16:30執行紀錄查看具體待處理要求，勿批准過期貼文；若明確為尚未執行Windsor action，拒絕/取消並留真回條，否則需OpenAI/Windsor原始trace。此瀏覽器未登入ChatGPT，工具只提供summary無請求細節。詳records/reconciliation/2026-10-27-1630-dispatch.json。
+- 本輪新FB呼叫0、無新Post ID，無人排程發文/連續兩輪驗收皆未完成。19:30為設定時段，但目前任務停用且新armed未知阻擋，不承諾會發。
+
 ## 2026-10-27 16:30 armed事故核對（優先於歷史enabled報告）
 - 原daily真實disabled，c2aef589 completed/空結果/requires_user_action=true。16:37:52 armed/publishing已CAS到445c332，但無Windsor回條/Request ID/Post ID。Windsor及Meta已發布清單未見當篇，不足以證明沒有呼叫。
 - 新8b6bf...為protocol2未知：保留armed與所有hash/slot，不重送、不套舊f269例外、不強制結案。舊f269精確隔離保持不變。
