@@ -9,7 +9,7 @@
       "19:30"
     ],
     "enabled": true,
-    "release_gate": "live AND all unresolved publications reconciled; legacy f269 remains blocked",
+    "release_gate": "live AND no unquarantined unresolved publication; exact Oct26 legacy f269 preserved as scoped unknown quarantine with full dedup and protocol2",
     "observed_at": "2026-10-27T09:46:28.511749+08:00",
     "last_runtime_run": "391e157e-9228-8326-b28a-33709b70ea47",
     "runtime_requires_user_action": false,
@@ -17,7 +17,9 @@
     "runtime_status": "completed",
     "last_result": "09:30 blocked by legacy lock; research/draft completed, no Facebook publication",
     "next_configured_slot": "2026-10-27T12:30:00+08:00",
-    "next_run_time_from_platform": null
+    "next_run_time_from_platform": null,
+    "legacy_quarantine_path": "state/legacy_quarantine.json",
+    "quarantine_rollout": "2026-10-27 new future slots only; unattended post success not yet proven"
   },
   "weekly": {
     "task_id": "6add4bde3d6881919ff5037351dd44d4",
