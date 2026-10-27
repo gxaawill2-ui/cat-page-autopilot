@@ -72,6 +72,39 @@ def release_check(d):
             raise ValueError('Local asset differs from verified Pages bytes')
         return proof
 
+def quarantined_historical_pending(old, new_slot):
+    """Only one explicitly allowlisted historical UNKNOWN may cease blocking OTHER content.
+    This never resolves, deletes, retries, or changes the historical record.
+    Current-day, protocol2, non-allowlisted and mismatching records still block.
+    """
+    if old.get('status')!='publishing' or old.get('dispatch_protocol') not in (None,1):
+        return False
+    r=old.get('reconciliation') or {}
+    if r.get('classification')!='unknown' or r.get('closure_allowed') is not False or r.get('resend_allowed') is not False:
+        return False
+    try:
+        q=read(ROOT/'state/legacy_quarantine.json')
+    except (FileNotFoundError, ValueError, OSError):
+        return False
+    if not(q.get('enabled') is True and q.get('mode')=='scoped_legacy_quarantine'):
+        return False
+    for item in q.get('quarantined',[]):
+        identity=('key','slot','caption_sha256','image_sha256')
+        if not all(item.get(k) and item[k]==old.get(k) for k in identity):
+            continue
+        if item.get('status')!='unknown_not_closed' or item.get('resend_allowed') is not False:
+            continue
+        if item.get('evidence_record')!=r.get('evidence_record'):
+            continue
+        try:
+            old_day=dt.datetime.fromisoformat(old['slot']).date()
+            new_day=dt.datetime.fromisoformat(new_slot).date()
+        except (ValueError, TypeError):
+            return False
+        if old_day < new_day:
+            return True
+    return False
+
 def reserve(args):
     if args.durable: sync()
     d=read(args.draft)
@@ -85,7 +118,7 @@ def reserve(args):
     day=dt.datetime.now(TZ).date().isoformat()
     if dt.datetime.fromisoformat(args.slot).date().isoformat()!=day: raise ValueError('Stale slot cannot publish')
     if sum(dt.datetime.fromisoformat(x['reserved_at']).astimezone(TZ).date().isoformat()==day for x in entries() if x.get('reserved_at'))>=policy.get('daily_limit',2): raise ValueError('DAILY_LIMIT: configured daily content cap reached')
-    if any(x.get('status') in ('reserved','publishing','published_unverified') for x in entries()): raise ValueError('UNRESOLVED_PUBLICATION: reconcile before any new post')
+    if any(x.get('status') in ('reserved','publishing','published_unverified') and not quarantined_historical_pending(x,args.slot) for x in entries()): raise ValueError('UNRESOLVED_PUBLICATION: reconcile unknown non-quarantined post before release')
     if args.purpose=='regular':
         from international import plan
         expected=plan(args.slot)
