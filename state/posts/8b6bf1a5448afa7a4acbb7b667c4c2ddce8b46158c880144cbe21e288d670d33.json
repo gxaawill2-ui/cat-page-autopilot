@@ -41,5 +41,13 @@
   },
   "dispatch_owner": "daily-20261027-1630-53475c3dd3ac42c9a8be027c6b32bbc6",
   "dispatch_nonce": "e39187acb3ad4f84ad7b111e77dc5f46",
-  "dispatch_started_at": "2026-10-27T16:37:52.446465+08:00"
+  "dispatch_started_at": "2026-10-27T16:37:52.446465+08:00",
+  "reconciliation": {
+    "classification": "unknown",
+    "checked_at": "2026-10-27T16:56:11.894335+08:00",
+    "evidence_record": "records/reconciliation/2026-10-27-1630-dispatch.json",
+    "closure_allowed": false,
+    "resend_allowed": false,
+    "protocol2_quarantine_exception": false
+  }
 }

@@ -1,3 +1,9 @@
+## 2026-10-27 16:30 armed事故核對（優先於歷史enabled報告）
+- 原daily真實disabled，c2aef589 completed/空結果/requires_user_action=true。16:37:52 armed/publishing已CAS到445c332，但無Windsor回條/Request ID/Post ID。Windsor及Meta已發布清單未見當篇，不足以證明沒有呼叫。
+- 新8b6bf...為protocol2未知：保留armed與所有hash/slot，不重送、不套舊f269例外、不強制結案。舊f269精確隔離保持不變。
+- GitHub Blob/Tree/Commit/CAS在本次排程已實際成功，圖片流程非本次斷點；publish_once工具名稱/參數與即時Windsor schema一致。GitHub app Allow all actions；Windsor繼承低風險預設；不能據此斷言是哪個授權造成。
+- 反覆停用原因仍unknown，平台只提供flag無原始工具審計。此輪不直接重新啟用、無新Facebook呼叫；先調查官方允許授權及替代排程入口。證據records/reconciliation/2026-10-27-1630-dispatch.json。
+
 ## 2026-10-27 圖片橋接修復最終交接（優先於全部歷史）
 - 恢復原圖，沒有重生：ac245d...草稿/8bbd66ec...e1b23 JPEG已真實存GitHub，GitBlob13994a8a...、399114 bytes；Pages匿名200,image/jpeg,SHA一致。修復commit4a77f1a；本checkpoint另外實跑永久connector_bundle.js→GitHub同一JPEG提交驗證，沒有Facebook寫入。
 - 原daily ID不變，已更新成可執行的分段binary bridge與先存asset/draft順序，讀回enabled=true，四時段Asia/Taipei與每週日20:00保留。新橋接支援無需人工貼base64，仍受實際工具可用性與授權審核限制。

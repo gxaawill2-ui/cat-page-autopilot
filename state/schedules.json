@@ -8,21 +8,21 @@
       "16:30",
       "19:30"
     ],
-    "enabled": true,
+    "enabled": false,
     "release_gate": "live; exact historical f269 quarantine allowed for NEW unique future content; all protocol2 CAS, image proof and dedup gates still mandatory",
-    "observed_at": "2026-10-27T13:45:33.357016+08:00",
-    "last_runtime_run": "de17439b-ac90-8333-b04a-a73e3a359ae8",
+    "observed_at": "2026-10-27T16:56:11.894335+08:00",
+    "last_runtime_run": "c2aef589-fbd4-8323-bee5-57094bd8e395",
     "runtime_requires_user_action": true,
-    "disabled_reason": "平台未提供; not proven to be permissions, timeout or quota",
+    "disabled_reason": "unknown; platform does not expose offending tool/action review/cause",
     "runtime_status": "completed",
-    "last_result": "12:30 result empty / requires_user_action=true; JPEG recovery and binary bridge repaired in active Work; next unattended publication pending",
-    "next_configured_slot": "2026-10-27T16:30:00+08:00",
+    "last_result": "16:30 armed CAS succeeded, runtime ended with empty result/user_action, no genuine Post ID; actual task disabled",
+    "next_configured_slot": "2026-10-27T19:30:00+08:00",
     "next_run_time_from_platform": null,
     "legacy_quarantine_path": "state/legacy_quarantine.json",
     "quarantine_rollout": "2026-10-27 new future slots only; unattended post success not yet proven",
     "binary_bridge": "connector_bundle.js loadConnectorBundle → connector_commit.js expected blob SHA + CAS",
     "latest_repair_commit": "4a77f1a59c9bbffdaf747108e0bc67dee97c42e0",
-    "unattended_acceptance": "pending_next_normal_slot"
+    "unattended_acceptance": "failed_to_complete; no blind resume"
   },
   "weekly": {
     "task_id": "6add4bde3d6881919ff5037351dd44d4",
