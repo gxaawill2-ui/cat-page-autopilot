@@ -26,9 +26,10 @@
     "TW"
   ],
   "experiment_id": "intl-20261026-14d",
-  "asset_upload_state": "pending_binary_bridge",
+  "asset_upload_state": "cas_upload_pending",
   "pages_proof_status": "not_started",
   "facebook_write_calls": 0,
   "not_published": true,
-  "visual_qa": "passed"
+  "visual_qa": "passed",
+  "original_recovered_without_regeneration": true
 }

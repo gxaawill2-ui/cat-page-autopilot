@@ -1,3 +1,6 @@
+## 2026-10-27 圖片上傳修復進行中（最新）
+12:30原始image file_ref已找回；沿原Pillow流程重建JPEG，SHA8bbd66ec...e1b23、399114 bytes完全一致，沒有重新生圖。正在使用GitHub base64 Blob＋原CAS適配器提交。原每日任務真實disabled、12:30 requires_user_action=true且結果空；平台未提供具體原因，不將它直接歸因於GitHub。12:30不得補發，下一個設定16:30；真實發文仍未驗收。舊f269精確隔離保留。
+
 ## 2026-10-27 12:30 最新排程續作（新圖文尚未發布）
 - live、每日4篇；10/27當日Windsor查無已發新貼文。10/26歷史f269仍publishing/unknown，精確隔離未清鎖。
 - 目前main GitHub Actions Python safety tests success，JS CAS模擬測試通過。7個美日台候選已實查，原創繁中圖片及JPEG（SHA 8bbd66eccbb16d879b435afa21e691e210dc0d850ca0310538ff8ad0a61e1b23）與文案已製作、目視QA通過。

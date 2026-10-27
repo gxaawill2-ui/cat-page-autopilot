@@ -1,0 +1,24 @@
+{
+  "observed_at": "2026-10-27T13:39:07.055414+08:00",
+  "image_recovery": "source_image_file_ref materialized; same prepare JPEG algorithm; exact SHA/bytes match",
+  "image_sha256": "8bbd66eccbb16d879b435afa21e691e210dc0d850ca0310538ff8ad0a61e1b23",
+  "bytes": 399114,
+  "regenerated": false,
+  "prior_failure_confirmed": "run reported no verified binary bridge; no recorded GitHub API error",
+  "prior_failure_not_proven": [
+    "network problem",
+    "permission denied",
+    "wrong encoding",
+    "file too large",
+    "interactive approval specific tool"
+  ],
+  "runtime": {
+    "run_id": "de17439b-ac90-8333-b04a-a73e3a359ae8",
+    "completed": true,
+    "requires_user_action": true,
+    "actual_enabled": false,
+    "result_text": "",
+    "reason": "platform did not provide tool/error/cause"
+  },
+  "publication": "not attempted; 12:30 expired, next configured16:30"
+}
