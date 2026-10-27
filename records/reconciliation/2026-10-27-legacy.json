@@ -1,0 +1,36 @@
+{
+  "observed_at": "2026-10-27T09:44:17.819189+08:00",
+  "scope": "legacy lock reconciliation; branding paused by user",
+  "legacy_key": "f269fed6aaffbe02af467fe8b7759144aa9a479bce2fb626899a26bdfaa59ba1",
+  "classification": "unknown",
+  "decision": "retain publishing; never resend expired content",
+  "evidence": {
+    "run_file": "records/runs/2026-10-26-1930.json",
+    "declared_write_calls": 0,
+    "original_tool_audit": "not exposed by available automations/Windsor tools; targeted historical search returned retrospective reports only",
+    "requires_user_action_reason": "unknown; no raw reason exposed",
+    "windsor": {
+      "date_from": "2026-10-25",
+      "date_to": "2026-10-27",
+      "rows": 6,
+      "english_caption_found": false,
+      "latest_editorial_id": "1346385028565797_122105388507515576"
+    },
+    "facebook_ui": {
+      "page": "貓咪投資筆記",
+      "page_id": "1346385028565797",
+      "published_past_90_days": "latest Oct26 13:06 local, ID122105388507515576; older rows Oct25 and Oct23; no Halloween English caption or image observed",
+      "scheduled": "no scheduled posts; selected tab confirmed",
+      "drafts": "inspection pending"
+    }
+  },
+  "new_publication_acceptance": "not performed; blocked by unknown legacy outcome",
+  "new_facebook_write_calls": 0,
+  "new_tasks_created": 0,
+  "budget_ntd": 0,
+  "next_required_evidence": [
+    "Windsor backend audit for facebook_organic Page1346385028565797 Oct26 11:30–11:45 UTC: execute_action/create_photo_post request start, terminal result, request id and any Meta post id; explicit no matching call if absent",
+    "ChatGPT run30117afe-f4fc-832c-a2a3-09525e538873 tool trace and original requires_user_action reason; latest-run peek does not expose older tool calls"
+  ],
+  "closure_rule": "Only authoritative no-dispatch or definitive failure-with-no-post evidence may close as not_published. If genuine post found, record id and verify. Otherwise retain unknown; do not mark verified or delete lock."
+}

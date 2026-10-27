@@ -151,3 +151,9 @@ Meta安全密碼驗證已完成，實際送出要求後遭拒。原文：「不�
 
 ### 更名最終結果（2026-10-27）
 正常密碼驗證後，唯一正式嘗試「貓咪慢日子」仍遭拒：「不允許使用此名稱建立內容，請使用其他名稱。」取消編輯後管理頁回讀真實名稱仍為「貓咪投資筆記」。不是審核中。品牌設定不改、既有素材不動。本輪停止提交。下一步由Meta官方Help & support的Report a problem/Support inbox查具體拒絕原因；無官方說明前不宣稱帳號限制或命名格式是原因。證據records/brand/2026-10-27/result.json。
+
+## 續作核對 2026-10-27T09:44:17.819189+08:00（優先於以上更名續作指示）
+- 使用者暫停全部更名與品牌素材修改；state/international.json已明確暫停，不操作Meta名稱表單。
+- fresh main為2500b681：今天09:30真實任務run391e157e已completed、requires_user_action=false並留下清楚阻擋結果，並非未執行；仍未發Facebook。
+- Windsor重新查Oct25–27共6列無該英文；Meta Business Suite實際已發布列表最新Oct26 13:06 ID122105388507515576、後續Oct25；已排定列表明確為「沒有排定發佈的貼文」。這是更完整的外部核對，仍不是歷史呼叫否定證明。
+- 舊鎖維持publishing，不補10/26內容。詳細證據與所需精確審計欄位見records/reconciliation/2026-10-27-legacy.json。下次只有取得新審計/真實Post ID才重新判斷，不無限重做同樣查詢。
