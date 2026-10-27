@@ -18,7 +18,13 @@
     "requires_user_action": true,
     "actual_enabled": false,
     "result_text": "",
-    "reason": "platform did not provide tool/error/cause"
+    "reason": "platform did not provide tool/error/cause",
+    "enabled_after_repair": true,
+    "enabled_readback": true,
+    "prompt_replaced": true,
+    "next_configured_slot": "2026-10-27T16:30:00+08:00",
+    "why_disabled": "平台未提供",
+    "background_capability": "not yet accepted; verify next real scheduled run"
   },
   "publication": "not attempted; 12:30 expired, next configured16:30",
   "binary_upload": {
@@ -27,7 +33,8 @@
     "remote_bytes": 399114,
     "remote_sha256": "8bbd66eccbb16d879b435afa21e691e210dc0d850ca0310538ff8ad0a61e1b23",
     "encoding": "base64",
-    "bridge": "23 bounded stdout chunks reassembled inside code mode; no content printed"
+    "bridge": "23 bounded stdout chunks reassembled inside code mode; no content printed",
+    "permanent_bridge_live_cas": "This checkpoint also sends exact JPEG through connector_bundle.js and checks actual GitHub Blob SHA before CAS"
   },
   "pages": {
     "url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/8bbd66eccbb16d879b435afa21e691e210dc0d850ca0310538ff8ad0a61e1b23.jpg",

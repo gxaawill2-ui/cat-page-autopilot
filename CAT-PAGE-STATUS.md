@@ -1,3 +1,11 @@
+## 2026-10-27 圖片橋接修復最終交接（優先於全部歷史）
+- 恢復原圖，沒有重生：ac245d...草稿/8bbd66ec...e1b23 JPEG已真實存GitHub，GitBlob13994a8a...、399114 bytes；Pages匿名200,image/jpeg,SHA一致。修復commit4a77f1a；本checkpoint另外實跑永久connector_bundle.js→GitHub同一JPEG提交驗證，沒有Facebook寫入。
+- 原daily ID不變，已更新成可執行的分段binary bridge與先存asset/draft順序，讀回enabled=true，四時段Asia/Taipei與每週日20:00保留。新橋接支援無需人工貼base64，仍受實際工具可用性與授權審核限制。
+- 反覆停用真正原因「平台未提供」；12:30 de17439b completed/空結果/requires_user_action=true。不能宣稱已根治停用；原稿只記缺binary bridge，沒有GitHub拒絕錯誤。已檢查GitHub Allow all actions，Windsor Use default/Allow low-risk，未擅改權限。
+- 不補12:30。下一正常16:30繁中，必須本輪新圖文、fresh posts/policy、Pages、protocol2兩次CAS、單次Windsor、真Post ID及回讀目視，才能標verified/宣稱恢復。現在仍「未驗收」，無新Post ID。
+- f269仍publishing unknown但精確隔離，未刪改舊鎖；所有其他新未知仍停止。品牌修改暫停，三天與週日分析保留。
+- 下次先讀records/runs/2026-10-27-upload-repair.json及RUNBOOK binary段；若再requires_user_action，必須保留實際工具與錯誤，若平台仍不提供則明寫，不能無限重啟或杜撰授權原因。
+
 ## 2026-10-27 13:xx 圖片修復實測（最高優先）
 - 12:30原圖已由source_image_file_ref找回，JPEG SHA8bbd66ec...e1b23/399114 bytes完全相同，沒有重新生成。GitHub CAS commit bd5f8aba已保存JPEG，遠端Git讀回SHA一致；Pages匿名200/image/jpeg/SHA於13:41:35通過。證據records/url-checks/ac245d...json及records/runs/2026-10-27-upload-repair.json。
 - 新connector_bundle.js＋bundle.py manifest/chunk補上可重用binary bridge；connector_commit.js比Git blob SHA防截斷。30 Python項、JS真JPEG分段重建/錯SHA停止、CAS並行未知重跑測試通過。
