@@ -1,0 +1,42 @@
+{
+  "key": "8b6bf1a5448afa7a4acbb7b667c4c2ddce8b46158c880144cbe21e288d670d33",
+  "page_id": "1346385028565797",
+  "caption": "阿斑認真存下第一枚金幣\n阿橘已經把紙箱蓋成三層豪宅\n小雪還在旁邊觀察房價 📦\n\n貓咪世界最搶手的資產\n原來不是金幣\n是那個剛拆封的紙箱 😂🐱\n\n#貓咪投資筆記 #貓咪日常",
+  "caption_sha256": "87a24ddc7f50e99bd8a65115dace14f2cedd0435135bbac30a4ba503b692d318",
+  "image_sha256": "cce9086fa3eb87189d8e40ad6d806b993da81c68499240ab9eca75ad8c226920",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/cce9086fa3eb87189d8e40ad6d806b993da81c68499240ab9eca75ad8c226920.jpg",
+  "asset_path": "docs/assets/cce9086fa3eb87189d8e40ad6d806b993da81c68499240ab9eca75ad8c226920.jpg",
+  "bytes": 167707,
+  "dimensions": [
+    768,
+    768
+  ],
+  "created_at": "2026-10-27T16:31:09.520797+08:00",
+  "topic": "貓咪的紙箱房地產",
+  "style": "夕陽暖色細膩手繪插畫",
+  "caption_type": "short_humor",
+  "source_image": "imagegen:be504264-2af3-443f-960c-90fc48edefb0;file_00000000ed6c81f79288cdba456eeac8",
+  "sources": [],
+  "status": "reserved",
+  "language": "zh-Hant",
+  "target_markets": [
+    "TW"
+  ],
+  "experiment_id": "intl-20261026-14d",
+  "dispatch_protocol": 2,
+  "slot": "2026-10-27T16:30",
+  "reserved_at": "2026-10-27T16:37:10.810661+08:00",
+  "purpose": "regular",
+  "task_id": null,
+  "image_check": {
+    "url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/cce9086fa3eb87189d8e40ad6d806b993da81c68499240ab9eca75ad8c226920.jpg",
+    "http_status": 200,
+    "content_type": "image/jpeg",
+    "bytes": 167707,
+    "sha256": "cce9086fa3eb87189d8e40ad6d806b993da81c68499240ab9eca75ad8c226920",
+    "checked_at": "2026-10-27T08:36:18.805235+00:00",
+    "validator": "github-actions-pages-probe",
+    "run_id": "40474575067",
+    "source_commit": "4ea1312774a6706599125c1da2d77d565f152f31"
+  }
+}
