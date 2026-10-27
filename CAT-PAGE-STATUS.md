@@ -1,3 +1,9 @@
+## 2026-10-27 18:03 官方 API 實際續作 checkpoint
+- 既有 Meta 發布程式 9 項安全測試通過；真 GitHub Actions dry-run #40485174412 success（09:30 已過期，安全跳過，不是發布驗收）。
+- Meta for Developers 實際入口尚未完成開發者註冊，停在接受 Meta Platform Terms / Developer Policies；未建立 App、未取得 Page Token，正式開關不開。帳號本人須完成此一步，不能宣稱已取得 pages_manage_posts。
+- 原 daily disabled，最新提示尾段已 queue-only，舊 Windsor 發布不可再使用；兩筆 unknown 不更動。
+- 正在既有新架構補 policy、跨管線篇數與圖像回讀必要防護；不重做圖片上傳。證據 records/migration/2026-10-27-meta-official.json。
+
 ## 2026-10-27 17:xx 替代架構已落地（優先於歷史 Windsor 路線）
 - 使用者要求換方法，停止反覆要求 ChatGPT 無人排程直接執行 Windsor Facebook 寫入。**舊 daily 仍停用，不能再直接發布；週日檢討維持。**
 - 新建安全預設關閉的「GitHub Actions → Meta 官方 Graph API」發布骨架：scripts/meta_graph_publish.py、.github/workflows/meta-graph-publish.yml、scripts/test_meta_graph_publish.py；官方權限/啟用流程記錄 docs/meta-official-alternative.md。

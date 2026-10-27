@@ -1,0 +1,30 @@
+{
+  "observed_at": "2026-10-27T18:01:29.003300+08:00",
+  "source_commit": "e3ec6f85fa10d6ed82e01f87f103fe56833f4066",
+  "local_tests": {
+    "passed": 9,
+    "command": "python3 -m unittest discover -s scripts -p test_meta_graph_publish.py -v"
+  },
+  "actions_dry_run": {
+    "run_id": 40485174412,
+    "job_id": 122125049605,
+    "conclusion": "success",
+    "url": "https://github.com/gxaawill2-ui/cat-page-autopilot/actions/runs/40485174412",
+    "note": "manual dry_run=true, expired 09:30 slot; no live acceptance"
+  },
+  "meta_authorization": {
+    "status": "blocked_at_developer_registration_terms",
+    "url": "https://developers.facebook.com/async/registration/dialog/?src=default",
+    "page_token_obtained": false,
+    "app_obtained": false,
+    "observed_text": "建立 Meta for Developers 帳號; By proceeding, you agree to the Meta Platform Terms and Developer Policies",
+    "required_user_action": "Account owner must accept terms and complete developer registration; no token or publishing grant claimed"
+  },
+  "facebook_writes": 0,
+  "daily_task": {
+    "id": "6add4bc872c88191bea8e6d2cf3dc016",
+    "is_enabled": false,
+    "role": "queue_only; latest override already present"
+  },
+  "next": "Patch missing policy/daily-cap/image readback guards; repeat real dry-run with safety tests; prepare future unique queue; user completes developer registration."
+}
