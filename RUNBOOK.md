@@ -10,7 +10,7 @@
 5. 使用 connector_commit.js 的 connectorCommit 工具適配器保存 asset、draft、gallery。`python3 bundle.py MESSAGE PATH...` 提供 parent/baseTree/files；其 stdout 可在 code mode 內解析，勿對話輸出 base64。讀 adapter 原始碼，作為 async function 在 functions.exec 中執行（tools 為工具物件）。每次寫入前 `git fetch origin main` 更新 origin/main，但若遠端有其他 worker 更新了 state，必須重新 clone/rebase並重作判斷，不用新parent包住舊state。一般 git push 未認證，禁止尋找/公開秘密來替代。
 6. 等 GitHub Pages 部署，最多3次、每次間隔至少30秒匿名 GET。`python3 catflow.py check-url --draft DRAFT` 要200、image/jpeg、SHA一致。網址無簽名/到期參數；不是保證永久可用，保留原圖和hash可恢復。
 7. policy.mode=draft 時一般輪次到此交草稿，禁止發文。只有 bootstrap 或指定 acceptance_task_id 的一次驗收可例外。live 時可 regular。
-8. `python3 catflow.py reserve --draft DRAFT --slot YYYY-MM-DDTHH:MM --purpose regular`（驗收用 acceptance 並傳 --task-id）。先用最新貼文確認無相同文案；以 connectorCommit CAS 保存 state/posts/KEY.json（publishing）成功才繼續。CAS拒絕就停止本輪，不重試發文。此鎖同時阻止相同文案、圖片、時段以及每日超過兩篇。
+8. `python3 catflow.py reserve --draft DRAFT --slot YYYY-MM-DDTHH:MM --purpose regular`（驗收用 acceptance 並傳 --task-id）。先用最新貼文確認無相同文案；以 connectorCommit CAS 保存 state/posts/KEY.json（publishing）成功才繼續。CAS拒絕就停止本輪，不重試發文。此鎖同時阻止相同文案、圖片、時段以及超過policy.daily_limit。
 9. 僅呼叫一次 Windsor execute_action，參數採 reserve 回傳的 execute_action。立即把真實回傳寫檔；`catflow.py receipt --key KEY --result RESULT`。用 adapter 保存 state/posts 與回條。沒有post id保持publishing，先查重，絕不自動重送。
 10. Windsor get_fields 後 get_data：account_id/post_id/post_message/post_created_time/permalink_url/full_picture，限定剛發布ID和日期。最多回讀3次、間隔至少60秒，不 force_refresh 升級付費。用 `catflow.py verify --key KEY --rows ROWS` 驗文字+圖片欄位；實際開啟圖片目視後才加 --visual passed。簽名 fbcdn URL 不公開保存，僅記 presence、比對結果與永久貼文網址。
 11. 更新 CAT-PAGE-STATUS.md、state/posts、實測證據，同步唯一 Library status file libfile_eb843306062c81919a18f9a9efc211f9（有版本防衝突）。無論哪階段失敗都留下錯誤與下一步。只將安全摘要放公開repo。
@@ -50,3 +50,5 @@ prepare加 --language --target-markets --experiment-id（依plan回傳）；保�
 regular reserve只建立reserved(protocol2)，先CAS保存。欲發送時dispatch_guard.arm(state,唯一run owner)產生publishing與nonce；用publish_once.js將該狀態CAS保存並在同一工具執行單次Windsor呼叫。只允許CAS成功者呼叫，CAS失敗不可發送。已arm/publishing不可重新arm或重送；逾時/回條遺失須外部核對。expire僅適用協議2未arm且已跨日reserved，CAS保存not_published前重讀最新；舊protocol1 publishing永不依過期或write_calls=0自動清鎖。保留歷史hash/slot，不重用過期內容。
 發文或製圖工具需要user_action就記具體狀態並正常回報，不吞掉錯誤。每輪peek真實daily與weekly，記observed_at/enabled/run狀態；不把GitHub enabled當runtime。任務自行停用後無法由已停用任務自我監測；未另建監控，不保證即時通知。平台API不提供停用審計原因則寫unknown。
 三天檢討使用review_due.py判斷到期；即使發文被鎖仍執行研究/檢討。CAS建立records/reviews/cycle-日期.json（running）後才分析；完成保存結果與下一策略，重跑讀running續作、不建立第二份或再套策略。從10/29 19:30起每3天，錯過則下輪補檢討；資料不足不造數據。週日仍保留。
+
+protocol2工具整合：bundle.py對JSON使用utf-8，供publish_once.js核對CAS內容；二進位圖片仍base64。先使用最新同一parent/tree重新檢查policy、所有posts、真實Facebook清單與slot，再prepare arm bundle。publishOnce必須在同一次functions.exec await CAS及單次Windsor，不得把已成功CAS bundle拿到另一輪重播。CAS後中斷的armed狀態仍需人工/外部證據核對，不能自動推定未發送。

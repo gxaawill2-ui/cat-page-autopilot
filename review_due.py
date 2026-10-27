@@ -3,7 +3,9 @@ from pathlib import Path
 from zoneinfo import ZoneInfo
 def review_key(at):
  at=at.astimezone(ZoneInfo('Asia/Taipei'));start=dt.date(2026,10,29);days=(at.date()-start).days
- if days<0 or (days%3==0 and at.time()<dt.time(19,30)):return None
+ if days<0:return None
+ if days%3==0 and at.time()<dt.time(19,30):days-=1
+ if days<0:return None
  due=start+dt.timedelta(days=(days//3)*3)
  return due.isoformat()
 def due(at,root):

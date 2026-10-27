@@ -13,5 +13,36 @@
     "why runtime requires user action",
     "who or what disabled task",
     "timeout vs tool approval vs interruption"
+  ],
+  "actual_disabled_at_start": true,
+  "actual_enabled_after_update": true,
+  "publication_gate": "blocked pending legacy reconciliation",
+  "tests": {
+    "python": "25 passed",
+    "javascript": "mock CAS concurrent/unknown/replay passed; no real Facebook write"
+  },
+  "pages_probe": {
+    "http": 200,
+    "mime": "image/jpeg",
+    "bytes": 174899,
+    "sha256": "753629ef376fb0e7acabec04afc6223b3bbf0da5938194e71c3b758ba8ba0a5e",
+    "checked_at": "2026-10-27T09:01:19.508759+08:00",
+    "existing_actions_run": 40316407324,
+    "existing_actions_job": 121549989997,
+    "existing_actions_job_conclusion": "success"
+  },
+  "brand": {
+    "actual_name": "貓咪投資筆記",
+    "candidate": "貓咪慢日子",
+    "status": "awaiting password verification; not submitted",
+    "quality": "Page has no issues; account no restrictions; recommendation active",
+    "limits": "UI says approved name changes cannot change again within 60 days; review up to 3 days",
+    "specific_prior_rejection_reason": "not disclosed; mixed languages/account restriction are not proven"
+  },
+  "limitations": [
+    "Full tool invocation audit unavailable; cannot safely close legacy publishing",
+    "No independent disabled-task monitor; existing task cannot monitor itself after pause",
+    "Windsor Trial is unpaid; post-trial free writes not proven",
+    "No new unattended end-to-end acceptance while legacy lock remains"
   ]
 }

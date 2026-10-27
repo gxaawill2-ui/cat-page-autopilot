@@ -11,5 +11,8 @@ for p in sys.argv[2:]:
     path=Path(p)
     if path.is_absolute() or '..' in path.parts: raise SystemExit('Unsafe path')
     b=(ROOT/path).read_bytes()
-    files.append({'path':p,'content':base64.b64encode(b).decode(),'encoding':'base64'})
+    if path.suffix in ('.json','.py','.js','.md','.yml','.yaml','.txt'):
+        files.append({'path':p,'content':b.decode('utf-8'),'encoding':'utf-8'})
+    else:
+        files.append({'path':p,'content':base64.b64encode(b).decode(),'encoding':'base64'})
 print(json.dumps({'parent':parent,'baseTree':tree,'message':sys.argv[1],'files':files}))
