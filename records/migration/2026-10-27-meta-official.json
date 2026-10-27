@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-27T19:43:32.011865+08:00",
+  "observed_at": "2026-10-27T19:49:15.015121+08:00",
   "source_commit": "e3ec6f85fa10d6ed82e01f87f103fe56833f4066",
   "local_tests": {
     "passed": 9,
@@ -14,12 +14,12 @@
     "log_result": "SKIPPED_STALE_OR_EARLY; both Meta env values empty"
   },
   "meta_authorization": {
-    "status": "app_created_page_token_not_obtained",
+    "status": "exact_page_and_three_permissions_ready_pending_explicit_grant",
     "url": "https://developers.facebook.com/async/registration/dialog/?src=default",
     "page_token_obtained": false,
     "app_obtained": true,
     "observed_text": "建立 Meta for Developers 帳號; By proceeding, you agree to the Meta Platform Terms and Developer Policies",
-    "required_user_action": "Any actual Page OAuth grant must follow official permission dialog; token not yet requested",
+    "required_user_action": "Confirm final OAuth Save granting only Page1346385028565797 pages_manage_posts/pages_read_engagement/pages_show_list; Page token destination only GitHub Actions META_PAGE_ACCESS_TOKEN",
     "developer_registration_completed": true
   },
   "facebook_writes": 0,
@@ -28,13 +28,13 @@
     "is_enabled": false,
     "role": "queue_only; latest override already present"
   },
-  "next": "Inspect Pages API actual scopes, permissions access levels, Page token authorization. No new FB writes.",
+  "next": "User confirms this scoped OAuth grant and secret storage; click Save once, obtain Page token safely, verify identity/grants, store only designated Actions Secret, run read-only preflight. Live switch stays off until all checks pass.",
   "expanded_tests": {
     "passed": 16,
     "ci_run_id": 40486394603,
     "ci_conclusion": "success"
   },
-  "stage": "app_created_inspecting_page_permissions",
+  "stage": "app_created_exact_page_oauth_pending_final_save",
   "latest_dry_run": {
     "run_id": 40486162579,
     "job_id": 122128356033,
@@ -84,5 +84,25 @@
     "publish_status": "尚未發佈",
     "user_terms_confirmation": "同意建立",
     "reauthentication": "completed through secure browserAuth; no password read or recorded"
+  },
+  "oauth_review": {
+    "app_id": "1094057270082192",
+    "selected_page_id": "1346385028565797",
+    "selected_page_name": "貓咪投資筆記",
+    "asset_mode": "Only currently selected Page; not all current/future Pages",
+    "scopes": [
+      "pages_manage_posts",
+      "pages_read_engagement",
+      "pages_show_list"
+    ],
+    "official_screen": [
+      "建立並管理你粉絲專頁的內容",
+      "閱讀此粉絲專頁發佈的內容",
+      "顯示你管理的粉絲專頁清單"
+    ],
+    "final_button": "儲存",
+    "saved": false,
+    "token_generated": false,
+    "settings_status": "All three listed available for testing; not proof of production permission yet"
   }
 }

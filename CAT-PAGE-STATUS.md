@@ -1,3 +1,9 @@
+## 2026-10-27 官方 OAuth 已備妥／待最後授權（最新）
+- 真 App1094057270082192已建立。pages_manage_posts / pages_read_engagement / pages_show_list 在官方設定為可供測試，Explorer選定僅此三項。
+- OAuth已切回管理員本人，選「只能使用目前的粉專」且只勾貓咪投資筆記1346385028565797；不是全部目前/未來粉專。最後畫面列明建立管理內容、讀取本粉專內容、顯示粉專清單（各1項資產）。
+- 最後「儲存」會建立新的粉專管理存取權，尚未按下，待本人針對三個scope／單一Page／Token只存GitHub指定Secret確認。沒有Token或新Post ID，正式開關不開。
+- 下步：確認後單次儲存OAuth→安全取得Page token不顯示對話/公開repo→核對Page ID/實際權限及期限→指定Secret→GET預檢→正常slot及下一輪驗收。若待發19:30過期不得補發。
+
 ## 2026-10-27 Meta App 已真正建立（最新）
 - 使用者回覆「同意建立」後，單次提交建立並透過正常安全輸入完成Facebook密碼再驗證；未讀取、記錄或傳送密碼至repo。
 - App: Cat Page Autopilot，真App ID1094057270082192，主控板 https://developers.facebook.com/apps/1094057270082192/dashboard/ 已讀回，應用程式狀態尚未發佈。
