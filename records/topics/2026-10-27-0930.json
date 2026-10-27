@@ -1,0 +1,123 @@
+{
+  "run_date": "2026-10-27",
+  "slot": "2026-10-27T09:30",
+  "observed_at": "2026-10-27T09:32:05+08:00",
+  "timezone": "Asia/Taipei",
+  "experiment_id": "intl-20261026-14d",
+  "language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "trend_window": "past 24 hours as displayed by Google Trends on 2026-10-27",
+  "candidates": [
+    {
+      "id": "us-01",
+      "topic": "Football awards: a cat accepts a trophy for sleeping",
+      "market": "US",
+      "event_date": "2026-10-27",
+      "source": "https://trends.google.com/trending?geo=US",
+      "observed_signal": {
+        "query": "harry kane",
+        "search_volume": "1M+",
+        "trend_status": "active",
+        "trend_started": "7h ago"
+      },
+      "rights_note": "Do not use likeness or reproduce award logos"
+    },
+    {
+      "id": "us-02",
+      "topic": "Sports fans versus cats stealing the best seat",
+      "market": "US",
+      "event_date": "2026-10-27",
+      "source": "https://trends.google.com/trending?geo=US",
+      "observed_signal": {
+        "query": "eagles",
+        "search_volume": "200K+",
+        "trend_status": "active",
+        "trend_started": "50m ago"
+      },
+      "rights_note": "Avoid team marks, player likenesses, or false game claims"
+    },
+    {
+      "id": "jp-01",
+      "topic": "Cat's home life as a tiny animal reality show",
+      "market": "JP",
+      "event_date": "2026-10-27",
+      "source": "https://trends.google.com/trending?geo=JP",
+      "observed_signal": {
+        "query": "嗚呼 みんなの 動物園",
+        "search_volume": "5K+",
+        "trend_status": "active",
+        "trend_started": "11h ago"
+      },
+      "rights_note": "Do not copy any show footage, title card or character"
+    },
+    {
+      "id": "jp-02",
+      "topic": "Chilly morning: a cat claims the warmest blanket",
+      "market": "JP",
+      "event_date": "2026-10-27",
+      "source": "https://trends.google.com/trending?geo=JP",
+      "observed_signal": {
+        "query": "早期天候情報",
+        "search_volume": "20K+",
+        "trend_status": "active",
+        "trend_started": "4h ago"
+      },
+      "rights_note": "Original evergreen weather humor, not an official forecast"
+    },
+    {
+      "id": "tw-01",
+      "topic": "A cat's retirement plan is a cardboard box",
+      "market": "TW",
+      "event_date": "2026-10-27",
+      "source": "https://trends.google.com/trending?geo=TW",
+      "observed_signal": {
+        "query": "退休 金",
+        "search_volume": "10K+",
+        "trend_status": "active",
+        "trend_started": "14h ago"
+      },
+      "rights_note": "Avoid financial advice or pension facts"
+    },
+    {
+      "id": "tw-02",
+      "topic": "Taiwan TV drama discussion",
+      "market": "TW",
+      "event_date": "2026-10-27",
+      "source": "https://trends.google.com/trending?geo=TW",
+      "observed_signal": {
+        "query": "我們與惡的距離2",
+        "search_volume": "50K+",
+        "trend_status": "active",
+        "trend_started": "14h ago"
+      },
+      "suitability": "not_selected; sensitive topic and not suitable for a light cat joke"
+    },
+    {
+      "id": "us-03",
+      "topic": "Halloween cat costume: cat scares itself",
+      "market": "US",
+      "event_date": "2026-10-26",
+      "source": "https://www.axios.com/local/san-diego/2026/10/26/trending-halloween-costumes-2026",
+      "observed_signal": {
+        "news_publication_date": "2026-10-26",
+        "independent_cat_engagement": null
+      },
+      "rights_note": "Use generic costume and original scene, not branded designs"
+    },
+    {
+      "id": "evergreen-01",
+      "topic": "The office cat works while the kitten enjoys a cardboard box",
+      "market": "US/PH",
+      "event_date": null,
+      "source": null,
+      "observed_signal": null,
+      "suitability": "selected_original_evergreen; no trend ranking claimed"
+    }
+  ],
+  "threads_public_engagement": null,
+  "facebook_public_engagement": null,
+  "notes": "Trend query volume describes the original search term, not projected interest in a derivative cat meme. No Indonesian content. Do not confuse target markets with observed country reach."
+}

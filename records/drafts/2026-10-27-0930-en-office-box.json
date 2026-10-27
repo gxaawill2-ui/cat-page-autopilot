@@ -1,0 +1,39 @@
+{
+  "key": "2026-10-27-0930-en-office-box-draft",
+  "slot": "2026-10-27T09:30",
+  "created_at": "2026-10-27T09:32:05+08:00",
+  "status": "draft_only_blocked_by_global_legacy_publishing",
+  "page_id": "1346385028565797",
+  "language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "experiment_id": "intl-20261026-14d",
+  "topic": "The office cat versus the cardboard-box retiree",
+  "caption": "9:30 AM. One cat is in a meeting.\nThe other has already retired to a cardboard box.\nGuess who's winning at life? 🐈💻📦",
+  "style": "original cozy textured gouache and colored-pencil home-office humor",
+  "source_image": {
+    "kind": "ChatGPT ImageGen original",
+    "conversation_file_id": "file_00000000be7481f79851127a040cb364",
+    "generated_count": 1,
+    "visual_qa": "passed",
+    "source_png_filename": "a_cozy_warm_highly_detailed_painted_illustrated.png"
+  },
+  "prepared_jpeg": {
+    "filename": "cat-page-2026-10-27-0930-draft.jpg",
+    "sha256": "871f64eb06fc1926fe24dd8abf499d9a184074839e32a7063ff30490c44a5f21",
+    "bytes": 469510,
+    "width": 1254,
+    "height": 1254,
+    "mime": "image/jpeg",
+    "prepared_with": "Pillow RGB JPEG; catflow.py not locally available",
+    "repo_asset_uploaded": false,
+    "library_asset_uploaded": false
+  },
+  "public_url": null,
+  "facebook_write_calls": 0,
+  "slot_reserved": false,
+  "reason": "Existing legacy publishing state f269fed6... is unreconciled; no new publication permitted. The generated asset is available only in the current conversation/container, not a verified public GitHub Pages URL.",
+  "next_step": "After independent legacy call audit or conclusive reconciliation, recover original file by conversation_file_id, run catflow.py prepare with language/target-markets/experiment-id, upload via existing CAS, verify public URL and use only a future eligible slot; do not retroactively post 09:30."
+}

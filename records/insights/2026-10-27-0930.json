@@ -1,0 +1,42 @@
+{
+  "observed_at": "2026-10-27T09:32:05+08:00",
+  "source": "Windsor.ai facebook_organic",
+  "page_id": "1346385028565797",
+  "recent_editorial_posts": [
+    {
+      "post_id": "1346385028565797_122105388507515576",
+      "created_at": "2026-10-26T05:06:06+00:00",
+      "impressions": 14,
+      "viewers": 1,
+      "reactions": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "post_id": "1346385028565797_122104687647515576",
+      "created_at": "2026-10-25T02:22:17+00:00",
+      "impressions": 33,
+      "viewers": 2,
+      "reactions": 0,
+      "comments": 0,
+      "shares": 0
+    },
+    {
+      "post_id": "1346385028565797_122104674921515576",
+      "created_at": "2026-10-25T02:06:38+00:00",
+      "impressions": 26,
+      "viewers": 2,
+      "reactions": 0,
+      "comments": 0,
+      "shares": 0
+    }
+  ],
+  "page_daily_follows_2026_10_27": 0,
+  "page_daily_unfollows_2026_10_27": 0,
+  "reach": null,
+  "overseas_reach": null,
+  "language_follower_attribution": null,
+  "age_matched_48h_snapshot": "not yet mature for 10/25 editorial posts at 09:32 local",
+  "age_matched_168h_snapshot": null,
+  "warning": "Impressions and viewers are not reach. No country-level or per-language attribution. Do not infer growth impact."
+}

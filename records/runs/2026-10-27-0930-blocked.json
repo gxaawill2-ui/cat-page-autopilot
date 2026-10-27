@@ -1,0 +1,45 @@
+{
+  "run_date": "2026-10-27",
+  "slot": "2026-10-27T09:30",
+  "observed_at": "2026-10-27T09:32:05+08:00",
+  "policy_mode": "live",
+  "daily_limit": 4,
+  "experiment_day": 2,
+  "language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "experiment_id": "intl-20261026-14d",
+  "daily_task_enabled": true,
+  "weekly_task_enabled": true,
+  "daily_task_run_status": "in_progress at 09:32",
+  "today_verified_posts": 0,
+  "legacy_lock": {
+    "key": "f269fed6aaffbe02af467fe8b7759144aa9a479bce2fb626899a26bdfaa59ba1",
+    "status": "publishing",
+    "protocol": "legacy",
+    "full_tool_call_audit": "unavailable",
+    "external_windsor_result": "no English post observed through 2026-10-27 09:32; absence is not conclusive no-write proof",
+    "decision": "hold; no resend and no automatic unlock"
+  },
+  "research_candidate_count": 8,
+  "topic_record": "records/topics/2026-10-27-0930.json",
+  "draft_record": "records/drafts/2026-10-27-0930-en-office-box.json",
+  "insights_record": "records/insights/2026-10-27-0930.json",
+  "imagegen_count": 1,
+  "visual_qa": "passed",
+  "prepared_jpeg_sha256": "871f64eb06fc1926fe24dd8abf499d9a184074839e32a7063ff30490c44a5f21",
+  "asset_public_url": null,
+  "facebook_write_calls": 0,
+  "slot_claimed": false,
+  "stage": "BLOCKED_LEGACY_PUBLISHING_SAVED_RESEARCH_AND_LOCAL_DRAFT",
+  "review_due": "2026-10-29 19:30 after slot attempt",
+  "extra_cost_ntd": 0,
+  "limitations": [
+    "No full 2026-10-26 English run invocation audit; legacy publishing cannot be cleared",
+    "Image generated and JPEG prepared locally but asset upload to Library failed and not stored in GitHub; no public URL",
+    "Library status synchronization unavailable from current tools; canonical run evidence committed in GitHub"
+  ],
+  "next_step": "Reconcile legacy publishing with full tool invocation audit or conclusive official Facebook evidence. Until then research, draft and 3-day review only. Do not backfill expired slot."
+}
