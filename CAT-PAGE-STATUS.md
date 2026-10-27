@@ -1,3 +1,9 @@
+## 2026-10-27 Meta App 已真正建立（最新）
+- 使用者回覆「同意建立」後，單次提交建立並透過正常安全輸入完成Facebook密碼再驗證；未讀取、記錄或傳送密碼至repo。
+- App: Cat Page Autopilot，真App ID1094057270082192，主控板 https://developers.facebook.com/apps/1094057270082192/dashboard/ 已讀回，應用程式狀態尚未發佈。
+- 正在檢查Pages API使用案例之實際權限/存取層級。尚未取得Page token或粉專發布授權，Secret/正式開關不開，沒有新Post ID。
+- 下步：核實 pages_manage_posts/pages_read_engagement/pages_show_list → 正常Page OAuth → Token只存Actions Secret → GET預檢及正常slot驗收；未知歷史兩篇、圖片、queue和排程不改。
+
 ## 2026-10-27 開發者註冊完成／App 最後確認待處理（最新）
 - 使用者已完成正式 Meta developer 註冊；新截圖及本輪已登入 apps 清單均確認。
 - 已準備新 App：Cat Page Autopilot／使用案例「管理粉絲專頁的所有內容」。沒有可用商家資產管理組合，採官方稍後連結選項；要求頁目前顯示沒有條件，不能當作取得發布權限或永久免審證明。

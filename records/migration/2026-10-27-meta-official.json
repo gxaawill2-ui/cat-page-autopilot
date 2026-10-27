@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-27T19:24:21.827876+08:00",
+  "observed_at": "2026-10-27T19:43:32.011865+08:00",
   "source_commit": "e3ec6f85fa10d6ed82e01f87f103fe56833f4066",
   "local_tests": {
     "passed": 9,
@@ -14,12 +14,12 @@
     "log_result": "SKIPPED_STALE_OR_EARLY; both Meta env values empty"
   },
   "meta_authorization": {
-    "status": "developer_registration_completed; app creation pending",
+    "status": "app_created_page_token_not_obtained",
     "url": "https://developers.facebook.com/async/registration/dialog/?src=default",
     "page_token_obtained": false,
-    "app_obtained": false,
+    "app_obtained": true,
     "observed_text": "建立 Meta for Developers 帳號; By proceeding, you agree to the Meta Platform Terms and Developer Policies",
-    "required_user_action": "Confirm acceptance of Meta Platform Terms/Developer Policies on final App creation step; no app created yet",
+    "required_user_action": "Any actual Page OAuth grant must follow official permission dialog; token not yet requested",
     "developer_registration_completed": true
   },
   "facebook_writes": 0,
@@ -28,13 +28,13 @@
     "is_enabled": false,
     "role": "queue_only; latest override already present"
   },
-  "next": "User explicitly confirms App creation terms, then click Create App once; inspect actual App ID, permissions and Page identity; keep live publish disabled.",
+  "next": "Inspect Pages API actual scopes, permissions access levels, Page token authorization. No new FB writes.",
   "expanded_tests": {
     "passed": 16,
     "ci_run_id": 40486394603,
     "ci_conclusion": "success"
   },
-  "stage": "developer_registered_app_draft_pending_explicit_terms_confirmation",
+  "stage": "app_created_inspecting_page_permissions",
   "latest_dry_run": {
     "run_id": 40486162579,
     "job_id": 122128356033,
@@ -76,5 +76,13 @@
     "requirements_screen": "找不到條件 / 沒有針對此應用程式使用案例的要求",
     "note": "This setup screen is not a Page permission grant or proof that review is unnecessary",
     "creation_submitted": false
+  },
+  "app": {
+    "id": "1094057270082192",
+    "name": "Cat Page Autopilot",
+    "dashboard": "https://developers.facebook.com/apps/1094057270082192/dashboard/",
+    "publish_status": "尚未發佈",
+    "user_terms_confirmation": "同意建立",
+    "reauthentication": "completed through secure browserAuth; no password read or recorded"
   }
 }
