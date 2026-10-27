@@ -1,0 +1,111 @@
+{
+  "slot": "2026-10-27T16:30",
+  "observed_at": "2026-10-27T16:33:01.198039+08:00",
+  "window": "last_24h_google_trends",
+  "markets_checked": [
+    "TW",
+    "JP",
+    "US"
+  ],
+  "threads_public": {
+    "status": "not_retrieved",
+    "engagement_signal": null
+  },
+  "facebook_public": {
+    "status": "not_retrieved",
+    "engagement_signal": null
+  },
+  "candidates": [
+    {
+      "topic": "強風",
+      "market": "TW",
+      "event_date": "2026-10-27",
+      "source": "https://trends.google.com/trending?geo=TW",
+      "signal": {
+        "search_volume_bucket": "20K+",
+        "status": "active",
+        "started_hours_ago": 7
+      },
+      "selected": false,
+      "reason": "不把搜尋熱度誤當具體天氣警報"
+    },
+    {
+      "topic": "我們與惡的距離2",
+      "market": "TW",
+      "event_date": "2026-10-26",
+      "source": "https://trends.google.com/trending?geo=TW",
+      "signal": {
+        "search_volume_bucket": "50K+",
+        "status": "active",
+        "started_hours_ago": 21
+      },
+      "selected": false,
+      "reason": "避免引用劇集版權角色"
+    },
+    {
+      "topic": "レイズ 対 ブルワーズ",
+      "market": "JP",
+      "event_date": "2026-10-27",
+      "source": "https://trends.google.com/trending?geo=JP",
+      "signal": {
+        "search_volume_bucket": "100K+",
+        "status": "active",
+        "started_hours_ago": 8
+      },
+      "selected": false
+    },
+    {
+      "topic": "ちばてつや",
+      "market": "JP",
+      "event_date": "2026-10-27",
+      "source": "https://trends.google.com/trending?geo=JP",
+      "signal": {
+        "search_volume_bucket": "50K+",
+        "status": "active",
+        "started_hours_ago": 5
+      },
+      "selected": false,
+      "reason": "避免真人/既有角色衍生內容"
+    },
+    {
+      "topic": "harry kane",
+      "market": "US",
+      "event_date": "2026-10-27",
+      "source": "https://trends.google.com/trending?geo=US",
+      "signal": {
+        "search_volume_bucket": "1M+",
+        "status": "active",
+        "started_hours_ago": 14
+      },
+      "selected": false
+    },
+    {
+      "topic": "warriors vs nuggets",
+      "market": "US",
+      "event_date": "2026-10-27",
+      "source": "https://trends.google.com/trending?geo=US",
+      "signal": {
+        "search_volume_bucket": "200K+",
+        "status": "active",
+        "started_hours_ago": 7
+      },
+      "selected": false
+    },
+    {
+      "topic": "貓咪紙箱房地產／存錢貓",
+      "market": "TW",
+      "event_date": null,
+      "source": "original_evergreen_creative",
+      "signal": null,
+      "selected": true,
+      "reason": "原創常青題，投資筆記品牌連結，不引用未核實數字或他人迷因"
+    }
+  ],
+  "selected_draft_key": "8b6bf1a5448afa7a4acbb7b667c4c2ddce8b46158c880144cbe21e288d670d33",
+  "image_generation_count": 1,
+  "image_qa": "passed",
+  "original_source_image_file_ref": "file_00000000ed6c81f79288cdba456eeac8",
+  "brand_changes": 0,
+  "budget_ntd": 0,
+  "note": "Google Trends buckets are platform estimates, not rankings; time-since-start captured when observed; cross-market reach not inferred"
+}
