@@ -1,0 +1,17 @@
+{
+  "legacy_key": "f269fed6aaffbe02af467fe8b7759144aa9a479bce2fb626899a26bdfaa59ba1",
+  "runtime_status": "completed",
+  "requires_user_action": true,
+  "runtime_result_text": "",
+  "actual_disabled": true,
+  "disabled_reason": "unknown; audit reason not exposed",
+  "external_check": "Windsor Oct25-Oct27 six rows, last editorial noon Oct26; Facebook live profile latest noon; English absent from observed results",
+  "write_execution_proof": "run file says zero but complete tool invocation audit unavailable",
+  "decision": "retain legacy publishing lock; do not resend or claim confirmed never called",
+  "root_cause_confirmed": "protocol conflates reserved intent and started dispatch; no fence receipt for disambiguation",
+  "root_cause_unconfirmed": [
+    "why runtime requires user action",
+    "who or what disabled task",
+    "timeout vs tool approval vs interruption"
+  ]
+}

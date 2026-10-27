@@ -8,8 +8,12 @@
       "16:30",
       "19:30"
     ],
-    "enabled": true,
-    "release_gate": "state/policy.json mode must be live"
+    "enabled": false,
+    "release_gate": "state/policy.json mode must be live",
+    "observed_at": "2026-10-27",
+    "last_runtime_run": "30117afe-f4fc-832c-a2a3-09525e538873",
+    "runtime_requires_user_action": true,
+    "disabled_reason": "not exposed by automation API"
   },
   "weekly": {
     "task_id": "6add4bde3d6881919ff5037351dd44d4",

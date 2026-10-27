@@ -83,18 +83,18 @@ def reserve(args):
         if old['key']==d['key'] or old['caption_sha256']==d['caption_sha256'] or old['image_sha256']==d['image_sha256']: raise ValueError('DUPLICATE_OR_UNCERTAIN: do not republish same text or image')
         if old['slot']==args.slot: raise ValueError('SLOT_RESERVED: another worker already claimed this slot')
     day=dt.datetime.now(TZ).date().isoformat()
-    if not args.slot.startswith(day): raise ValueError('Stale slot cannot publish')
-    if sum(x.get('reserved_at','').startswith(day) for x in entries())>=policy.get('daily_limit',2): raise ValueError('DAILY_LIMIT: configured daily content cap reached')
-    if any(x.get('status') in ('publishing','published_unverified') for x in entries()): raise ValueError('UNRESOLVED_PUBLICATION: reconcile before any new post')
+    if dt.datetime.fromisoformat(args.slot).date().isoformat()!=day: raise ValueError('Stale slot cannot publish')
+    if sum(dt.datetime.fromisoformat(x['reserved_at']).astimezone(TZ).date().isoformat()==day for x in entries() if x.get('reserved_at'))>=policy.get('daily_limit',2): raise ValueError('DAILY_LIMIT: configured daily content cap reached')
+    if any(x.get('status') in ('reserved','publishing','published_unverified') for x in entries()): raise ValueError('UNRESOLVED_PUBLICATION: reconcile before any new post')
     if args.purpose=='regular':
         from international import plan
         expected=plan(args.slot)
         if d.get('language')!=expected['language'] or d.get('target_markets')!=expected['target_markets'] or d.get('experiment_id')!=expected['experiment_id']: raise ValueError('INTERNATIONAL_METADATA_MISMATCH')
     proof=release_check(d)
-    d.update(status='publishing',slot=args.slot,reserved_at=now(),purpose=args.purpose,task_id=args.task_id,image_check=proof)
+    d.update(status='reserved' if args.purpose=='regular' else 'publishing',dispatch_protocol=2 if args.purpose=='regular' else 1,slot=args.slot,reserved_at=now(),purpose=args.purpose,task_id=args.task_id,image_check=proof)
     write(ROOT/'state/posts'/f'{d["key"]}.json',d)
     if args.durable: checkpoint('Reserve Facebook slot '+args.slot)
-    return {'key':d['key'],'execute_action':{'connector':'facebook_organic','account':PAGE,'action':'create_photo_post','params':{'image_url':d['image_url'],'caption':d['caption']}},'warning':'LOCAL_INTENT_ONLY: use connector_commit.js to save this state with expected parent SHA; call once ONLY after CAS success. Unknown outcome stays blocked.'}
+    return {'key':d['key'],'execute_action':{'connector':'facebook_organic','account':PAGE,'action':'create_photo_post','params':{'image_url':d['image_url'],'caption':d['caption']}},'warning':'REGULAR MUST ARM: CAS-save reserved first; dispatch_guard.arm then CAS-save publishing with unique owner/nonce; ONLY winning CAS caller may invoke Windsor once; never resume/replay publishing. LOCAL_INTENT_ONLY: use connector_commit.js to save this state with expected parent SHA; call once ONLY after CAS success. Unknown outcome stays blocked.'}
 def receipt(args):
     p=ROOT/'state/posts'/f'{args.key}.json'; d=read(p)
     if d['status']!='publishing': raise ValueError('Receipt cannot overwrite completed state')
@@ -111,6 +111,7 @@ def verify(args):
     matches=[x for x in rows if x.get('post_id')==d.get('post_id')]
     if len(matches)!=1: raise ValueError('Post not yet in connector readback; do not resend')
     r=matches[0]
+    if args.visual!='passed': raise ValueError('Visual verification required before clearing publication lock')
     if norm(r.get('post_message',''))!=norm(d['caption']) or not r.get('full_picture'): raise ValueError('Readback text/image mismatch; requires review')
     d.update(status='verified',verified_at=now(),post_url=r['permalink_url'],facebook_created_time=r['post_created_time'],readback={'caption_match':True,'full_picture_present':True,'image_visual_check':args.visual})
     write(p,d)
