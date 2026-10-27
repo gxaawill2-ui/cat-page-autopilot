@@ -37,6 +37,6 @@ class PublishingGuards(unittest.TestCase):
     def test_wrong_readback_caption_is_not_verified(self):
         f.reserve(self.a);p=f.ROOT/'state/posts/key.json';d=f.read(p);d['post_id']=f.PAGE+'_123';f.write(p,d)
         rows=f.ROOT/'rows.json';f.write(rows,[{'post_id':d['post_id'],'post_message':'wrong','full_picture':'https://example.com/image.jpg'}])
-        with self.assertRaisesRegex(ValueError,'mismatch'):f.verify(argparse.Namespace(key='key',rows=str(rows),visual='pending',durable=False))
+        with self.assertRaisesRegex(ValueError,'mismatch'):f.verify(argparse.Namespace(key='key',rows=str(rows),visual='passed',durable=False))
 
 if __name__=='__main__':unittest.main()

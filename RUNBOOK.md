@@ -45,3 +45,8 @@ prepare加 --language --target-markets --experiment-id（依plan回傳）；保�
 
 ## 三天即調整（2026-10-26使用者最新要求，優先於舊7天等待）
 加量實驗10/27–10/29，首次由既有每日任務於10/29 19:30當輪發布或跳過處理完後檢討，以後每3天一次，記錄last_review_at避免同日重做；不等週日才改。分析同齡48h與每篇/每日整體表現、Page追蹤變化。若無改善先查發布/曝光/分發/資料，資料有效仍持平就當輪保存下一周期的實質內容調整（題材、畫風、形式或頻率擇一），按授權執行，不只寫建議。不動Page ID、發布安全門檻及NT$0限制；不是每3天改名。缺數據不當0，明確記不足且修資料；可進行可逆探索但不宣稱勝負。原14天國際化追蹤和週日完整分析仍保留，標註頻率/內容調整混雜。
+
+## 緊急中斷安全協議2（10/27，優先於舊reserve立即發送描述）
+regular reserve只建立reserved(protocol2)，先CAS保存。欲發送時dispatch_guard.arm(state,唯一run owner)產生publishing與nonce；用publish_once.js將該狀態CAS保存並在同一工具執行單次Windsor呼叫。只允許CAS成功者呼叫，CAS失敗不可發送。已arm/publishing不可重新arm或重送；逾時/回條遺失須外部核對。expire僅適用協議2未arm且已跨日reserved，CAS保存not_published前重讀最新；舊protocol1 publishing永不依過期或write_calls=0自動清鎖。保留歷史hash/slot，不重用過期內容。
+發文或製圖工具需要user_action就記具體狀態並正常回報，不吞掉錯誤。每輪peek真實daily與weekly，記observed_at/enabled/run狀態；不把GitHub enabled當runtime。任務自行停用後無法由已停用任務自我監測；未另建監控，不保證即時通知。平台API不提供停用審計原因則寫unknown。
+三天檢討使用review_due.py判斷到期；即使發文被鎖仍執行研究/檢討。CAS建立records/reviews/cycle-日期.json（running）後才分析；完成保存結果與下一策略，重跑讀running續作、不建立第二份或再套策略。從10/29 19:30起每3天，錯過則下輪補檢討；資料不足不造數據。週日仍保留。

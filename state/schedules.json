@@ -8,8 +8,8 @@
       "16:30",
       "19:30"
     ],
-    "enabled": false,
-    "release_gate": "state/policy.json mode must be live",
+    "enabled": true,
+    "release_gate": "live AND all unresolved publications reconciled; legacy f269 remains blocked",
     "observed_at": "2026-10-27",
     "last_runtime_run": "30117afe-f4fc-832c-a2a3-09525e538873",
     "runtime_requires_user_action": true,

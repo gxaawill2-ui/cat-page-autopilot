@@ -137,3 +137,6 @@ Meta安全密碼驗證已完成，實際送出要求後遭拒。原文：「不�
 - Windsor與FB實際頁面未見晚間英文，最近內容為10/26午間。舊檔雖記write_calls=0，但無完整呼叫審計，legacy publishing仍保留，不重送、不強制解鎖。不能宣稱已恢復發文。
 - 新dispatch_guard加入reserved→CAS arm publishing→單次呼叫；只有協議2且未arm的過期reserved可結案，legacy與任何已arm/未知結果不可自動結案。每日計數改按Asia/Taipei轉換時間，修UTC字串日期誤計；視覺驗證pending不可清鎖。
 - state/schedules已同步真實disabled；其餘語言/4篇/三天與週日設定不改。待新測試及狀態核對後決定恢復；細節records/runs/2026-10-27-emergency.json。
+
+- 同一每日task已恢復enabled並再次peek確認，四時段未變；但legacy未知鎖仍存在，僅恢復任務執行/研究/草稿/通知，不宣稱恢復Facebook發布。週日20:00仍enabled。24項測試通過；並行測試目前為狀態推導，實際CAS競爭仍待隔離驗證。
+- 公開晚間圖片本輪匿名GET實測200/image/jpeg/174899 bytes/SHA753629ef...一致；Windsor仍Trial/is_paid=false，未升級。FB品質UI顯示粉專沒有任何問題、帳號沒有限制、推薦進行中、營利不符資格；這不證明更名沒有其他內部限制。
