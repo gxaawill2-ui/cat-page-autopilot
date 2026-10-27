@@ -1,0 +1,27 @@
+name: Cat Page Python Safety Tests
+on:
+  push:
+    branches: [main]
+    paths:
+      - catflow.py
+      - dispatch_guard.py
+      - test_catflow.py
+      - test_dispatch_guard.py
+      - state/legacy_quarantine.json
+      - .github/workflows/unit-tests.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  safety-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install existing free image dependency
+        run: python -m pip install Pillow
+      - name: Run project tests without Facebook writes
+        run: python -m unittest discover -v -p 'test_*.py'
