@@ -85,6 +85,36 @@ def validate(q, day, slot):
         raise ValueError("Untrusted image URL")
     if q.get("language") not in ("en", "zh-Hant", "ja"):
         raise ValueError("Unsupported language")
+    expected = "en" if slot in ("09:30", "19:30") else "zh-Hant"
+    if slot == "19:30" and day in ("2026-11-03", "2026-11-06"):
+        expected = "ja"
+    if q["language"] != expected:
+        raise ValueError("Language does not match authorized slot")
+
+def policy_gate(day, slot):
+    policy = read(ROOT / "state/policy.json")
+    if (policy.get("mode") != "live" or policy.get("page_id") != PAGE_ID
+            or policy.get("timezone") != "Asia/Taipei"):
+        raise ValueError("POLICY_GATE: live Page and timezone required")
+    limit = policy.get("daily_limit")
+    if type(limit) is not int or not 1 <= limit <= 4:
+        raise ValueError("Invalid daily limit")
+    # Count even unknown attempts; an absent receipt is not an unused slot.
+    occupied = set()
+    for folder in ("state/posts", "state/meta_dispatch"):
+        for path in (ROOT / folder).glob("*.json"):
+            old = read(path)
+            if old.get("slot"):
+                stamp = dt.datetime.fromisoformat(old["slot"])
+                if stamp.tzinfo is None:
+                    stamp = stamp.replace(tzinfo=TZ)
+                stamp = stamp.astimezone(TZ)
+                if stamp.date().isoformat() == day:
+                    occupied.add(stamp.strftime("%H:%M"))
+    if slot in occupied:
+        raise ValueError("SLOT_RESERVED by existing pipeline")
+    if len(occupied) >= limit:
+        raise ValueError("DAILY_LIMIT includes unknown attempts")
 
 def local_dedup(q):
     for path in (ROOT / "state/posts").glob("*.json"):
@@ -97,11 +127,27 @@ def local_dedup(q):
             raise ValueError("Meta publisher already attempted this content")
 
 def remote_dedup(q, token):
+    identity = graph("me", token, {"fields": "id,name"})
+    if identity.get("id") != PAGE_ID:
+        raise ValueError("Token does not represent the authorized Page")
     posts = graph(f"{PAGE_ID}/posts", token, {"fields": "id,message,created_time", "limit": 40})
     if not isinstance(posts.get("data"), list):
         raise ValueError("Cannot verify Meta recent posts")
     if any(norm(p.get("message") or "") == norm(q["caption"]) for p in posts["data"]):
         raise ValueError("Meta already contains same caption")
+    day = q["slot"].split("T")[0]
+    today = [p for p in posts["data"] if dt.datetime.fromisoformat(
+        p["created_time"].replace("Z", "+00:00")).astimezone(TZ).date().isoformat() == day]
+    if len(today) >= min(4, read(ROOT / "state/policy.json")["daily_limit"]):
+        raise ValueError("REMOTE_DAILY_LIMIT reached")
+
+def readback_matches(p, post_id, photo_id, caption):
+    if p.get("id") != post_id or norm(p.get("message") or "") != norm(caption):
+        return False
+    attachments = p.get("attachments", {}).get("data", [])
+    return bool(p.get("full_picture") and p.get("permalink_url") and any(
+        a.get("target", {}).get("id") == photo_id and a.get("media", {}).get("image", {}).get("src")
+        for a in attachments))
 
 def verify_image(q):
     req = urllib.request.Request(q["image_url"], headers={"User-Agent": "cat-page-image/1"})
@@ -132,6 +178,7 @@ def run(slot, dry_run=False, now=None):
     if out.exists():
         print("SLOT_ALREADY_ATTEMPTED_NEVER_RETRY")
         return "skipped"
+    policy_gate(day, slot)
     local_dedup(q)
     if dry_run:
         print("DRY_RUN_OK_NO_FACEBOOK_WRITES")
@@ -178,9 +225,11 @@ def run(slot, dry_run=False, now=None):
         print("ONLY_PHOTO_ID_NO_POST_ID; NEED_MANUAL_VERIFICATION")
         return "unknown"
     try:
-        p = graph(post_id, token, {"fields": "id,message,permalink_url,created_time"})
-        if p.get("id") == post_id and norm(p.get("message") or "") == norm(q["caption"]):
+        p = graph(post_id, token, {"fields": "id,message,permalink_url,created_time,full_picture,attachments{target,media}"})
+        if readback_matches(p, post_id, photo_id, q["caption"]):
             record.update(status="verified_api", permalink_url=p.get("permalink_url"),
+                          full_picture=p["full_picture"], attachment_photo_id=photo_id,
+                          visual_review="pending; API identity check is not visual QA",
                           verified_at=dt.datetime.now(TZ).isoformat())
             write(out, record)
             persist(out, f"Verify Meta official post {day} {slot}")

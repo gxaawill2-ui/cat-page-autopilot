@@ -36,6 +36,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
+      - name: Verify safety gates without Facebook writes
+        run: python3 -m unittest discover -s scripts -p test_meta_graph_publish.py -v
       - name: Send only current prepared, unique Page photo
         shell: bash
         run: |

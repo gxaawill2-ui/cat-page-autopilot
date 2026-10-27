@@ -59,3 +59,10 @@
 - 官方 GitHub Actions 免費規則：https://docs.github.com/en/actions/concepts/billing-and-usage
 
 最新授權：**粉專更名暫停。額外 NT$0。禁止重啟舊 Windsor 發文造成競爭。**
+
+## 2026-10-27 18:05 實測更新
+- 真實管理員入口重新導向 `https://developers.facebook.com/async/registration/dialog/?src=default`，顯示尚須建立 Meta for Developers 帳號並接受條款；尚未有 App/Token/授權審查結果。本人須先完成註冊（Register → Verify account → Contact info → About you），不能以粉專管理員或 Windsor 授權代替。
+- Actions dry-run #40485174412 成功，log 明確顯示 `META_PAGE_ACCESS_TOKEN`/`META_PUBLISH_ENABLED` 為空及 `SKIPPED_STALE_OR_EARLY`。此筆不是 Facebook 發布驗收。
+- 程式新增 policy live/Page/timezone、跨舊/新管線同 slot/每日上限（未知亦計入）、英文/繁中/日文時段、Token /me Page 身分及 Meta 當日篇數檢查；回讀必須含 full_picture 且 attachment target.id 與返回 photo ID 一致，API verified 不冒充目視確認。
+- 新增 CAS 失敗不 POST、POST 未知只嘗試一次/重跑不重送及上述防護測試，15 項通過；publisher workflow 每輪先跑此無寫入測試。
+- 正式授權仍需核對 pages_manage_posts（發布）、pages_read_engagement（回讀）、pages_show_list（管理員列出 Page/取得 Page token）。是否需 App Review/商家驗證取決於實際 App/dashboard，尚未到此步驟，不預先宣稱免審或遭拒。官方文件本輪檢索 HTTP429，未以第三方內容冒充官方核准。

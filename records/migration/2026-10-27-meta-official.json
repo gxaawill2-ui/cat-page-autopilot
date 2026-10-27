@@ -10,7 +10,8 @@
     "job_id": 122125049605,
     "conclusion": "success",
     "url": "https://github.com/gxaawill2-ui/cat-page-autopilot/actions/runs/40485174412",
-    "note": "manual dry_run=true, expired 09:30 slot; no live acceptance"
+    "note": "manual dry_run=true, expired 09:30 slot; no live acceptance",
+    "log_result": "SKIPPED_STALE_OR_EARLY; both Meta env values empty"
   },
   "meta_authorization": {
     "status": "blocked_at_developer_registration_terms",
@@ -26,5 +27,11 @@
     "is_enabled": false,
     "role": "queue_only; latest override already present"
   },
-  "next": "Patch missing policy/daily-cap/image readback guards; repeat real dry-run with safety tests; prepare future unique queue; user completes developer registration."
+  "next": "Patch missing policy/daily-cap/image readback guards; repeat real dry-run with safety tests; prepare future unique queue; user completes developer registration.",
+  "expanded_tests": {
+    "passed": 15,
+    "cas_failure_prevents_write": true,
+    "unknown_write_replay_blocked": true,
+    "policy_daily_slot_image_readback_guards": true
+  }
 }
