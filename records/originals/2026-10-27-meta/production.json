@@ -1,0 +1,67 @@
+{
+  "source_generation_id": "exec-b378e8e5-4147-4d13-a44c-be6cd906ae9e",
+  "intended_slot": "2026-10-27T19:30",
+  "generation_count": 1,
+  "qa": {
+    "passed": true,
+    "composition": "one clear cute cat, four paws and tail, readable face, no text/logo or protected characters",
+    "image_inspected": true
+  },
+  "prompt": "Use case: illustration-story. Create one entirely original, high-quality square social post illustration with NO text, NO logos, NO existing characters. A cozy modern home in warm evening light: one adorable fluffy cream-and-orange cat is completely sprawled across an open laptop keyboard like an extravagantly relaxed manager, one front paw gently resting on the trackpad, eyes half closed in smug contentment. At the edge of the frame only a human hand holds an unplugged computer mouse in resignation. The cat is anatomically coherent, four paws, one tail, clean attractive face. Editorial 3D clay illustration with soft tactile fur and beautifully lit warm ivory/teal colors, expressive funny composition understood without language, clear silhouette readable on a phone, charming not generic, minimal uncluttered desk. No boxes, coins, Halloween, ghosts or reflection. This is a new original English cat-life humor post for an international Facebook audience. All important elements centered with margins.",
+  "evergreen_original": true,
+  "news_or_trend_claim": false,
+  "candidate_topics": [
+    {
+      "topic": "Cat supervising remote work",
+      "market": [
+        "US",
+        "PH"
+      ],
+      "source": "original editorial idea",
+      "date": "2026-10-27",
+      "measured_heat": "N/A; no popularity claim"
+    },
+    {
+      "topic": "Cat treats laundry as luxury bed",
+      "market": [
+        "US",
+        "PH"
+      ],
+      "source": "original editorial idea",
+      "date": "2026-10-27",
+      "measured_heat": "N/A; no popularity claim"
+    },
+    {
+      "topic": "Human follows cat feeding schedule",
+      "market": [
+        "US",
+        "PH"
+      ],
+      "source": "original editorial idea",
+      "date": "2026-10-27",
+      "measured_heat": "N/A; no popularity claim"
+    },
+    {
+      "topic": "Cat discovers warm printer",
+      "market": [
+        "US",
+        "PH"
+      ],
+      "source": "original editorial idea",
+      "date": "2026-10-27",
+      "measured_heat": "N/A; no popularity claim"
+    },
+    {
+      "topic": "Cat steals human video-call seat",
+      "market": [
+        "US",
+        "PH"
+      ],
+      "source": "original editorial idea",
+      "date": "2026-10-27",
+      "measured_heat": "N/A; no popularity claim"
+    }
+  ],
+  "selected": "Cat supervising remote work",
+  "source_png_bytes": 1951305
+}

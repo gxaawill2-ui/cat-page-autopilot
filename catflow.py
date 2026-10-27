@@ -47,7 +47,10 @@ def prepare(args):
     # Human-readable static project art gallery, not a commerce/SaaS host.
     gallery=[]
     for f in sorted((ROOT/'records/drafts').glob('*.json')):
-        d=read(f); gallery.append({'key':d['key'],'image_url':d['image_url'],'caption':d['caption'],'topic':d['topic']})
+        d=read(f)
+        if not all(d.get(k) for k in ('key','image_url','caption','topic')):
+            continue  # Recovery checkpoints can precede asset preparation.
+        gallery.append({k:d[k] for k in ('key','image_url','caption','topic')})
     write(ROOT/'docs/gallery.json',gallery)
     return draft
 def url_check(url, expected):

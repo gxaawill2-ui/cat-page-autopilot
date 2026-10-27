@@ -1,0 +1,27 @@
+{
+  "key": "9c865b6ce99b27976149e4531ae9538e651437746c1c1b83130ff811cfe8145d",
+  "page_id": "1346385028565797",
+  "caption": "My cat offered to supervise my work.\n\nThe keyboard is now a nap zone.\nAll deadlines have been postponed indefinitely. 🐾",
+  "caption_sha256": "7e0ac8acaf2922abe9bdc95e1181ff5cc5ee4e2c8e37ed6b392b96462de182aa",
+  "image_sha256": "80d20f523ba090f2f276239393bc6c593dd0796dbc7f811b06924b2caa5cfd30",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/80d20f523ba090f2f276239393bc6c593dd0796dbc7f811b06924b2caa5cfd30.jpg",
+  "asset_path": "docs/assets/80d20f523ba090f2f276239393bc6c593dd0796dbc7f811b06924b2caa5cfd30.jpg",
+  "bytes": 249160,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "created_at": "2026-10-27T18:06:03.369849+08:00",
+  "topic": "Original cat keyboard supervisor humor",
+  "style": "Warm polished 3D illustration",
+  "caption_type": "Short English everyday humor",
+  "source_image": "imagegen:exec-b378e8e5-4147-4d13-a44c-be6cd906ae9e",
+  "sources": [],
+  "status": "draft",
+  "language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "experiment_id": "intl-20261026-14d"
+}
