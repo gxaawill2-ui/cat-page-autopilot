@@ -55,3 +55,8 @@ protocol2工具整合：bundle.py對JSON使用utf-8，供publish_once.js核對CA
 
 ## 2026-10-27 最新續作限制
 所有更名/名稱研究/頭貼封面簡介修改暫停，直到使用者另行授權。舊f269 publishing結果仍unknown，核對證據見records/reconciliation/2026-10-27-legacy.json；所需後端審計與已備妥未送的查詢內容見provider-audit-request.txt。沒有新證據不無限重做舊查詢；不得清鎖/標verified/繞過全域安全門。任務可繼續研究、草稿與三天/週日分析；只有成功發布的Post ID納入成效樣本，故障缺樣明確標記。Meta UI日期可能為太平洋時間，核對日期須涵蓋原始UTC事件，不把預設截至昨天的空列表當完整否定證明。
+
+## 2026-10-27 範圍隔離策略（使用者最新授權，優先於前述「任一舊未知＝全站停發」規則）
+10/26 英文事故 f269fed6aaffbe02af467fe8b7759144aa9a479bce2fb626899a26bdfaa59ba1 仍為 publishing/unknown，不能結案、不能重送、不能補發過期時段。使用者要求更換方法，不可再因此把所有未來全新內容永久封鎖。僅當 state/legacy_quarantine.json 明確 enabled、精確 key/slot/caption SHA/image SHA/證據檔全部吻合、舊文 reconciliation.classification=unknown 且 closure_allowed=false/resend_allowed=false、舊記錄是未採 protocol2 的 publishing、且舊 slot 嚴格早於新 slot 日期，catflow.reserve 才將該筆舊未知排除於「全域阻擋」判斷。原始檔保持 publishing，所有文字/圖片hash查重、相同slot查重、每日上限、當日及其他未知的全域阻擋維持原樣。
+新的每個正常時段使用完全不同的原創圖與文字；每輪先查 Facebook/Meta/Windsor 最新真實貼文與最近一次slot，驗證沒有新重複、Windsor權限、Pages公開驗證，依 protocol2 reserved CAS→armed publishing CAS→同一Work工具執行單次 create_photo_post→真實回條→FB UI/API回讀。若外部查詢失敗、Meta出現不明/延遲的舊文、CAS衝突或其他未解新鎖，停止並記錄，不能自動重試。歷史f269保持隔離並等待後端審計；不能改為verified/not_published，不能「全域清鎖」。舊文即使晚到也不會被重送，但仍有平台不可見延遲的殘餘風險，不能宣稱絕對零風險。
+此改動只適用10/27以後新時段，不追補已過期slot；同一每日task、不新增重複排程，4篇上限且不為了湊量降品質。品牌更名維持暫停。首次新的 unattended 完整發文+回讀仍須真實驗收，程式規則更新不可當驗收成功。
