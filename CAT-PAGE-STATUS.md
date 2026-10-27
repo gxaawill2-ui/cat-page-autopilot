@@ -1,3 +1,9 @@
+## 2026-10-27 12:30 最新排程續作（新圖文尚未發布）
+- live、每日4篇；10/27當日Windsor查無已發新貼文。10/26歷史f269仍publishing/unknown，精確隔離未清鎖。
+- 目前main GitHub Actions Python safety tests success，JS CAS模擬測試通過。7個美日台候選已實查，原創繁中圖片及JPEG（SHA 8bbd66eccbb16d879b435afa21e691e210dc0d850ca0310538ff8ad0a61e1b23）與文案已製作、目視QA通過。
+- **本輪Facebook寫入0**：產生的JPEG尚未經GitHub connector成功上傳，故無Pages匿名200/MIME/SHA證據，未reserve、未arm、未呼叫Windsor。新草稿 records/drafts/ac245d27aff62a26cc66e789f3b6ae301317b65ec96054d4abf8aa9141c62b56.json 僅為待上傳，不可將未公開URL當已驗證。舊f269保持unknown。
+- 既有09:30/12:30/16:30/19:30、3天10/29檢討與品牌暫停不變。下次先讀最新state/posts與真實FB，再依protocol2執行；不得重發已過期時段。
+
 # 貓咪投資筆記 V3.1｜唯一續作狀態
 
 ## 最新修復方向（2026-10-27，使用者要求「解決不了就換方法」）

@@ -1,0 +1,32 @@
+{
+  "run_date": "2026-10-27",
+  "slot": "2026-10-27T12:30",
+  "timezone": "Asia/Taipei",
+  "observed_at": "2026-10-27T12:31:15+08:00",
+  "automation_run_id": "de17439b-ac90-8333-b04a-a73e3a359ae8",
+  "policy_mode": "live",
+  "daily_limit": 4,
+  "existing_today_posts_windsor": 0,
+  "legacy_unknown_key": "f269fed6aaffbe02af467fe8b7759144aa9a479bce2fb626899a26bdfaa59ba1",
+  "legacy_status": "publishing_unchanged_quarantined_exact",
+  "tests": {
+    "python_actions_run": "https://github.com/gxaawill2-ui/cat-page-autopilot/actions/runs/40436303901",
+    "python_status": "success_at_current_head",
+    "js_cas": "PASS simulated concurrent CAS loser, unknown result and replay; zero Facebook calls"
+  },
+  "imagegen_count": 1,
+  "visual_qa": "passed",
+  "draft_key": "ac245d27aff62a26cc66e789f3b6ae301317b65ec96054d4abf8aa9141c62b56",
+  "image_sha256": "8bbd66eccbb16d879b435afa21e691e210dc0d850ca0310538ff8ad0a61e1b23",
+  "asset_bytes": 399114,
+  "stage": "DRAFT_PREPARED_IMAGE_BINARY_UPLOAD_PENDING",
+  "blocker": "The generated image is available in conversation/container, but the current GitHub connector accepts base64 strings and this run has no direct verified binary bridge from the image file to that connector. No Pages proof can exist before asset upload. Therefore reserve/arm/Windsor must not run.",
+  "facebook_write_calls": 0,
+  "post_id": null,
+  "slot_claimed": false,
+  "brand_changes": 0,
+  "other_repos_changed": 0,
+  "new_tasks_created": 0,
+  "extra_cost_ntd": 0,
+  "next_action": "Upload exact new JPEG bytes to docs/assets via GitHub CAS, verify Pages 200 image/jpeg SHA, recheck slot and current posts, then protocol2 reserve CAS/arm CAS/single Windsor only if same-day and all gates pass; otherwise keep draft and do not catch up past slot"
+}

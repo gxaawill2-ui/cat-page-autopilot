@@ -1,0 +1,75 @@
+{
+  "observed_at": "2026-10-27T12:31:15+08:00",
+  "slot": "2026-10-27T12:30",
+  "language": "zh-Hant",
+  "market": "TW",
+  "source_window": "2026-10-26 to 2026-10-27, Google Trends past 24 hours",
+  "trends_sources": [
+    "https://trends.google.com/trending?geo=TW",
+    "https://trends.google.com/trending?geo=JP",
+    "https://trends.google.com/trending?geo=US"
+  ],
+  "public_threads_signal": null,
+  "public_facebook_signal": null,
+  "candidates": [
+    {
+      "topic": "強風與貓追落葉",
+      "market": "TW",
+      "source": "https://trends.google.com/trending?geo=TW",
+      "source_date": "2026-10-27",
+      "signal": "強風 5K+ searches; Active; started 3h ago",
+      "original_angle": "室內貓咪追窗邊落葉，僅借用季節氛圍，非氣象報導",
+      "selected": true
+    },
+    {
+      "topic": "iPad mini與貓搶平板",
+      "market": "TW",
+      "source": "https://trends.google.com/trending?geo=TW",
+      "source_date": "2026-10-27",
+      "signal": "ipad mini 5K+ searches; Active; started 14h ago",
+      "selected": false
+    },
+    {
+      "topic": "日本動物節目與貓咪療癒",
+      "market": "JP",
+      "source": "https://trends.google.com/trending?geo=JP",
+      "source_date": "2026-10-27",
+      "signal": "嗚呼 みんなの 動物園 10K+ searches; Active; started 13h ago",
+      "selected": false
+    },
+    {
+      "topic": "日本初冬天氣與暖被窩貓咪",
+      "market": "JP",
+      "source": "https://trends.google.com/trending?geo=JP",
+      "source_date": "2026-10-27",
+      "signal": "早期天候情報 20K+ searches; Active; started 6h ago",
+      "selected": false
+    },
+    {
+      "topic": "美國球賽貓咪搶遙控器",
+      "market": "US",
+      "source": "https://trends.google.com/trending?geo=US",
+      "source_date": "2026-10-27",
+      "signal": "warriors vs nuggets 100K+ searches; Active; started 3h ago",
+      "selected": false
+    },
+    {
+      "topic": "美國萬聖節裝扮與貓咪",
+      "market": "US",
+      "source": "https://www.axios.com/local/san-diego/2026/10/26/trending-halloween-costumes-2026",
+      "source_date": "2026-10-26",
+      "signal": "Axios reports 2026 Google Frightgeist costume search trends; exact cat-content popularity unavailable",
+      "selected": false
+    },
+    {
+      "topic": "萬聖節貓咪安全與無火燈飾",
+      "market": "US",
+      "source": "https://www.aaha.org/resources/how-to-have-a-pet-safe-halloween/",
+      "source_date": "2026-08-21",
+      "signal": null,
+      "signal_note": "Evergreen veterinary safety reference; not a trending rank",
+      "selected": false
+    }
+  ],
+  "decision": "Choose original lighthearted Chinese cat humor, no real-world news assertion; do not copy external meme"
+}
