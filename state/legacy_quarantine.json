@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "enabled": true,
+  "mode": "scoped_legacy_quarantine",
+  "user_instruction": "2026-10-27: stop global freeze caused by unresolved 2026-10-26 historical post; switch to per-content isolation",
+  "meaning": "This exception unblocks NEW unique content in FUTURE slots only. Old result remains unknown, original record remains publishing, and old content may never be resent.",
+  "quarantined": [
+    {
+      "key": "f269fed6aaffbe02af467fe8b7759144aa9a479bce2fb626899a26bdfaa59ba1",
+      "slot": "2026-10-26T19:30",
+      "caption_sha256": "437819321206f7c95c62721eda4ec067dd70c51fc06be99bbbcd2a1f307b4fc0",
+      "image_sha256": "753629ef376fb0e7acabec04afc6223b3bbf0da5938194e71c3b758ba8ba0a5e",
+      "status": "unknown_not_closed",
+      "evidence_record": "records/reconciliation/2026-10-27-legacy.json",
+      "resend_allowed": false,
+      "entry_status_must_remain": "publishing"
+    }
+  ],
+  "safety_contract": [
+    "Never ignore current-day pending posts.",
+    "Never ignore protocol2 or other unknown publications.",
+    "Never publish any content matching quarantined text, image, key or old slot.",
+    "Keep normal image proof, one-call Windsor, CAS, timezone daily cap, external fresh-post readback.",
+    "Observe Facebook recent posts before any new dispatch; newly discovered unexpected old post triggers reconciliation.",
+    "No retroactive catch-up or automatic cleanup of quarantined historical entry.",
+    "No claim of zero risk: opaque platform delayed publish may still occur."
+  ],
+  "budget_ntd": 0
+}
