@@ -17,7 +17,7 @@
   "caption_type": "short_humor",
   "source_image": "imagegen:be504264-2af3-443f-960c-90fc48edefb0;file_00000000ed6c81f79288cdba456eeac8",
   "sources": [],
-  "status": "reserved",
+  "status": "publishing",
   "language": "zh-Hant",
   "target_markets": [
     "TW"
@@ -38,5 +38,8 @@
     "validator": "github-actions-pages-probe",
     "run_id": "40474575067",
     "source_commit": "4ea1312774a6706599125c1da2d77d565f152f31"
-  }
+  },
+  "dispatch_owner": "daily-20261027-1630-53475c3dd3ac42c9a8be027c6b32bbc6",
+  "dispatch_nonce": "e39187acb3ad4f84ad7b111e77dc5f46",
+  "dispatch_started_at": "2026-10-27T16:37:52.446465+08:00"
 }
