@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-27T18:12:04.084122+08:00",
+  "observed_at": "2026-10-27T19:24:21.827876+08:00",
   "source_commit": "e3ec6f85fa10d6ed82e01f87f103fe56833f4066",
   "local_tests": {
     "passed": 9,
@@ -14,12 +14,13 @@
     "log_result": "SKIPPED_STALE_OR_EARLY; both Meta env values empty"
   },
   "meta_authorization": {
-    "status": "blocked_at_developer_registration_terms",
+    "status": "developer_registration_completed; app creation pending",
     "url": "https://developers.facebook.com/async/registration/dialog/?src=default",
     "page_token_obtained": false,
     "app_obtained": false,
     "observed_text": "建立 Meta for Developers 帳號; By proceeding, you agree to the Meta Platform Terms and Developer Policies",
-    "required_user_action": "Account owner must accept terms and complete developer registration; no token or publishing grant claimed"
+    "required_user_action": "Confirm acceptance of Meta Platform Terms/Developer Policies on final App creation step; no app created yet",
+    "developer_registration_completed": true
   },
   "facebook_writes": 0,
   "daily_task": {
@@ -27,13 +28,13 @@
     "is_enabled": false,
     "role": "queue_only; latest override already present"
   },
-  "next": "User completes Meta developer registration in preserved browser; continue App setup and permissions, no need to redo image/code. If 19:30 expires keep draft and do not backfill.",
+  "next": "User explicitly confirms App creation terms, then click Create App once; inspect actual App ID, permissions and Page identity; keep live publish disabled.",
   "expanded_tests": {
     "passed": 16,
     "ci_run_id": 40486394603,
     "ci_conclusion": "success"
   },
-  "stage": "safe_queue_ready_authorization_blocked",
+  "stage": "developer_registered_app_draft_pending_explicit_terms_confirmation",
   "latest_dry_run": {
     "run_id": 40486162579,
     "job_id": 122128356033,
@@ -67,5 +68,13 @@
     "Scaffold lacked policy/old-slot/global daily-cap/image identity checks; minimal gates added",
     "catflow.prepare gallery crashed KeyError image_url on an incomplete historical draft; skip incomplete gallery entry, draft/JPEG had already been created, no image regeneration",
     "Pages probe ran before actual deployment settled; failed 404, real anonymous third bounded GET passed after deploy success; do not treat failed probe as proof"
-  ]
+  ],
+  "app_draft": {
+    "name": "Cat Page Autopilot",
+    "use_case": "管理粉絲專頁的所有內容",
+    "business_portfolio": "none available; official defer option selected",
+    "requirements_screen": "找不到條件 / 沒有針對此應用程式使用案例的要求",
+    "note": "This setup screen is not a Page permission grant or proof that review is unnecessary",
+    "creation_submitted": false
+  }
 }

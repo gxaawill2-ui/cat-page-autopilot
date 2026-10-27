@@ -1,3 +1,10 @@
+## 2026-10-27 開發者註冊完成／App 最後確認待處理（最新）
+- 使用者已完成正式 Meta developer 註冊；新截圖及本輪已登入 apps 清單均確認。
+- 已準備新 App：Cat Page Autopilot／使用案例「管理粉絲專頁的所有內容」。沒有可用商家資產管理組合，採官方稍後連結選項；要求頁目前顯示沒有條件，不能當作取得發布權限或永久免審證明。
+- 最後總覽明示建立即同意 Meta 開放平台條款及開發商政策，尚未按「建立應用程式」，待本人對此具體建立動作確認。沒有 App ID、沒有 Page token，Secret/正式開關仍未配置，沒有新 Facebook Post ID。
+- 原碼、圖片、queue、兩筆 unknown、daily queue-only disabled、weekly enabled 保持；不重做已完成驗證。若19:30過期一律不補發。
+- 精確下一步：取得此最後條款接受確認→單次建立 App→記錄真App ID與實際權限要求→官方OAuth/Page token→只存GitHub Secret→GET預檢→正常slot驗收。
+
 ## 2026-10-27 18:12 Meta 官方新架構本輪結果（優先於以下歷史）
 - **未取得合法 Page token / 發布權限，未完成真實發文驗收；新 Facebook Post ID = 無。** 管理員在 developers.facebook.com 顯示未完成開發者註冊，停於 Meta Platform Terms/Developer Policies 接受步驟。本人必須完成註冊；尚未到 App Review/商家驗證，不宣稱必需或免審。此為新架構的一次性外部授權阻礙，不再重啟 Windsor。
 - GitHub 設定頁實查沒有 repository/environment secrets、沒有 variables；META_PAGE_ACCESS_TOKEN 未設、META_PUBLISH_ENABLED 未開。未儲存任何 Token，正式發布仍關閉。
