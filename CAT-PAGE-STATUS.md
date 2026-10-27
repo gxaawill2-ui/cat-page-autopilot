@@ -1,3 +1,12 @@
+## 2026-10-27 17:xx 替代架構已落地（優先於歷史 Windsor 路線）
+- 使用者要求換方法，停止反覆要求 ChatGPT 無人排程直接執行 Windsor Facebook 寫入。**舊 daily 仍停用，不能再直接發布；週日檢討維持。**
+- 新建安全預設關閉的「GitHub Actions → Meta 官方 Graph API」發布骨架：scripts/meta_graph_publish.py、.github/workflows/meta-graph-publish.yml、scripts/test_meta_graph_publish.py；官方權限/啟用流程記錄 docs/meta-official-alternative.md。
+- 這是**已提交的程式架構，不是已啟用的真實 Facebook 發文**。預設缺少 META_PAGE_ACCESS_TOKEN GitHub Secret、META_PUBLISH_ENABLED=true，無法對外 POST。需要 Facebook Page 管理員透過合法 Meta 開發者流程取得 pages_manage_posts 等必要權限、Page token；可能遇到審查/商家驗證，不能假定可用。
+- 排程預定台北09:30/12:30/16:30/19:30，GitHub Actions UTC cron。GitHub Actions 對公開 repo 標準runner免費，但排程不保證準點。只讀 queue/meta/YYYY-MM-DD/HHMM.json 預先存妥的全新圖文，過期45分鐘跳過，單一slot一次，CAS armed先持久保存再單次Meta照片API發布；未知不重送、真正Post ID後再驗。
+- **ChatGPT Work 仍須負責產生新原創圖片、文案與 queue**，GitHub Actions 本身不生成AI圖片。舊 task在授權後可以改成queue-only，不得再呼叫Windsor/Meta寫入；工作流程沒有完成前絕不宣稱完全無人營運。
+- 保留10/26 f269與10/27 16:30 8b6兩筆未知記錄及hash，不補發、不改為verified；品牌更名繼續暫停，零額外費用。
+- 下個具體步驟：Work 先查本repo新 docs 以及 GitHub Actions dry-run/test；用官方 Meta App/頁面管理身分取得正常必要授權，Token 僅設定至 GitHub Actions Secret，前置檢查後由使用者確認打開 META_PUBLISH_ENABLED；用正常時段原創新內容測得Facebook Post ID+回讀，下一輪再驗穩定。若Meta不核准，改Meta Business Suite人工一次排多篇，坦白標半自動。
+
 ## 2026-10-27 發布故障本輪最終結果（優先於所有成功/啟用報告）
 - 16:30是否呼叫Windsor仍unknown：armed CAS445c332成功、runtime空結果/needs user action/停用，無原始工具trace、Request ID、Post ID；FB/Windsor均未見新文但不當作未呼叫證明。兩筆事故保留，不重送/不清鎖/不新增protocol2隔離例外。
 - GitHub本次無人Blob/Tree/Commit/CAS已成功，Windsor工具名/參數符合即時schema、連線存在、Trial full access到11/19，非已證實試用過期。GitHub Allow all；Windsor Use default/low-risk，provider目錄寫明寫入需要確認；這是實際授權限制線索，不是本run原始錯誤。
