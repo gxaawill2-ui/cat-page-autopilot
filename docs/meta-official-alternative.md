@@ -66,3 +66,7 @@
 - 程式新增 policy live/Page/timezone、跨舊/新管線同 slot/每日上限（未知亦計入）、英文/繁中/日文時段、Token /me Page 身分及 Meta 當日篇數檢查；回讀必須含 full_picture 且 attachment target.id 與返回 photo ID 一致，API verified 不冒充目視確認。
 - 新增 CAS 失敗不 POST、POST 未知只嘗試一次/重跑不重送及上述防護測試，15 項通過；publisher workflow 每輪先跑此無寫入測試。
 - 正式授權仍需核對 pages_manage_posts（發布）、pages_read_engagement（回讀）、pages_show_list（管理員列出 Page/取得 Page token）。是否需 App Review/商家驗證取決於實際 App/dashboard，尚未到此步驟，不預先宣稱免審或遭拒。官方文件本輪檢索 HTTP429，未以第三方內容冒充官方核准。
+
+### 可直接續作的待發內容
+`queue/meta/2026-10-27/1930.json`：新英文鍵盤主管貓，原創JPEG/文案/QA/匿名200-MIME-SHA證據已保存。只有開關、Token和全部安全資格具備才可正常時段發布；錯過就保留，不移日/補發。
+安全測試現為16項（含Meta外部貼文與本地unknown合併每日計數），CI40486394603通過。原daily已改純queue-only並至少提前30分鐘準備下一slot，仍disabled等Meta授權；weekly仍enabled。

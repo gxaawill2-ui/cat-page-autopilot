@@ -1,0 +1,10 @@
+{
+  "http_status": 200,
+  "content_type": "image/jpeg",
+  "sha256": "80d20f523ba090f2f276239393bc6c593dd0796dbc7f811b06924b2caa5cfd30",
+  "bytes": 249160,
+  "url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/80d20f523ba090f2f276239393bc6c593dd0796dbc7f811b06924b2caa5cfd30.jpg",
+  "checked_at": "2026-10-27T18:10:49.930552+08:00",
+  "validator": "anonymous GET using same Meta verifier",
+  "deployment_wait": "Two initial 404 GETs before deployment, third GET after Pages deployment success passed"
+}

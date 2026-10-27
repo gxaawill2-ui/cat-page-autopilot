@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-27T18:01:29.003300+08:00",
+  "observed_at": "2026-10-27T18:12:04.084122+08:00",
   "source_commit": "e3ec6f85fa10d6ed82e01f87f103fe56833f4066",
   "local_tests": {
     "passed": 9,
@@ -27,11 +27,45 @@
     "is_enabled": false,
     "role": "queue_only; latest override already present"
   },
-  "next": "Patch missing policy/daily-cap/image readback guards; repeat real dry-run with safety tests; prepare future unique queue; user completes developer registration.",
+  "next": "User completes Meta developer registration in preserved browser; continue App setup and permissions, no need to redo image/code. If 19:30 expires keep draft and do not backfill.",
   "expanded_tests": {
-    "passed": 15,
-    "cas_failure_prevents_write": true,
-    "unknown_write_replay_blocked": true,
-    "policy_daily_slot_image_readback_guards": true
-  }
+    "passed": 16,
+    "ci_run_id": 40486394603,
+    "ci_conclusion": "success"
+  },
+  "stage": "safe_queue_ready_authorization_blocked",
+  "latest_dry_run": {
+    "run_id": 40486162579,
+    "job_id": 122128356033,
+    "conclusion": "success",
+    "tests_passed": 15,
+    "result": "SKIPPED_STALE_OR_EARLY; both Meta env values empty; dry_run=true",
+    "url": "https://github.com/gxaawill2-ui/cat-page-autopilot/actions/runs/40486162579"
+  },
+  "queue": {
+    "path": "queue/meta/2026-10-27/1930.json",
+    "draft_key": "9c865b6ce99b27976149e4531ae9538e651437746c1c1b83130ff811cfe8145d",
+    "original_new_image": true,
+    "url_proof": "records/url-checks/meta-20261027-1930.json",
+    "public_get": "200/image/jpeg/SHA match",
+    "not_published": true
+  },
+  "github_settings": {
+    "repository_secrets": "none observed",
+    "repository_variables": "none observed",
+    "META_PAGE_ACCESS_TOKEN": false,
+    "META_PUBLISH_ENABLED": false
+  },
+  "remaining": [
+    "Account owner completes Meta developer registration terms/account verification",
+    "Create/use legitimate Meta App; verify actual scope grants and target Page tasks; App Review/business verification if required",
+    "Store Page token only in META_PAGE_ACCESS_TOKEN Secret, no secrets in conversation or public git",
+    "Read-only identity/permission/API preflight; explicit live enable only after checks",
+    "Normal scheduled Meta POST+receipt+text/image readback and next-round continuity NOT YET ACCEPTED"
+  ],
+  "bugs_found": [
+    "Scaffold lacked policy/old-slot/global daily-cap/image identity checks; minimal gates added",
+    "catflow.prepare gallery crashed KeyError image_url on an incomplete historical draft; skip incomplete gallery entry, draft/JPEG had already been created, no image regeneration",
+    "Pages probe ran before actual deployment settled; failed 404, real anonymous third bounded GET passed after deploy success; do not treat failed probe as proof"
+  ]
 }

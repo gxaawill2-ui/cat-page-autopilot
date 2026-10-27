@@ -1,3 +1,14 @@
+## 2026-10-27 18:12 Meta 官方新架構本輪結果（優先於以下歷史）
+- **未取得合法 Page token / 發布權限，未完成真實發文驗收；新 Facebook Post ID = 無。** 管理員在 developers.facebook.com 顯示未完成開發者註冊，停於 Meta Platform Terms/Developer Policies 接受步驟。本人必須完成註冊；尚未到 App Review/商家驗證，不宣稱必需或免審。此為新架構的一次性外部授權阻礙，不再重啟 Windsor。
+- GitHub 設定頁實查沒有 repository/environment secrets、沒有 variables；META_PAGE_ACCESS_TOKEN 未設、META_PUBLISH_ENABLED 未開。未儲存任何 Token，正式發布仍關閉。
+- 真 Actions dry-run #40485174412、#40486162579 success；第二次含15項安全測試，日誌token/開關空、dry_run=true、早/過期slot跳過。後補跨外部貼文+本地未知篇數合併測試，共16項，本機及CI #40486394603通過。這些是無寫入安全驗證，不是Facebook接受驗收。
+- 既有Meta程式補 live policy/Page/timezone、同slot、新舊未知篇數/每日上限4、語言、Token Page身分、真圖attachment ID/full_picture回讀；單POST/CAS/未知不重送保持。修復commit84f41b1、bc3bc9b。API驗證與目視標記分開。
+- 全新英文原創鍵盤主管貓圖文已持久保存：draft9c865b6c...、JPEG80d20f52...fd30、249160bytes/1254方圖；一次生圖、目視QA通過。圖片先存commit0ded531，再等Pages deploy success，匿名第三次有限GET為200/image/jpeg/SHA一致。已準備queue/meta/2026-10-27/1930.json，沒有Meta授權不得發布；過期不補發、不自動移到別日。
+- catflow.prepare實遇舊不完整草稿缺image_url導致gallery KeyError；僅跳過缺欄位的gallery entry，未改JPEG/binary流程，沒有重生圖。13項相關既有測試通過。
+- 原daily任務ID不變，提示已完全重寫成**只提前至少30分鐘準備下一未到slot queue、禁止Windsor/Meta/UI發布**，真正disabled保留待授權。四時段09:30en/12:30繁中/16:30繁中/19:30en不變；11/3、11/6晚ja；週日原任務enabled且提示已移除過時品牌授權；三天設定保留，但daily disabled期間不保證自動觸發。
+- 兩筆歷史unknown原封保留，不清鎖不復用；Page1346385028565797、品牌、國際實驗與NT$0不變。證據records/migration/2026-10-27-meta-official.json。
+- **精確續作：本人在已保留的Meta開發者註冊畫面完成條款/帳號驗證→再續App與Page scopes官方授權→僅將Page token存Actions Secret→GET預檢→正式開關→下一合格正常slot與再下一輪真實驗收。若Meta明確不准，才轉Business Suite批次排程，標半自動。現在不是已全面恢復。**
+
 ## 2026-10-27 18:03 官方 API 實際續作 checkpoint
 - 既有 Meta 發布程式 9 項安全測試通過；真 GitHub Actions dry-run #40485174412 success（09:30 已過期，安全跳過，不是發布驗收）。
 - Meta for Developers 實際入口尚未完成開發者註冊，停在接受 Meta Platform Terms / Developer Policies；未建立 App、未取得 Page Token，正式開關不開。帳號本人須完成此一步，不能宣稱已取得 pages_manage_posts。
