@@ -203,8 +203,14 @@ def run(slot, dry_run=False, now=None):
     day = now.date().isoformat()
     planned = dt.datetime.fromisoformat(f"{day}T{slot}").replace(tzinfo=TZ)
     mins = (now - planned).total_seconds()/60
+    # Safe, non-sensitive schedule diagnostics. GitHub cron is best effort.
+    print(f"DISPATCH_DIAG slot={day}T{slot} now_taipei={now.isoformat()} "
+          f"delay_min={mins:.2f} allowed_window_min={WINDOW_MIN} "
+          f"run_id={os.environ.get('GITHUB_RUN_ID', 'local')} "
+          f"event={os.environ.get('GITHUB_EVENT_NAME', 'local')}", flush=True)
     if not 0 <= mins <= WINDOW_MIN:
-        print("SKIPPED_STALE_OR_EARLY")
+        reason = "EARLY" if mins < 0 else "STALE"
+        print(f"SKIPPED_STALE_OR_EARLY reason={reason} delay_min={mins:.2f}; NEVER_BACKFILL")
         return "skipped"
     queue = queue_path(day, slot)
     if not queue.exists():
