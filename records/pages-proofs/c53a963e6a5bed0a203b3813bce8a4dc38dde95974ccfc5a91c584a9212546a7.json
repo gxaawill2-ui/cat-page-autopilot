@@ -4,8 +4,8 @@
   "content_type": "image/jpeg",
   "bytes": 373439,
   "sha256": "e4c7cacd2cbc30a2cbc0115e6c41b4ba84aea6750e2efccc96c3a78881610fc7",
-  "checked_at": "2026-10-28T07:01:05.149072+00:00",
+  "checked_at": "2026-10-28T08:38:57.788041+00:00",
   "validator": "github-actions-pages-probe",
-  "run_id": "40647294448",
-  "source_commit": "fc05f84db4e3dff239b6f418446c976a681d8aa3"
+  "run_id": "40658211859",
+  "source_commit": "8408652b3d1e36c1af5b3bde9d7b3a74523c91a8"
 }
