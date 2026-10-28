@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-10-28T15:02:19.868514+08:00",
+  "queue": "queue/meta/2026-10-28/1630.json",
+  "public_image_proof": "records/url-checks/meta-20261028-1630.json",
+  "checks": [
+    "Page and language",
+    "live policy/Taipei/day cap",
+    "local old/new caption/image dedup",
+    "no occupied target slot",
+    "simulated eligible-time dry-run"
+  ],
+  "simulation_time": "2026-10-28T16:30:00+08:00",
+  "dry_run_result": "dry-run",
+  "facebook_post_calls": 0,
+  "actual_scheduled_acceptance": false,
+  "note": "Eligible-time simulation only, not a real scheduled publication.",
+  "queue_commit_error": {
+    "tool": "GitHub connector CAS adapter",
+    "occurred_at": "2026-10-28T07:02:26Z",
+    "error": "GithubGraphQLAPIError: Something went wrong while executing query",
+    "request_reference": "62BE:335653:F6F51B:173CE9D:6AE19E01",
+    "facebook_write_calls": 0,
+    "reconciliation": "Fresh main 311c74c has no target queue/readiness files. Safe to retry repository commit once against fresh parent; no Facebook action involved."
+  }
+}
