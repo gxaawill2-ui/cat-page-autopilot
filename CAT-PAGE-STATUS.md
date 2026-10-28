@@ -1,3 +1,10 @@
+## 2026-10-28 17:xx 修復GitHub Actions排程延遲/缺失（新，優先於歷史）
+- 16:30已完成圖文queue與200/MIME/SHA驗證，但截至17:14查不到 state/meta_dispatch/2026-10-28-1630.json 或真FB Post ID；Windsor當日亦無新貼文。本次 **尚未證實GitHub 16:30 scheduled run存在/啟動**，不能歸因Meta POST失敗。已有09:30的 GitHub scheduled run 延遲至15:08才執行並SKIPPED_STALE_OR_EARLY；官方文檔確認GitHub排程可能延遲或遺漏，此為最明顯的問題線索，尚非16:30的已證根因。
+- 改善唯一現有 .github/workflows/meta-graph-publish.yml：每一原定slot（09:30、12:30、16:30、19:30 台北）改為該時段:30、:38、:48與下小時:05四個安全候選觸發；八條cron映射回原四slot，絕不把重複觸發當作新增內容額度。GitHub concurrency cancel-in-progress=false、state/meta_dispatch slot+hash CAS、meta_graph_publish.py 45分鐘窗口/每日4篇上限/unknown不重送依舊保留；不是能保證準時的絕對方案。
+- 在scripts/meta_graph_publish.py新增不含憑證的DISPATCH_DIAG，記錄slot、實際台灣時間、delay_min、run_id及EARLY/STALE理由；若仍發生漏啟動，須查官方Actions schedule event/actor/runner及GH status，不可繞過排程或人工補發過期內容。
+- 已保存程式 commit b38a7df4（cron fallback）、bcdb889a（時間日誌），**尚無對新排程的實際GitHub Run或Facebook Post驗收，不能稱修好。** 10/28 19:30英文queue已驗證完成，下一步查19:30四個機會是否觸發，若發出只取單一真Post ID+回讀。16:30時段逾期後不補發、不重試。
+- 原 ChatGPT Work queue-only 每日任務於10/28 16:30 run 後又requires_user_action並停用，但GitHub Actions正式發布與此task獨立；若未來queue無法持續建立，改由Work提前批次備妥1–3日全新原創queue直到queue-only背景限制有實際解法。不能冒稱真正長期全自動。品牌更名繼續暫停，額外NT$0。
+
 ## 2026-10-28 16:40｜19:30英文內容已完成queue-only準備（最新）
 - 本輪台北時間16:34後接續唯一repo；下一合格未來時段2026-10-28 19:30（en，目標US/PH不代表實際觸及），未補16:30已開始時段。現有每日任務ID `6add4bc872c88191bea8e6d2cf3dc016` 由任務清單真實讀回 `enabled=true`；原週日20:00任務不變。
 - 19:30原創南瓜屋睡貓：內建ImageGen 1次、目視QA通過；原圖 `file_0000000062a082309da2d2360a1d2f1d`，原創提示/文案/6個候選與來源保存在 `records/originals/2026-10-28-1930/`，熱門訊號均N/A，不捏造。Pillow依現有catflow.prepare JPEG參數轉換、無EXIF、355340 bytes；image SHA256 `2244fc67b379bf986313b75f5f7efd07a6a754ac094db35bc49128b1f7f7483d`，draft key `34b8f339f0a3a90000b50a37e6843a0fc2892b2e80c20748dc0cf59e644f7dbb`。
