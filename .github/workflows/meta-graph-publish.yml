@@ -1,10 +1,17 @@
 name: Meta Official Page Publisher (requires Meta Page token)
 "on":
   schedule:
-    - cron: '30 1 * * *'   # 09:30 Asia/Taipei
-    - cron: '30 4 * * *'   # 12:30 Asia/Taipei
-    - cron: '30 8 * * *'   # 16:30 Asia/Taipei
-    - cron: '30 11 * * *'  # 19:30 Asia/Taipei
+    # Three attempts inside each authorised slot, plus a +35 minute fallback.
+    # Each run is idempotent: state/meta_dispatch SLOT CAS prevents duplicate writes.
+    # GitHub schedule may be delayed or missed. We NEVER backfill beyond 45 minutes.
+    - cron: '30,38,48 1 * * *'    # 09:30 / 09:38 / 09:48 Taipei
+    - cron: '5 2 * * *'           # 10:05 Taipei fallback for 09:30
+    - cron: '30,38,48 4 * * *'    # 12:30 / 12:38 / 12:48 Taipei
+    - cron: '5 5 * * *'           # 13:05 Taipei fallback for 12:30
+    - cron: '30,38,48 8 * * *'    # 16:30 / 16:38 / 16:48 Taipei
+    - cron: '5 9 * * *'           # 17:05 Taipei fallback for 16:30
+    - cron: '30,38,48 11 * * *'   # 19:30 / 19:38 / 19:48 Taipei
+    - cron: '5 12 * * *'          # 20:05 Taipei fallback for 19:30
   workflow_dispatch:
     inputs:
       slot:
@@ -57,11 +64,12 @@ jobs:
             fi
           else
             case "$EVENT_CRON" in
-              '30 1 * * *') slot='09:30';;
-              '30 4 * * *') slot='12:30';;
-              '30 8 * * *') slot='16:30';;
-              '30 11 * * *') slot='19:30';;
+              '30,38,48 1 * * *'|'5 2 * * *') slot='09:30';;
+              '30,38,48 4 * * *'|'5 5 * * *') slot='12:30';;
+              '30,38,48 8 * * *'|'5 9 * * *') slot='16:30';;
+              '30,38,48 11 * * *'|'5 12 * * *') slot='19:30';;
               *) echo 'UNKNOWN_SCHEDULE'; exit 1;;
             esac
+            echo "SCHEDULED_TRIGGER=$EVENT_CRON TARGET_SLOT=$slot RUN_ID=$GITHUB_RUN_ID ACTUAL_UTC=$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
             python3 scripts/meta_graph_publish.py --slot "$slot"
           fi
