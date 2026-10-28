@@ -1,0 +1,69 @@
+{
+  "created_at": "2026-10-28T16:36:33.247022+08:00",
+  "window": "2026-10-26 to 2026-10-28 Asia/Taipei",
+  "selection": "original_halloween_nap_suite",
+  "heat_policy": "Actual per-platform likes/shares/trending rank unavailable: N/A; search-result counts not used as heat. Evergreen concepts have no claimed trending signal.",
+  "candidates": [
+    {
+      "id": "original_halloween_nap_suite",
+      "topic": "Original cozy pumpkin cat house, Halloween nap suite",
+      "market": "US",
+      "source": "Original evergreen seasonal concept; not a news claim",
+      "source_date": "2026-10-28",
+      "source_url": null,
+      "verified_heat_signal": null,
+      "heat_display": "N/A",
+      "selected": true
+    },
+    {
+      "id": "us-adoptable-cats",
+      "topic": "Adoptable animals featured by Athens-Clarke County Animal Services",
+      "market": "US",
+      "source": "Flagpole Adoptable Animals at ACC Animal Services",
+      "source_date": "2026-10-28",
+      "source_url": "https://flagpole.com/pets/adopt-me/2026/10/28/adoptable-animals-at-acc-animal-services-298/",
+      "verified_heat_signal": null,
+      "heat_display": "N/A"
+    },
+    {
+      "id": "us-nyc-pet-event",
+      "topic": "NYC weekend pop-up with adoptable cats and dogs",
+      "market": "US",
+      "source": "Secret NYC weekend guide",
+      "source_date": "2026-10-27",
+      "source_url": "https://secretnyc.co/what-to-do-this-weekend-nyc/",
+      "verified_heat_signal": null,
+      "heat_display": "N/A"
+    },
+    {
+      "id": "wildcat-bolivia",
+      "topic": "Genomics research on distinct South American tiger cat lineage",
+      "market": "US/Global",
+      "source": "Times of India science report; not used as scientific primary evidence",
+      "source_date": "2026-10-28",
+      "source_url": "https://timesofindia.indiatimes.com/science/in-bolivia-a-cat-mistaken-for-an-ordinary-tiger-cat-for-years-proved-to-be-a-new-species-after-dna-analysis-placed-it-on-a-branch-split-1-4-million-years-ago/articleshow/135206956.cms",
+      "verified_heat_signal": null,
+      "heat_display": "N/A"
+    },
+    {
+      "id": "jp-adoption-event",
+      "topic": "Animal Baton Festa pet adoption event planned for November",
+      "market": "JP",
+      "source": "Organiser press release, outside 48h window; background only",
+      "source_date": "2026-10-21",
+      "source_url": "https://prtimes.jp/main/html/rd/p/000000003.000170588.html",
+      "verified_heat_signal": null,
+      "heat_display": "N/A"
+    },
+    {
+      "id": "tw-laundry-cat",
+      "topic": "Original cat treats folded laundry as a luxury hotel",
+      "market": "TW",
+      "source": "Original evergreen concept; no verified fresh TW trend this run",
+      "source_date": "2026-10-28",
+      "source_url": null,
+      "verified_heat_signal": null,
+      "heat_display": "N/A"
+    }
+  ]
+}

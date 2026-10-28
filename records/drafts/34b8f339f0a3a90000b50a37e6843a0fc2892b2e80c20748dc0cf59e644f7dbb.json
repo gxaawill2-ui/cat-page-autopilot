@@ -1,0 +1,29 @@
+{
+  "key": "34b8f339f0a3a90000b50a37e6843a0fc2892b2e80c20748dc0cf59e644f7dbb",
+  "page_id": "1346385028565797",
+  "caption": "I decorated for Halloween.\nMy cat turned the pumpkin into a five-star nap suite. 🎃💤\n\nCheck-in: immediate.\nCheck-out: never.",
+  "caption_sha256": "1e147f6f4e76b5890f24e69a6aabbedce8f260c1acf42f0b811f5e928632b1ed",
+  "image_sha256": "2244fc67b379bf986313b75f5f7efd07a6a754ac094db35bc49128b1f7f7483d",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/2244fc67b379bf986313b75f5f7efd07a6a754ac094db35bc49128b1f7f7483d.jpg",
+  "asset_path": "docs/assets/2244fc67b379bf986313b75f5f7efd07a6a754ac094db35bc49128b1f7f7483d.jpg",
+  "bytes": 355340,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "created_at": "2026-10-28T16:36:33.247022+08:00",
+  "topic": "Original Halloween cat pumpkin nap suite",
+  "style": "warm painterly-realistic seasonal cozy cat scene",
+  "caption_type": "short_humor",
+  "source_image": "ImageGen original a1264fa0-f076-4a18-b353-cca97b674e66; file_0000000062a082309da2d2360a1d2f1d",
+  "sources": [
+    "records/originals/2026-10-28-1930/production.json"
+  ],
+  "status": "draft",
+  "language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "experiment_id": "intl-20261026-14d"
+}
