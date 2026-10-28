@@ -73,7 +73,7 @@
     "cron_removed": true
   },
   "meta_native": {
-    "status": "first_schedule_pending",
+    "status": "first_native_UI_schedule_verified_publication_pending",
     "scheduling_executor": "Meta Business Suite official native scheduling UI",
     "production_mode": "semi_automatic_interactive_batch",
     "page_id": "1346385028565797",
@@ -85,7 +85,13 @@
       "19:30"
     ],
     "timezone": "Asia/Taipei",
-    "scheduled_post_ids": [],
-    "api_status": "blocked_expired_secret; official UI fallback selected"
+    "scheduled_post_ids": [
+      "812374491970657"
+    ],
+    "api_status": "blocked_expired_secret; official UI fallback selected",
+    "verified_slots": [
+      "2026-10-29T09:30"
+    ],
+    "published_acceptance": "pending_due_time"
   }
 }

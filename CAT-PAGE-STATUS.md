@@ -1,3 +1,9 @@
+## 2026-10-29 第一篇Meta原生預約真正存在（最新）
+- 2026-10-29T07:46:46.229939+08:00，Business Suite單次排定回條「你已透過 Meta Business Suite 排定一則貼文」；重新開官方已排定發佈清單，10/29 09:30英文新文存在，Planner亦有上午9:30卡片，文案與紙袋貓原圖目視一致。
+- 真Facebook貼文預覽permalink ID812374491970657（不是圖片），Business Suite內容編號1128212423131470，圖片ID122106718473515576。state/meta_native/2026-10-29-0930.json=schedule_ui_verified（檔案實值scheduled_ui_verified）。
+- API Token失效，本輪無Graph is_published欄位回讀；is_published_api=null，UI狀態為已排定未發布，不能冒充API false。證據截圖已保存本次scratch，未含秘密。還沒到09:30，真正自動發布驗收pending，不能報自動化成功。
+- 下步先批次安排今天12:30/16:30繁中、19:30英文全新內容（總上限4，已有09:30占用）。每篇持久化圖文/URL/提交意圖，再單次UI排程與Post ID/時間回讀；舊事故/過期queue不碰。09:30到後由實際已發佈清單核對，不按立即發佈。
+
 ## 2026-10-29 09:30官方UI預約提交前CAS意圖（最新）
 - 新圖文/JPEG已GitHub持久保存c816a04，公開匿名GET200/image/jpeg/SHA一致。queue/meta/2026-10-29/0930.json全新en內容，圖片370006c2...。
 - 官方編輯器目標Facebook貓咪投資筆記、2026/10/29 09:30（24小時），圖文預覽完整；廣告/限時動態/加強推廣皆關。分鐘欄需鍵盤pressSequentially才真正從37改為30，已回讀實值30。
