@@ -8,24 +8,26 @@
       "16:30",
       "19:30"
     ],
-    "enabled": false,
-    "release_gate": "Credential rotation/lifecycle + explicit enable + live safety checks and fresh future queue required; Work queue-only remains disabled",
-    "observed_at": "2026-10-27T18:04:10+08:00",
+    "enabled": true,
+    "release_gate": "queue-only enabled; Work must never publish. Official Actions live gates apply independently.",
+    "observed_at": "2026-10-28T15:09:14.652297+08:00",
     "last_runtime_run": "c2aef589-fbd4-8323-bee5-57094bd8e395",
     "runtime_requires_user_action": true,
-    "disabled_reason": "unknown; platform does not expose offending tool/action review/cause",
+    "disabled_reason": null,
     "runtime_status": "completed",
     "last_result": "16:30 armed CAS succeeded, runtime ended with empty result/user_action, no genuine Post ID; actual task disabled",
-    "next_configured_slot": "2026-10-27T19:30:00+08:00",
+    "next_configured_slot": "2026-10-28T16:30:00+08:00",
     "next_run_time_from_platform": null,
     "legacy_quarantine_path": "state/legacy_quarantine.json",
     "quarantine_rollout": "2026-10-27 new future slots only; unattended post success not yet proven",
     "binary_bridge": "connector_bundle.js loadConnectorBundle → connector_commit.js expected blob SHA + CAS",
-    "latest_repair_commit": "4a77f1a59c9bbffdaf747108e0bc67dee97c42e0",
-    "unattended_acceptance": "not_tested_for_Meta_Graph",
+    "latest_repair_commit": "085a51454de5c936f157a259f781ba5481db3915",
+    "unattended_acceptance": "pending_first_Meta_Graph_scheduled_post",
     "role": "prepare_future_queue_only",
     "publication_tool": "disabled in Work; existing GitHub Actions meta-graph-publish.yml is sole publisher",
-    "lead_time_minutes": 30
+    "lead_time_minutes": 30,
+    "previous_disabled_reason": "unknown; platform does not expose offending tool/action review/cause",
+    "last_runtime_result_note": "Historical c2aef589 requires_user_action remains unresolved; not a new run or current authorization failure."
   },
   "weekly": {
     "task_id": "6add4bde3d6881919ff5037351dd44d4",
@@ -54,10 +56,16 @@
     ],
     "authorization_status": "rotated_single_Page_grant_GET_verified",
     "secret_present": true,
-    "publish_enabled": false,
+    "publish_enabled": true,
     "no_duplicate_workflow_created": true,
     "preflight_run_id": "40646935634",
     "credential_lifecycle": "Page token Debugger Never; data_access_expires_epoch 1800943174; still revocable",
-    "observed_at": "2026-10-28T15:00:00.210457+08:00"
+    "observed_at": "2026-10-28T15:09:14.652297+08:00",
+    "workflow_state": "active; official UI offers Disable workflow",
+    "switch_ui_receipt": "Repository variables table: META_PUBLISH_ENABLED true",
+    "next_prepared_queue": "queue/meta/2026-10-28/1630.json",
+    "first_scheduled_acceptance": "pending",
+    "next_expected_nominal_slot": "2026-10-28T16:30:00+08:00",
+    "note": "GitHub cron best effort; no genuine Meta post yet. No backfill beyond existing 45 minute window."
   }
 }

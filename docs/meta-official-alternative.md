@@ -1,3 +1,10 @@
+## 2026-10-28 15:xx 上線前置完成（優先於歷史阻礙）
+- 正式授權、官方長效延展、指定Page Secret輪替及Actions GET預檢均實測成功；run40646935634/18tests/Facebook POST0。Token值不寫repo。
+- 已設META_PUBLISH_ENABLED=true，原daily任務恢復queue-only enabled，原週日分析不變；未建立新任務或workflow。
+- 全新queue/meta/2026-10-28/1630.json，JPEG277414bytes/1254方圖，匿名200/image/jpeg/SHA一致，模擬資格時段dry-run通過；這不是實際發布驗收。
+- 下一步等待原正常16:30排程，查真Post ID、文字/attachment/full_picture、目視並CAS保存；再觀察下一正常時段。未完成兩輪不可宣稱穩定全自動。GitHub cron非準點保證、無queue/過期/權限失效安全跳過。
+- Page Token官方顯示到期永不，但可撤銷且data_access_expires_epoch1800943174；須於既有檢討核對生命周期，不承諾永久無人續期。Work/ImageGen額度及工具也仍為內容來源依賴。
+
 # V3.1 官方 Meta API + GitHub Actions 發文替代方案（2026-10-27）
 
 ## 最新實際狀態

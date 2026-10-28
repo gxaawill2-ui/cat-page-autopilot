@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-28T14:55:41.676547+08:00",
+  "observed_at": "2026-10-28T15:09:14.652297+08:00",
   "app_id": "1094057270082192",
   "page_id": "1346385028565797",
   "oauth_saved": true,
@@ -33,14 +33,14 @@
     "expires_label": "Never",
     "source": "Page token derived via official GET me/accounts from official extended User Token after secure password reauthentication"
   },
-  "publish_enabled": false,
+  "publish_enabled": true,
   "facebook_writes": 0,
   "new_post_id": null,
   "tests": {
     "passed": 18,
     "new_cases": "read-only preflight never arms/posts; wrong Page rejected"
   },
-  "next": "Persist new 16:30 original draft and JPEG; verify anonymous Pages URL; prepare queue and live gates. Actual scheduled POST and next-cycle acceptance still pending.",
+  "next": "After nominal 2026-10-28 16:30 Taipei, inspect scheduled Actions run and state/meta_dispatch/2026-10-28-1630.json; reconcile unknown without retry, or verify genuine post and visual image. Original queue-only daily prepares 19:30 and reads receipt; second normal scheduled acceptance still required. Do not manually publish or replay expired/unknown content.",
   "preflight": {
     "run_id": "40611743803",
     "job_id": "122564661215",
@@ -73,5 +73,24 @@
     "checked_at": "2026-10-28T14:56:42.525946+08:00",
     "facebook_post_calls": 0,
     "tests_passed": 18
+  },
+  "release": {
+    "switch": "META_PUBLISH_ENABLED=true",
+    "switch_ui_verified": true,
+    "workflow_active_ui": "Disable workflow option present",
+    "daily_task_id": "6add4bc872c88191bea8e6d2cf3dc016",
+    "daily_role": "prepare_future_queue_only",
+    "daily_enabled": true,
+    "daily_enabled_readback": true,
+    "daily_updated_at": "2026-10-28T07:05:55.766274+00:00",
+    "platform_next_run_time": null,
+    "weekly_enabled": true,
+    "first_normal_slot": "2026-10-28T16:30:00+08:00",
+    "queue": "queue/meta/2026-10-28/1630.json",
+    "queue_commit": "1d6f16a9fba87ace6a7294ef93562e41f0c9be3f",
+    "image_proof": "records/url-checks/meta-20261028-1630.json",
+    "unattended_acceptance": "not_yet_run",
+    "continuous_two_runs": "not_yet_verified",
+    "ui_screenshot": "Browser screenshot capture timed out; text UI and actual Actions proof retained."
   }
 }

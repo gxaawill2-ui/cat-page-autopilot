@@ -1,3 +1,12 @@
+## 2026-10-28 正式開關與原queue-only任務啟用／待16:30真排程驗收（最新）
+- 保存時間2026-10-28T15:09:14.652297+08:00。本人透過安全表單完成GitHub新email OTP，指定Secret真回條Secret updated.（14:53）；Meta官方撤銷/同範圍重授權/長效延展完成。
+- 真Actions40646935634用新Secret成功GET指定Page/24筆貼文，18tests、Facebook POST=0；records/meta-preflight/40646935634.json。Page Token有效/到期永不，仍有資料存取期限，不等於永久有效。
+- 正式變數META_PUBLISH_ENABLED=true已從GitHub表格回讀；原workflow active（UI選項Disable workflow），未新增workflow。原daily6add4bc872c88191bea8e6d2cf3dc016真正enabled=true已peek回讀，只準備未來queue，絕對不透過Windsor/Meta/UI發布；weekly仍enabled。平台next_run_time未提供，不捏造排程回條。
+- 下一正常16:30繁中新圖已備：queue/meta/2026-10-28/1630.json（commit1d6f16a），草稿f103bc12...、JPEGeb15d3e6...1e9871。匿名200/image/jpeg/SHA一致，模擬資格時間dry-run通過，277414bytes。一次GitHub GraphQL服務錯誤後先核對最新main無目標檔，才單次CAS重試成功；錯誤reference及證據保留readiness檔。
+- **未驗收**：目前沒有新Facebook Post ID，也沒有真正scheduled發文/兩輪持續性成功。不能稱每天四篇已恢復。09:30/12:30不補發，歷史f269/8b6不動不復用，品牌暫停。
+- 下個精確步驟：16:30後讀scheduled Actions run及state/meta_dispatch/2026-10-28-1630.json；若armed_unknown/published_unverified先核對不重送；有真Post ID則核文字/full_picture/attachment及目視、保存永久網址。原16:30 queue-only輪次提前準備19:30英文並查前輪回條；至少再驗下一正常slot才評估穩定。三天首輪10/29晚、週日20:00維持，缺樣不造數據。
+- 證據records/migration/2026-10-28-meta-authorized.json、2026-10-28-1630-readiness.json、records/url-checks/meta-20261028-1630.json。瀏覽器截圖capture timeout，未以假圖代替；UI文字及Actions原始證據已保存。
+
 ## 2026-10-28 新Secret背景GET預檢通過／16:30新圖先持久保存（最新）
 - 2026-10-28T15:00:00.210457+08:00：真Actions40646935634成功，18tests，正確Page/24筆近期貼文，FACEBOOK_POST_CALLS=0；回條records/meta-preflight/40646935634.json。正式發布/連續兩輪驗收尚未完成。
 - 新16:30繁中原創日光貓，1次內建ImageGen，目視QA通過；draft f103bc12ce281aa396066ca6645b4f8289ba02aa31a0342121e0ca34d36e415a，JPEG eb15d3e6a6e99e7c417765726482530ea3fcfd1629996634f95bfb2c8d1e9871，277414bytes/1254平方。
