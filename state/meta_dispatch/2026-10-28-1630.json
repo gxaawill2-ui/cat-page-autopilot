@@ -2,7 +2,7 @@
   "page_id": "1346385028565797",
   "slot": "2026-10-28T16:30",
   "method": "direct_Windsor_oneoff_on_explicit_user_request",
-  "status": "armed_unknown_until_external_result_verified",
+  "status": "published_unverified",
   "armed_at_utc": "2026-10-28T09:23:42.293Z",
   "intent": "one image post now; block any delayed scheduled retry of 16:30 content",
   "source_queue": "queue/meta/2026-10-28/1630.json",
@@ -11,5 +11,8 @@
   "caption": "我：下午還有一堆事。\n貓：我也有，15:00 曬太陽，15:05 翻面。\n\n牠的行事曆看起來比我的重要。☀️",
   "retry_allowed": false,
   "post_id": null,
-  "not_a_scheduled_automation_success": true
+  "not_a_scheduled_automation_success": true,
+  "meta_post_id": "1346385028565797_122106471645515576",
+  "photo_id": "122106471621515576",
+  "windsor_result": "Published photo post to Facebook Page 1346385028565797"
 }
