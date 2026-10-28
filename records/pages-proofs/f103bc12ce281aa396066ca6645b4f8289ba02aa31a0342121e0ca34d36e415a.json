@@ -1,0 +1,11 @@
+{
+  "url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/eb15d3e6a6e99e7c417765726482530ea3fcfd1629996634f95bfb2c8d1e9871.jpg",
+  "http_status": 200,
+  "content_type": "image/jpeg",
+  "bytes": 277414,
+  "sha256": "eb15d3e6a6e99e7c417765726482530ea3fcfd1629996634f95bfb2c8d1e9871",
+  "checked_at": "2026-10-28T07:01:05.682864+00:00",
+  "validator": "github-actions-pages-probe",
+  "run_id": "40647294448",
+  "source_commit": "fc05f84db4e3dff239b6f418446c976a681d8aa3"
+}
