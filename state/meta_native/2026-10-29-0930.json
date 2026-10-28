@@ -1,0 +1,21 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-10-29T09:30",
+  "status": "ui_schedule_armed_unknown_until_reconciled",
+  "method": "Meta Business Suite official native scheduling UI",
+  "caption_sha256": "c57fa21556d70c301b4d4e2d597d7691986487d455c4ead627e60fb031066f8c",
+  "image_sha256": "370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8.jpg",
+  "scheduled_publish_time": 1793237400,
+  "scheduled_taipei": "2026-10-29T09:30:00+08:00",
+  "armed_at": "2026-10-29T07:40:06.503722+08:00",
+  "retry_allowed": false,
+  "meta_post_id": null,
+  "ui_target_verified": "Facebook 貓咪投資筆記 only",
+  "ui_date_verified": "2026年10月29日",
+  "ui_time_verified": "09:30 (24-hour)",
+  "ads_stories_boost_enabled": false,
+  "image_qa": true,
+  "image_url_proof": "records/url-checks/native-20261029-0930.json",
+  "note": "Durable intent before single Schedule button. Missing receipt never proves not submitted; check Planner before any recovery."
+}

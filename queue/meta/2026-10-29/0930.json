@@ -1,0 +1,14 @@
+{
+  "page_id": "1346385028565797",
+  "caption": "I bought the fancy cat bed.\nShe chose the bag it came in.\nFive-star packaging. ⭐🐾",
+  "language": "en",
+  "image_sha256": "370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8.jpg",
+  "experiment_id": "intl-20261026-14d",
+  "slot": "2026-10-29T09:30",
+  "draft_key": "23b46e7517c312dfa26db2dfb7a802777cfbea7a4c80e33e3735027f438d90cb",
+  "image_qa": true,
+  "source_record": "records/originals/2026-10-29-native/0930-production.json",
+  "image_proof": "records/url-checks/native-20261029-0930.json",
+  "executor": "meta_business_suite_native"
+}

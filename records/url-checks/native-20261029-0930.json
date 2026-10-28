@@ -1,0 +1,10 @@
+{
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8.jpg",
+  "image_sha256": "370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8",
+  "bytes": 369459,
+  "http_status": 200,
+  "content_type": "image/jpeg",
+  "sha256": "370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8",
+  "checked_at": "2026-10-29T07:38:30.962071+08:00",
+  "validator": "catflow-check-url anonymous HTTPS GET"
+}

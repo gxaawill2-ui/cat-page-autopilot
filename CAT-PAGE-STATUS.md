@@ -1,3 +1,15 @@
+## 2026-10-29 09:30官方UI預約提交前CAS意圖（最新）
+- 新圖文/JPEG已GitHub持久保存c816a04，公開匿名GET200/image/jpeg/SHA一致。queue/meta/2026-10-29/0930.json全新en內容，圖片370006c2...。
+- 官方編輯器目標Facebook貓咪投資筆記、2026/10/29 09:30（24小時），圖文預覽完整；廣告/限時動態/加強推廣皆關。分鐘欄需鍵盤pressSequentially才真正從37改為30，已回讀實值30。
+- state/meta_native/2026-10-29-0930.json先保存ui_schedule_armed_unknown_until_reconciled。下一步僅單次按排定時間，立即讀Planner真回條/Post ID；若中斷不得直接再按，必須先核對同slot/文案/圖。
+- 尚未預約成功，沒有scheduled Post ID，不報成功。舊Actions已移除cron/live分支；原queue-only仍disabled，半自動互動批次，不無限重啟。
+
+## 2026-10-29 官方API真錯誤與Business Suite備援（最新）
+- 2026-10-29T07:32:09.914353+08:00，Actions40787647222 audit/15tests pass，真Graph GET回401/code190/subcode463/fbtrace AmlZz3odjWxikplq4q7cwOO，Secret內權杖已10/28 16:00台北失效。沒有Meta寫入；不是預約參數錯誤，也不是證明API不支援。
+- 先前Page Token Debugger Never不能代表目前Secret同一枚，保存後同一憑證生命周期核對不充分；以本次真401為準。依使用者指示不再重授權重試，改已登入Meta Business Suite官方介面原生預約，暫標半自動。
+- 新09:30英文紙袋貓原創1次ImageGen/目視QA通過；draft23b46e7517c312dfa26db2dfb7a802777cfbea7a4c80e33e3735027f438d90cb，JPEG370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8，369459bytes/1254square。素材先持久保存，不重用10/26–28事故圖文。
+- Business Suite已確認同Page，Planner現有10/28互動貼文下午5:24，尚無新09:30預約。下一步驗新JPEG URL→持久化UI提交意圖→官方排程表單09:30→取真scheduled Post ID/Planner回讀；未成功前不批次提交其他篇。
+
 ## 2026-10-29 原生預約準備器已實作，待真API驗證（最新）
 - Meta官方SDK實際原碼確認未發布photos、Feed attached_media/published/scheduled_publish_time/unpublished_content_type=SCHEDULED及scheduled_posts讀取；官方網頁HTTP429未假裝讀到。
 - 同一workflow改為純workflow_dispatch：預設audit，只能audit/dry-run/schedule/verify；沒有cron、沒有立即發布路徑。Page Token留原指定Secret，無需讀出或搬移。Meta負責時間，Actions只提前提交。
