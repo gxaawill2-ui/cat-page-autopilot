@@ -1,0 +1,18 @@
+{
+  "slot": "2026-10-29T12:30",
+  "language": "zh-Hant",
+  "target_markets": [
+    "TW"
+  ],
+  "caption": "只是離開座位倒杯水。\n回來就從屋主變成訪客。\n\n現在坐下還要先問：「不好意思，這裡有人嗎？」🐈‍⬛",
+  "tool": "built-in ImageGen",
+  "attempts": 1,
+  "source_image_file_ref": "generated_images/exec-9a87c114-3414-4383-b89c-8c543bfd7bd6.png",
+  "prompt": "Use case: illustration-story. One original square editorial cat humor illustration for a Taiwan Facebook audience. A round black-and-white tuxedo cat has confidently claimed an empty swivel desk chair, sitting upright like the office owner with paws neatly on the seat, facing the viewer with an innocent expression. On the desk beside the chair, an unbranded clear glass of water and an open blank notebook suggest its human stepped away briefly. No computer screen and no keyboard, no stock imagery. Sophisticated playful gouache illustration with crisp expressive character drawing, soft ink outlines, warm cream, muted sage green and charcoal palette, cozy small apartment home office, composition focused on cat and chair, delightful but anatomically credible, high-quality original editorial art. No humans, no writing, no labels, no letters, no brand or watermark. All cat features fully in frame; four limbs, one tail.",
+  "visual_qa": {
+    "passed": true,
+    "composition": "Tuxedo cat confidently on green chair, four paws and one tail, notebook/water support story",
+    "clarity": "Clean original gouache art without embedded text or logos",
+    "originality": "New generated image; no reuse of historical incidents"
+  }
+}

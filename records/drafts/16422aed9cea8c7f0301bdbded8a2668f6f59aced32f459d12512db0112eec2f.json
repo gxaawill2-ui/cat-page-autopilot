@@ -1,0 +1,28 @@
+{
+  "key": "16422aed9cea8c7f0301bdbded8a2668f6f59aced32f459d12512db0112eec2f",
+  "page_id": "1346385028565797",
+  "caption": "只是離開座位倒杯水。\n回來就從屋主變成訪客。\n\n現在坐下還要先問：「不好意思，這裡有人嗎？」🐈‍⬛",
+  "caption_sha256": "d05de5531fcdfa90484ac88be18500a6cfb6d3f451b9b928d7c563adb3521067",
+  "image_sha256": "1605dbb2d9a3c27b49994b503f7d6cc3e0316a708110659ce67383bfd4d4a075",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/1605dbb2d9a3c27b49994b503f7d6cc3e0316a708110659ce67383bfd4d4a075.jpg",
+  "asset_path": "docs/assets/1605dbb2d9a3c27b49994b503f7d6cc3e0316a708110659ce67383bfd4d4a075.jpg",
+  "bytes": 426876,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "created_at": "2026-10-29T07:48:49.487377+08:00",
+  "topic": "原創座位被貓接管",
+  "style": "暖色水粉插畫",
+  "caption_type": "生活情境幽默",
+  "source_image": "ImageGen original exec-9a87c114-3414-4383-b89c-8c543bfd7bd6",
+  "sources": [
+    "records/originals/2026-10-29-native/1230-production.json"
+  ],
+  "status": "draft",
+  "language": "zh-Hant",
+  "target_markets": [
+    "TW"
+  ],
+  "experiment_id": "intl-20261026-14d"
+}
