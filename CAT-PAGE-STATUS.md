@@ -1,3 +1,9 @@
+## 2026-10-29 Meta原生預約切換：舊Actions立即發布已停（最新）
+- 2026-10-29T07:19:40.698136+08:00：依使用者指示，移除既有meta-graph-publish.yml所有schedule cron及live分支，只保留手動GET預檢/強制dry-run。原workflow完整備份records/migration/2026-10-29-native/legacy-immediate-workflow.yml.txt，發布程式/unknown鎖及歷史回條不刪。
+- daily真實disabled：最新run860cdd3e-f0b4-8329-8e46-dea410639282/10-28 16:30 completed、空結果、requires_user_action=true；平台無觸發工具trace，原因unknown，不再盲目重啟。改互動Work批次備稿，暫標半自動；weekly保留。
+- 10/28 16:30內容於17:24由使用者即時指示互動發布，Post ID1346385028565797_122106471645515576，不能重排。19:30目前無state/meta_dispatch回條，待查真Actions日誌；不補發或推定沒送出。
+- Meta原生預約仍未建立，scheduled_post_ids空，非驗收成功。下一步核對晚間run、正式API以未發布圖片+Feed預約測試，取得Post ID與is_published=false/預定時間/Planner證據。官方docs HTTP429本輪保留，不以第三方論述冒充官方驗證。
+
 ## 2026-10-29 07:xx 追查10/28晚間自動貼文：未驗收（最新）
 - 10/28 17:24台北時間透過使用者明確即時指示呼叫Windsor create_photo_post，回Post ID 1346385028565797_122106471645515576；10/29再次以Windsor回讀文字、full_picture核實，**這是單次互動發布，非 GitHub Actions 自動排程成功**。該篇原16:30圖片/文案已有state/meta_dispatch/2026-10-28-1630.json鎖及回條，不能再排程重發。
 - 10/28 19:30英文queue已準備，但至10/29 07:xx並無state/meta_dispatch/2026-10-28-1930.json、repo沒有對應armed/回條commit，Windsor 10/28-10/29只讀到上述互動貼文（1篇）；**未能確認有實際自動發布**。缺完整19:30 Actions run/event/job log，不能斷言根因是「沒觸發」、延遲、前置檢查失敗或Meta拒絕。

@@ -1,75 +1,39 @@
-name: Meta Official Page Publisher (requires Meta Page token)
+name: Meta Official Page Checks (immediate publishing retired)
 "on":
-  schedule:
-    # Three attempts inside each authorised slot, plus a +35 minute fallback.
-    # Each run is idempotent: state/meta_dispatch SLOT CAS prevents duplicate writes.
-    # GitHub schedule may be delayed or missed. We NEVER backfill beyond 45 minutes.
-    - cron: '30,38,48 1 * * *'    # 09:30 / 09:38 / 09:48 Taipei
-    - cron: '5 2 * * *'           # 10:05 Taipei fallback for 09:30
-    - cron: '30,38,48 4 * * *'    # 12:30 / 12:38 / 12:48 Taipei
-    - cron: '5 5 * * *'           # 13:05 Taipei fallback for 12:30
-    - cron: '30,38,48 8 * * *'    # 16:30 / 16:38 / 16:48 Taipei
-    - cron: '5 9 * * *'           # 17:05 Taipei fallback for 16:30
-    - cron: '30,38,48 11 * * *'   # 19:30 / 19:38 / 19:48 Taipei
-    - cron: '5 12 * * *'          # 20:05 Taipei fallback for 19:30
   workflow_dispatch:
     inputs:
       slot:
-        description: 'Current Taipei slot; no old-slot backfill'
+        description: 'Read-only dry-run slot; cannot publish'
         required: true
         type: choice
         options: ['09:30', '12:30', '16:30', '19:30']
-      dry_run:
-        description: 'Default safe test without Graph API writes'
+      preflight_only:
+        description: 'Meta GET only; never schedules or publishes'
         type: boolean
         default: true
-      preflight_only:
-        description: 'Read-only Meta GET check; never publishes, ignores slot and live switch'
-        type: boolean
-        default: false
 permissions:
   contents: write
 concurrency:
   group: cat-page-meta-official-publisher
   cancel-in-progress: false
 jobs:
-  publish:
+  checks:
+    name: Read-only checks - old immediate publisher retired
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
-      META_PUBLISH_ENABLED: ${{ vars.META_PUBLISH_ENABLED }}
       META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
-      EVENT_KIND: ${{ github.event_name }}
-      EVENT_CRON: ${{ github.event.schedule }}
       MANUAL_SLOT: ${{ inputs.slot }}
-      MANUAL_DRY_RUN: ${{ inputs.dry_run }}
       MANUAL_PREFLIGHT: ${{ inputs.preflight_only }}
     steps:
       - uses: actions/checkout@v4
-        with:
-          persist-credentials: true
-      - name: Verify safety gates without Facebook writes
+      - name: Verify existing safety tests without Facebook writes
         run: python3 -m unittest discover -s scripts -p test_meta_graph_publish.py -v
-      - name: Send only current prepared, unique Page photo
+      - name: Read-only Meta GET or local dry-run - no live branch
         shell: bash
         run: |
-          if [[ "$EVENT_KIND" == 'workflow_dispatch' ]]; then
-            slot="$MANUAL_SLOT"
-            if [[ "$MANUAL_PREFLIGHT" == 'true' ]]; then
-              python3 scripts/meta_graph_publish.py --preflight
-            elif [[ "$MANUAL_DRY_RUN" == 'false' ]]; then
-              python3 scripts/meta_graph_publish.py --slot "$slot"
-            else
-              python3 scripts/meta_graph_publish.py --slot "$slot" --dry-run
-            fi
+          if [[ "$MANUAL_PREFLIGHT" == 'true' ]]; then
+            python3 scripts/meta_graph_publish.py --preflight
           else
-            case "$EVENT_CRON" in
-              '30,38,48 1 * * *'|'5 2 * * *') slot='09:30';;
-              '30,38,48 4 * * *'|'5 5 * * *') slot='12:30';;
-              '30,38,48 8 * * *'|'5 9 * * *') slot='16:30';;
-              '30,38,48 11 * * *'|'5 12 * * *') slot='19:30';;
-              *) echo 'UNKNOWN_SCHEDULE'; exit 1;;
-            esac
-            echo "SCHEDULED_TRIGGER=$EVENT_CRON TARGET_SLOT=$slot RUN_ID=$GITHUB_RUN_ID ACTUAL_UTC=$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
-            python3 scripts/meta_graph_publish.py --slot "$slot"
+            python3 scripts/meta_graph_publish.py --slot "$MANUAL_SLOT" --dry-run
           fi
