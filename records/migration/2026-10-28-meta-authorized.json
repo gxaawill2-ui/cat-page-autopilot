@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-28T08:52:52.400268+08:00",
+  "observed_at": "2026-10-28T09:01:08.013692+08:00",
   "app_id": "1094057270082192",
   "page_id": "1346385028565797",
   "oauth_saved": true,
@@ -18,7 +18,7 @@
     "name": "META_PAGE_ACCESS_TOKEN",
     "saved": true,
     "ui_receipt": "Repository secret added.",
-    "token_recorded_in_code_or_chat": false
+    "page_token_recorded_in_code_or_chat": false
   },
   "token_debugger": {
     "type": "Page",
@@ -37,5 +37,24 @@
     "passed": 18,
     "new_cases": "read-only preflight never arms/posts; wrong Page rejected"
   },
-  "next": "Run existing Actions preflight_only=true; inspect official long-lived token option; prepare fresh future slot only after auth/lifecycle checks. Oct27 queue expired, never backfill."
+  "next": "Keep publishing disabled. Await explicit authorization to revoke affected app connection, invalidate exposed user credential, then same-scope official reauthorization and safe token lifecycle setup. Next eligible future queue and two real scheduled acceptances remain untested; no backfill.",
+  "preflight": {
+    "run_id": "40611743803",
+    "job_id": "122564661215",
+    "result": "success",
+    "proof": "records/meta-preflight/40611743803.json",
+    "facebook_post_calls": 0,
+    "write_permission_tested": false,
+    "checked_at": "2026-10-28T08:54:35.531137+08:00"
+  },
+  "user_token_exposure": {
+    "occurred": true,
+    "location": "tool output in this private conversation",
+    "password_exposed": false,
+    "page_token_exposed": false,
+    "revocation_executed": false,
+    "long_lived_extension_completed": false,
+    "automatic_approval_review": "rejected revocation: trusted user messages authorized connection and storage, not revoking the newly granted connection",
+    "next_required_approval": "Revoke only Cat Page Autopilot app authorization; then reauthorize same Page and three scopes and replace designated Secret. Do not delete App, Page or posts."
+  }
 }

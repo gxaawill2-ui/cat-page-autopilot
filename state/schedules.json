@@ -9,7 +9,7 @@
       "19:30"
     ],
     "enabled": false,
-    "release_gate": "Meta developer authorization + secret + explicit enable + live safety checks required",
+    "release_gate": "Credential rotation/lifecycle + explicit enable + live safety checks and fresh future queue required; Work queue-only remains disabled",
     "observed_at": "2026-10-27T18:04:10+08:00",
     "last_runtime_run": "c2aef589-fbd4-8323-bee5-57094bd8e395",
     "runtime_requires_user_action": true,
@@ -52,9 +52,12 @@
       "16:30",
       "19:30"
     ],
-    "authorization_status": "blocked_developer_registration_terms",
-    "secret_present": false,
+    "authorization_status": "three_scopes_granted_GET_verified_rotation_pending",
+    "secret_present": true,
     "publish_enabled": false,
-    "no_duplicate_workflow_created": true
+    "no_duplicate_workflow_created": true,
+    "preflight_run_id": "40611743803",
+    "credential_lifecycle": "short_lived_until_2026-10-28T10:00:00+08:00; user-token exposure revocation approval pending",
+    "observed_at": "2026-10-28T09:01:08.013692+08:00"
   }
 }

@@ -1,6 +1,15 @@
+## 2026-10-28 官方授權與 Actions GET 成功／憑證輪替待批准（最新）
+- 保存時間：2026-10-28T09:01:08.013692+08:00。單一Page1346385028565797已正式授予三個必要scope，指定GitHub Secret已儲存短效Page Token。
+- 真Actions預檢40611743803成功：18項測試，GET Page身分及24筆近期貼文，Facebook POST=0；無秘密回條records/meta-preflight/40611743803.json。這不是實際發布驗收。
+- 檢查官方延展表單時，一段短效User Token意外進入本對話工具輸出。密碼未讀取、Page Token未顯示，公開repo未存任何Token。延展密碼確認已取消，未完成延展。
+- 嘗試撤銷僅此App連線遭自動批准審核拒絕：既有授權未明確涵蓋撤銷剛建立的連線。撤銷未執行，沒有改走其他路徑。待本人明確批准「撤銷此App授權並以相同Page/三scope重授權」；不刪App/Page/貼文。
+- 正式META_PUBLISH_ENABLED仍關閉，daily queue-only仍disabled、weekly保留；無新Post ID，尚未恢復無人發文。現Secret到期10/28 10:00台灣，不能宣稱長期有效。
+- 下一個精確步驟：取得上述撤銷批准→正式撤銷並重新授權→僅更新指定Secret並核對有效期→再做GET預檢→全新未來queue及正常slot驗收/下一輪持續性驗收。舊unknown兩篇與過期queue不重送，更名暫停。
+- 證據：records/migration/2026-10-28-meta-authorized.json；現有安全架構/圖片流程不重做。
+
 ## 2026-10-28 官方單一粉專授權與 Secret 已完成（最新）
 - 本人回覆「同意授權」後正式儲存OAuth，Meta顯示連結成功。GET me/permissions 回傳 pages_manage_posts/pages_read_engagement/pages_show_list 全granted。
-- 官方Page Token GET me回讀1346385028565797／貓咪投資筆記，GitHub已真實新增指定META_PAGE_ACCESS_TOKEN Secret。Token未進聊天/公開repo，複製暫存已清除。
+- 官方Page Token GET me回讀1346385028565797／貓咪投資筆記，GitHub已真實新增指定META_PAGE_ACCESS_TOKEN Secret。Page Token未進聊天/公開repo，複製暫存已清除；後續短效User Token意外進入工具輸出，見最上方安全checkpoint。
 - 官方Debugger：類型Page、App1094057270082192、有效是、各scope僅Page1346385028565797；到期epoch1793152800=10/28 10:00台灣，目前短效，須解決生命周期才可宣稱持續運作。資料存取到期epoch1800924414。
 - 正式開關仍關閉，無新Facebook寫入/Post ID。新增既有workflow preflight_only選項，只做GET身分+近期貼文，保存無秘密回條，不依賴slot/queue，不arm不POST；18項安全測試通過。
 - 下一步：同一Actions跑preflight_only=true → 正常官方長效權杖處理 → 全新未來queue → 開啟前置檢查通過之正常slot驗收。10/27所有過期queue不補發；未知兩篇不復用。
