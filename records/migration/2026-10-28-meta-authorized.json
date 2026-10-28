@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-28T14:00:53.898393+08:00",
+  "observed_at": "2026-10-28T14:55:41.676547+08:00",
   "app_id": "1094057270082192",
   "page_id": "1346385028565797",
   "oauth_saved": true,
@@ -17,18 +17,21 @@
   "github_secret": {
     "name": "META_PAGE_ACCESS_TOKEN",
     "saved": true,
-    "ui_receipt": "Repository secret added.",
-    "page_token_recorded_in_code_or_chat": false
+    "ui_receipt": "Secret updated.",
+    "page_token_recorded_in_code_or_chat": false,
+    "updated_at_ui": "2026-10-28T14:53:00+08:00"
   },
   "token_debugger": {
     "type": "Page",
     "valid": true,
     "app_id": "1094057270082192",
     "page_id": "1346385028565797",
-    "expires_epoch": 1793152800,
-    "expires_at": "2026-10-28T10:00:00+08:00",
-    "data_access_expires_epoch": 1800924414,
-    "note": "Short-lived; do not enable sustained operation until lifecycle resolved"
+    "expires_epoch": 0,
+    "expires_at": null,
+    "data_access_expires_epoch": 1800943174,
+    "note": "Page token shows Never; still revocable and subject to data access lifecycle. Long-lived User Token expires 2026-12-27, not saved in GitHub.",
+    "expires_label": "Never",
+    "source": "Page token derived via official GET me/accounts from official extended User Token after secure password reauthentication"
   },
   "publish_enabled": false,
   "facebook_writes": 0,
@@ -37,7 +40,7 @@
     "passed": 18,
     "new_cases": "read-only preflight never arms/posts; wrong Page rejected"
   },
-  "next": "Official token extension in progress; then derive Page token, update same GitHub Secret and run read-only Actions preflight. Publish switch stays false until lifecycle and fresh future queue gates pass.",
+  "next": "Run read-only GitHub Actions preflight using replaced Secret, then fresh future queue and gated scheduled acceptance. No Facebook write yet.",
   "preflight": {
     "run_id": "40611743803",
     "job_id": "122564661215",
@@ -53,13 +56,13 @@
     "password_exposed": false,
     "page_token_exposed": false,
     "revocation_executed": true,
-    "long_lived_extension_completed": false,
+    "long_lived_extension_completed": true,
     "automatic_approval_review": "rejected revocation: trusted user messages authorized connection and storage, not revoking the newly granted connection",
     "next_required_approval": "Revoke only Cat Page Autopilot app authorization; then reauthorize same Page and three scopes and replace designated Secret. Do not delete App, Page or posts.",
     "revocation_authorized_by_user": true,
     "revocation_ui_result": "Explorer token cleared and Get Token reset after official Uninstall Application; OAuth returned to first-time single-Page asset selection",
     "reauthorization_completed": true,
     "reauthorization_ui_result": "Administrator already connected to Cat Page Autopilot",
-    "old_secret_replaced_after_rotation": false
+    "old_secret_replaced_after_rotation": true
   }
 }

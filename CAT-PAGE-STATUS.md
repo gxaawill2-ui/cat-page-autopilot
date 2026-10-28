@@ -1,3 +1,9 @@
+## 2026-10-28 14:53 新Page Token已替換指定Secret（最新）
+- 完成時間2026-10-28T14:55:41.676547+08:00。官方撤銷/單一Page三scope重授權後，Meta正常密碼再確認成功，官方延展User Token顯示12/27到期。
+- 經官方me/accounts取得指定1346385028565797 Page Token，Debugger類型Page/有效是/到期永不，data_access_expires1800943174；不把永不當作永久不會撤銷。
+- GitHub更新原META_PAGE_ACCESS_TOKEN遇正常Confirm access電子郵件OTP；本人透過安全表單確認後，真UI回條Secret updated.，列時間10/28 14:53 GMT+8。舊Secret已替換，新User/Page Token未顯示對話、未寫公開repo。
+- 正式發布仍關閉、無新Post ID。下一步既有Actions唯讀預檢→未來全新queue→安全門檻及正常排程真實驗收。歷史unknown/過期內容不復用。
+
 ## 2026-10-28 撤銷及同範圍重授權已執行（最新）
 - 時間2026-10-28T14:00:53.898393+08:00。使用者明確回覆同意後，官方Explorer單次「解除安裝應用程式」，舊Token欄清空、選單回到取得權杖；未刪App/Page/貼文。
 - 已完成同一管理員官方OAuth，僅勾1346385028565797／目前粉專，三scope不變；Meta顯示管理員已與Cat Page Autopilot連結。新User Token偵錯有效且scope只指定Page。
