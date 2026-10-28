@@ -1,0 +1,13 @@
+{
+  "page_id": "1346385028565797",
+  "caption": "I decorated for Halloween.\nMy cat turned the pumpkin into a five-star nap suite. 🎃💤\n\nCheck-in: immediate.\nCheck-out: never.",
+  "language": "en",
+  "image_sha256": "2244fc67b379bf986313b75f5f7efd07a6a754ac094db35bc49128b1f7f7483d",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/2244fc67b379bf986313b75f5f7efd07a6a754ac094db35bc49128b1f7f7483d.jpg",
+  "experiment_id": "intl-20261026-14d",
+  "slot": "2026-10-28T19:30",
+  "draft_key": "34b8f339f0a3a90000b50a37e6843a0fc2892b2e80c20748dc0cf59e644f7dbb",
+  "image_qa": true,
+  "source_record": "records/originals/2026-10-28-1930/production.json",
+  "image_proof": "records/url-checks/meta-20261028-1930.json"
+}

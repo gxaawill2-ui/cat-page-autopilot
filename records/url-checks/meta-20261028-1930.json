@@ -1,0 +1,14 @@
+{
+  "url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/2244fc67b379bf986313b75f5f7efd07a6a754ac094db35bc49128b1f7f7483d.jpg",
+  "http_status": 200,
+  "content_type": "image/jpeg",
+  "bytes": 355340,
+  "sha256": "2244fc67b379bf986313b75f5f7efd07a6a754ac094db35bc49128b1f7f7483d",
+  "checked_at": "2026-10-28T08:38:57.005137+00:00",
+  "validator": "github-actions-pages-probe",
+  "run_id": "40658211859",
+  "source_commit": "8408652b3d1e36c1af5b3bde9d7b3a74523c91a8",
+  "source_record": "records/pages-proofs/34b8f339f0a3a90000b50a37e6843a0fc2892b2e80c20748dc0cf59e644f7dbb.json",
+  "qa_result": "visual_passed",
+  "verified_method": "existing Actions Pages probe; local environment DNS failure"
+}
