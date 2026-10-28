@@ -1,0 +1,223 @@
+﻿2026-10-28T18:18:13.3552389Z Current runner version: '2.338.0'
+2026-10-28T18:18:13.3579129Z ##[group]Runner Image Provisioner
+2026-10-28T18:18:13.3580026Z Hosted Compute Agent
+2026-10-28T18:18:13.3580770Z Version: 20261021.618
+2026-10-28T18:18:13.3581732Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-28T18:18:13.3582731Z Build Date: 2026-10-21T00:45:21Z
+2026-10-28T18:18:13.3583512Z Worker ID: {8cf60018-85b2-421a-bc79-4b8541ef6447}
+2026-10-28T18:18:13.3584254Z Region: westcentralus
+2026-10-28T18:18:13.3584949Z Cloud: Azure
+2026-10-28T18:18:13.3585542Z ##[endgroup]
+2026-10-28T18:18:13.3587185Z ##[group]Operating System
+2026-10-28T18:18:13.3587906Z Ubuntu
+2026-10-28T18:18:13.3588466Z 24.04.5
+2026-10-28T18:18:13.3589105Z LTS
+2026-10-28T18:18:13.3589683Z ##[endgroup]
+2026-10-28T18:18:13.3590309Z ##[group]Runner Image
+2026-10-28T18:18:13.3591080Z Image: ubuntu-24.04
+2026-10-28T18:18:13.3591961Z Version: 20261025.353.1
+2026-10-28T18:18:13.3593410Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-28T18:18:13.3595096Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-28T18:18:13.3596145Z ##[endgroup]
+2026-10-28T18:18:13.3597396Z ##[group]GITHUB_TOKEN Permissions
+2026-10-28T18:18:13.3599366Z Contents: write
+2026-10-28T18:18:13.3599985Z Metadata: read
+2026-10-28T18:18:13.3600749Z ##[endgroup]
+2026-10-28T18:18:13.3603442Z Secret source: Actions
+2026-10-28T18:18:13.3604918Z Cache mode: write
+2026-10-28T18:18:13.3605678Z Prepare workflow directory
+2026-10-28T18:18:13.4154490Z Prepare all required actions
+2026-10-28T18:18:13.4207029Z Getting action download info
+2026-10-28T18:18:13.6838792Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-28T18:18:13.8457062Z Complete job name: publish
+2026-10-28T18:18:13.9436863Z ##[group]Run actions/checkout@v4
+2026-10-28T18:18:13.9437695Z with:
+2026-10-28T18:18:13.9438297Z   persist-credentials: true
+2026-10-28T18:18:13.9438926Z   repository: gxaawill2-ui/cat-page-autopilot
+2026-10-28T18:18:13.9443007Z   token: ***
+2026-10-28T18:18:13.9443479Z   ssh-strict: true
+2026-10-28T18:18:13.9443953Z   ssh-user: git
+2026-10-28T18:18:13.9444397Z   clean: true
+2026-10-28T18:18:13.9444863Z   sparse-checkout-cone-mode: true
+2026-10-28T18:18:13.9445409Z   fetch-depth: 1
+2026-10-28T18:18:13.9445866Z   fetch-tags: false
+2026-10-28T18:18:13.9446328Z   show-progress: true
+2026-10-28T18:18:13.9446792Z   lfs: false
+2026-10-28T18:18:13.9447232Z   submodules: false
+2026-10-28T18:18:13.9447697Z   set-safe-directory: true
+2026-10-28T18:18:13.9448222Z   allow-unsafe-pr-checkout: false
+2026-10-28T18:18:13.9448984Z env:
+2026-10-28T18:18:13.9449421Z   META_PUBLISH_ENABLED: true
+2026-10-28T18:18:13.9452060Z   META_PAGE_ACCESS_TOKEN: ***
+2026-10-28T18:18:13.9452611Z   EVENT_KIND: schedule
+2026-10-28T18:18:13.9453103Z   EVENT_CRON: 5 12 * * *
+2026-10-28T18:18:13.9453597Z   MANUAL_SLOT: 
+2026-10-28T18:18:13.9454044Z   MANUAL_DRY_RUN: 
+2026-10-28T18:18:13.9454507Z   MANUAL_PREFLIGHT: 
+2026-10-28T18:18:13.9454967Z ##[endgroup]
+2026-10-28T18:18:14.1653049Z Syncing repository: gxaawill2-ui/cat-page-autopilot
+2026-10-28T18:18:14.1655994Z ##[group]Getting Git version info
+2026-10-28T18:18:14.1657511Z Working directory is '/home/runner/work/cat-page-autopilot/cat-page-autopilot'
+2026-10-28T18:18:14.1659480Z [command]/usr/bin/git version
+2026-10-28T18:18:14.1702948Z git version 2.56.0
+2026-10-28T18:18:14.1734335Z ##[endgroup]
+2026-10-28T18:18:14.1750715Z Temporarily overriding HOME='/home/runner/work/_temp/21124139-02dd-4c80-845d-365541d39a67' before making global git config changes
+2026-10-28T18:18:14.1753356Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-28T18:18:14.1755398Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cat-page-autopilot/cat-page-autopilot
+2026-10-28T18:18:14.1810062Z Deleting the contents of '/home/runner/work/cat-page-autopilot/cat-page-autopilot'
+2026-10-28T18:18:14.1820274Z ##[group]Initializing the repository
+2026-10-28T18:18:14.1847404Z [command]/usr/bin/git init /home/runner/work/cat-page-autopilot/cat-page-autopilot
+2026-10-28T18:18:14.1904552Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-28T18:18:14.1906161Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-28T18:18:14.1907150Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-28T18:18:14.1908000Z hint: call:
+2026-10-28T18:18:14.1908431Z hint:
+2026-10-28T18:18:14.1909155Z hint: 	git config --global init.defaultBranch <name>
+2026-10-28T18:18:14.1910158Z hint:
+2026-10-28T18:18:14.1911138Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-28T18:18:14.1912870Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-28T18:18:14.1914075Z hint:
+2026-10-28T18:18:14.1914744Z hint: 	git branch -m <name>
+2026-10-28T18:18:14.1915492Z hint:
+2026-10-28T18:18:14.1916486Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-28T18:18:14.1918274Z Initialized empty Git repository in /home/runner/work/cat-page-autopilot/cat-page-autopilot/.git/
+2026-10-28T18:18:14.1924628Z [command]/usr/bin/git remote add origin https://github.com/gxaawill2-ui/cat-page-autopilot
+2026-10-28T18:18:14.1972916Z ##[endgroup]
+2026-10-28T18:18:14.1974143Z ##[group]Disabling automatic garbage collection
+2026-10-28T18:18:14.1977490Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-28T18:18:14.2015910Z ##[endgroup]
+2026-10-28T18:18:14.2017063Z ##[group]Setting up auth
+2026-10-28T18:18:14.2024311Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-28T18:18:14.2068045Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-28T18:18:14.2430699Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-28T18:18:14.2477851Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-28T18:18:14.2756331Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-28T18:18:14.2804314Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-28T18:18:14.3067963Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-28T18:18:14.3121069Z ##[endgroup]
+2026-10-28T18:18:14.3132648Z ##[group]Fetching the repository
+2026-10-28T18:18:14.3134296Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8fd07e8d03007c8815f660c6f4e5526b466f8e46:refs/remotes/origin/main
+2026-10-28T18:18:15.3470932Z From https://github.com/gxaawill2-ui/cat-page-autopilot
+2026-10-28T18:18:15.3473141Z  * [new ref]         8fd07e8d03007c8815f660c6f4e5526b466f8e46 -> origin/main
+2026-10-28T18:18:15.3477556Z ##[endgroup]
+2026-10-28T18:18:15.3479144Z ##[group]Determining the checkout info
+2026-10-28T18:18:15.3481148Z ##[endgroup]
+2026-10-28T18:18:15.3492779Z [command]/usr/bin/git sparse-checkout disable
+2026-10-28T18:18:15.3558326Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-28T18:18:15.3605037Z ##[group]Checking out the ref
+2026-10-28T18:18:15.3608188Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-28T18:18:15.4229518Z Switched to a new branch 'main'
+2026-10-28T18:18:15.4233016Z branch 'main' set up to track 'origin/main'.
+2026-10-28T18:18:15.4245924Z ##[endgroup]
+2026-10-28T18:18:15.4301211Z [command]/usr/bin/git log -1 --format=%H
+2026-10-28T18:18:15.4338891Z 8fd07e8d03007c8815f660c6f4e5526b466f8e46
+2026-10-28T18:18:15.4617347Z ##[group]Run python3 -m unittest discover -s scripts -p test_meta_graph_publish.py -v
+2026-10-28T18:18:15.4619948Z [36;1mpython3 -m unittest discover -s scripts -p test_meta_graph_publish.py -v[0m
+2026-10-28T18:18:15.4648005Z shell: /usr/bin/bash -e {0}
+2026-10-28T18:18:15.4649229Z env:
+2026-10-28T18:18:15.4650222Z   META_PUBLISH_ENABLED: true
+2026-10-28T18:18:15.4656961Z   META_PAGE_ACCESS_TOKEN: ***
+2026-10-28T18:18:15.4658164Z   EVENT_KIND: schedule
+2026-10-28T18:18:15.4659256Z   EVENT_CRON: 5 12 * * *
+2026-10-28T18:18:15.4660519Z   MANUAL_SLOT: 
+2026-10-28T18:18:15.4661804Z   MANUAL_DRY_RUN: 
+2026-10-28T18:18:15.4662844Z   MANUAL_PREFLIGHT: 
+2026-10-28T18:18:15.4663899Z ##[endgroup]
+2026-10-28T18:18:15.5827973Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.5841750Z test_cap_counts_old_and_new_unknown_attempts (test_meta_graph_publish.OfficialMetaSafetyTests.test_cap_counts_old_and_new_unknown_attempts) ... ok
+2026-10-28T18:18:15.5857739Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.5876535Z test_cas_failure_prevents_post (test_meta_graph_publish.OfficialMetaSafetyTests.test_cas_failure_prevents_post) ... ok
+2026-10-28T18:18:15.5885613Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.5897230Z test_disabled_means_no_graph_call (test_meta_graph_publish.OfficialMetaSafetyTests.test_disabled_means_no_graph_call) ... ok
+2026-10-28T18:18:15.5906883Z META_PUBLISH_DISABLED
+2026-10-28T18:18:15.5910349Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.5921278Z test_draft_policy_blocks_even_with_switch_and_token (test_meta_graph_publish.OfficialMetaSafetyTests.test_draft_policy_blocks_even_with_switch_and_token) ... ok
+2026-10-28T18:18:15.5927821Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.5934167Z test_dry_run_means_no_graph_call (test_meta_graph_publish.OfficialMetaSafetyTests.test_dry_run_means_no_graph_call) ... ok
+2026-10-28T18:18:15.5949817Z test_external_posts_plus_local_unknown_count_together (test_meta_graph_publish.OfficialMetaSafetyTests.test_external_posts_plus_local_unknown_count_together) ... ok
+2026-10-28T18:18:15.5959072Z DRY_RUN_OK_NO_FACEBOOK_WRITES
+2026-10-28T18:18:15.5962525Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=local event=local
+2026-10-28T18:18:15.5969122Z test_missing_token_no_publish (test_meta_graph_publish.OfficialMetaSafetyTests.test_missing_token_no_publish) ... ok
+2026-10-28T18:18:15.5975599Z META_PAGE_ACCESS_TOKEN_SECRET_MISSING
+2026-10-28T18:18:15.5978721Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.5989538Z test_no_queue_no_publish (test_meta_graph_publish.OfficialMetaSafetyTests.test_no_queue_no_publish) ... ok
+2026-10-28T18:18:15.5996185Z NO_QUEUED_CONTENT
+2026-10-28T18:18:15.5999367Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.6005585Z test_old_caption_never_republished (test_meta_graph_publish.OfficialMetaSafetyTests.test_old_caption_never_republished) ... ok
+2026-10-28T18:18:15.6012697Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.6020666Z test_old_image_never_republished (test_meta_graph_publish.OfficialMetaSafetyTests.test_old_image_never_republished) ... ok
+2026-10-28T18:18:15.6028076Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.6035830Z test_old_unknown_same_slot_blocks_new_caption (test_meta_graph_publish.OfficialMetaSafetyTests.test_old_unknown_same_slot_blocks_new_caption) ... ok
+2026-10-28T18:18:15.6042315Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.6047720Z test_outcome_file_prohibits_replay (test_meta_graph_publish.OfficialMetaSafetyTests.test_outcome_file_prohibits_replay) ... ok
+2026-10-28T18:18:15.6067547Z test_preflight_only_uses_get_and_no_arm (test_meta_graph_publish.OfficialMetaSafetyTests.test_preflight_only_uses_get_and_no_arm) ... ok
+2026-10-28T18:18:15.6084397Z test_preflight_rejects_wrong_page (test_meta_graph_publish.OfficialMetaSafetyTests.test_preflight_rejects_wrong_page) ... ok
+2026-10-28T18:18:15.6093249Z test_readback_requires_correct_photo (test_meta_graph_publish.OfficialMetaSafetyTests.test_readback_requires_correct_photo) ... ok
+2026-10-28T18:18:15.6096921Z SLOT_ALREADY_ATTEMPTED_NEVER_RETRY
+2026-10-28T18:18:15.6098977Z META_PREFLIGHT_OK_PAGE=1346385028565797; FACEBOOK_POST_CALLS=0
+2026-10-28T18:18:15.6102916Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T14:40:00+08:00 delay_min=130.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.6107732Z test_stale_slot_no_publish (test_meta_graph_publish.OfficialMetaSafetyTests.test_stale_slot_no_publish) ... ok
+2026-10-28T18:18:15.6113306Z SKIPPED_STALE_OR_EARLY reason=STALE delay_min=130.00; NEVER_BACKFILL
+2026-10-28T18:18:15.6117245Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.6123637Z META_WRITE_UNKNOWN_KEEP_ARMED_NEVER_RETRY
+2026-10-28T18:18:15.6136174Z test_unknown_post_is_called_once_and_never_replayed (test_meta_graph_publish.OfficialMetaSafetyTests.test_unknown_post_is_called_once_and_never_replayed) ... ok
+2026-10-28T18:18:15.6142148Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.6145690Z SLOT_ALREADY_ATTEMPTED_NEVER_RETRY
+2026-10-28T18:18:15.6148816Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.6153242Z test_untrusted_url_rejected (test_meta_graph_publish.OfficialMetaSafetyTests.test_untrusted_url_rejected) ... ok
+2026-10-28T18:18:15.6155485Z 
+2026-10-28T18:18:15.6156352Z ----------------------------------------------------------------------
+2026-10-28T18:18:15.6158222Z Ran 18 tests in 0.034s
+2026-10-28T18:18:15.6158992Z 
+2026-10-28T18:18:15.6159492Z OK
+2026-10-28T18:18:15.6373359Z ##[group]Run if [[ "$EVENT_KIND" == 'workflow_dispatch' ]]; then
+2026-10-28T18:18:15.6375011Z [36;1mif [[ "$EVENT_KIND" == 'workflow_dispatch' ]]; then[0m
+2026-10-28T18:18:15.6376331Z [36;1m  slot="$MANUAL_SLOT"[0m
+2026-10-28T18:18:15.6377604Z [36;1m  if [[ "$MANUAL_PREFLIGHT" == 'true' ]]; then[0m
+2026-10-28T18:18:15.6379061Z [36;1m    python3 scripts/meta_graph_publish.py --preflight[0m
+2026-10-28T18:18:15.6380528Z [36;1m  elif [[ "$MANUAL_DRY_RUN" == 'false' ]]; then[0m
+2026-10-28T18:18:15.6382145Z [36;1m    python3 scripts/meta_graph_publish.py --slot "$slot"[0m
+2026-10-28T18:18:15.6383495Z [36;1m  else[0m
+2026-10-28T18:18:15.6384746Z [36;1m    python3 scripts/meta_graph_publish.py --slot "$slot" --dry-run[0m
+2026-10-28T18:18:15.6386174Z [36;1m  fi[0m
+2026-10-28T18:18:15.6387060Z [36;1melse[0m
+2026-10-28T18:18:15.6387993Z [36;1m  case "$EVENT_CRON" in[0m
+2026-10-28T18:18:15.6389154Z [36;1m    '30,38,48 1 * * *'|'5 2 * * *') slot='09:30';;[0m
+2026-10-28T18:18:15.6390517Z [36;1m    '30,38,48 4 * * *'|'5 5 * * *') slot='12:30';;[0m
+2026-10-28T18:18:15.6391955Z [36;1m    '30,38,48 8 * * *'|'5 9 * * *') slot='16:30';;[0m
+2026-10-28T18:18:15.6393594Z [36;1m    '30,38,48 11 * * *'|'5 12 * * *') slot='19:30';;[0m
+2026-10-28T18:18:15.6394898Z [36;1m    *) echo 'UNKNOWN_SCHEDULE'; exit 1;;[0m
+2026-10-28T18:18:15.6396076Z [36;1m  esac[0m
+2026-10-28T18:18:15.6397890Z [36;1m  echo "SCHEDULED_TRIGGER=$EVENT_CRON TARGET_SLOT=$slot RUN_ID=$GITHUB_RUN_ID ACTUAL_UTC=$(date -u +'%Y-%m-%dT%H:%M:%SZ')"[0m
+2026-10-28T18:18:15.6400091Z [36;1m  python3 scripts/meta_graph_publish.py --slot "$slot"[0m
+2026-10-28T18:18:15.6401392Z [36;1mfi[0m
+2026-10-28T18:18:15.6426982Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-10-28T18:18:15.6428308Z env:
+2026-10-28T18:18:15.6429218Z   META_PUBLISH_ENABLED: true
+2026-10-28T18:18:15.6434482Z   META_PAGE_ACCESS_TOKEN: ***
+2026-10-28T18:18:15.6435566Z   EVENT_KIND: schedule
+2026-10-28T18:18:15.6436568Z   EVENT_CRON: 5 12 * * *
+2026-10-28T18:18:15.6437644Z   MANUAL_SLOT: 
+2026-10-28T18:18:15.6438611Z   MANUAL_DRY_RUN: 
+2026-10-28T18:18:15.6439572Z   MANUAL_PREFLIGHT: 
+2026-10-28T18:18:15.6440531Z ##[endgroup]
+2026-10-28T18:18:15.6512469Z SCHEDULED_TRIGGER=5 12 * * * TARGET_SLOT=19:30 RUN_ID=40743823672 ACTUAL_UTC=2026-10-28T18:18:15Z
+2026-10-28T18:18:15.7078457Z DISPATCH_DIAG slot=2026-10-29T19:30 now_taipei=2026-10-29T02:18:15.707415+08:00 delay_min=-1031.74 allowed_window_min=45 run_id=40743823672 event=schedule
+2026-10-28T18:18:15.7081170Z SKIPPED_STALE_OR_EARLY reason=EARLY delay_min=-1031.74; NEVER_BACKFILL
+2026-10-28T18:18:15.7468405Z Post job cleanup.
+2026-10-28T18:18:15.8406263Z [command]/usr/bin/git version
+2026-10-28T18:18:15.8500705Z git version 2.56.0
+2026-10-28T18:18:15.8537553Z Temporarily overriding HOME='/home/runner/work/_temp/244e95a8-43db-43c4-8c5e-b636326525d6' before making global git config changes
+2026-10-28T18:18:15.8541908Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-28T18:18:15.8547813Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cat-page-autopilot/cat-page-autopilot
+2026-10-28T18:18:15.8614167Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-28T18:18:15.8663061Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-28T18:18:15.9072769Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-28T18:18:15.9108664Z http.https://github.com/.extraheader
+2026-10-28T18:18:15.9135164Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-28T18:18:15.9192494Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-28T18:18:15.9563840Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-28T18:18:15.9619108Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-28T18:18:16.0104065Z Cleaning up orphan processes
+2026-10-28T18:18:16.0722511Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
