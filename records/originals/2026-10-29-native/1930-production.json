@@ -1,0 +1,19 @@
+{
+  "slot": "2026-10-29T19:30",
+  "language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "caption": "Some days, the best part is getting home\nand finding someone who’s been saving your spot. 🐾",
+  "tool": "built-in ImageGen",
+  "attempts": 1,
+  "source_image_file_ref": "generated_images/exec-1aa6d21c-eb9f-4a53-a8f5-b67c4e0eff5c.png",
+  "prompt": "Use case: stylized-concept. One original high-quality square painterly illustration for a gentle international cat evening post. A small sleek black cat with warm amber eyes curled peacefully on one side of a wide cushioned window seat, its tail tucked naturally, leaving a welcoming empty space beside it under a loosely folded knitted blanket. Cozy intimate apartment at blue hour; outside the large window soft rain and blurred anonymous city lights, no recognisable landmarks, inside a modest warm amber reading lamp. A plain closed book with no writing rests nearby. Moody blue/amber cinematic lighting, sophisticated hand-painted brush texture, tender believable expression, rich detail without clutter, cat is clear and original character rather than existing franchise. No human, no letters, no logos, no watermark, no stock charts. Emotional sense of someone waiting for you to come home; central safe composition and anatomically correct cat.",
+  "visual_qa": {
+    "passed": true,
+    "composition": "Black cat curled on blanket, welcoming space and rainy anonymous skyline; calm clear face",
+    "clarity": "Crisp original cinematic warm/blue art without letters or brands",
+    "originality": "New generated scene and original caption; no incident content reuse"
+  }
+}
