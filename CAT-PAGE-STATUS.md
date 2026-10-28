@@ -1,3 +1,9 @@
+## 2026-10-28 撤銷及同範圍重授權已執行（最新）
+- 時間2026-10-28T14:00:53.898393+08:00。使用者明確回覆同意後，官方Explorer單次「解除安裝應用程式」，舊Token欄清空、選單回到取得權杖；未刪App/Page/貼文。
+- 已完成同一管理員官方OAuth，僅勾1346385028565797／目前粉專，三scope不變；Meta顯示管理員已與Cat Page Autopilot連結。新User Token偵錯有效且scope只指定Page。
+- 正在官方延展程序；新Page Token尚未替換指定Secret，正式發布仍關閉、daily queue-only停用，沒有新Post ID。舊Secret已過原到期時間，不可用來宣稱新連線可發布。
+- 下步：完成官方延展所需正常身分驗證→取得同Page Token→僅替換META_PAGE_ACCESS_TOKEN→核對有效期和Actions GET→新未來slot與下一輪真發文驗收。
+
 ## 2026-10-28 官方授權與 Actions GET 成功／憑證輪替待批准（最新）
 - 保存時間：2026-10-28T09:01:08.013692+08:00。單一Page1346385028565797已正式授予三個必要scope，指定GitHub Secret已儲存短效Page Token。
 - 真Actions預檢40611743803成功：18項測試，GET Page身分及24筆近期貼文，Facebook POST=0；無秘密回條records/meta-preflight/40611743803.json。這不是實際發布驗收。
