@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-10-29T07:56:12.628338+08:00",
+  "type": "original_evergreen_not_news",
+  "heat_signal_note": "No trend ranking or news popularity claimed. Current external trend signals not acquired in this repair batch, N/A.",
+  "candidates": [
+    {
+      "id": "paper-bag-luxury",
+      "topic": "紙袋豪宅",
+      "target_market": "US/PH",
+      "selected_slot": "09:30",
+      "source": "Original concepts created for this Page",
+      "source_date": "2026-10-29",
+      "heat_signal": null,
+      "heat_display": "N/A"
+    },
+    {
+      "id": "chair-owner",
+      "topic": "座位接管",
+      "target_market": "TW",
+      "selected_slot": "12:30",
+      "source": "Original concepts created for this Page",
+      "source_date": "2026-10-29",
+      "heat_signal": null,
+      "heat_display": "N/A"
+    },
+    {
+      "id": "quiet-paper-comic",
+      "topic": "安靜後的衛生紙事件",
+      "target_market": "TW",
+      "selected_slot": "16:30",
+      "source": "Original concepts created for this Page",
+      "source_date": "2026-10-29",
+      "heat_signal": null,
+      "heat_display": "N/A"
+    },
+    {
+      "id": "rain-companion",
+      "topic": "雨夜回家陪伴",
+      "target_market": "US/PH",
+      "selected_slot": "19:30",
+      "source": "Original concepts created for this Page",
+      "source_date": "2026-10-29",
+      "heat_signal": null,
+      "heat_display": "N/A"
+    },
+    {
+      "id": "toy-under-sofa",
+      "topic": "玩具掉到沙發下的貓咪談判",
+      "target_market": "TW/US",
+      "selected_slot": null,
+      "source": "Original concepts created for this Page",
+      "source_date": "2026-10-29",
+      "heat_signal": null,
+      "heat_display": "N/A"
+    }
+  ]
+}

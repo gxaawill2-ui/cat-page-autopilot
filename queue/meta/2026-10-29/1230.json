@@ -1,0 +1,14 @@
+{
+  "page_id": "1346385028565797",
+  "caption": "只是離開座位倒杯水。\n回來就從屋主變成訪客。\n\n現在坐下還要先問：「不好意思，這裡有人嗎？」🐈‍⬛",
+  "language": "zh-Hant",
+  "image_sha256": "1605dbb2d9a3c27b49994b503f7d6cc3e0316a708110659ce67383bfd4d4a075",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/1605dbb2d9a3c27b49994b503f7d6cc3e0316a708110659ce67383bfd4d4a075.jpg",
+  "experiment_id": "intl-20261026-14d",
+  "slot": "2026-10-29T12:30",
+  "draft_key": "16422aed9cea8c7f0301bdbded8a2668f6f59aced32f459d12512db0112eec2f",
+  "image_qa": true,
+  "source_record": "records/originals/2026-10-29-native/1230-production.json",
+  "image_proof": "records/url-checks/native-20261029-1230.json",
+  "executor": "meta_business_suite_native"
+}
