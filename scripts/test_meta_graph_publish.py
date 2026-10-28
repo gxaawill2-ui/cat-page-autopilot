@@ -106,5 +106,19 @@ class OfficialMetaSafetyTests(unittest.TestCase):
                 self.assertEqual(p.run("12:30",now=self.now),"skipped")
                 self.assertEqual(graph.call_count,1)
 
+    def test_preflight_only_uses_get_and_no_arm(self):
+        with patch.dict("os.environ", {"META_PAGE_ACCESS_TOKEN":"fake", "GITHUB_RUN_ID":"local"}, clear=True):
+            with patch.object(p,"graph",side_effect=[{"id":p.PAGE_ID,"name":"test"},{"data":[]}]) as graph:
+                proof=p.preflight()
+                self.assertEqual(proof["facebook_post_calls"],0)
+                self.assertTrue(all(c.kwargs.get("method","GET")=="GET" for c in graph.call_args_list))
+                self.assertFalse((p.ROOT/"state/meta_dispatch").exists())
+
+    def test_preflight_rejects_wrong_page(self):
+        with patch.dict("os.environ", {"META_PAGE_ACCESS_TOKEN":"fake"}):
+            with patch.object(p,"graph",return_value={"id":"wrong"}):
+                with self.assertRaisesRegex(ValueError,"PREFLIGHT_WRONG_PAGE"):
+                    p.preflight()
+
 if __name__ == "__main__":
     unittest.main()

@@ -16,6 +16,10 @@ name: Meta Official Page Publisher (requires Meta Page token)
         description: 'Default safe test without Graph API writes'
         type: boolean
         default: true
+      preflight_only:
+        description: 'Read-only Meta GET check; never publishes, ignores slot and live switch'
+        type: boolean
+        default: false
 permissions:
   contents: write
 concurrency:
@@ -32,6 +36,7 @@ jobs:
       EVENT_CRON: ${{ github.event.schedule }}
       MANUAL_SLOT: ${{ inputs.slot }}
       MANUAL_DRY_RUN: ${{ inputs.dry_run }}
+      MANUAL_PREFLIGHT: ${{ inputs.preflight_only }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -43,7 +48,9 @@ jobs:
         run: |
           if [[ "$EVENT_KIND" == 'workflow_dispatch' ]]; then
             slot="$MANUAL_SLOT"
-            if [[ "$MANUAL_DRY_RUN" == 'false' ]]; then
+            if [[ "$MANUAL_PREFLIGHT" == 'true' ]]; then
+              python3 scripts/meta_graph_publish.py --preflight
+            elif [[ "$MANUAL_DRY_RUN" == 'false' ]]; then
               python3 scripts/meta_graph_publish.py --slot "$slot"
             else
               python3 scripts/meta_graph_publish.py --slot "$slot" --dry-run

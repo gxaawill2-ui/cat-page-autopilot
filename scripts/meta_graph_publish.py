@@ -170,6 +170,32 @@ def verify_image(q):
     if status != 200 or mime != "image/jpeg" or len(image) > 4_000_000 or sha(image) != q["image_sha256"]:
         raise ValueError("Public JPEG status, MIME or SHA failed")
 
+def preflight():
+    """Read-only Meta connectivity check; independent of queue, slot and live switch."""
+    token = os.environ.get("META_PAGE_ACCESS_TOKEN")
+    if not token:
+        raise ValueError("PREFLIGHT_TOKEN_MISSING")
+    identity = graph("me", token, {"fields": "id,name"})
+    if identity.get("id") != PAGE_ID:
+        raise ValueError("PREFLIGHT_WRONG_PAGE")
+    posts = graph(f"{PAGE_ID}/posts", token, {"fields":"id,message,created_time", "limit":40})
+    if not isinstance(posts.get("data"), list):
+        raise ValueError("PREFLIGHT_POST_LIST_UNAVAILABLE")
+    run_id = os.environ.get("GITHUB_RUN_ID", "local")
+    proof = {"validator":"github-actions-meta-get-preflight", "page_id":PAGE_ID,
+             "page_name":identity.get("name"), "graph_version":GRAPH_VERSION,
+             "checked_at":dt.datetime.now(TZ).isoformat(), "run_id":run_id,
+             "source_commit":os.environ.get("GITHUB_SHA"),
+             "recent_posts":[{"id":p.get("id"),"created_time":p.get("created_time")} for p in posts["data"]],
+             "facebook_post_calls":0, "write_permission_tested":False,
+             "note":"GET success is not Facebook publishing acceptance; no Token stored in this proof."}
+    out = ROOT / "records/meta-preflight" / (run_id + ".json")
+    write(out, proof)
+    if run_id != "local":
+        persist(out, "Record read-only Meta official preflight " + run_id)
+    print("META_PREFLIGHT_OK_PAGE=" + PAGE_ID + "; FACEBOOK_POST_CALLS=0")
+    return proof
+
 def run(slot, dry_run=False, now=None):
     if slot not in SLOTS:
         raise ValueError("Invalid slot")
@@ -254,11 +280,17 @@ def run(slot, dry_run=False, now=None):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--slot", choices=sorted(SLOTS), required=True)
+    parser.add_argument("--slot", choices=sorted(SLOTS))
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--preflight", action="store_true")
     args = parser.parse_args()
     try:
-        run(args.slot, dry_run=args.dry_run)
+        if args.preflight:
+            preflight()
+        elif args.slot:
+            run(args.slot, dry_run=args.dry_run)
+        else:
+            parser.error("--slot or --preflight required")
     except Exception as exc:
         print("SAFETY_STOP:", str(exc), file=sys.stderr)
         raise SystemExit(1)

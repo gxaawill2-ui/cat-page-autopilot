@@ -1,3 +1,11 @@
+## 2026-10-28 官方單一粉專授權與 Secret 已完成（最新）
+- 本人回覆「同意授權」後正式儲存OAuth，Meta顯示連結成功。GET me/permissions 回傳 pages_manage_posts/pages_read_engagement/pages_show_list 全granted。
+- 官方Page Token GET me回讀1346385028565797／貓咪投資筆記，GitHub已真實新增指定META_PAGE_ACCESS_TOKEN Secret。Token未進聊天/公開repo，複製暫存已清除。
+- 官方Debugger：類型Page、App1094057270082192、有效是、各scope僅Page1346385028565797；到期epoch1793152800=10/28 10:00台灣，目前短效，須解決生命周期才可宣稱持續運作。資料存取到期epoch1800924414。
+- 正式開關仍關閉，無新Facebook寫入/Post ID。新增既有workflow preflight_only選項，只做GET身分+近期貼文，保存無秘密回條，不依賴slot/queue，不arm不POST；18項安全測試通過。
+- 下一步：同一Actions跑preflight_only=true → 正常官方長效權杖處理 → 全新未來queue → 開啟前置檢查通過之正常slot驗收。10/27所有過期queue不補發；未知兩篇不復用。
+- 證據records/migration/2026-10-28-meta-authorized.json。
+
 ## 2026-10-27 官方 OAuth 已備妥／待最後授權（最新）
 - 真 App1094057270082192已建立。pages_manage_posts / pages_read_engagement / pages_show_list 在官方設定為可供測試，Explorer選定僅此三項。
 - OAuth已切回管理員本人，選「只能使用目前的粉專」且只勾貓咪投資筆記1346385028565797；不是全部目前/未來粉專。最後畫面列明建立管理內容、讀取本粉專內容、顯示粉專清單（各1項資產）。
