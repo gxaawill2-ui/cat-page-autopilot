@@ -1,0 +1,53 @@
+{
+  "created_at": "2026-10-28T14:59:33.251072+08:00",
+  "type": "original_evergreen_not_news",
+  "research_note": "No current trend ranking asserted. Original life entertainment concepts; platform heat data not acquired this round, N/A.",
+  "candidates": [
+    {
+      "id": "sun-calendar",
+      "topic": "貓的日光行程",
+      "target_market": "TW",
+      "source": "Original concept created for this Page",
+      "source_date": "2026-10-28",
+      "heat_signal": null,
+      "heat_display": "N/A"
+    },
+    {
+      "id": "bag-inspector",
+      "topic": "貓咪檢查回家購物袋",
+      "target_market": "US",
+      "source": "Original concept created for this Page",
+      "source_date": "2026-10-28",
+      "heat_signal": null,
+      "heat_display": "N/A"
+    },
+    {
+      "id": "laundry-hotel",
+      "topic": "乾淨衣物變成貓旅館",
+      "target_market": "TW",
+      "source": "Original concept created for this Page",
+      "source_date": "2026-10-28",
+      "heat_signal": null,
+      "heat_display": "N/A"
+    },
+    {
+      "id": "door-negotiator",
+      "topic": "貓在門口猶豫進出",
+      "target_market": "US",
+      "source": "Original concept created for this Page",
+      "source_date": "2026-10-28",
+      "heat_signal": null,
+      "heat_display": "N/A"
+    },
+    {
+      "id": "rain-window",
+      "topic": "雨天窗邊的小陪伴",
+      "target_market": "JP",
+      "source": "Original concept created for this Page",
+      "source_date": "2026-10-28",
+      "heat_signal": null,
+      "heat_display": "N/A"
+    }
+  ],
+  "selected": "sun-calendar"
+}

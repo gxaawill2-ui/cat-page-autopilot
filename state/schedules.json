@@ -52,12 +52,12 @@
       "16:30",
       "19:30"
     ],
-    "authorization_status": "three_scopes_granted_GET_verified_rotation_pending",
+    "authorization_status": "rotated_single_Page_grant_GET_verified",
     "secret_present": true,
     "publish_enabled": false,
     "no_duplicate_workflow_created": true,
-    "preflight_run_id": "40611743803",
-    "credential_lifecycle": "short_lived_until_2026-10-28T10:00:00+08:00; user-token exposure revocation approval pending",
-    "observed_at": "2026-10-28T09:01:08.013692+08:00"
+    "preflight_run_id": "40646935634",
+    "credential_lifecycle": "Page token Debugger Never; data_access_expires_epoch 1800943174; still revocable",
+    "observed_at": "2026-10-28T15:00:00.210457+08:00"
   }
 }

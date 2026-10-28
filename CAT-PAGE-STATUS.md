@@ -1,3 +1,9 @@
+## 2026-10-28 新Secret背景GET預檢通過／16:30新圖先持久保存（最新）
+- 2026-10-28T15:00:00.210457+08:00：真Actions40646935634成功，18tests，正確Page/24筆近期貼文，FACEBOOK_POST_CALLS=0；回條records/meta-preflight/40646935634.json。正式發布/連續兩輪驗收尚未完成。
+- 新16:30繁中原創日光貓，1次內建ImageGen，目視QA通過；draft f103bc12ce281aa396066ca6645b4f8289ba02aa31a0342121e0ca34d36e415a，JPEG eb15d3e6a6e99e7c417765726482530ea3fcfd1629996634f95bfb2c8d1e9871，277414bytes/1254平方。
+- 先保存JPEG/草稿/原創提示及5個常青候選，未聲稱熱門，訊號N/A；尚待Pages公開GET/queue。圖片不是歷史事故或過期queue，不重送舊圖文。
+- 下一步Pages部署成功後有限GET200/image/jpeg/SHA→同一未來slot queue→正式開關/原queue-only任務安全啟用→等待原正常排程真驗收，不手動發布補數。
+
 ## 2026-10-28 14:53 新Page Token已替換指定Secret（最新）
 - 完成時間2026-10-28T14:55:41.676547+08:00。官方撤銷/單一Page三scope重授權後，Meta正常密碼再確認成功，官方延展User Token顯示12/27到期。
 - 經官方me/accounts取得指定1346385028565797 Page Token，Debugger類型Page/有效是/到期永不，data_access_expires1800943174；不把永不當作永久不會撤銷。

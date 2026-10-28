@@ -40,7 +40,7 @@
     "passed": 18,
     "new_cases": "read-only preflight never arms/posts; wrong Page rejected"
   },
-  "next": "Run read-only GitHub Actions preflight using replaced Secret, then fresh future queue and gated scheduled acceptance. No Facebook write yet.",
+  "next": "Persist new 16:30 original draft and JPEG; verify anonymous Pages URL; prepare queue and live gates. Actual scheduled POST and next-cycle acceptance still pending.",
   "preflight": {
     "run_id": "40611743803",
     "job_id": "122564661215",
@@ -64,5 +64,14 @@
     "reauthorization_completed": true,
     "reauthorization_ui_result": "Administrator already connected to Cat Page Autopilot",
     "old_secret_replaced_after_rotation": true
+  },
+  "preflight_after_rotation": {
+    "run_id": "40646935634",
+    "job_id": "122677824333",
+    "result": "success",
+    "proof": "records/meta-preflight/40646935634.json",
+    "checked_at": "2026-10-28T14:56:42.525946+08:00",
+    "facebook_post_calls": 0,
+    "tests_passed": 18
   }
 }

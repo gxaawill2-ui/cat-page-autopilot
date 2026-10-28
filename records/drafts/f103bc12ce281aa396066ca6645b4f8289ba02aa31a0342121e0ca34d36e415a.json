@@ -1,0 +1,28 @@
+{
+  "key": "f103bc12ce281aa396066ca6645b4f8289ba02aa31a0342121e0ca34d36e415a",
+  "page_id": "1346385028565797",
+  "caption": "我：下午還有一堆事。\n貓：我也有，15:00 曬太陽，15:05 翻面。\n\n牠的行事曆看起來比我的重要。☀️",
+  "caption_sha256": "2d4aa02f0bdda5a6c04ce8d9e617163e01963c0b703ba8e837d49ae4df40d4c6",
+  "image_sha256": "eb15d3e6a6e99e7c417765726482530ea3fcfd1629996634f95bfb2c8d1e9871",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/eb15d3e6a6e99e7c417765726482530ea3fcfd1629996634f95bfb2c8d1e9871.jpg",
+  "asset_path": "docs/assets/eb15d3e6a6e99e7c417765726482530ea3fcfd1629996634f95bfb2c8d1e9871.jpg",
+  "bytes": 277414,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "created_at": "2026-10-28T14:59:33.585506+08:00",
+  "topic": "原創貓咪日光行程",
+  "style": "自然寫實暖光",
+  "caption_type": "日常對話幽默",
+  "source_image": "ImageGen original exec-7b5366b7-dcf3-4339-a630-44c7171fff61",
+  "sources": [
+    "records/originals/2026-10-28-1630/production.json"
+  ],
+  "status": "draft",
+  "language": "zh-Hant",
+  "target_markets": [
+    "TW"
+  ],
+  "experiment_id": "intl-20261026-14d"
+}
