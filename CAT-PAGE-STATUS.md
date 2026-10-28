@@ -1,3 +1,11 @@
+## 2026-10-28 16:40｜19:30英文內容已完成queue-only準備（最新）
+- 本輪台北時間16:34後接續唯一repo；下一合格未來時段2026-10-28 19:30（en，目標US/PH不代表實際觸及），未補16:30已開始時段。現有每日任務ID `6add4bc872c88191bea8e6d2cf3dc016` 由任務清單真實讀回 `enabled=true`；原週日20:00任務不變。
+- 19:30原創南瓜屋睡貓：內建ImageGen 1次、目視QA通過；原圖 `file_0000000062a082309da2d2360a1d2f1d`，原創提示/文案/6個候選與來源保存在 `records/originals/2026-10-28-1930/`，熱門訊號均N/A，不捏造。Pillow依現有catflow.prepare JPEG參數轉換、無EXIF、355340 bytes；image SHA256 `2244fc67b379bf986313b75f5f7efd07a6a754ac094db35bc49128b1f7f7483d`，draft key `34b8f339f0a3a90000b50a37e6843a0fc2892b2e80c20748dc0cf59e644f7dbb`。
+- 原創asset+draft先存GitHub CAS commit `8408652b3d1e36c1af5b3bde9d7b3a74523c91a8`；本環境對GitHub Pages直接連線DNS失敗，改用既有Actions Pages驗證run `40658211859`，真正匿名GET回條HTTP200、image/jpeg、355340bytes、SHA一致，`records/pages-proofs/34b8f339f0a3a90000b50a37e6843a0fc2892b2e80c20748dc0cf59e644f7dbb.json`。不是憑空宣稱本機GET成功。
+- 已以最新main parent expected_sha CAS寫入 `queue/meta/2026-10-28/1930.json`、`records/url-checks/meta-20261028-1930.json`、`records/migration/2026-10-28-1930-readiness.json`，commit `064dfcb604af6683476722250148d8445efd7e73`；圖URL `https://gxaawill2-ui.github.io/cat-page-autopilot/assets/2244fc67b379bf986313b75f5f7efd07a6a754ac094db35bc49128b1f7f7483d.jpg`。
+- 本輪Facebook寫入0、Work未呼叫Windsor/Meta /photos/FB UI，未armed或reserve。官方Meta單Page Token已授權並保存指定Secret，`META_PUBLISH_ENABLED=true`先前真UI回讀；只有原`.github/workflows/meta-graph-publish.yml`可發布。queue不是已發布；目前19:30無Post ID/永久網址/API回讀。
+- 前一16:30排程驗收：截至16:40未觀察到相對應scheduled Actions run或`state/meta_dispatch/2026-10-28-1630.json`，只有15:08的舊09:30 scheduled run `40648179046`（log `SKIPPED_STALE_OR_EARLY`）。GitHub Actions可能延遲，不能提前判定16:30失敗或成功；未有真Post ID/回讀/目視證據，連續兩輪成功未驗收。
+- 保留10/26 f269、10/27 16:30 8b6未知事故，不清鎖不重送不復用；品牌更名暫停、排除印尼、額外NT$0。10/29 19:30後才按`review_due.py`與CAS cycle執行首輪三天檢討，週日完整分析不變；未發布不計入成效。
 ## 2026-10-28 正式開關與原queue-only任務啟用／待16:30真排程驗收（最新）
 - 保存時間2026-10-28T15:09:14.652297+08:00。本人透過安全表單完成GitHub新email OTP，指定Secret真回條Secret updated.（14:53）；Meta官方撤銷/同範圍重授權/長效延展完成。
 - 真Actions40646935634用新Secret成功GET指定Page/24筆貼文，18tests、Facebook POST=0；records/meta-preflight/40646935634.json。Page Token有效/到期永不，仍有資料存取期限，不等於永久有效。
