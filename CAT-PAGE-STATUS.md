@@ -1,3 +1,10 @@
+## 2026-10-29 07:xx 追查10/28晚間自動貼文：未驗收（最新）
+- 10/28 17:24台北時間透過使用者明確即時指示呼叫Windsor create_photo_post，回Post ID 1346385028565797_122106471645515576；10/29再次以Windsor回讀文字、full_picture核實，**這是單次互動發布，非 GitHub Actions 自動排程成功**。該篇原16:30圖片/文案已有state/meta_dispatch/2026-10-28-1630.json鎖及回條，不能再排程重發。
+- 10/28 19:30英文queue已準備，但至10/29 07:xx並無state/meta_dispatch/2026-10-28-1930.json、repo沒有對應armed/回條commit，Windsor 10/28-10/29只讀到上述互動貼文（1篇）；**未能確認有實際自動發布**。缺完整19:30 Actions run/event/job log，不能斷言根因是「沒觸發」、延遲、前置檢查失敗或Meta拒絕。
+- daily ChatGPT queue-only真任務在10/28 16:30 run後又requires_user_action=true、自動停用；週日檢討仍啟用，後續內容不保證持續準備。GitHub檔案state/schedules.json之前寫enabled=true已過時，不能當真正啟用證據。
+- **策略建議改為Meta原生預約排程**：Work在有正常互動授權的一次工作階段提前製作新原創圖文，對10分鐘以上的未來時間用Meta官方scheduled_publish_time/published=false，核實是真正Page scheduled post ID、Meta Planner及指定排程時間，而不是只有圖片upload ID。用Meta平台本身準時發布，減少依賴GitHub cron；原GitHub Actions立即發布管線須在成功轉型前明確防止對同時段重送。未驗證前標半自動；若用API排程，詳細檢查官方實際權限與目前版本支援，遇錯誤停下不盲重試。已過期/未知歷史內容絕不補發，0元額外成本、更名暫停。
+- GitHub官方明示cron可能延遲/漏執行；不再以單純新增cron次數當作根本解決。下次Work須從Actions UI抓10/28 19:30四候選run的event+job log，無run也紀錄缺失，同時優先安全驗收Meta原生預約發文。此checkpoint不是已完成自動化驗收。
+
 ## 2026-10-28 17:xx 修復GitHub Actions排程延遲/缺失（新，優先於歷史）
 - 16:30已完成圖文queue與200/MIME/SHA驗證，但截至17:14查不到 state/meta_dispatch/2026-10-28-1630.json 或真FB Post ID；Windsor當日亦無新貼文。本次 **尚未證實GitHub 16:30 scheduled run存在/啟動**，不能歸因Meta POST失敗。已有09:30的 GitHub scheduled run 延遲至15:08才執行並SKIPPED_STALE_OR_EARLY；官方文檔確認GitHub排程可能延遲或遺漏，此為最明顯的問題線索，尚非16:30的已證根因。
 - 改善唯一現有 .github/workflows/meta-graph-publish.yml：每一原定slot（09:30、12:30、16:30、19:30 台北）改為該時段:30、:38、:48與下小時:05四個安全候選觸發；八條cron映射回原四slot，絕不把重複觸發當作新增內容額度。GitHub concurrency cancel-in-progress=false、state/meta_dispatch slot+hash CAS、meta_graph_publish.py 45分鐘窗口/每日4篇上限/unknown不重送依舊保留；不是能保證準時的絕對方案。
