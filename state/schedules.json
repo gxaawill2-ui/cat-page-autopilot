@@ -54,12 +54,12 @@
       "16:30",
       "19:30"
     ],
-    "authorization_status": "rotated_single_Page_grant_GET_verified",
+    "authorization_status": "expired_actual_secret_HTTP401_190_463",
     "secret_present": true,
     "publish_enabled": false,
     "no_duplicate_workflow_created": true,
     "preflight_run_id": "40646935634",
-    "credential_lifecycle": "Page token Debugger Never; data_access_expires_epoch 1800943174; still revocable",
+    "credential_lifecycle": "Actual Secret token expired 2026-10-28T16:00:00+08:00; no new OAuth attempted",
     "observed_at": "2026-10-29T07:19:40.698136+08:00",
     "workflow_state": "manual read-only checks only",
     "switch_ui_receipt": "Repository variables table: META_PUBLISH_ENABLED true",
@@ -73,9 +73,9 @@
     "cron_removed": true
   },
   "meta_native": {
-    "status": "preparing_not_yet_verified",
-    "scheduling_executor": "Meta native scheduled posts",
-    "production_mode": "semi_automatic_interactive_batch_until_background_proven",
+    "status": "first_schedule_pending",
+    "scheduling_executor": "Meta Business Suite official native scheduling UI",
+    "production_mode": "semi_automatic_interactive_batch",
     "page_id": "1346385028565797",
     "max_per_day": 4,
     "times": [
@@ -85,6 +85,7 @@
       "19:30"
     ],
     "timezone": "Asia/Taipei",
-    "scheduled_post_ids": []
+    "scheduled_post_ids": [],
+    "api_status": "blocked_expired_secret; official UI fallback selected"
   }
 }

@@ -1,0 +1,29 @@
+{
+  "key": "23b46e7517c312dfa26db2dfb7a802777cfbea7a4c80e33e3735027f438d90cb",
+  "page_id": "1346385028565797",
+  "caption": "I bought the fancy cat bed.\nShe chose the bag it came in.\nFive-star packaging. ⭐🐾",
+  "caption_sha256": "c57fa21556d70c301b4d4e2d597d7691986487d455c4ead627e60fb031066f8c",
+  "image_sha256": "370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8.jpg",
+  "asset_path": "docs/assets/370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8.jpg",
+  "bytes": 369459,
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "created_at": "2026-10-29T07:31:42.186118+08:00",
+  "topic": "原創英文包裝豪宅貓",
+  "style": "自然寫實晨光",
+  "caption_type": "短句生活幽默",
+  "source_image": "ImageGen original exec-a8a9a143-39f9-4cd1-a51e-206772299ee2",
+  "sources": [
+    "records/originals/2026-10-29-native/0930-production.json"
+  ],
+  "status": "draft",
+  "language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "experiment_id": "intl-20261026-14d"
+}

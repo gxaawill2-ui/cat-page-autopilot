@@ -1,0 +1,19 @@
+{
+  "slot": "2026-10-29T09:30",
+  "language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "caption": "I bought the fancy cat bed.\nShe chose the bag it came in.\nFive-star packaging. ⭐🐾",
+  "tool": "built-in ImageGen",
+  "attempts": 1,
+  "source_image_file_ref": "generated_images/exec-a8a9a143-39f9-4cd1-a51e-206772299ee2.png",
+  "prompt": "Use case: photorealistic-natural. Asset type: premium original square Facebook cat comedy photo. A small expressive silver tabby adult cat with green eyes peeks cozily from inside a crumpled plain kraft paper shopping bag on a tidy soft blue living-room rug. A plush expensive-looking oval cat bed sits completely empty beside it, creating immediately readable gentle visual humor about choosing the packaging. The bag is open and safe, no handles around the cat, anatomically correct visible paws. Charming candid natural morning window light, realistic fine fur, calm elegant apartment, uncluttered composition, eye-level framing, paper bag cat and unused bed both fully legible. Warm paper brown and cool blue palette, original not a copy of any photo or character. No people, no text, no brand, no watermark, no money or stocks. Keep the cat's face and main objects within central safe frame.",
+  "visual_qa": {
+    "passed": true,
+    "composition": "Cat face and two visible front paws clear; safe open bag and unused bed readable",
+    "clarity": "Sharp realistic fur; no embedded text/logo",
+    "originality": "Fresh ImageGen source; no reuse of historical incident media"
+  }
+}
