@@ -1,39 +1,35 @@
-name: Meta Official Page Checks (immediate publishing retired)
+name: Meta Native Scheduler (manual preparation - no cron)
 "on":
   workflow_dispatch:
     inputs:
-      slot:
-        description: 'Read-only dry-run slot; cannot publish'
+      mode:
+        description: 'audit/dry-run are read-only; schedule creates Meta-native future posts; verify only reads back'
         required: true
         type: choice
-        options: ['09:30', '12:30', '16:30', '19:30']
-      preflight_only:
-        description: 'Meta GET only; never schedules or publishes'
-        type: boolean
-        default: true
+        default: audit
+        options: ['audit', 'dry-run', 'schedule', 'verify']
+      queue:
+        description: 'Canonical queue/meta/YYYY-MM-DD/HHMM.json; empty only for audit'
+        required: false
+        type: string
+        default: ''
 permissions:
   contents: write
 concurrency:
   group: cat-page-meta-official-publisher
   cancel-in-progress: false
 jobs:
-  checks:
-    name: Read-only checks - old immediate publisher retired
+  prepare_meta_native:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
       META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
-      MANUAL_SLOT: ${{ inputs.slot }}
-      MANUAL_PREFLIGHT: ${{ inputs.preflight_only }}
+      NATIVE_MODE: ${{ inputs.mode }}
+      NATIVE_QUEUE: ${{ inputs.queue }}
     steps:
       - uses: actions/checkout@v4
-      - name: Verify existing safety tests without Facebook writes
-        run: python3 -m unittest discover -s scripts -p test_meta_graph_publish.py -v
-      - name: Read-only Meta GET or local dry-run - no live branch
+      - name: Native scheduling safety tests - mocked writes only
+        run: python3 -m unittest discover -s scripts -p test_meta_native_schedule.py -v
+      - name: Prepare Meta native schedule or read-only audit - never immediate publish
         shell: bash
-        run: |
-          if [[ "$MANUAL_PREFLIGHT" == 'true' ]]; then
-            python3 scripts/meta_graph_publish.py --preflight
-          else
-            python3 scripts/meta_graph_publish.py --slot "$MANUAL_SLOT" --dry-run
-          fi
+        run: python3 scripts/meta_native_schedule.py --mode "$NATIVE_MODE" --queue "$NATIVE_QUEUE"

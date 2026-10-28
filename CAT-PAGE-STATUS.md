@@ -1,3 +1,16 @@
+## 2026-10-29 原生預約準備器已實作，待真API驗證（最新）
+- Meta官方SDK實際原碼確認未發布photos、Feed attached_media/published/scheduled_publish_time/unpublished_content_type=SCHEDULED及scheduled_posts讀取；官方網頁HTTP429未假裝讀到。
+- 同一workflow改為純workflow_dispatch：預設audit，只能audit/dry-run/schedule/verify；沒有cron、沒有立即發布路徑。Page Token留原指定Secret，無需讀出或搬移。Meta負責時間，Actions只提前提交。
+- 原生新安全測試15項通過：未來15分鐘–3天、四slot/語言/每日四篇/既有圖文去重、未發布照片CAS與真Feed Post ID、unknown不重送、CAS競爭前停止、只有photo ID不算成功。無真Meta寫入驗收。
+- 下一步先單次audit讀真Page/已發/預約清單，再新09:30原創圖文dry-run與單次原生預約，最後Planner核對。若API明確拒絕就保存錯誤轉官方Business Suite，不盲試。
+
+## 2026-10-29 19:30舊Actions真日誌已查明（最新）
+- run40734150062/job122978047579，實際UTC10/28 17:16:45＝台北10/29 01:16:45，cron30,38,48 11，映射19:30卻以實際當天10/29重建slot；delay=-1093.24，EARLY安全跳過，正式步驟未呼叫FB。
+- fallback run40743823672/job123012198516，實際UTC10/28 18:18:15＝台北10/29 02:18:15，cron5 12，同樣映射當天19:30，delay=-1031.74，EARLY安全跳過。GitHub為何延遲未提供，不推測；未取到各19:38/19:48獨立事件證據。
+- 測試步驟stdout會印模擬UNKNOWN/MISSING_TOKEN等，不能當正式操作。真正發布step的SCHEDULED_TRIGGER之後才是上述結論。完整遮蔽日誌及audit.json存records/migration/2026-10-29-native/。
+- 舊cron/live分支已從workflow移除（e979930），不再修補其準點性。額外將META_PUBLISH_ENABLED改false遇GitHub正常Confirm access郵件驗證，尚未儲存；目前該變數仍true但新workflow無立即寫入路徑。未繞過驗證、未冒稱變數已關。
+- 下一步用唯一現有workflow的手動準備模式提交未來Meta預約，時間由Meta執行，並核Planner。尚無新scheduled Post ID，不報成功。
+
 ## 2026-10-29 Meta原生預約切換：舊Actions立即發布已停（最新）
 - 2026-10-29T07:19:40.698136+08:00：依使用者指示，移除既有meta-graph-publish.yml所有schedule cron及live分支，只保留手動GET預檢/強制dry-run。原workflow完整備份records/migration/2026-10-29-native/legacy-immediate-workflow.yml.txt，發布程式/unknown鎖及歷史回條不刪。
 - daily真實disabled：最新run860cdd3e-f0b4-8329-8e46-dea410639282/10-28 16:30 completed、空結果、requires_user_action=true；平台無觸發工具trace，原因unknown，不再盲目重啟。改互動Work批次備稿，暫標半自動；weekly保留。

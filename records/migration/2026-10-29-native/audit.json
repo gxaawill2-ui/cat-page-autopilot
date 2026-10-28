@@ -1,0 +1,36 @@
+{
+  "observed_at": "2026-10-29T07:24:41.601954+08:00",
+  "page_id": "1346385028565797",
+  "runs": [
+    {
+      "run_id": "40734150062",
+      "job_id": "122978047579",
+      "actual_utc": "2026-10-28T17:16:45Z",
+      "actual_taipei": "2026-10-29T01:16:45+08:00",
+      "cron": "30,38,48 11 * * *",
+      "mapped_slot": "19:30",
+      "actual_publisher_diagnostic": "slot=2026-10-29T19:30; delay_min=-1093.24; EARLY; NEVER_BACKFILL",
+      "actual_step_facebook_writes": 0
+    },
+    {
+      "run_id": "40743823672",
+      "job_id": "123012198516",
+      "actual_utc": "2026-10-28T18:18:15Z",
+      "actual_taipei": "2026-10-29T02:18:15+08:00",
+      "cron": "5 12 * * *",
+      "mapped_slot": "19:30",
+      "actual_publisher_diagnostic": "slot=2026-10-29T19:30; delay_min=-1031.74; EARLY; NEVER_BACKFILL",
+      "actual_step_facebook_writes": 0
+    }
+  ],
+  "proven": "The retrieved scheduled jobs ran the next Taipei day, mapped target day to that current day, and exited at the early-slot gate before any Facebook write.",
+  "unknown": "GitHub internal cause of delayed trigger is not exposed by these logs; no claim about exact missing individual 19:38/19:48 event occurrences.",
+  "test_stdout_warning": "The 18 unittest step prints simulated UNKNOWN/MISSING_TOKEN/diagnostic values. Those are not actual production operations. Only the final Send step after SCHEDULED_TRIGGER establishes this run outcome.",
+  "task": {
+    "id": "6add4bc872c88191bea8e6d2cf3dc016",
+    "enabled": false,
+    "run_id": "860cdd3e-f0b4-8329-8e46-dea410639282",
+    "requires_user_action": true,
+    "offending_tool": "unknown; platform did not provide"
+  }
+}

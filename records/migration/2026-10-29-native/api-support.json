@@ -1,0 +1,23 @@
+{
+  "observed_at": "2026-10-29T07:27:17.671498+08:00",
+  "official_sdk_source": "https://raw.githubusercontent.com/facebook/facebook-python-business-sdk/main/facebook_business/adobjects/page.py",
+  "retrieval": "Successful direct HTTPS read via Python urllib; web indexed docs HTTP429/disabled source separately recorded",
+  "verified_sdk_parameters": {
+    "Page.create_photo": [
+      "url",
+      "published"
+    ],
+    "Page.create_feed": [
+      "message",
+      "attached_media",
+      "published",
+      "scheduled_publish_time",
+      "unpublished_content_type"
+    ],
+    "Page.UnpublishedContentType.scheduled": "SCHEDULED",
+    "Page.get_scheduled_posts": true
+  },
+  "implementation": "scripts/meta_native_schedule.py",
+  "tests_passed": 15,
+  "actual_Meta_schedule_test": "pending; SDK support alone is not deployment acceptance"
+}
