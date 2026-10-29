@@ -1,0 +1,10 @@
+{
+  "verified": false,
+  "workers_free": false,
+  "no_paid_upgrade": true,
+  "no_gateway_billing": true,
+  "provider_hard_stop": false,
+  "evidence_record": null,
+  "valid_until": null,
+  "reason": "Official free quota documented; actual account plan and Token not verified. Stop all inference until verified. No card, upgrade or prepaid credits authorized."
+}

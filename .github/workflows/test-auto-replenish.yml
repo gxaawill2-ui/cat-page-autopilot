@@ -3,6 +3,9 @@ name: Cat Autopilot No-Write Safety CI
   pull_request:
     paths:
       - 'scripts/auto_replenish.py'
+      - 'scripts/cloudflare_ai.py'
+      - 'scripts/test_cloudflare_ai.py'
+      - 'state/cloudflare_free.json'
       - 'scripts/test_auto_replenish.py'
       - '.github/workflows/cat-unattended-replenish.yml'
       - '.github/workflows/test-auto-replenish.yml'
@@ -19,5 +22,6 @@ jobs:
       - name: Verify unattended pipeline guardrails (no tokens, no Meta writes)
         run: |
           python3 -m py_compile scripts/auto_replenish.py scripts/meta_native_schedule.py
+          python3 -m unittest discover -s scripts -p test_cloudflare_ai.py -v
           python3 -m unittest discover -s scripts -p test_auto_replenish.py -v
           python3 -m unittest discover -s scripts -p test_meta_native_schedule.py -v

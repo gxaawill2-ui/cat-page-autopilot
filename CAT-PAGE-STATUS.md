@@ -1,3 +1,18 @@
+## 2026-10-29 Cloudflare接線已備妥；GitHub Secret名稱錯誤待更正（最新）
+- 使用者已自行登入Cloudflare並準備Workers AI限定帳戶Read/Edit token；未取得/讀取Token值。指定Repo的CLOUDFLARE_ACCOUNT_ID已真保存，原META_PAGE_ACCESS_TOKEN保留。
+- GitHub Secret清單實讀尚無CLOUDFLARE_API_TOKEN。使用者19:24截圖明示Secret名稱格式不合法；不是Cloudflare權杖驗證失敗。請在正式GitHub新增Secret，Name只填CLOUDFLARE_API_TOKEN、Secret填既有Token，不加空格/引號，不把Token貼聊天。
+- 僅在PR #1將AI供應端改為直接Cloudflare Workers AI：Gemma 4文字/視覺、FLUX.1 schnell圖片；保留原圖持久化/Pages/SHA、CAS、Meta原生預約、四slot與unknown隔離。禁止付費模型、Gateway回退、升級、重試未知生成；額度耗盡停止。
+- 新state/cloudflare_free.json預設未驗證，必須核實實際Workers Free方案與免費額度停止證據才允許生成；不將官方免費說明當作此帳戶實測。原Vercel方案停用，不能再要求信用卡。
+- 本機16項原補充測試+8項Cloudflare安全測試通過，外部AI呼叫0/FB寫入0。未真生圖、未真API預約、無新Post ID；PR仍draft且未合併，正式開關未啟用。
+- 下一步：Secret真保存→帳戶免費方案核對→單篇真AI/視覺/Pages→空白未來slot真原生API預約與Planner→到期發布驗收，之後才merge/啟用。詳records/autopilot/2026-10-29-cloudflare-adapter.json。
+
+## 2026-10-29 使用者拒絕新增信用卡：停止Vercel，改查Cloudflare Workers Free（最新優先）
+- 使用者明確要求不新增信用卡、改用其他方法。已取消Vercel Add a Card表單並核對dialog消失；未送卡片/付款、未建立Gateway key。所有「下一步綁卡」舊段落作廢，不能再次要求綁卡。
+- 官方最新Cloudflare Workers AI pricing確認Workers Free每日10,000 Neurons，用完報錯停止；超額必須另行升級Workers Paid。本任務不升級、不加卡、不購買credits、不啟用Unified billing。官方flux-1-schnell模型存在，REST回傳base64 image；尚未證實此帳戶可使用或圖像品質合格。
+- Cloudflare正式Dashboard已開啟，實際是Sign in to Cloudflare；未登入、無Account ID/Scoped API token。下一步本人正常登入既有Cloudflare帳戶；若需註冊，條款須本人處理，不能假稱已取得免費資格。新憑證只進指定Repo Actions Secrets，不進聊天。
+- 優先只替換PR #1的AI供應端，保留已修復Meta Page Secret、原生預約、JPEG/Pages/CAS/未知隔離與每日四slot。Cloudflare文字、圖像、視覺QA都必須實測，特別核實模型條款；無權杖前不虛構生成/API成功。
+- PR仍draft/未合併/正式開關關閉。既有四篇原生預約不動，無Facebook新寫入。本輪沒有新圖片/新預約Post ID，不稱全自動成功。
+
 ## 2026-10-29 PR最新真安全CI已通過，正式全自動仍未啟用（最新）
 - 分支2e064662，Actions40853204443/job123377578707 success，30+18+16+15=79項真CI測試通過。公開live模型型態/價格門檻實查通過；AI生成請求0，不將安全CI或模型清單查詢稱真生圖。
 - Meta長效Secret完成正式延展與GitHub OTP；audit40851675898指定Page GET成功，FB寫入0。Vercel已本人正常登入，但免費點數啟用須卡驗證，實際$0.00；卡片/未來付款授權未提交，key未建立。

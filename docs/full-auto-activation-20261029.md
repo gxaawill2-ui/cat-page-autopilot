@@ -1,3 +1,11 @@
+## 最新：不加信用卡，改用Cloudflare直接API（優先於以下歷史）
+- Vercel方案已由使用者取消，不再建立AI_GATEWAY_API_KEY、不綁卡、不購點。
+- 指定Repo Secrets：CLOUDFLARE_ACCOUNT_ID、CLOUDFLARE_API_TOKEN、既有META_PAGE_ACCESS_TOKEN。Token只能填GitHub正式Secret欄，不進對話或公開repo。
+- scripts/cloudflare_ai.py只允許Gemma 4文字/視覺與FLUX.1 schnell圖片，直接Cloudflare端點，無Gateway、付費模型或重試回退。
+- state/cloudflare_free.json必須有真實帳戶Workers Free與免付費停止證據，否則所有推論阻擋。官方每日10,000 Neurons配額不是此帳戶已驗收證據。
+- 目前Token尚未保存（GitHub回名稱格式錯誤）；只有本機安全測試，未真生成/預約。PR不得合併或開CAT_AUTOPILOT_ENABLED。
+- Secret完成後依CAT-PAGE-STATUS.md精確步驟做單篇真端到端驗收；不碰既有預約與歷史unknown。
+
 ## 最新外部驗證（2026-10-29）
 Meta長效Page Token已透過官方延展與GitHub OTP更新Secret；真Actions GET audit40851675898成功，Facebook寫入0。API scheduled_posts空但官方UI仍有10/29 19:30預約，必須保留本地鎖、不重排。
 Vercel已正常登入，實際餘額$0.00；免費$5/月資格要求新增卡片驗證，尚未完成。沒有API key，沒有AI真生成，也沒有新Meta API預約。不可合併或啟用自動補充。

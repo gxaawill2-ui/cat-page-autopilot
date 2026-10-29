@@ -23,10 +23,8 @@ jobs:
     env:
       CAT_AUTOPILOT_ENABLED: ${{ vars.CAT_AUTOPILOT_ENABLED }}
       META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
-      AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
-      AUTOPILOT_TEXT_MODEL: nvidia/nemotron-3.5-lightning-free
-      AUTOPILOT_IMAGE_MODEL: bfl/flux-3-image-klein
-      AUTOPILOT_VISION_MODEL: openai/gpt-5-nano
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
     steps:
       - uses: actions/checkout@v4
         with:

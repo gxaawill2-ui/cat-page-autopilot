@@ -4,7 +4,7 @@ Fail closed; never post immediately and never replay uncertain writes.
 """
 import base64, datetime as dt, hashlib, io, json, os, re, subprocess, sys
 import urllib.request, urllib.error
-from decimal import Decimal
+import cloudflare_ai as cloudflare
 from pathlib import Path
 from PIL import Image, ImageOps
 import meta_native_schedule as native
@@ -13,39 +13,17 @@ import meta_graph_publish as base
 ROOT=base.ROOT
 TZ=base.TZ
 SLOTS=("09:30","12:30","16:30","19:30")
-GATEWAY="https://ai-gateway.vercel.sh/v1"
-TEXT=os.environ.get("AUTOPILOT_TEXT_MODEL","nvidia/nemotron-3.5-lightning-free")
-IMAGE=os.environ.get("AUTOPILOT_IMAGE_MODEL","bfl/flux-3-image-klein")
-VISION=os.environ.get("AUTOPILOT_VISION_MODEL","openai/gpt-5-nano")
+TEXT=cloudflare.TEXT
+IMAGE=cloudflare.IMAGE
+VISION=cloudflare.VISION
 
 def budget_gate(now):
-    """Dashboard budgets are soft caps, not proof of zero paid spend."""
-    p=ROOT/"state/autopilot_budget.json"
-    if not p.exists(): raise ValueError("ZERO_PAID_SPEND_NOT_VERIFIED")
-    b=base.read(p)
-    required=("verified", "free_credits_only", "auto_topup_disabled",
-              "no_paid_balance", "no_invoice_billing", "no_byok", "provider_hard_stop")
-    if any(b.get(k) is not True for k in required) or not b.get("evidence_record"):
-        raise ValueError("ZERO_PAID_SPEND_NOT_VERIFIED")
-    if native.stamp(b["valid_until"]) <= now:
-        raise ValueError("ZERO_PAID_SPEND_EVIDENCE_EXPIRED")
+    cloudflare.budget_gate(ROOT,now)
 
 def model_gate():
-    """Inspect the live catalog before spending; never silently replace a model."""
-    with urllib.request.urlopen(GATEWAY+"/models",timeout=30) as response:
-        models={m["id"]:m for m in json.loads(response.read(4_000_000))["data"]}
-    for mid,inputs,output in ((TEXT,("text",),"text"),(IMAGE,("text",),"image"),
-                              (VISION,("text","image"),"text")):
-        modes=models.get(mid,{}).get("modalities",{})
-        if not set(inputs).issubset(modes.get("input",[])) or output not in modes.get("output",[]):
-            raise ValueError("MODEL_UNAVAILABLE_OR_WRONG_MODALITY: "+mid)
-    if Decimal(models[TEXT]["pricing"]["input"])!=0 or Decimal(models[TEXT]["pricing"]["output"])!=0:
-        raise ValueError("Text model no longer free")
-    if Decimal(models[IMAGE]["pricing"]["image"])>Decimal("0.009"):
-        raise ValueError("Image price exceeds reviewed ceiling")
-    if (Decimal(models[VISION]["pricing"]["input"])>Decimal("0.00000005") or
-            Decimal(models[VISION]["pricing"]["output"])>Decimal("0.0000004")):
-        raise ValueError("Vision price exceeds reviewed ceiling")
+    # Reviewed direct Workers AI models only; no paid-model or gateway fallback.
+    if (TEXT,IMAGE,VISION)!=(cloudflare.TEXT,cloudflare.IMAGE,cloudflare.VISION):
+        raise ValueError("MODEL_UNAVAILABLE_OR_UNREVIEWED")
 
 def slot_language(day,slot):
     if slot=="19:30" and str(day) in ("2026-11-03","2026-11-06"):
@@ -53,16 +31,10 @@ def slot_language(day,slot):
     return "en" if slot in ("09:30","19:30") else "zh-Hant"
 
 def ai(endpoint, body, key):
-    r=urllib.request.Request(GATEWAY+endpoint, json.dumps(body).encode(),
-        method="POST",headers={"Authorization":"Bearer "+key,"Content-Type":"application/json"})
-    try:
-        with urllib.request.urlopen(r,timeout=150) as f:
-            return json.loads(f.read(18_000_000))
-    except urllib.error.HTTPError as e:
-        raise RuntimeError("AI_GATEWAY_HTTP_"+str(e.code)) from None
+    return cloudflare.request(endpoint,body,key)
 
 def chat(messages,key,model):
-    r=ai("/chat/completions",{"model":model,"messages":messages,"max_tokens":1000},key)
+    r=ai("/chat/completions",{"model":model,"messages":messages,"max_completion_tokens":1000},key)
     value=(r.get("choices") or [{}])[0].get("message",{}).get("content")
     if not isinstance(value,str) or not value.strip():
         raise ValueError("No usable generated text")
@@ -147,7 +119,7 @@ def commit_queue(day,slot,item,language,jpg):
         "image_url":base.ASSET_BASE+digest+".jpg",
         "image_qa":False,"image_qa_method":"pending; never schedule before vision PASS",
         "scene":item["scene"],"prepared_at":dt.datetime.now(TZ).isoformat(),
-        "source_record":"AI Gateway original from prompt","image_model":IMAGE,
+        "source_record":"Cloudflare Workers AI original from prompt","image_model":IMAGE,
         "text_model":TEXT,"vision_model":VISION,"topic":str(item.get("topic",""))[:80]}
     base.write(queue_file,record)
     for args in (["add",str(image_file.relative_to(ROOT)),str(queue_file.relative_to(ROOT))],
@@ -166,9 +138,10 @@ def run(dry=False):
     if os.environ.get("CAT_AUTOPILOT_ENABLED")!="true":
         raise ValueError("Autopilot explicitly disabled")
     meta=os.environ.get("META_PAGE_ACCESS_TOKEN")
-    key=os.environ.get("AI_GATEWAY_API_KEY")
+    key=os.environ.get("CLOUDFLARE_API_TOKEN")
     if not meta or not key:
         raise ValueError("Credentials missing; no Facebook or AI write attempted")
+    cloudflare.credentials()
     # Check Meta authorization before AI usage to avoid spending on unusable posts.
     native.remote(meta)
     budget_gate(now)
