@@ -32,6 +32,24 @@ def run():
     day, slot = targets[0]
     path = ROOT / "records/canary" / (str(day) + "-" + slot.replace(":", "") + ".json")
     previous = auto.base.read(path) if path.exists() else None
+    if previous and previous.get("status")=="qa_failed_held" and previous.get("image_attempts")==2 and not previous.get("vision_response") and not previous.get("vision_diagnostic_attempted"):
+        record=dict(previous)
+        record.update(status="vision_diagnostic_armed_unknown",vision_diagnostic_attempted=True)
+        auto.base.write(path,record)
+        persist([path],"Record one same-image QA diagnostic; no text or image generation")
+        jpg=(ROOT/record["image_path"]).read_bytes()
+        if hashlib.sha256(jpg).hexdigest()!=record["image_sha256"]:
+            raise ValueError("Diagnostic original image SHA mismatch")
+        def save_diagnostic(raw):
+            record["vision_response"]=raw
+            auto.base.write(path,record)
+            persist([path],"Preserve actual vision output; never infer PASS from job success")
+        passed=auto.qa_image(jpg,record["content"]["scene"],key,raw_sink=save_diagnostic)
+        record.update(status="qa_pass_needs_human_visual_acceptance" if passed else "qa_failed_held",image_qa=passed)
+        auto.base.write(path,record)
+        persist([path],"Save same-image vision verdict without any Facebook write")
+        print(json.dumps(record,ensure_ascii=False))
+        return
     retry_image = bool(previous and previous.get("status")=="qa_failed_held" and
                        previous.get("image_attempts",1)==1 and previous.get("image_sha256"))
     retry_caption = bool(previous and previous.get("status")=="caption_response_parse_failed" and
@@ -68,7 +86,11 @@ def run():
                   image_model=cf.IMAGE, text_model=cf.TEXT, vision_model=cf.VISION)
     auto.base.write(path, record)
     persist([path, image_path], "Persist actual original canary JPEG before visual QA")
-    passed = auto.qa_image(jpg, item["scene"], key)
+    def save_vision(raw):
+        record["vision_response"]=raw
+        auto.base.write(path,record)
+        persist([path],"Persist actual vision response before quality decision")
+    passed = auto.qa_image(jpg, item["scene"], key,raw_sink=save_vision)
     record.update(status="qa_pass_needs_human_visual_acceptance" if passed else "qa_failed_held",
                   image_qa=passed, completed_at=dt.datetime.now(auto.TZ).isoformat())
     auto.base.write(path, record)

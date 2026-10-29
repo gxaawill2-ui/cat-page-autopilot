@@ -85,11 +85,12 @@ def make_image(scene,key):
     if not 25_000<len(jpg)<4_000_000: raise ValueError("Invalid JPEG")
     return jpg
 
-def qa_image(jpg,scene,key):
+def qa_image(jpg,scene,key,raw_sink=None):
     uri="data:image/jpeg;base64,"+base64.b64encode(jpg).decode()
     response=chat([{"role":"user","content":[
        {"type":"text","text":"Return ONLY PASS if the image clearly depicts a coherent cat illustration, with no inappropriate content, symbols, gibberish writing or watermark; else FAIL. "+scene},
        {"type":"image_url","image_url":{"url":uri}}]}],key,VISION)
+    if raw_sink is not None: raw_sink(response)
     return response.strip()=="PASS"
 
 def slots_to_fill(now):
