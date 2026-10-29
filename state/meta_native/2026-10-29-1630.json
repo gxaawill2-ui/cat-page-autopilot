@@ -28,5 +28,15 @@
   "is_published_api": null,
   "ui_publication_state": "scheduled_not_yet_published",
   "verified_at": "2026-10-29T08:07:33.825981+08:00",
-  "published_acceptance": "pending_due_time"
+  "published_acceptance": "pending_due_time",
+  "source_queue": "queue/meta/2026-10-29/1630.json",
+  "language": "zh-Hant",
+  "target_markets": [
+    "TW"
+  ],
+  "experiment_id": "intl-20261026-14d",
+  "topic": "原創安靜後的衛生紙事件",
+  "style": "立體童話雙格漫畫",
+  "caption_type": "兩段反差幽默",
+  "actual_audience_geography": null
 }

@@ -28,5 +28,15 @@
   "is_published_api": null,
   "ui_publication_state": "scheduled_not_yet_published",
   "verified_at": "2026-10-29T08:00:30.644584+08:00",
-  "published_acceptance": "pending_due_time"
+  "published_acceptance": "pending_due_time",
+  "source_queue": "queue/meta/2026-10-29/1230.json",
+  "language": "zh-Hant",
+  "target_markets": [
+    "TW"
+  ],
+  "experiment_id": "intl-20261026-14d",
+  "topic": "原創座位被貓接管",
+  "style": "暖色水粉插畫",
+  "caption_type": "生活情境幽默",
+  "actual_audience_geography": null
 }

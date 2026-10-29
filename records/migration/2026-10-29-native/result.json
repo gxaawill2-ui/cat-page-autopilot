@@ -1,0 +1,68 @@
+{
+  "observed_at": "2026-10-29T08:20:51.659401+08:00",
+  "page_id": "1346385028565797",
+  "budget_ntd": 0,
+  "mode": "semi_automatic_interactive_batch_plus_Meta_native_delivery",
+  "old_immediate_path": "retired commit e979930: cron/live branches removed; no duplicate publishing schedule",
+  "actual_Oct28_runs": "audit.json plus actions-40734150062.masked.log/actions-40743823672.masked.log; next-day early skips, no production writes",
+  "api_status": "401 code190 subcode463; actual saved Secret expired 2026-10-28T16:00+08:00",
+  "native_UI_posts": [
+    {
+      "slot": "2026-10-29T09:30",
+      "meta_post_id": "812374491970657",
+      "business_suite_content_id": "1128212423131470",
+      "photo_id": "122106718473515576",
+      "scheduled_taipei": "2026-10-29T09:30:00+08:00",
+      "status": "scheduled_ui_verified",
+      "language": "en"
+    },
+    {
+      "slot": "2026-10-29T12:30",
+      "meta_post_id": "1840103147059522",
+      "business_suite_content_id": "1660141809111396",
+      "photo_id": "122106721293515576",
+      "scheduled_taipei": "2026-10-29T12:30:00+08:00",
+      "status": "scheduled_ui_verified",
+      "language": "zh-Hant"
+    },
+    {
+      "slot": "2026-10-29T16:30",
+      "meta_post_id": "28831968349765535",
+      "business_suite_content_id": "4595947790650887",
+      "photo_id": "122106723951515576",
+      "scheduled_taipei": "2026-10-29T16:30:00+08:00",
+      "status": "scheduled_ui_verified",
+      "language": "zh-Hant"
+    },
+    {
+      "slot": "2026-10-29T19:30",
+      "meta_post_id": "1135613809012719",
+      "business_suite_content_id": "2946191469080895",
+      "photo_id": "122106726591515576",
+      "scheduled_taipei": "2026-10-29T19:30:00+08:00",
+      "status": "scheduled_ui_verified",
+      "language": "en"
+    }
+  ],
+  "batch_days": 1,
+  "daily_cap": 4,
+  "planner_or_official_list_verified": true,
+  "is_published_API_values": "unavailable (expired credential); UI scheduled state verified, no fabricated Graph false",
+  "published_acceptance": "pending_first_0930_due_time",
+  "readback_task": {
+    "task_id": "6ad6ec1845d48191938f06790c91fe8a",
+    "reused_existing_completed_one_off": true,
+    "scheduled_for": "2026-10-29T09:40:00+08:00",
+    "enabled": true,
+    "role": "read-only Facebook check + GitHub receipt; all Facebook writes forbidden",
+    "actual_next_run_time_from_platform": null,
+    "acceptance": "pending_not_run",
+    "note": "Configured once, not proof of execution; old Oct25 acceptance preserved"
+  },
+  "queue_only_daily": "disabled; requires_user_action true with no trace, not claimed fixed",
+  "weekly_analysis": "original Sunday20:00 task enabled, unchanged",
+  "three_day_review": "original setting retained; daily disabled means interactive review required, not guaranteed unattended",
+  "experiment_note": "Native delivery migration plus interactive batch and mixed styles/languages are confounded; no performance/country claims",
+  "ui_evidence": "records/meta-native/ui/2026-10-29-four-scheduled.json and 2026-10-29-0930-preview.jpg",
+  "next": "After 09:30 check actual published list/Planner/full caption/image; 09:40 existing task is read-only. Unknown or overdue never immediately publish/retry. Other three native scheduled posts untouched."
+}

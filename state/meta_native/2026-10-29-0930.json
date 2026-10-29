@@ -32,5 +32,16 @@
   "api_field_note": "API credential expired; do not fabricate Graph is_published=false readback. Official UI scheduled tab and future time are verified instead.",
   "verified_at": "2026-10-29T07:46:46.229939+08:00",
   "evidence_screenshot": "cat-native-0930-planner-20261029.jpg",
-  "published_acceptance": "pending_due_time"
+  "published_acceptance": "pending_due_time",
+  "source_queue": "queue/meta/2026-10-29/0930.json",
+  "language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "experiment_id": "intl-20261026-14d",
+  "topic": "原創英文包裝豪宅貓",
+  "style": "自然寫實晨光",
+  "caption_type": "短句生活幽默",
+  "actual_audience_geography": null
 }

@@ -1,7 +1,7 @@
 {
   "page_id": "1346385028565797",
   "slot": "2026-10-29T19:30",
-  "status": "ui_schedule_armed_unknown_until_reconciled",
+  "status": "scheduled_ui_verified",
   "method": "Meta Business Suite official native scheduling UI",
   "caption_sha256": "ef2824c3e9839767d5c6e4635c74e706ce19eb6290a7680b06bc95209fe65944",
   "image_sha256": "865c80a7ce11c29ad26f227f2cc9c9488f0e8d88a4f00cd4f38c5a92a667d882",
@@ -9,7 +9,7 @@
   "scheduled_taipei": "2026-10-29T19:30:00+08:00",
   "armed_at": "2026-10-29T08:11:23.432024+08:00",
   "retry_allowed": false,
-  "meta_post_id": null,
+  "meta_post_id": "1135613809012719",
   "ui_target_verified": "Facebook 貓咪投資筆記 only",
   "ui_date_verified": "2026年10月29日",
   "ui_time_verified": "19:30 (24-hour)",
@@ -17,5 +17,29 @@
   "image_qa": true,
   "image_url_proof": "records/url-checks/native-20261029-1930.json",
   "day_slots_before": 3,
-  "authorized_max_per_day": 4
+  "authorized_max_per_day": 4,
+  "post_id_source": "Official Facebook preview time permalink /1135613809012719",
+  "business_suite_content_id": "2946191469080895",
+  "photo_id": "122106726591515576",
+  "planner_verified": true,
+  "planner_date_text": "10月29日 19:30",
+  "scheduled_ui_receipt": "你的貼文已排定發佈時間；2026年10月29日，下午7:30",
+  "caption_matches": true,
+  "image_visual_matches": true,
+  "visual_review": "passed; official preview shows exact rainy-window black cat and full English caption",
+  "is_published_api": null,
+  "ui_publication_state": "scheduled_not_yet_published",
+  "verified_at": "2026-10-29T08:20:51.659401+08:00",
+  "published_acceptance": "pending_due_time",
+  "source_queue": "queue/meta/2026-10-29/1930.json",
+  "language": "en",
+  "target_markets": [
+    "US",
+    "PH"
+  ],
+  "experiment_id": "intl-20261026-14d",
+  "topic": "原創雨夜回家陪伴",
+  "style": "電影暖藍療癒畫面",
+  "caption_type": "英文情緒短句",
+  "actual_audience_geography": null
 }

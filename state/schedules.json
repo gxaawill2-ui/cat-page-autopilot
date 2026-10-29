@@ -10,10 +10,10 @@
     ],
     "enabled": false,
     "release_gate": "queue-only enabled; Work must never publish. Official Actions live gates apply independently.",
-    "observed_at": "2026-10-29T07:19:40.698136+08:00",
+    "observed_at": "2026-10-29T08:20:51.659401+08:00",
     "last_runtime_run": "860cdd3e-f0b4-8329-8e46-dea410639282",
     "runtime_requires_user_action": true,
-    "disabled_reason": "unknown; platform does not expose triggering tool or approval details",
+    "disabled_reason": "unknown; platform offers flag but no offending tool trace. Not blindly re-enabled.",
     "runtime_status": "completed",
     "last_result": "16:30 armed CAS succeeded, runtime ended with empty result/user_action, no genuine Post ID; actual task disabled",
     "next_configured_slot": "2026-10-28T19:30:00+08:00",
@@ -23,8 +23,8 @@
     "binary_bridge": "connector_bundle.js loadConnectorBundle → connector_commit.js expected blob SHA + CAS",
     "latest_repair_commit": "085a51454de5c936f157a259f781ba5481db3915",
     "unattended_acceptance": "pending_first_Meta_Graph_scheduled_post",
-    "role": "prepare_future_queue_only",
-    "publication_tool": "Work interactive batch -> Meta native scheduling only; old Actions immediate path retired",
+    "role": "paused_draft_preparation_only",
+    "publication_tool": "Meta Business Suite native scheduled delivery; interactive batch content preparation",
     "lead_time_minutes": 30,
     "previous_disabled_reason": "unknown; platform does not expose offending tool/action review/cause",
     "last_runtime_result_note": "Historical c2aef589 requires_user_action remains unresolved; not a new run or current authorization failure."
@@ -43,7 +43,8 @@
     "not_yet_accepted": false,
     "run_id": "c06bac0f-078c-8323-b584-9cc126995bde",
     "completed_at": "2026-10-25T02:25:44.653112Z",
-    "passed": true
+    "passed": true,
+    "historical_only": true
   },
   "meta_actions": {
     "workflow": ".github/workflows/meta-graph-publish.yml",
@@ -54,14 +55,14 @@
       "16:30",
       "19:30"
     ],
-    "authorization_status": "expired_actual_secret_HTTP401_190_463",
+    "authorization_status": "API blocked expired Secret; no reauthorization loop",
     "secret_present": true,
     "publish_enabled": false,
     "no_duplicate_workflow_created": true,
     "preflight_run_id": "40646935634",
-    "credential_lifecycle": "Actual Secret token expired 2026-10-28T16:00:00+08:00; no new OAuth attempted",
+    "credential_lifecycle": "Actual Secret expired 2026-10-28 16:00 Asia/Taipei; HTTP401/190/463 observed",
     "observed_at": "2026-10-29T07:19:40.698136+08:00",
-    "workflow_state": "manual read-only checks only",
+    "workflow_state": "manual native future preparation/audit only; no immediate publication branch",
     "switch_ui_receipt": "Repository variables table: META_PUBLISH_ENABLED true",
     "next_prepared_queue": "queue/meta/2026-10-28/1930.json",
     "first_scheduled_acceptance": "pending_1630_run_not_yet_observed_at_1640",
@@ -70,10 +71,11 @@
     "queue_proof": "records/url-checks/meta-20261028-1930.json",
     "queue_commit": "064dfcb604af6683476722250148d8445efd7e73",
     "immediate_publish_retired": true,
-    "cron_removed": true
+    "cron_removed": true,
+    "legacy_variable_actual_value": "true (inert; attempted false edit required GitHub sudo verification and was not saved)"
   },
   "meta_native": {
-    "status": "first_native_UI_schedule_verified_publication_pending",
+    "status": "four_native_UI_schedules_verified_delivery_pending",
     "scheduling_executor": "Meta Business Suite official native scheduling UI",
     "production_mode": "semi_automatic_interactive_batch",
     "page_id": "1346385028565797",
@@ -86,12 +88,30 @@
     ],
     "timezone": "Asia/Taipei",
     "scheduled_post_ids": [
-      "812374491970657"
+      "812374491970657",
+      "1840103147059522",
+      "28831968349765535",
+      "1135613809012719"
     ],
     "api_status": "blocked_expired_secret; official UI fallback selected",
     "verified_slots": [
-      "2026-10-29T09:30"
+      "2026-10-29T09:30",
+      "2026-10-29T12:30",
+      "2026-10-29T16:30",
+      "2026-10-29T19:30"
     ],
-    "published_acceptance": "pending_due_time"
+    "published_acceptance": "pending_due_time",
+    "batch_date": "2026-10-29",
+    "batch_count": 4
+  },
+  "native_readback_acceptance": {
+    "task_id": "6ad6ec1845d48191938f06790c91fe8a",
+    "reused_existing_completed_one_off": true,
+    "scheduled_for": "2026-10-29T09:40:00+08:00",
+    "enabled": true,
+    "role": "read-only Facebook check + GitHub receipt; all Facebook writes forbidden",
+    "actual_next_run_time_from_platform": null,
+    "acceptance": "pending_not_run",
+    "note": "Configured once, not proof of execution; old Oct25 acceptance preserved"
   }
 }
