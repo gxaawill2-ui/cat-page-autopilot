@@ -1,3 +1,10 @@
+## 2026-10-30 真文案與兩張原創圖已生成；視覺QA明確FAIL，安全保留草稿（最新）
+- Workers Free/$0/Current plan已由使用者官方帳戶截圖確認。Cloudflare真GET及原有87項CI通過，無信用卡/升級/付費服務。
+- 首次run40972350958在文案JSON解析失敗，無圖片或FB呼叫；修正response_format=json_object、fenced JSON及回應先持久化後，run40972725863已真生成英文文案與FLUX JPEG f0f947f9...，右下有生成簽名、QA false。
+- 僅重做第二張圖片，run40973099586真生成3d42d781...、JPEG1024x1024，原文案不重生。第二張目視無簽名但QA仍false；run40973485029只對同一張圖補取原始視覺回應，確實為FAIL，非PASS格式誤判。達每篇兩張上限，保留qa_failed_held，不再生圖、不越過QA、不將job success冒充圖像驗收成功。
+- 全程FB寫入0，沒有新Post ID或原生預約；PR未合併/CAT_AUTOPILOT_ENABLED未啟用，不能稱全自動已恢復。兩張原圖/歷史文案與生成階段都已在原PR分支持久保存。
+- 下一步：保留本篇為草稿；先將視覺QA輸出改為可稽核理由/檢查項目，查明拒絕原因，再決定未來新內容的畫風/模型；不得強制PASS或重新生成本篇。原生API/Planner/到點發布全鏈仍未驗收。
+
 ## 2026-10-30 已確認帳戶Workers Free，開始單篇真生成驗收（最新）
 - 使用者正式Workers plans截圖明確顯示Free/$0/Current plan；同帳戶對應。證據records/autopilot/2026-10-30-cloudflare-free.json，只記畫面事實與圖片SHA，不公開含個人資訊原圖。
 - 指定Cloudflare Secret真GET與87項CI已通過，不重做授權。PR免費門檻核實，直接Workers AI已審模型、無Gateway付費回退或升級；14天或方案變更需重核。

@@ -1,0 +1,17 @@
+{
+  "key": "cloudflare-2026-10-30-0930",
+  "status": "draft_qa_failed_held",
+  "page_id": "1346385028565797",
+  "slot": "2026-10-30T09:30",
+  "caption": "Target locked! 🐾 Mibao has officially declared war on the fluffiest enemy in the garden. Wish us luck! #CatLife #GardenAdventures",
+  "language": "en",
+  "scene": "A hand-painted book illustration of Mibao, a playful tabby cat, leaping mid-air in a lush, sun-drenched garden. Her eyes are wide with intense focus, and her paws are outstretched toward a single, floating dandelion seed. Soft natural light filters through green leaves, highlighting her precise markings and whiskers.",
+  "image_sha256": "3d42d781b3f67d5bb3271d2e7afa9e547ba53fc140842ef988f2619037744d92",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/3d42d781b3f67d5bb3271d2e7afa9e547ba53fc140842ef988f2619037744d92.jpg",
+  "image_qa": false,
+  "vision_response": "FAIL",
+  "image_attempts": 2,
+  "facebook_write_calls": 0,
+  "source_run": 40973099586,
+  "diagnostic_run": 40973485029
+}
