@@ -58,5 +58,6 @@
   "completed_at": "2026-10-30T07:26:34.233140+08:00",
   "vision_diagnostic_attempted": true,
   "vision_response": "FAIL",
-  "structured_qa_attempted": true
+  "structured_qa_attempted": true,
+  "structured_qa_response": "{\n  \"decision\": \"PASS\",\n  \"reason\": \"The image is a coherent, stylized illustration of a kitten jumping in a garden. All anatomical features are correctly placed for this style, and there are no visible watermarks, text, or signatures.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": true,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
