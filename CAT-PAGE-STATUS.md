@@ -1,3 +1,28 @@
+## 2026-10-29 PR最新真安全CI已通過，正式全自動仍未啟用（最新）
+- 分支2e064662，Actions40853204443/job123377578707 success，30+18+16+15=79項真CI測試通過。公開live模型型態/價格門檻實查通過；AI生成請求0，不將安全CI或模型清單查詢稱真生圖。
+- Meta長效Secret完成正式延展與GitHub OTP；audit40851675898指定Page GET成功，FB寫入0。Vercel已本人正常登入，但免費點數啟用須卡驗證，實際$0.00；卡片/未來付款授權未提交，key未建立。
+- 新AI→原生API預約→Planner→到期發布全鏈未驗收，新Post ID無；PR保留draft、未合併/未啟用。既有今日四篇不變；三篇已由Meta原生發布，19:30仍UI已排定，API空清單不代表可重排。
+- 目前唯一必要的下一個外部操作：本人決定是否在既有Vercel官方免費額度流程新增卡片驗證（頁面含未來付款授權條款）。不購點、不升級、不開自動加值；完成後再核免費模型與零自費條件，才建立專用API key/放指定GitHub Secret並做新未來slot真驗收。
+- 程式修復僅在PR；main本輪只同步這份進度及records/autopilot證據，不是合併production。
+
+## 2026-10-29 長效Meta Secret已修復並真Actions GET通過／Vercel免費額度卡驗證待本人（最新）
+- 官方密碼再驗證完成，新長效Page Token再次偵錯為Page1346385028565797、有效是、到期永不、三scope同Page；資料存取期限1801040326仍存在。將同一枚長效Token直接填GitHub指定Secret後，正常郵件OTP完成，真正更新回條及列時間均已讀回；無Token進對話或repo。
+- 真Actions audit40851675898/job123372424831成功，15安全測試及GET Page/posts/scheduled_posts通過；日誌META_NATIVE_AUDIT_OK_PAGE=1346385028565797; FACEBOOK_WRITE_CALLS=0，無寫入。原始真回條已自存main records/meta-native/audit-40851675898.json。
+- API已讀到10/29 09:30:03、12:30:06、16:30:03的三篇is_published=true（Post IDs尾碼122106746697515576、122106782931515576、122106850785515576）。不是本輪新生成/API預約驗收。
+- API scheduled_posts=[]，但本輪官方Business Suite已排定分頁確見今晚19:30「Some days, the best part...」既有貼文；此差異原因未查明。以既有state/meta_native鎖和官方UI防重複，不可因API空就再排同篇/時段。
+- 已本人正常登入既有Vercel Hobby team；真餘額$0.00。Use Free AI Gateway Credit明示每月$5/限部分模型/限速，點擊後要求Add a Card，Stripe表單列明同意未來付款。未輸入卡片、未購點、未啟用加值、未建立API key；零付費硬條件仍不通過。
+- 必要下一步：本人在Vercel官方Add a Card完成願意接受的免費資格卡驗證（不得把卡號/CVC貼聊天；不買點數/升級/開自動加值），之後核真免費資格/模型可用性/扣款停止條件，再安全建立專用key並只存GitHub Secret。若不願綁卡，這個Vercel方案當前不能零成本啟用，保持關閉。
+- PR #1保留draft，正式不合併/不啟用；新AI文案/生圖/QA/API原生預約與到期發布全鏈仍未驗收，新scheduled Post ID無。品牌本輪未改，既有四篇與歷史unknown未動。
+
+## 2026-10-29 PR #1 實際檢查與修復／外部登入尚待完成（最新）
+- 只修改既有 feat/20261029-unattended-autopilot，未合併 main、未開 CAT_AUTOPILOT_ENABLED。原 CI40844219881 success 只證明9項模擬測試，不等於真 AI/API 發布驗收。
+- 修正 JPEG 目錄 assets→docs/assets，兩種原生寫入流程共用 concurrency，保留11/3及11/6晚日文。真查 Gateway 499個模型，原視覺模型 inclusionai/ling-3.0-flash-vl-free 不存在；換成實際有圖像輸入的 openai/gpt-5-nano，並加即時型態/價格門檻。尚未真呼叫生成。
+- 加零付費證據門檻（預設不通過），Vercel 官方 budget 是 soft cap，不能當硬性免扣款證據；必須核實免費點數、無自動加值/付費餘額/帳單/BYOK及供應端停止。未完成前所有AI請求停止。
+- 文案/生圖意圖先持久保存，JPEG在視覺QA前先提交；QA未PASS不可排程，不明生成結果不重生圖。PR checkout禁止向main做正式發布交易。新增本機測試16項+既有原生15項通過，待新CI實際回讀。
+- 官方Meta同範圍刷新後 GET me 確認 Page仍1346385028565797（實際回傳名稱 Daily Purr 喵喵日常；本輪未改品牌）。Debugger為Page/三scope同Page；到期值1793268000卻顯示有效是，不採為長效證明。官方延展要求管理員重新輸入密碼，尚未完成，GitHub Secret未更換。
+- Vercel connector確認既有team；瀏覽器需登入，使用者安全表單選ChatGPT後停OpenAI登入畫面。額度/免費資格/API key尚未取得，不猜測。需要本人完成這一次正常登入，以及Meta官方安全再驗證；不要把密碼/Token貼聊天。
+- Facebook寫入0、新預約ID無。今天既有4篇、兩筆歷史unknown、即時Actions退役狀態均保留。完整證據 records/autopilot/2026-10-29-review.json；真AI→新原生預約→到期發布仍未驗收，不能稱全自動。
+
 ## 2026-10-29 全自動化請求：新安全分支已實作並通過無寫入CI，但正式尚未啟用（最新）
 - 使用者要求一步到位：AI 自動選題+文案+全新原創生圖+視覺QA+GitHub Pages驗證+自動交Meta原生預約+由Facebook到點配送，目標提前3天、每天四時段、零額外支出。
 - 新分支 feat/20261029-unattended-autopilot，Draft PR #1 https://github.com/gxaawill2-ui/cat-page-autopilot/pull/1；新增 scripts/auto_replenish.py、.github/workflows/cat-unattended-replenish.yml、scripts/test_auto_replenish.py、純安全CI與 docs/full-auto-activation-20261029.md。
