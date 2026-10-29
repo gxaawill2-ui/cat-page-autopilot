@@ -1,0 +1,314 @@
+﻿2026-10-29T11:36:05.0901773Z Current runner version: '2.338.0'
+2026-10-29T11:36:05.0929009Z ##[group]Runner Image Provisioner
+2026-10-29T11:36:05.0930027Z Hosted Compute Agent
+2026-10-29T11:36:05.0930881Z Version: 20261021.618
+2026-10-29T11:36:05.0931597Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-29T11:36:05.0932363Z Build Date: 2026-10-21T00:45:21Z
+2026-10-29T11:36:05.0933344Z Worker ID: {2e6c306a-4500-4dd4-9cfd-971b0bcc6854}
+2026-10-29T11:36:05.0934461Z Region: northcentralus
+2026-10-29T11:36:05.0935464Z Cloud: Azure
+2026-10-29T11:36:05.0936323Z ##[endgroup]
+2026-10-29T11:36:05.0938282Z ##[group]Operating System
+2026-10-29T11:36:05.0939396Z Ubuntu
+2026-10-29T11:36:05.0940230Z 24.04.5
+2026-10-29T11:36:05.0941244Z LTS
+2026-10-29T11:36:05.0942188Z ##[endgroup]
+2026-10-29T11:36:05.0943105Z ##[group]Runner Image
+2026-10-29T11:36:05.0944343Z Image: ubuntu-24.04
+2026-10-29T11:36:05.0945260Z Version: 20261025.353.1
+2026-10-29T11:36:05.0947259Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-29T11:36:05.0949172Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-29T11:36:05.0950248Z ##[endgroup]
+2026-10-29T11:36:05.0951981Z ##[group]GITHUB_TOKEN Permissions
+2026-10-29T11:36:05.0954896Z Contents: read
+2026-10-29T11:36:05.0955550Z Metadata: read
+2026-10-29T11:36:05.0956179Z ##[endgroup]
+2026-10-29T11:36:05.0958493Z Secret source: Actions
+2026-10-29T11:36:05.0959617Z Cache mode: write
+2026-10-29T11:36:05.0960697Z Prepare workflow directory
+2026-10-29T11:36:05.1307124Z Prepare all required actions
+2026-10-29T11:36:05.1356750Z Getting action download info
+2026-10-29T11:36:05.3947459Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-29T11:36:05.4997088Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-10-29T11:36:05.6933779Z Complete job name: safety-tests
+2026-10-29T11:36:05.7802993Z ##[group]Run actions/checkout@v4
+2026-10-29T11:36:05.7804271Z with:
+2026-10-29T11:36:05.7805027Z   repository: gxaawill2-ui/cat-page-autopilot
+2026-10-29T11:36:05.7811947Z   token: ***
+2026-10-29T11:36:05.7812610Z   ssh-strict: true
+2026-10-29T11:36:05.7813206Z   ssh-user: git
+2026-10-29T11:36:05.7813863Z   persist-credentials: true
+2026-10-29T11:36:05.7814624Z   clean: true
+2026-10-29T11:36:05.7815330Z   sparse-checkout-cone-mode: true
+2026-10-29T11:36:05.7816159Z   fetch-depth: 1
+2026-10-29T11:36:05.7816841Z   fetch-tags: false
+2026-10-29T11:36:05.7817543Z   show-progress: true
+2026-10-29T11:36:05.7818213Z   lfs: false
+2026-10-29T11:36:05.7818880Z   submodules: false
+2026-10-29T11:36:05.7819613Z   set-safe-directory: true
+2026-10-29T11:36:05.7820435Z   allow-unsafe-pr-checkout: false
+2026-10-29T11:36:05.7822057Z ##[endgroup]
+2026-10-29T11:36:06.0161226Z Syncing repository: gxaawill2-ui/cat-page-autopilot
+2026-10-29T11:36:06.0164373Z ##[group]Getting Git version info
+2026-10-29T11:36:06.0165817Z Working directory is '/home/runner/work/cat-page-autopilot/cat-page-autopilot'
+2026-10-29T11:36:06.0167122Z [command]/usr/bin/git version
+2026-10-29T11:36:06.0226362Z git version 2.56.0
+2026-10-29T11:36:06.0256275Z ##[endgroup]
+2026-10-29T11:36:06.0264779Z Temporarily overriding HOME='/home/runner/work/_temp/1d286d98-38eb-48ee-ac23-2373d857c72e' before making global git config changes
+2026-10-29T11:36:06.0266934Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T11:36:06.0269514Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cat-page-autopilot/cat-page-autopilot
+2026-10-29T11:36:06.0326337Z Deleting the contents of '/home/runner/work/cat-page-autopilot/cat-page-autopilot'
+2026-10-29T11:36:06.0331222Z ##[group]Initializing the repository
+2026-10-29T11:36:06.0335627Z [command]/usr/bin/git init /home/runner/work/cat-page-autopilot/cat-page-autopilot
+2026-10-29T11:36:06.0435118Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-29T11:36:06.0437474Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-29T11:36:06.0439255Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-29T11:36:06.0440647Z hint: call:
+2026-10-29T11:36:06.0441276Z hint:
+2026-10-29T11:36:06.0442108Z hint: 	git config --global init.defaultBranch <name>
+2026-10-29T11:36:06.0443086Z hint:
+2026-10-29T11:36:06.0443986Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-29T11:36:06.0445462Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-29T11:36:06.0446644Z hint:
+2026-10-29T11:36:06.0447278Z hint: 	git branch -m <name>
+2026-10-29T11:36:06.0448019Z hint:
+2026-10-29T11:36:06.0449002Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-29T11:36:06.0450973Z Initialized empty Git repository in /home/runner/work/cat-page-autopilot/cat-page-autopilot/.git/
+2026-10-29T11:36:06.0455630Z [command]/usr/bin/git remote add origin https://github.com/gxaawill2-ui/cat-page-autopilot
+2026-10-29T11:36:06.0511104Z ##[endgroup]
+2026-10-29T11:36:06.0512362Z ##[group]Disabling automatic garbage collection
+2026-10-29T11:36:06.0515538Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-29T11:36:06.0555257Z ##[endgroup]
+2026-10-29T11:36:06.0556400Z ##[group]Setting up auth
+2026-10-29T11:36:06.0563497Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T11:36:06.0608552Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T11:36:06.1002135Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T11:36:06.1064758Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T11:36:06.1357687Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T11:36:06.1410425Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T11:36:06.1718730Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-29T11:36:06.1778342Z ##[endgroup]
+2026-10-29T11:36:06.1779659Z ##[group]Fetching the repository
+2026-10-29T11:36:06.1792286Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e565c848135ef424705bff5bfa5b8fa349f6f77a:refs/remotes/origin/feat/20261029-unattended-autopilot
+2026-10-29T11:36:06.9568963Z From https://github.com/gxaawill2-ui/cat-page-autopilot
+2026-10-29T11:36:06.9570732Z  * [new ref]         e565c848135ef424705bff5bfa5b8fa349f6f77a -> origin/feat/20261029-unattended-autopilot
+2026-10-29T11:36:06.9589235Z ##[endgroup]
+2026-10-29T11:36:06.9590312Z ##[group]Determining the checkout info
+2026-10-29T11:36:06.9592283Z ##[endgroup]
+2026-10-29T11:36:06.9601537Z [command]/usr/bin/git sparse-checkout disable
+2026-10-29T11:36:06.9688483Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-29T11:36:06.9739231Z ##[group]Checking out the ref
+2026-10-29T11:36:06.9746094Z [command]/usr/bin/git checkout --progress --force -B feat/20261029-unattended-autopilot refs/remotes/origin/feat/20261029-unattended-autopilot
+2026-10-29T11:36:07.0434027Z Switched to a new branch 'feat/20261029-unattended-autopilot'
+2026-10-29T11:36:07.0438734Z branch 'feat/20261029-unattended-autopilot' set up to track 'origin/feat/20261029-unattended-autopilot'.
+2026-10-29T11:36:07.0448677Z ##[endgroup]
+2026-10-29T11:36:07.0508656Z [command]/usr/bin/git log -1 --format=%H
+2026-10-29T11:36:07.0548612Z e565c848135ef424705bff5bfa5b8fa349f6f77a
+2026-10-29T11:36:07.0955849Z ##[group]Run actions/setup-python@v5
+2026-10-29T11:36:07.0957377Z with:
+2026-10-29T11:36:07.0958345Z   python-version: 3.11
+2026-10-29T11:36:07.0959434Z   check-latest: false
+2026-10-29T11:36:07.0967575Z   token: ***
+2026-10-29T11:36:07.0968605Z   update-environment: true
+2026-10-29T11:36:07.0969768Z   allow-prereleases: false
+2026-10-29T11:36:07.0971069Z   freethreaded: false
+2026-10-29T11:36:07.0972109Z ##[endgroup]
+2026-10-29T11:36:07.2421199Z ##[group]Installed versions
+2026-10-29T11:36:07.2529082Z (node:2239) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-29T11:36:07.2531908Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-29T11:36:07.2533837Z Successfully set up CPython (3.11.17)
+2026-10-29T11:36:07.2536423Z ##[endgroup]
+2026-10-29T11:36:07.2761093Z ##[group]Run python -m pip install Pillow
+2026-10-29T11:36:07.2762497Z [36;1mpython -m pip install Pillow[0m
+2026-10-29T11:36:07.2810398Z shell: /usr/bin/bash -e {0}
+2026-10-29T11:36:07.2811793Z env:
+2026-10-29T11:36:07.2813151Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-29T11:36:07.2815100Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-29T11:36:07.2816747Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-29T11:36:07.2818242Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-29T11:36:07.2819731Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-29T11:36:07.2821463Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-29T11:36:07.2822746Z ##[endgroup]
+2026-10-29T11:36:08.1960222Z Collecting Pillow
+2026-10-29T11:36:08.2444334Z   Downloading pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+2026-10-29T11:36:08.2541330Z Downloading pillow-13.0.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (7.1 MB)
+2026-10-29T11:36:08.3220313Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 170.4 MB/s  0:00:00
+2026-10-29T11:36:08.3658014Z Installing collected packages: Pillow
+2026-10-29T11:36:08.7147511Z Successfully installed Pillow-13.0.0
+2026-10-29T11:36:08.7762154Z ##[group]Run python -m unittest discover -v -p 'test_*.py'
+2026-10-29T11:36:08.7762739Z [36;1mpython -m unittest discover -v -p 'test_*.py'[0m
+2026-10-29T11:36:08.7763278Z [36;1mpython -m unittest discover -v -s scripts -p 'test_meta_graph_publish.py'[0m
+2026-10-29T11:36:08.7763861Z [36;1mpython -m unittest discover -v -s scripts -p 'test_auto_replenish.py'[0m
+2026-10-29T11:36:08.7764465Z [36;1mpython -m unittest discover -v -s scripts -p 'test_meta_native_schedule.py'[0m
+2026-10-29T11:36:08.7765031Z [36;1mpython -m unittest discover -v -s scripts -p 'test_cloudflare_ai.py'[0m
+2026-10-29T11:36:08.7789549Z shell: /usr/bin/bash -e {0}
+2026-10-29T11:36:08.7789872Z env:
+2026-10-29T11:36:08.7790233Z   pythonLocation: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-29T11:36:08.7790956Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib/pkgconfig
+2026-10-29T11:36:08.7791460Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-29T11:36:08.7791957Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-29T11:36:08.7792395Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.11.17/x64
+2026-10-29T11:36:08.7792828Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.11.17/x64/lib
+2026-10-29T11:36:08.7793213Z ##[endgroup]
+2026-10-29T11:36:09.0595390Z test_changed_hash_or_missing_config_never_quarantined (test_catflow.PublishingGuards.test_changed_hash_or_missing_config_never_quarantined) ... ok
+2026-10-29T11:36:09.0611951Z test_daily_limit_includes_uncertain_outcomes (test_catflow.PublishingGuards.test_daily_limit_includes_uncertain_outcomes) ... ok
+2026-10-29T11:36:09.0620603Z test_draft_mode_blocks_regular_run (test_catflow.PublishingGuards.test_draft_mode_blocks_regular_run) ... ok
+2026-10-29T11:36:09.0637913Z test_exact_legacy_quarantine_allows_new_unique_day (test_catflow.PublishingGuards.test_exact_legacy_quarantine_allows_new_unique_day) ... ok
+2026-10-29T11:36:09.0652894Z test_no_post_id_does_not_clear_pending_lock (test_catflow.PublishingGuards.test_no_post_id_does_not_clear_pending_lock) ... ok
+2026-10-29T11:36:09.0668939Z test_old_content_reuse_remains_forbidden (test_catflow.PublishingGuards.test_old_content_reuse_remains_forbidden) ... ok
+2026-10-29T11:36:09.0684996Z test_protocol2_unknown_never_quarantined (test_catflow.PublishingGuards.test_protocol2_unknown_never_quarantined) ... ok
+2026-10-29T11:36:09.0701172Z test_reused_image_different_caption_is_blocked (test_catflow.PublishingGuards.test_reused_image_different_caption_is_blocked) ... ok
+2026-10-29T11:36:09.0716301Z test_same_day_unknown_still_blocks (test_catflow.PublishingGuards.test_same_day_unknown_still_blocks) ... ok
+2026-10-29T11:36:09.0731909Z test_slot_is_atomic_before_publication (test_catflow.PublishingGuards.test_slot_is_atomic_before_publication) ... ok
+2026-10-29T11:36:09.0744405Z test_unknown_publication_cannot_be_repeated (test_catflow.PublishingGuards.test_unknown_publication_cannot_be_repeated) ... ok
+2026-10-29T11:36:09.0754991Z test_wrong_page_is_blocked (test_catflow.PublishingGuards.test_wrong_page_is_blocked) ... ok
+2026-10-29T11:36:09.0831140Z test_wrong_readback_caption_is_not_verified (test_catflow.PublishingGuards.test_wrong_readback_caption_is_not_verified) ... ok
+2026-10-29T11:36:09.0832493Z test_armed_or_unknown_cannot_replay (test_dispatch_guard.Guard.test_armed_or_unknown_cannot_replay) ... ok
+2026-10-29T11:36:09.0833897Z test_concurrent_compare_and_swap (test_dispatch_guard.Guard.test_concurrent_compare_and_swap) ... ok
+2026-10-29T11:36:09.0835150Z test_expired_unarmed_closes_but_cannot_send (test_dispatch_guard.Guard.test_expired_unarmed_closes_but_cannot_send) ... ok
+2026-10-29T11:36:09.0836271Z test_legacy_no_expiry (test_dispatch_guard.Guard.test_legacy_no_expiry) ... ok
+2026-10-29T11:36:09.0837288Z test_pre_call_recovery_has_no_send (test_dispatch_guard.Guard.test_pre_call_recovery_has_no_send) ... ok
+2026-10-29T11:36:09.0889249Z test_four_allowed_fifth_blocked (test_frequency.Frequency.test_four_allowed_fifth_blocked) ... ok
+2026-10-29T11:36:09.0891315Z test_new_slots (test_frequency.Frequency.test_new_slots) ... ok
+2026-10-29T11:36:09.0901706Z test_global_unknown_blocks_new_content (test_international.InternationalTests.test_global_unknown_blocks_new_content) ... ok
+2026-10-29T11:36:09.0903143Z test_missing_reach_not_invented (test_international.InternationalTests.test_missing_reach_not_invented) ... ok
+2026-10-29T11:36:09.0914819Z test_no_extra_slots_or_excluded_markets (test_international.InternationalTests.test_no_extra_slots_or_excluded_markets) ... ok
+2026-10-29T11:36:09.1357727Z test_prepare_language_survives_without_facebook (test_international.InternationalTests.test_prepare_language_survives_without_facebook) ... ok
+2026-10-29T11:36:09.1359104Z test_week1_and_week2 (test_international.InternationalTests.test_week1_and_week2) ... ok
+2026-10-29T11:36:09.1369480Z test_real_http_error_not_overridden (test_pages_fallback.EvidenceTests.test_real_http_error_not_overridden) ... ok
+2026-10-29T11:36:09.1375616Z test_stale (test_pages_fallback.EvidenceTests.test_stale) ... ok
+2026-10-29T11:36:09.1386462Z test_transport_uses_matching_evidence (test_pages_fallback.EvidenceTests.test_transport_uses_matching_evidence) ... ok
+2026-10-29T11:36:09.1391887Z test_wrong_sha (test_pages_fallback.EvidenceTests.test_wrong_sha) ... ok
+2026-10-29T11:36:09.1392986Z test_boundaries (test_review_due.Review.test_boundaries) ... ok
+2026-10-29T11:36:09.1393415Z 
+2026-10-29T11:36:09.1393709Z ----------------------------------------------------------------------
+2026-10-29T11:36:09.1394276Z Ran 30 tests in 0.083s
+2026-10-29T11:36:09.1394545Z 
+2026-10-29T11:36:09.1394911Z OK
+2026-10-29T11:36:09.2601251Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2612231Z test_cap_counts_old_and_new_unknown_attempts (test_meta_graph_publish.OfficialMetaSafetyTests.test_cap_counts_old_and_new_unknown_attempts) ... ok
+2026-10-29T11:36:09.2630312Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2648719Z test_cas_failure_prevents_post (test_meta_graph_publish.OfficialMetaSafetyTests.test_cas_failure_prevents_post) ... ok
+2026-10-29T11:36:09.2658457Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2669252Z test_disabled_means_no_graph_call (test_meta_graph_publish.OfficialMetaSafetyTests.test_disabled_means_no_graph_call) ... ok
+2026-10-29T11:36:09.2679216Z META_PUBLISH_DISABLED
+2026-10-29T11:36:09.2680784Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2691831Z test_draft_policy_blocks_even_with_switch_and_token (test_meta_graph_publish.OfficialMetaSafetyTests.test_draft_policy_blocks_even_with_switch_and_token) ... ok
+2026-10-29T11:36:09.2698276Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2703312Z test_dry_run_means_no_graph_call (test_meta_graph_publish.OfficialMetaSafetyTests.test_dry_run_means_no_graph_call) ... ok
+2026-10-29T11:36:09.2718260Z test_external_posts_plus_local_unknown_count_together (test_meta_graph_publish.OfficialMetaSafetyTests.test_external_posts_plus_local_unknown_count_together) ... ok
+2026-10-29T11:36:09.2731005Z DRY_RUN_OK_NO_FACEBOOK_WRITES
+2026-10-29T11:36:09.2732069Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=local event=local
+2026-10-29T11:36:09.2738396Z test_missing_token_no_publish (test_meta_graph_publish.OfficialMetaSafetyTests.test_missing_token_no_publish) ... ok
+2026-10-29T11:36:09.2745729Z META_PAGE_ACCESS_TOKEN_SECRET_MISSING
+2026-10-29T11:36:09.2747302Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2749102Z test_no_queue_no_publish (test_meta_graph_publish.OfficialMetaSafetyTests.test_no_queue_no_publish) ... ok
+2026-10-29T11:36:09.2755807Z NO_QUEUED_CONTENT
+2026-10-29T11:36:09.2756842Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2763581Z test_old_caption_never_republished (test_meta_graph_publish.OfficialMetaSafetyTests.test_old_caption_never_republished) ... ok
+2026-10-29T11:36:09.2768656Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2775680Z test_old_image_never_republished (test_meta_graph_publish.OfficialMetaSafetyTests.test_old_image_never_republished) ... ok
+2026-10-29T11:36:09.2781213Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2787862Z test_old_unknown_same_slot_blocks_new_caption (test_meta_graph_publish.OfficialMetaSafetyTests.test_old_unknown_same_slot_blocks_new_caption) ... ok
+2026-10-29T11:36:09.2792952Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2797173Z test_outcome_file_prohibits_replay (test_meta_graph_publish.OfficialMetaSafetyTests.test_outcome_file_prohibits_replay) ... ok
+2026-10-29T11:36:09.2818244Z test_preflight_only_uses_get_and_no_arm (test_meta_graph_publish.OfficialMetaSafetyTests.test_preflight_only_uses_get_and_no_arm) ... ok
+2026-10-29T11:36:09.2835008Z test_preflight_rejects_wrong_page (test_meta_graph_publish.OfficialMetaSafetyTests.test_preflight_rejects_wrong_page) ... ok
+2026-10-29T11:36:09.2842414Z test_readback_requires_correct_photo (test_meta_graph_publish.OfficialMetaSafetyTests.test_readback_requires_correct_photo) ... ok
+2026-10-29T11:36:09.2845642Z SLOT_ALREADY_ATTEMPTED_NEVER_RETRY
+2026-10-29T11:36:09.2846228Z META_PREFLIGHT_OK_PAGE=1346385028565797; FACEBOOK_POST_CALLS=0
+2026-10-29T11:36:09.2847529Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T14:40:00+08:00 delay_min=130.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2849026Z test_stale_slot_no_publish (test_meta_graph_publish.OfficialMetaSafetyTests.test_stale_slot_no_publish) ... ok
+2026-10-29T11:36:09.2861778Z SKIPPED_STALE_OR_EARLY reason=STALE delay_min=130.00; NEVER_BACKFILL
+2026-10-29T11:36:09.2862966Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2870937Z META_WRITE_UNKNOWN_KEEP_ARMED_NEVER_RETRY
+2026-10-29T11:36:09.2872163Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2881477Z test_unknown_post_is_called_once_and_never_replayed (test_meta_graph_publish.OfficialMetaSafetyTests.test_unknown_post_is_called_once_and_never_replayed) ... ok
+2026-10-29T11:36:09.2888267Z SLOT_ALREADY_ATTEMPTED_NEVER_RETRY
+2026-10-29T11:36:09.2889388Z DISPATCH_DIAG slot=2026-10-29T12:30 now_taipei=2026-10-29T12:40:00+08:00 delay_min=10.00 allowed_window_min=45 run_id=40866626967 event=workflow_dispatch
+2026-10-29T11:36:09.2893138Z test_untrusted_url_rejected (test_meta_graph_publish.OfficialMetaSafetyTests.test_untrusted_url_rejected) ... ok
+2026-10-29T11:36:09.2894055Z 
+2026-10-29T11:36:09.2894573Z ----------------------------------------------------------------------
+2026-10-29T11:36:09.2895140Z Ran 18 tests in 0.031s
+2026-10-29T11:36:09.2895379Z 
+2026-10-29T11:36:09.2895535Z OK
+2026-10-29T11:36:09.4249721Z test_bad_image_rejected (test_auto_replenish.ReplenishSafetyTest.test_bad_image_rejected) ... ok
+2026-10-29T11:36:09.4257323Z test_budget_proof_expiry_blocks_spend (test_auto_replenish.ReplenishSafetyTest.test_budget_proof_expiry_blocks_spend) ... ok
+2026-10-29T11:36:09.4263653Z test_budget_proof_missing_or_unverified_blocks_spend (test_auto_replenish.ReplenishSafetyTest.test_budget_proof_missing_or_unverified_blocks_spend) ... ok
+2026-10-29T11:36:09.4274135Z FUTURE_SLOTS_TO_FILL=8
+2026-10-29T11:36:09.4276732Z test_disabled_never_calls_provider (test_auto_replenish.ReplenishSafetyTest.test_disabled_never_calls_provider) ... ok
+2026-10-29T11:36:09.4285482Z test_existing_native_slot_never_requeued (test_auto_replenish.ReplenishSafetyTest.test_existing_native_slot_never_requeued) ... ok
+2026-10-29T11:36:09.4295915Z FUTURE_SLOTS_TO_FILL=8
+2026-10-29T11:36:09.4299251Z test_expired_meta_token_stops_before_paid_ai (test_auto_replenish.ReplenishSafetyTest.test_expired_meta_token_stops_before_paid_ai) ... ok
+2026-10-29T11:36:09.4300962Z test_invalid_model_stops_before_generation (test_auto_replenish.ReplenishSafetyTest.test_invalid_model_stops_before_generation) ... ok
+2026-10-29T11:36:09.4302210Z test_japanese_test_dates_are_preserved (test_auto_replenish.ReplenishSafetyTest.test_japanese_test_dates_are_preserved) ... ok
+2026-10-29T11:36:09.4304749Z test_language_is_original_slot_language (test_auto_replenish.ReplenishSafetyTest.test_language_is_original_slot_language) ... ok
+2026-10-29T11:36:09.4307316Z test_missing_image_payload_stops (test_auto_replenish.ReplenishSafetyTest.test_missing_image_payload_stops) ... ok
+2026-10-29T11:36:09.4315249Z FUTURE_SLOTS_TO_FILL=8
+2026-10-29T11:36:09.4317475Z test_no_credentials_never_sends (test_auto_replenish.ReplenishSafetyTest.test_no_credentials_never_sends) ... ok
+2026-10-29T11:36:09.4322258Z FUTURE_SLOTS_TO_FILL=8
+2026-10-29T11:36:09.4323123Z test_preview_calls_no_external_provider (test_auto_replenish.ReplenishSafetyTest.test_preview_calls_no_external_provider) ... ok
+2026-10-29T11:36:09.4337004Z test_real_jpeg_saved_under_deployed_docs_before_qa (test_auto_replenish.ReplenishSafetyTest.test_real_jpeg_saved_under_deployed_docs_before_qa) ... ok
+2026-10-29T11:36:09.4350688Z FUTURE_SLOTS_TO_FILL=1
+2026-10-29T11:36:09.4356484Z GENERATION_NEEDS_RECONCILIATION 2026-11-01 09:30
+2026-10-29T11:36:09.4361193Z test_unknown_generation_is_not_paid_for_twice (test_auto_replenish.ReplenishSafetyTest.test_unknown_generation_is_not_paid_for_twice) ... ok
+2026-10-29T11:36:09.4370763Z FUTURE_SLOTS_TO_FILL=8
+2026-10-29T11:36:09.4375683Z test_unverified_budget_prevents_all_ai_calls (test_auto_replenish.ReplenishSafetyTest.test_unverified_budget_prevents_all_ai_calls) ... ok
+2026-10-29T11:36:09.4379798Z test_visual_qa_must_say_exact_pass (test_auto_replenish.ReplenishSafetyTest.test_visual_qa_must_say_exact_pass) ... ok
+2026-10-29T11:36:09.4380728Z 
+2026-10-29T11:36:09.4380900Z ----------------------------------------------------------------------
+2026-10-29T11:36:09.4381281Z Ran 16 tests in 0.021s
+2026-10-29T11:36:09.4381428Z 
+2026-10-29T11:36:09.4381529Z OK
+2026-10-29T11:36:09.5594976Z test_armed_slot_never_replayed (test_meta_native_schedule.NativeSafety.test_armed_slot_never_replayed) ... ok
+2026-10-29T11:36:09.5624407Z test_cas_failure_before_upload_prevents_every_post (test_meta_native_schedule.NativeSafety.test_cas_failure_before_upload_prevents_every_post) ... ok
+2026-10-29T11:36:09.5664523Z test_explicit_feed_rejection_saved_without_retry (test_meta_native_schedule.NativeSafety.test_explicit_feed_rejection_saved_without_retry) ... ok
+2026-10-29T11:36:09.5686051Z test_four_unknown_attempts_consume_daily_cap (test_meta_native_schedule.NativeSafety.test_four_unknown_attempts_consume_daily_cap) ... ok
+2026-10-29T11:36:09.5703814Z test_historical_queued_image_blocked (test_meta_native_schedule.NativeSafety.test_historical_queued_image_blocked) ... ok
+2026-10-29T11:36:09.5714090Z test_only_canonical_queue_paths (test_meta_native_schedule.NativeSafety.test_only_canonical_queue_paths) ... ok
+2026-10-29T11:36:09.5723468Z test_over_three_days_rejected (test_meta_native_schedule.NativeSafety.test_over_three_days_rejected) ... ok
+2026-10-29T11:36:09.5732397Z test_past_is_rejected (test_meta_native_schedule.NativeSafety.test_past_is_rejected) ... ok
+2026-10-29T11:36:09.5768416Z test_photo_id_is_not_a_post_id (test_meta_native_schedule.NativeSafety.test_photo_id_is_not_a_post_id) ... ok
+2026-10-29T11:36:09.5777228Z test_remote_native_slot_is_occupied (test_meta_native_schedule.NativeSafety.test_remote_native_slot_is_occupied) ... ok
+2026-10-29T11:36:09.5785937Z test_short_lead_rejected (test_meta_native_schedule.NativeSafety.test_short_lead_rejected) ... ok
+2026-10-29T11:36:09.5812753Z test_unknown_upload_is_not_replayed (test_meta_native_schedule.NativeSafety.test_unknown_upload_is_not_replayed) ... ok
+2026-10-29T11:36:09.5843361Z test_unpublished_photo_then_scheduled_feed (test_meta_native_schedule.NativeSafety.test_unpublished_photo_then_scheduled_feed) ... ok
+2026-10-29T11:36:09.5848698Z test_visual_qa_required (test_meta_native_schedule.NativeSafety.test_visual_qa_required) ... ok
+2026-10-29T11:36:09.5862908Z test_wrong_page_rejected (test_meta_native_schedule.NativeSafety.test_wrong_page_rejected) ... ok
+2026-10-29T11:36:09.5863706Z 
+2026-10-29T11:36:09.5864132Z ----------------------------------------------------------------------
+2026-10-29T11:36:09.5864720Z Ran 15 tests in 0.030s
+2026-10-29T11:36:09.5865176Z 
+2026-10-29T11:36:09.5865504Z OK
+2026-10-29T11:36:09.7065120Z test_chat_returns_compatible_content (test_cloudflare_ai.CloudflareSafetyTest.test_chat_returns_compatible_content) ... ok
+2026-10-29T11:36:09.7085611Z test_image_uses_direct_endpoint_four_steps_and_base64 (test_cloudflare_ai.CloudflareSafetyTest.test_image_uses_direct_endpoint_four_steps_and_base64) ... ok
+2026-10-29T11:36:09.7091751Z test_invalid_account_never_connects (test_cloudflare_ai.CloudflareSafetyTest.test_invalid_account_never_connects) ... ok
+2026-10-29T11:36:09.7111637Z test_missing_image_does_not_fetch_a_provider_url (test_cloudflare_ai.CloudflareSafetyTest.test_missing_image_does_not_fetch_a_provider_url) ... ok
+2026-10-29T11:36:09.7119079Z test_missing_token_never_connects (test_cloudflare_ai.CloudflareSafetyTest.test_missing_token_never_connects) ... ok
+2026-10-29T11:36:09.7127779Z test_paid_model_and_unknown_endpoint_never_connect (test_cloudflare_ai.CloudflareSafetyTest.test_paid_model_and_unknown_endpoint_never_connect) ... ok
+2026-10-29T11:36:09.7141039Z test_quota_failure_is_single_call_and_redacts_body (test_cloudflare_ai.CloudflareSafetyTest.test_quota_failure_is_single_call_and_redacts_body) ... ok
+2026-10-29T11:36:09.7147661Z test_redirect_never_forwards_token (test_cloudflare_ai.CloudflareSafetyTest.test_redirect_never_forwards_token) ... ok
+2026-10-29T11:36:09.7148417Z 
+2026-10-29T11:36:09.7148738Z ----------------------------------------------------------------------
+2026-10-29T11:36:09.7149222Z Ran 8 tests in 0.011s
+2026-10-29T11:36:09.7149368Z 
+2026-10-29T11:36:09.7149531Z OK
+2026-10-29T11:36:09.7451855Z Post job cleanup.
+2026-10-29T11:36:09.8776726Z (node:2281) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-29T11:36:09.8777881Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-29T11:36:09.8991486Z Post job cleanup.
+2026-10-29T11:36:09.9944596Z [command]/usr/bin/git version
+2026-10-29T11:36:09.9993191Z git version 2.56.0
+2026-10-29T11:36:10.0033531Z Temporarily overriding HOME='/home/runner/work/_temp/31d805bd-c05e-4c97-b33a-bc8362b2b462' before making global git config changes
+2026-10-29T11:36:10.0034983Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T11:36:10.0040635Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cat-page-autopilot/cat-page-autopilot
+2026-10-29T11:36:10.0092447Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T11:36:10.0161448Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T11:36:10.0529206Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T11:36:10.0572133Z http.https://github.com/.extraheader
+2026-10-29T11:36:10.0591690Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-29T11:36:10.0648827Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T11:36:10.1031756Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T11:36:10.1095739Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T11:36:10.1569634Z Cleaning up orphan processes
+2026-10-29T11:36:10.1981212Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
