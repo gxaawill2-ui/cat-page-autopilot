@@ -1,6 +1,6 @@
 {
   "slot": "2026-10-30T09:30",
-  "status": "caption_response_durable",
+  "status": "image_armed_unknown",
   "facebook_write_calls": 0,
   "retry_allowed": false,
   "started_at": "2026-10-30T07:23:04.328332+08:00",
@@ -20,5 +20,11 @@
     "caption_retry_limit": 2,
     "reconciliation": "Failure occurred before make_image or Meta access; permit one bounded caption-only retry with structured output and durable response capture."
   },
-  "generated_text": "{\n  \"caption\": \"Target locked! 🐾 Mibao has officially declared war on the fluffiest enemy in the garden. Wish us luck! #CatLife #GardenAdventures\",\n  \"scene\": \"A hand-painted book illustration of Mibao, a playful tabby cat, leaping mid-air in a lush, sun-drenched garden. Her eyes are wide with intense focus, and her paws are outstretched toward a single, floating dandelion seed. Soft natural light filters through green leaves, highlighting her precise markings and whiskers.\",\n  \"topic\": \"Playful garden adventures\"\n}"
+  "generated_text": "{\n  \"caption\": \"Target locked! 🐾 Mibao has officially declared war on the fluffiest enemy in the garden. Wish us luck! #CatLife #GardenAdventures\",\n  \"scene\": \"A hand-painted book illustration of Mibao, a playful tabby cat, leaping mid-air in a lush, sun-drenched garden. Her eyes are wide with intense focus, and her paws are outstretched toward a single, floating dandelion seed. Soft natural light filters through green leaves, highlighting her precise markings and whiskers.\",\n  \"topic\": \"Playful garden adventures\"\n}",
+  "content": {
+    "caption": "Target locked! 🐾 Mibao has officially declared war on the fluffiest enemy in the garden. Wish us luck! #CatLife #GardenAdventures",
+    "scene": "A hand-painted book illustration of Mibao, a playful tabby cat, leaping mid-air in a lush, sun-drenched garden. Her eyes are wide with intense focus, and her paws are outstretched toward a single, floating dandelion seed. Soft natural light filters through green leaves, highlighting her precise markings and whiskers.",
+    "topic": "Playful garden adventures"
+  },
+  "language": "en"
 }
