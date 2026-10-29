@@ -1,0 +1,18 @@
+{
+  "checked_at": "2026-10-29T10:05:10.250786+00:00",
+  "user_constraint": "No new credit card; abandon Vercel card onboarding",
+  "vercel_card_dialog_cancelled": true,
+  "replacement_candidate": "Cloudflare Workers AI on Workers Free only",
+  "official_sources": [
+    "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+    "https://developers.cloudflare.com/workers-ai/models/flux-1-schnell/"
+  ],
+  "free_quota_neurons_daily": 10000,
+  "free_exhaustion": "fail; no paid upgrade authorized",
+  "dashboard_state": "signed out",
+  "account_id": null,
+  "token_configured": false,
+  "generation_verified": false,
+  "new_meta_scheduled_post_id": null,
+  "production_enabled": false
+}
