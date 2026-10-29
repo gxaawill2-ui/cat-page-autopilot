@@ -5,6 +5,7 @@ import os
 import re
 import urllib.error
 import urllib.request
+import urllib.parse
 
 TEXT = "@cf/google/gemma-4-26b-a4b-it"
 VISION = TEXT
@@ -82,3 +83,42 @@ def request(endpoint, body, key):
             raise ValueError("Cloudflare did not return base64 image")
         return {"data": [{"b64_json": image}]}
     return result.get("result", result)
+
+
+def audit():
+    """Read-only actual scoped authorization check; not inference or a billing check."""
+    account, key = credentials()
+    checked = []
+    for model in (TEXT, IMAGE):
+        query = urllib.parse.urlencode({"search": model, "per_page": 100})
+        req = urllib.request.Request(ORIGIN + account + "/ai/models/search?" + query,
+                method="GET", headers={"Authorization": "Bearer " + key})
+        try:
+            with urllib.request.build_opener(NoRedirect()).open(req, timeout=30) as response:
+                result = json.loads(response.read(1_000_000))
+        except urllib.error.HTTPError as exc:
+            raise RuntimeError("CLOUDFLARE_AUDIT_HTTP_" + str(exc.code)) from None
+        except urllib.error.URLError:
+            raise RuntimeError("CLOUDFLARE_AUDIT_NETWORK_FAILED; no retry") from None
+        if result.get("success") is not True:
+            raise RuntimeError("CLOUDFLARE_AUDIT_REJECTED")
+        models = result.get("result", [])
+        if not isinstance(models, list) or not any(m.get("name") == model for m in models):
+            raise RuntimeError("CLOUDFLARE_MODEL_NOT_FOUND: " + model)
+        checked.append(model)
+    return {"checked_at": dt.datetime.now(dt.timezone.utc).isoformat(),
+            "workers_ai_read_authorized": True, "models_found": checked,
+            "inference_calls": 0, "facebook_write_calls": 0,
+            "free_account_plan_verified": False, "live_generation_verified": False}
+
+
+if __name__ == "__main__":
+    import sys
+    try:
+        if sys.argv[1:] != ["--audit"]:
+            raise ValueError("Only --audit supported; no inference in this command")
+        print(json.dumps(audit()))
+    except Exception as exc:
+        print("CLOUDFLARE_AUDIT_STOP: " + type(exc).__name__ + ": " + str(exc)[:160],
+              file=sys.stderr)
+        sys.exit(1)
