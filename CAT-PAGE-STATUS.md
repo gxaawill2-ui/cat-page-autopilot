@@ -1,3 +1,13 @@
+## 2026-10-29 Meta原生預約一日四篇已建妥／實際發布待驗收（最新）
+- 保存時間2026-10-29T08:20:51.659401+08:00。正式Meta Business Suite已排定今日09:30英文、12:30繁中、16:30繁中、19:30英文，全新原創圖文，各1次ImageGen/目視QA/公開JPEG200-MIME-SHA通過；未補舊文，日上限4，品牌/Page不改。
+- 真預約Facebook預覽Post ID依序812374491970657／1840103147059522／28831968349765535／1135613809012719；每篇另存Business Suite內容ID、photo ID、UI明確日期時間、全文及目視證據。只有photo ID不算成功，這四篇均有獨立post permalink。
+- 官方已排定發佈清單真讀回4列及09:30/12:30/16:30/19:30，Planner首篇卡片也已見。證據records/meta-native/ui/2026-10-29-four-scheduled.json、2026-10-29-0930-preview.jpg及各state/meta_native/2026-10-29-HHMM.json。四列截圖兩次capture timeout，已保留真清單文字與首篇截圖，沒製造截圖。
+- **目前只確認原生預約存在，尚未到09:30；未完成實際到點發布驗收，不能報自動化成功。** Graph實際Secret已401/190/463失效，API is_published未讀到，欄位null，僅以官方UI證明已排定未發布；沒有偽造API false。
+- 舊Actions所有cron/live分支已移除；同一workflow只供手動原生未來預約準備/audit，沒有立即發文。META_PUBLISH_ENABLED舊變數仍true但已無執行路徑；改false遇GitHub正常郵件驗證未完成，未繞過。未用API失敗作為重複發文藉口。
+- 原daily真實disabled：run860cdd3e...requires_user_action=true，平台不提供工具trace，不能聲稱修復。已改提示為停用/草稿準備，不盲重啟；採互動Work批次製作＋Meta自身定時配送，標**半自動**。原週日20:00仍enabled；每3天設定保留，但daily停用下不保證首輪10/29晚自行執行，需互動檢討。
+- 沿用原一次性驗收task6ad6ec1845d48191938f06790c91fe8a，改10/29 09:40純讀取驗收，已update+peek enabled=true；不新增重複任務，禁止任何FB寫入/立即發布/重排/補發。平台next_run_time未提供，配置不等於已執行。舊Oct25驗收記錄保留。
+- 精確續作：09:30後核原生文章是否轉已發佈→真發布ID/網址/時間/全文/圖片→CAS補state/meta_native與records/acceptance/meta-native-2026-10-29-0930.json。若仍預約或未知，記pending/overdue，不按立即發布、不重送；後三篇不動。詳細result.json位於records/migration/2026-10-29-native/。
+
 ## 2026-10-29 三篇Meta原生預約已核實（最新）
 - 2026-10-29T08:07:33.825981+08:00：09:30/12:30/16:30皆已官方排定，真預約Post ID依序812374491970657／1840103147059522／28831968349765535。16:30對應Business Suite內容ID4595947790650887、photo122106723951515576；官方回條明示10/29下午4:30，全文與雙格漫畫已目視核對。
 - 全部不是立即發文，也沒有購買廣告；官方促銷一律稍後再說。到期發布驗收仍pending，不能稱全自動成功。
