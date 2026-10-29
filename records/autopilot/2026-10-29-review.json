@@ -241,5 +241,21 @@
   "free_credit_activation": "requires Add a Card; card not entered; no payment authorization submitted",
   "free_credit_advertised_usd_per_month": 5,
   "scheduled_posts_api_empty": true,
-  "existing_1930_official_ui": "confirmed present 2026-10-29 19:30; never replay based on empty API edge"
+  "existing_1930_official_ui": "confirmed present 2026-10-29 19:30; never replay based on empty API edge",
+  "safety_ci": {
+    "run_id": 40853204443,
+    "job_id": 123377578707,
+    "source_commit": "2e0646624dd6549a92202474db1b4af3d853a12e",
+    "success": true,
+    "test_counts": [
+      30,
+      18,
+      16,
+      15
+    ],
+    "total": 79
+  },
+  "live_catalog_type_price_gate": "passed; actual generation calls 0",
+  "card_verification_screenshot_sha256": "50295712b76036f198c8fdd3f2817c0e5670bb27b997f3b96d6df8782b95d8cf",
+  "updated_at": "2026-10-29T09:55:48.689145+00:00"
 }
