@@ -1,0 +1,19 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-10-29T16:30",
+  "status": "ui_schedule_armed_unknown_until_reconciled",
+  "method": "Meta Business Suite official native scheduling UI",
+  "caption_sha256": "e292faf26dfa0d40d422886012c1e0306365837f4a92108892cedb45eacb4055",
+  "image_sha256": "406e239f38cdcaeecacbb1b1f100f781ab6a73791d683dc97c04bad779e74729",
+  "scheduled_publish_time": 1793262600,
+  "scheduled_taipei": "2026-10-29T16:30:00+08:00",
+  "armed_at": "2026-10-29T08:03:39.129483+08:00",
+  "retry_allowed": false,
+  "meta_post_id": null,
+  "ui_target_verified": "Facebook 貓咪投資筆記 only",
+  "ui_date_verified": "2026年10月29日",
+  "ui_time_verified": "16:30 (24-hour)",
+  "ads_stories_boost_enabled": false,
+  "image_qa": true,
+  "image_url_proof": "records/url-checks/native-20261029-1630.json"
+}
