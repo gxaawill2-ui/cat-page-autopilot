@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-10-29T11:36:08.021893+00:00",
+  "workers_ai_read_authorized": true,
+  "models_found": [
+    "@cf/google/gemma-4-26b-a4b-it",
+    "@cf/black-forest-labs/flux-1-schnell"
+  ],
+  "inference_calls": 0,
+  "facebook_write_calls": 0,
+  "free_account_plan_verified": false,
+  "live_generation_verified": false,
+  "run_id": 40866626967,
+  "source_commit": "e565c848135ef424705bff5bfa5b8fa349f6f77a",
+  "audit_job": 123422913427,
+  "safety_job": 123422913861,
+  "conclusion": "success",
+  "safety_tests": [
+    30,
+    18,
+    16,
+    15,
+    8
+  ],
+  "total_tests": 87,
+  "secret_inventory_confirmed": [
+    "CLOUDFLARE_ACCOUNT_ID",
+    "CLOUDFLARE_API_TOKEN",
+    "META_PAGE_ACCESS_TOKEN"
+  ],
+  "secret_values_exposed": false,
+  "production_enabled": false,
+  "pr_merged": false,
+  "next_step": "Verify actual Workers Free account plan before any inference. Then single caption/image/vision canary; persist JPEG; Pages 200/MIME/SHA; next normal empty future slot native scheduling, Planner and due-time delivery acceptance."
+}

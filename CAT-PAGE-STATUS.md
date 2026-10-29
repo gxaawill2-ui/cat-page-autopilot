@@ -1,3 +1,11 @@
+## 2026-10-29 Cloudflare Secret已真保存，Actions實際連線＋87項安全CI通過（最新）
+- GitHub清單已真讀回CLOUDFLARE_ACCOUNT_ID、CLOUDFLARE_API_TOKEN、META_PAGE_ACCESS_TOKEN。先前Secret名稱格式錯誤已解決，不再要求重建Token或重新貼對話。
+- 既有unit-tests.yml在原PR分支單次workflow_dispatch實跑40866626967，source e565c848；audit job123422913427與safety job123422913861均success。真GET指定帳戶Workers AI模型清單成功，Gemma 4與FLUX.1 schnell均存在。憑證只由Actions Secret注入，全程不讀出值。
+- 30+18+16+15+8=87項真CI全部通過。這是連線及安全驗收，不是AI生成或Meta原生預約驗收；推論0/FB寫入0，無新Post ID。
+- 帳戶實際Workers Free方案仍未核實，模型清單GET不證明免扣款。state/cloudflare_free.json保持未驗證；需正式Cloudflare帳戶方案證據，不能虛稱零付費已驗收。禁止卡片/升級/預付/Gateway統一計費。
+- PR #1仍draft未合併，CAT_AUTOPILOT_ENABLED未啟用；既有每日四slot與原生已排內容、歷史unknown不變。精確下一步：核Free方案→單篇真圖文與視覺QA→Pages驗證→下一個未占用未來正常slot原生API預約→Planner與到點實發；都通過後才合併啟用。
+- 實際證據records/autopilot/cloudflare-audit-40866626967.json與同run原始遮罩日誌；本次只改PR的唯讀稽核與安全測試，main只存進度/證據。
+
 ## 2026-10-29 Cloudflare接線已備妥；GitHub Secret名稱錯誤待更正（最新）
 - 使用者已自行登入Cloudflare並準備Workers AI限定帳戶Read/Edit token；未取得/讀取Token值。指定Repo的CLOUDFLARE_ACCOUNT_ID已真保存，原META_PAGE_ACCESS_TOKEN保留。
 - GitHub Secret清單實讀尚無CLOUDFLARE_API_TOKEN。使用者19:24截圖明示Secret名稱格式不合法；不是Cloudflare權杖驗證失敗。請在正式GitHub新增Secret，Name只填CLOUDFLARE_API_TOKEN、Secret填既有Token，不加空格/引號，不把Token貼聊天。

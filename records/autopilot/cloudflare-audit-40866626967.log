@@ -1,0 +1,129 @@
+﻿2026-10-29T11:36:04.3334991Z Current runner version: '2.338.0'
+2026-10-29T11:36:04.3352686Z ##[group]Runner Image Provisioner
+2026-10-29T11:36:04.3353333Z Hosted Compute Agent
+2026-10-29T11:36:04.3353709Z Version: 20261021.618
+2026-10-29T11:36:04.3354177Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-10-29T11:36:04.3354627Z Build Date: 2026-10-21T00:45:21Z
+2026-10-29T11:36:04.3355104Z Worker ID: {38847ff2-192f-4304-907a-b6cfe861593b}
+2026-10-29T11:36:04.3355588Z Region: centralus
+2026-10-29T11:36:04.3355946Z Cloud: Azure
+2026-10-29T11:36:04.3356359Z ##[endgroup]
+2026-10-29T11:36:04.3357272Z ##[group]Operating System
+2026-10-29T11:36:04.3357693Z Ubuntu
+2026-10-29T11:36:04.3358077Z 24.04.5
+2026-10-29T11:36:04.3358429Z LTS
+2026-10-29T11:36:04.3358809Z ##[endgroup]
+2026-10-29T11:36:04.3359167Z ##[group]Runner Image
+2026-10-29T11:36:04.3359565Z Image: ubuntu-24.04
+2026-10-29T11:36:04.3360007Z Version: 20261025.353.1
+2026-10-29T11:36:04.3360827Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-29T11:36:04.3361701Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-10-29T11:36:04.3362364Z ##[endgroup]
+2026-10-29T11:36:04.3363078Z ##[group]GITHUB_TOKEN Permissions
+2026-10-29T11:36:04.3364258Z Contents: read
+2026-10-29T11:36:04.3364621Z Metadata: read
+2026-10-29T11:36:04.3365080Z ##[endgroup]
+2026-10-29T11:36:04.3366422Z Secret source: Actions
+2026-10-29T11:36:04.3367521Z Cache mode: write
+2026-10-29T11:36:04.3368013Z Prepare workflow directory
+2026-10-29T11:36:04.3574483Z Prepare all required actions
+2026-10-29T11:36:04.3608321Z Getting action download info
+2026-10-29T11:36:04.5929165Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-29T11:36:04.7408223Z Complete job name: cloudflare-read-only-audit
+2026-10-29T11:36:04.8011307Z ##[group]Run actions/checkout@v4
+2026-10-29T11:36:04.8011736Z with:
+2026-10-29T11:36:04.8012016Z   repository: gxaawill2-ui/cat-page-autopilot
+2026-10-29T11:36:04.8014224Z   token: ***
+2026-10-29T11:36:04.8014474Z   ssh-strict: true
+2026-10-29T11:36:04.8014729Z   ssh-user: git
+2026-10-29T11:36:04.8014989Z   persist-credentials: true
+2026-10-29T11:36:04.8015271Z   clean: true
+2026-10-29T11:36:04.8015535Z   sparse-checkout-cone-mode: true
+2026-10-29T11:36:04.8015834Z   fetch-depth: 1
+2026-10-29T11:36:04.8016087Z   fetch-tags: false
+2026-10-29T11:36:04.8016343Z   show-progress: true
+2026-10-29T11:36:04.8016606Z   lfs: false
+2026-10-29T11:36:04.8016847Z   submodules: false
+2026-10-29T11:36:04.8017114Z   set-safe-directory: true
+2026-10-29T11:36:04.8017533Z   allow-unsafe-pr-checkout: false
+2026-10-29T11:36:04.8017905Z ##[endgroup]
+2026-10-29T11:36:05.0199943Z Syncing repository: gxaawill2-ui/cat-page-autopilot
+2026-10-29T11:36:05.0201500Z ##[group]Getting Git version info
+2026-10-29T11:36:05.0202244Z Working directory is '/home/runner/work/cat-page-autopilot/cat-page-autopilot'
+2026-10-29T11:36:05.0203190Z [command]/usr/bin/git version
+2026-10-29T11:36:05.0275082Z git version 2.56.0
+2026-10-29T11:36:05.0288312Z ##[endgroup]
+2026-10-29T11:36:05.0298864Z Temporarily overriding HOME='/home/runner/work/_temp/3a94c193-91a8-4d96-bfc3-3cdb1f3e0003' before making global git config changes
+2026-10-29T11:36:05.0300058Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T11:36:05.0302100Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cat-page-autopilot/cat-page-autopilot
+2026-10-29T11:36:05.0353651Z Deleting the contents of '/home/runner/work/cat-page-autopilot/cat-page-autopilot'
+2026-10-29T11:36:05.0356907Z ##[group]Initializing the repository
+2026-10-29T11:36:05.0360303Z [command]/usr/bin/git init /home/runner/work/cat-page-autopilot/cat-page-autopilot
+2026-10-29T11:36:05.0553256Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-29T11:36:05.0554417Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-29T11:36:05.0555760Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-29T11:36:05.0556540Z hint: call:
+2026-10-29T11:36:05.0557010Z hint:
+2026-10-29T11:36:05.0557732Z hint: 	git config --global init.defaultBranch <name>
+2026-10-29T11:36:05.0558408Z hint:
+2026-10-29T11:36:05.0559032Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-29T11:36:05.0559938Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-29T11:36:05.0560685Z hint:
+2026-10-29T11:36:05.0561169Z hint: 	git branch -m <name>
+2026-10-29T11:36:05.0561695Z hint:
+2026-10-29T11:36:05.0562369Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-29T11:36:05.0563979Z Initialized empty Git repository in /home/runner/work/cat-page-autopilot/cat-page-autopilot/.git/
+2026-10-29T11:36:05.0574077Z [command]/usr/bin/git remote add origin https://github.com/gxaawill2-ui/cat-page-autopilot
+2026-10-29T11:36:05.0622097Z ##[endgroup]
+2026-10-29T11:36:05.0622849Z ##[group]Disabling automatic garbage collection
+2026-10-29T11:36:05.0624674Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-29T11:36:05.0662018Z ##[endgroup]
+2026-10-29T11:36:05.0662480Z ##[group]Setting up auth
+2026-10-29T11:36:05.0663917Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T11:36:05.0699035Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T11:36:05.1011933Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T11:36:05.1046683Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T11:36:05.1225895Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T11:36:05.1260973Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T11:36:05.1443189Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-29T11:36:05.1483428Z ##[endgroup]
+2026-10-29T11:36:05.1492035Z ##[group]Fetching the repository
+2026-10-29T11:36:05.1492969Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e565c848135ef424705bff5bfa5b8fa349f6f77a:refs/remotes/origin/feat/20261029-unattended-autopilot
+2026-10-29T11:36:06.0356493Z From https://github.com/gxaawill2-ui/cat-page-autopilot
+2026-10-29T11:36:06.0358381Z  * [new ref]         e565c848135ef424705bff5bfa5b8fa349f6f77a -> origin/feat/20261029-unattended-autopilot
+2026-10-29T11:36:06.0361523Z ##[endgroup]
+2026-10-29T11:36:06.0362511Z ##[group]Determining the checkout info
+2026-10-29T11:36:06.0363542Z ##[endgroup]
+2026-10-29T11:36:06.0367345Z [command]/usr/bin/git sparse-checkout disable
+2026-10-29T11:36:06.0420907Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-29T11:36:06.0456575Z ##[group]Checking out the ref
+2026-10-29T11:36:06.0459322Z [command]/usr/bin/git checkout --progress --force -B feat/20261029-unattended-autopilot refs/remotes/origin/feat/20261029-unattended-autopilot
+2026-10-29T11:36:06.0935818Z Switched to a new branch 'feat/20261029-unattended-autopilot'
+2026-10-29T11:36:06.0939424Z branch 'feat/20261029-unattended-autopilot' set up to track 'origin/feat/20261029-unattended-autopilot'.
+2026-10-29T11:36:06.0949216Z ##[endgroup]
+2026-10-29T11:36:06.0994374Z [command]/usr/bin/git log -1 --format=%H
+2026-10-29T11:36:06.1023055Z e565c848135ef424705bff5bfa5b8fa349f6f77a
+2026-10-29T11:36:06.1219032Z ##[group]Run python3 scripts/cloudflare_ai.py --audit
+2026-10-29T11:36:06.1219804Z [36;1mpython3 scripts/cloudflare_ai.py --audit[0m
+2026-10-29T11:36:06.1239281Z shell: /usr/bin/bash -e {0}
+2026-10-29T11:36:06.1240006Z env:
+2026-10-29T11:36:06.1240761Z   CLOUDFLARE_ACCOUNT_ID: ***
+2026-10-29T11:36:06.1241442Z   CLOUDFLARE_API_TOKEN: ***
+2026-10-29T11:36:06.1241982Z ##[endgroup]
+2026-10-29T11:36:08.0222524Z {"checked_at": "2026-10-29T11:36:08.021893+00:00", "workers_ai_read_authorized": true, "models_found": ["@cf/google/gemma-4-26b-a4b-it", "@cf/black-forest-labs/flux-1-schnell"], "inference_calls": 0, "facebook_write_calls": 0, "free_account_plan_verified": false, "live_generation_verified": false}
+2026-10-29T11:36:08.0389697Z Post job cleanup.
+2026-10-29T11:36:08.0936208Z [command]/usr/bin/git version
+2026-10-29T11:36:08.0968490Z git version 2.56.0
+2026-10-29T11:36:08.0991623Z Temporarily overriding HOME='/home/runner/work/_temp/57082500-f2c3-4863-8099-8d9310387259' before making global git config changes
+2026-10-29T11:36:08.0992332Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-29T11:36:08.0995855Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cat-page-autopilot/cat-page-autopilot
+2026-10-29T11:36:08.1028184Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-29T11:36:08.1055990Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-29T11:36:08.1268980Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-29T11:36:08.1294042Z http.https://github.com/.extraheader
+2026-10-29T11:36:08.1303816Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-29T11:36:08.1355606Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-29T11:36:08.1563989Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-29T11:36:08.1601792Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-29T11:36:08.1900816Z Cleaning up orphan processes
+2026-10-29T11:36:08.2221817Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
