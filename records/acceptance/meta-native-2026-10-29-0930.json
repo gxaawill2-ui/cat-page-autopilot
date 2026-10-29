@@ -1,0 +1,133 @@
+{
+  "status": "published_ui_verified",
+  "page_id": "1346385028565797",
+  "slot": "2026-10-29T09:30",
+  "observed_at": "2026-10-29T09:42:43.113913+08:00",
+  "time_gate": {
+    "first_clock_utc": "2026-10-29T01:39:44Z",
+    "first_clock_taipei": "2026-10-29T09:39:44+08:00",
+    "scheduled_taipei": "2026-10-29T09:30:00+08:00",
+    "after_due": true
+  },
+  "source": "Official Meta Business Suite specified Page published list, object insights preview, then actual Facebook permalink",
+  "ui_evidence": {
+    "page_name": "貓咪投資筆記",
+    "asset_id": "1346385028565797",
+    "tab_selected": "已發佈",
+    "grid": "已發佈的貼文",
+    "published_row_id": "122106746697515576",
+    "published_row_text": "I bought the fancy cat bed. She chose the bag it came in. Five-star packaging. ⭐🐾",
+    "published_date_text": "10月29日 9:30",
+    "detail_header": "貼文 ·發佈時間：10月29日 9:30",
+    "detail_url": "https://business.facebook.com/latest/insights/object_insights/?asset_id=1346385028565797&ir_qe_exposed=1&content_id=122106746697515576&nav_ref=bizweb_published_posts_table",
+    "facebook_permalink_opened": true,
+    "facebook_permalink_dialog_title": "貓咪投資筆記的貼文",
+    "public_audience_ui": "分享對象：所有人"
+  },
+  "ids": {
+    "scheduled_preview_post_id": "812374491970657",
+    "scheduled_business_suite_content_id": "1128212423131470",
+    "scheduled_photo_id": "122106718473515576",
+    "published_post_id": "122106746697515576",
+    "published_post_id_source": "Official published list row checkbox ID and object_insights content_id; distinct from photo ID",
+    "published_photo_id": "122106746685515576",
+    "published_photo_id_source": "Official preview visible photo.php?fbid link",
+    "permalink_story_fbid": "pfbid0M8LMuVYwk6gknkbuvf4stRQfHCjRxMxfndsx9JCUS2kukbroTTGcVsMWac4pMLK2l",
+    "note": "Scheduled preview and published IDs differ. Original IDs retained without overwrite; no unsupported API composite ID invented."
+  },
+  "post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid0M8LMuVYwk6gknkbuvf4stRQfHCjRxMxfndsx9JCUS2kukbroTTGcVsMWac4pMLK2l&id=61595467295507",
+  "published_time_ui": "2026-10-29T09:30:00+08:00",
+  "published_time_precision": "minute; UI label, seconds not observed",
+  "created_time_api": null,
+  "is_published_api": null,
+  "api_verification": null,
+  "api_note": "No Graph API invoked; designated Secret previously HTTP401/code190/subcode463 expired. No token read, reauthorization or write attempted.",
+  "caption": "I bought the fancy cat bed.\nShe chose the bag it came in.\nFive-star packaging. ⭐🐾",
+  "caption_verification": {
+    "source": "Official Business Suite expanded feed preview",
+    "full_text_matches_queue": true,
+    "emoji_alt_text": [
+      "⭐",
+      "🐾"
+    ],
+    "lines": [
+      "I bought the fancy cat bed.",
+      "She chose the bag it came in.",
+      "Five-star packaging. ⭐🐾"
+    ]
+  },
+  "image_verification": {
+    "expected_sha256": "370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8",
+    "repo_original_hash_verified": true,
+    "published_image_visual_matches": true,
+    "source": "Business Suite live preview screenshot viewed, compared to existing repository JPEG via view_image",
+    "description": "Green-eyed gray tabby in brown paper bag, empty cream-lined blue bed at right, blue couch and blue rug, same composition",
+    "published_image_byte_hash": null,
+    "note": "Visual match only; Facebook-transcoded image byte SHA not claimed."
+  },
+  "scheduled_receipt_preserved": {
+    "page_id": "1346385028565797",
+    "slot": "2026-10-29T09:30",
+    "status": "scheduled_ui_verified",
+    "method": "Meta Business Suite official native scheduling UI",
+    "caption_sha256": "c57fa21556d70c301b4d4e2d597d7691986487d455c4ead627e60fb031066f8c",
+    "image_sha256": "370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8",
+    "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8.jpg",
+    "scheduled_publish_time": 1793237400,
+    "scheduled_taipei": "2026-10-29T09:30:00+08:00",
+    "armed_at": "2026-10-29T07:40:06.503722+08:00",
+    "retry_allowed": false,
+    "meta_post_id": "812374491970657",
+    "ui_target_verified": "Facebook 貓咪投資筆記 only",
+    "ui_date_verified": "2026年10月29日",
+    "ui_time_verified": "09:30 (24-hour)",
+    "ads_stories_boost_enabled": false,
+    "image_qa": true,
+    "image_url_proof": "records/url-checks/native-20261029-0930.json",
+    "note": "Durable intent before single Schedule button. Missing receipt never proves not submitted; check Planner before any recovery.",
+    "post_id_source": "Official Facebook preview time permalink /812374491970657; not the photo ID",
+    "business_suite_content_id": "1128212423131470",
+    "photo_id": "122106718473515576",
+    "planner_verified": true,
+    "planner_date_text": "10月29日 9:30",
+    "scheduled_ui_receipt": "你已透過 Meta Business Suite 排定一則貼文",
+    "caption_matches": true,
+    "image_visual_matches": true,
+    "visual_review": "passed; official scheduled preview matches original paper-bag cat and empty bed",
+    "is_published_api": null,
+    "ui_publication_state": "scheduled_not_yet_published",
+    "api_field_note": "API credential expired; do not fabricate Graph is_published=false readback. Official UI scheduled tab and future time are verified instead.",
+    "verified_at": "2026-10-29T07:46:46.229939+08:00",
+    "evidence_screenshot": "cat-native-0930-planner-20261029.jpg",
+    "published_acceptance": "pending_due_time",
+    "source_queue": "queue/meta/2026-10-29/0930.json",
+    "language": "en",
+    "target_markets": [
+      "US",
+      "PH"
+    ],
+    "experiment_id": "intl-20261026-14d",
+    "topic": "原創英文包裝豪宅貓",
+    "style": "自然寫實晨光",
+    "caption_type": "短句生活幽默",
+    "actual_audience_geography": null
+  },
+  "read_only_checks": {
+    "published_list_and_expanded_preview": true,
+    "actual_facebook_permalink": true,
+    "windsor_queries": 0,
+    "graph_api_calls": 0,
+    "facebook_writes": 0,
+    "old_queue_or_locks_changed": false,
+    "other_three_slots_changed": false
+  },
+  "budget_ntd": 0,
+  "classification": "First Meta native scheduled delivery published UI verified. Content preparation remains semi-automatic interactive Work batch; no continuous/permanent unattended success claim.",
+  "external_blockers": [
+    "Existing Graph credential expiry prevents API field verification; does not block authenticated official UI readback."
+  ],
+  "library_sync": {
+    "file_id": "libfile_eb843306062c81919a18f9a9efc211f9",
+    "status": "pending"
+  }
+}
