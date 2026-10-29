@@ -9,10 +9,13 @@
   ],
   "free_quota_neurons_daily": 10000,
   "free_exhaustion": "fail; no paid upgrade authorized",
-  "dashboard_state": "signed out",
+  "dashboard_state": "Official password login submitted once; API Request Failed: post https://dash.cloudflare.com/api/v4/login (403)",
   "account_id": null,
   "token_configured": false,
   "generation_verified": false,
   "new_meta_scheduled_post_id": null,
-  "production_enabled": false
+  "production_enabled": false,
+  "login_error_cause": "unknown; site did not provide a specific reason",
+  "automated_login_retries": 0,
+  "next_step": "User takeover of official Cloudflare authentication; no card, no paid upgrade. Do not repeat failing automated sign-in."
 }

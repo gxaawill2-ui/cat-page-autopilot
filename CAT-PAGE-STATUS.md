@@ -1,3 +1,9 @@
+## 2026-10-29 Cloudflare替代方案：真登入回403，停止自動重試（最新）
+- Vercel綁卡表單已取消且dialog=0，使用者拒絕新增卡片的限制持續有效。
+- 本人安全表單選Email/password，正常提交一次，Cloudflare官方頁明示 API Request Failed: post https://dash.cloudflare.com/api/v4/login (403)。未提供更具體原因，不能斷言密碼錯誤或bot攔截。沒有再次自動登入、沒有換網路/指紋/繞過限制。
+- 尚未取得Cloudflare Account ID/API Token、尚未在帳戶核實Workers Free，也沒有新AI圖片或Meta預約。下一步交由本人接手官方登入；完成後先查免費方案、必要模型與額度耗盡停止，再改PR AI供應端實測。不要回到Vercel卡驗證。
+- 已修復的Meta長效Secret與既有Meta預約/四slot不動，production仍不合併/不啟用。免費配額官方依據與真登入錯誤見 records/autopilot/2026-10-29-no-card-alternative.json。
+
 ## 2026-10-29 使用者拒絕新增信用卡：停止Vercel，改查Cloudflare Workers Free（最新優先）
 - 使用者明確要求不新增信用卡、改用其他方法。已取消Vercel Add a Card表單並核對dialog消失；未送卡片/付款、未建立Gateway key。所有「下一步綁卡」舊段落作廢，不能再次要求綁卡。
 - 官方最新Cloudflare Workers AI pricing確認Workers Free每日10,000 Neurons，用完報錯停止；超額必須另行升級Workers Paid。本任務不升級、不加卡、不購買credits、不啟用Unified billing。官方flux-1-schnell模型存在，REST回傳base64 image；尚未證實此帳戶可使用或圖像品質合格。
