@@ -1,6 +1,6 @@
 {
   "slot": "2026-10-30T09:30",
-  "status": "structured_qa_armed_unknown",
+  "status": "qa_pass_needs_human_visual_acceptance",
   "facebook_write_calls": 0,
   "retry_allowed": false,
   "started_at": "2026-10-30T07:26:15.297579+08:00",
@@ -54,7 +54,7 @@
   "image_model": "@cf/black-forest-labs/flux-1-schnell",
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
-  "image_qa": false,
+  "image_qa": true,
   "completed_at": "2026-10-30T07:26:34.233140+08:00",
   "vision_diagnostic_attempted": true,
   "vision_response": "FAIL",
