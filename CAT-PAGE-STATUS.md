@@ -1,3 +1,12 @@
+## 2026-10-29 09:30 Meta原生配送已發布／純讀取驗收通過（最新）
+- 觀測時間2026-10-29T09:43:20.496743+08:00；先以真UTC時鐘01:39:44（台北09:39:44）確認已過09:30。正式Business Suite指定asset_id=1346385028565797、「已發佈」分頁與「已發佈的貼文」清單均見新英文紙袋貓，發佈日期10月29日9:30；詳情明示「貼文 ·發佈時間：10月29日 9:30」。
+- 真發布Post ID **122106746697515576**，來源官方已發佈清單checkbox ID及object_insights content_id；原預約預覽Post ID812374491970657、原Business Suite內容ID1128212423131470完整保留，不改寫或混同。原預約photo122106718473515576；發布圖片link fbid=122106746685515576，均不是Post ID。
+- 正式Facebook網址已實際開啟、對話框顯示本篇：https://www.facebook.com/permalink.php?story_fbid=pfbid0M8LMuVYwk6gknkbuvf4stRQfHCjRxMxfndsx9JCUS2kukbroTTGcVsMWac4pMLK2l&id=61595467295507
+- 完整三行原文I bought the fancy cat bed.／She chose the bag it came in.／Five-star packaging. ⭐🐾，官方預覽展開核對queue一致；已發佈圖片實際目視與既有JPEG370006c2727c50d7274cd563c859a105df81a281e8730c2e9fd39670526452f8一致（灰虎斑紙袋、右側藍色空貓床、藍沙發地毯）。已驗本地原圖SHA；不假稱Facebook壓縮圖片位元組SHA一致。
+- status=published_ui_verified；只以官方UI驗證，Graph created_time/is_published/API驗證均null，分鐘精度不冒稱秒數。指定Secret既有401/190/463失效仍在，未讀Token、未重授權、未呼叫Graph/Windsor，更無FB建立/編輯/刪除/發布/排程/重送。
+- 原scheduled回條完整保存；state/meta_native/2026-10-29-0930.json補發布結果，records/acceptance/meta-native-2026-10-29-0930.json保存來源/ID差異/全文/圖核對；採expected_sha+force=false CAS。僅此篇驗收，其他12:30/16:30/19:30預約、舊事故內容與鎖、品牌、停用的daily及Actions即時路徑皆未動。
+- **僅第一篇Meta原生定時配送驗收成功；互動Work提前批次備稿仍為半自動，未宣稱永久全自動或連續穩定。** 額外NT$0。Library唯一入口同步另以版本25防衝突保存；失敗需另記，不冒稱成功。
+
 ## 2026-10-29 Meta原生預約一日四篇已建妥／實際發布待驗收（最新）
 - 保存時間2026-10-29T08:20:51.659401+08:00。正式Meta Business Suite已排定今日09:30英文、12:30繁中、16:30繁中、19:30英文，全新原創圖文，各1次ImageGen/目視QA/公開JPEG200-MIME-SHA通過；未補舊文，日上限4，品牌/Page不改。
 - 真預約Facebook預覽Post ID依序812374491970657／1840103147059522／28831968349765535／1135613809012719；每篇另存Business Suite內容ID、photo ID、UI明確日期時間、全文及目視證據。只有photo ID不算成功，這四篇均有獨立post permalink。
