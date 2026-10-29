@@ -1,3 +1,13 @@
+## 2026-10-29 現行模式：互動Work批次製作＋Meta原生預約（最高優先）
+- 不再使用GitHub cron到點立即發文。meta-graph-publish.yml已無schedule及立即寫入分支，只保留手動native schedule/audit/dry-run/verify；不靠它控制發布時間。下方Windsor/Actions立即發布步驟全屬歷史，禁止執行或復原。
+- 實際指定Secret已在真run40787647222回401/code190/subcode463，10/28 16:00台北失效。官方SDK支持未發布photos→Feed attached_media/published=false/scheduled_publish_time/SCHEDULED，但本次API未獲可用Token，不報API預約成功、不再盲目重授權。改正式Business Suite UI原生排程。
+- 每批先讀最新state/meta_native、state/posts/meta_dispatch、queue及官方已排定/已發佈清單。未知和已預約slot不可重送；10/26–28舊事故不復用。最多每日4篇，09:30en/12:30繁中/16:30繁中/19:30en，既有日文日期與國際實驗保留。
+- 全新原創圖文與候選/提示/QA先持久保存。prepare JPEG→binary/CAS→Pages匿名200/image/jpeg/SHA→queue。大CAT進度檔不要塞入24000token binary manifest，應分開完整小批CAS；截斷JSON不能拼接或當成功。每次fresh main，衝突重讀不可覆蓋。
+- 官方UI確認Page、廣告/限時動態/加強推廣關閉，填新文案與本篇JPEG，選日期與24小時時間。Meta小時/分鐘元件需鍵盤輸入並讀實值，僅fill可能未套用；time dialog儲存只是時間設定，最後排定時間才提交。
+- 每篇最後提交前CAS保存state/meta_native/日期-HHMM.json=ui_schedule_armed_unknown_until_reconciled，含slot/圖文hash。只按一次排定時間。成功後略過廣告促銷；回到已排定清單核時間/全文/圖片，保存Facebook預覽post permalink ID、Business Suite內容ID、photo ID（不可混為一談）。若中斷只查清單，不能直接再送。
+- Planner外層日期格/建立連結可能開新稿；核對用內容→已排定發佈→該篇內容列→貼文詳情。未發布時以scheduled_ui_verified及來源明確的UI狀態記錄；API欄位取不到就null，不能捏造is_published=false。到點後確認已發佈清單、真ID/網址/實際時間/圖文目視，才另存published_ui_verified。仍預約/未知只記pending/overdue，不按立即發布、不清鎖、不補發。
+- 今天四篇已原生預約，見records/migration/2026-10-29-native/result.json。09:40沿用既有一次性驗收task作純讀取核對，不是新發文任務；未執行不稱成功。原daily因requires_user_action再次停用、平台無工具trace，保持paused；不可用反覆enabled宣稱修復。內容生產目前半自動，既有週日分析保留、三天檢討停用依賴需互動補核，不保證無人持續。
+
 ## 官方 Meta API 切換（2026-10-27，優先於全部 Windsor 發文段落）
 - 原 ChatGPT daily 僅提前準備未來 slot 的 queue，完全禁止 Windsor/Meta/UI 發布。原ID及時段保留，10/28已恢復queue-only enabled；不要將舊歷史提示當發布授權。
 - 讀 docs/meta-official-alternative.md。正式發布唯一 executor 為既有 .github/workflows/meta-graph-publish.yml。公開 repo無 token；只准 META_PAGE_ACCESS_TOKEN Actions Secret。正式開關未設置視為關閉。

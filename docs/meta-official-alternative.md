@@ -1,3 +1,11 @@
+## 2026-10-29 現行結果：採Business Suite原生排程，半自動（優先於歷史）
+- 停止GitHub Actions cron立即發文：同一workflow沒有schedule或即時發文分支。手動native API準備器15項安全測試通過，但真audit因現Secret已過期而401/190/463；不是預約參數遭拒，也不把SDK支援當實際API接受。
+- 依使用者授權直接用已登入的Meta Business Suite完成10/29四篇原生預約。09:30／12:30／16:30／19:30，en／繁中／繁中／en，全新原創圖文，正式已排定清單4列、Planner首篇與完整預覽已核。
+- 各真post permalink ID、內容ID、photo ID、來源與日期時間分存state/meta_native/2026-10-29-HHMM.json；總結records/migration/2026-10-29-native/result.json。API is_published無法取得時為null；UI核實scheduled，不冒充Graph回條。
+- 目前尚未到第一篇時間，真正發布驗收pending；沿用既有一次性驗收task於09:40只讀核對，禁止所有FB寫入。不能因預約成功就宣稱已全自動成功。內容仍需互動Work批次製作，原daily持續paused，平台不提供停用原因trace；週日分析不變。
+- 查10/28真Actions晚間日誌：兩run延到隔日01:16/02:18執行，程式映射為當天19:30並EARLY跳過，正式步驟未FB寫入。GitHub內部延遲原因unknown，不再加cron補救。測試stdout模擬UNKNOWN等不可當實際發布。
+- 未恢復Token前不嘗試API寫入，不建立第二粉專、不更名、不買廣告、不重送歷史事故。每篇先CAS意圖後單次原生UI排程，未知先核對，已占用slot不重用。到點後再以已發佈清單/Planner/真永久網址/圖文驗收配送。
+
 ## 2026-10-28 15:xx 上線前置完成（優先於歷史阻礙）
 - 正式授權、官方長效延展、指定Page Secret輪替及Actions GET預檢均實測成功；run40646935634/18tests/Facebook POST0。Token值不寫repo。
 - 已設META_PUBLISH_ENABLED=true，原daily任務恢復queue-only enabled，原週日分析不變；未建立新任務或workflow。
