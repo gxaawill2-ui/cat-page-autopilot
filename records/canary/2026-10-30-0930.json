@@ -1,6 +1,6 @@
 {
   "slot": "2026-10-30T09:30",
-  "status": "vision_diagnostic_armed_unknown",
+  "status": "qa_failed_held",
   "facebook_write_calls": 0,
   "retry_allowed": false,
   "started_at": "2026-10-30T07:26:15.297579+08:00",
