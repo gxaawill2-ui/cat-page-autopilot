@@ -130,11 +130,19 @@ class ReplenishSafetyTest(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,"base64 image"):
                 a.make_image("cat","key")
 
-    def test_visual_qa_must_say_exact_pass(self):
-        with patch.object(a,"chat",return_value="FAIL"):
+    def test_visual_qa_requires_every_check_and_actual_reason(self):
+        keys=("cat_visible","coherent_anatomy","safe_content","no_text_or_signature","no_watermark")
+        result={"decision":"PASS","reason":"A coherent cat with clean corners.","checks":dict.fromkeys(keys,True)}
+        with patch.object(a,"chat",return_value=json.dumps(result)):
+            self.assertTrue(a.qa_image(b"test","cat","key"))
+        result["checks"]["no_watermark"]=False
+        with patch.object(a,"chat",return_value=json.dumps(result)):
+            self.assertFalse(a.qa_image(b"test","cat","key"))
+        result["checks"]["no_watermark"]="true"
+        with patch.object(a,"chat",return_value=json.dumps(result)):
             self.assertFalse(a.qa_image(b"test","cat","key"))
         with patch.object(a,"chat",return_value="PASS"):
-            self.assertTrue(a.qa_image(b"test","cat","key"))
+            with self.assertRaises(json.JSONDecodeError): a.qa_image(b"test","cat","key")
 
     def test_existing_native_slot_never_requeued(self):
         with tempfile.TemporaryDirectory() as tmp:

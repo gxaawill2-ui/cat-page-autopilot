@@ -87,11 +87,22 @@ def make_image(scene,key):
 
 def qa_image(jpg,scene,key,raw_sink=None):
     uri="data:image/jpeg;base64,"+base64.b64encode(jpg).decode()
+    prompt=("Inspect the supplied image, not the scene description alone. Return JSON only with "
+      "decision (PASS or FAIL), reason (specific visible evidence), checks object with exactly "
+      "cat_visible, coherent_anatomy, safe_content, no_text_or_signature, no_watermark. "
+      "Each check must be a JSON boolean. PASS only if ALL checks are true. "
+      "If you cannot inspect the image, all checks false and explain that. "
+      "Stylized original illustrations are allowed, but malformed body parts or marks fail. Scene: "+scene)
     response=chat([{"role":"user","content":[
-       {"type":"text","text":"Return ONLY PASS if the image clearly depicts a coherent cat illustration, with no inappropriate content, symbols, gibberish writing or watermark; else FAIL. "+scene},
-       {"type":"image_url","image_url":{"url":uri}}]}],key,VISION)
+       {"type":"text","text":prompt},
+       {"type":"image_url","image_url":{"url":uri}}]}],key,VISION,json_object=True)
     if raw_sink is not None: raw_sink(response)
-    return response.strip()=="PASS"
+    result=json.loads(response)
+    keys={"cat_visible","coherent_anatomy","safe_content","no_text_or_signature","no_watermark"}
+    checks=result.get("checks",{})
+    return (result.get("decision")=="PASS" and isinstance(result.get("reason"),str)
+            and bool(result["reason"].strip()) and isinstance(checks,dict)
+            and set(checks)==keys and all(v is True for v in checks.values()))
 
 def slots_to_fill(now):
     for days in range(3):

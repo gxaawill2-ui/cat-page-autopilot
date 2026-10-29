@@ -32,6 +32,23 @@ def run():
     day, slot = targets[0]
     path = ROOT / "records/canary" / (str(day) + "-" + slot.replace(":", "") + ".json")
     previous = auto.base.read(path) if path.exists() else None
+    if previous and previous.get("status")=="qa_failed_held" and previous.get("image_attempts")==2 and previous.get("vision_response")=="FAIL" and not previous.get("structured_qa_attempted"):
+        record=dict(previous)
+        record.update(status="structured_qa_armed_unknown",structured_qa_attempted=True)
+        auto.base.write(path,record)
+        persist([path],"Persist one structured QA diagnosis of same image; preserve prior FAIL")
+        jpg=(ROOT/record["image_path"]).read_bytes()
+        if hashlib.sha256(jpg).hexdigest()!=record["image_sha256"]: raise ValueError("SHA mismatch")
+        def save_structured(raw):
+            record["structured_qa_response"]=raw
+            auto.base.write(path,record)
+            persist([path],"Save actual per-check vision evidence before verdict")
+        passed=auto.qa_image(jpg,record["content"]["scene"],key,raw_sink=save_structured)
+        record.update(status="qa_pass_needs_human_visual_acceptance" if passed else "qa_failed_held",image_qa=passed)
+        auto.base.write(path,record)
+        persist([path],"Save strict all-checks QA verdict; zero Meta writes")
+        print(json.dumps(record,ensure_ascii=False))
+        return
     if previous and previous.get("status")=="qa_failed_held" and previous.get("image_attempts")==2 and not previous.get("vision_response") and not previous.get("vision_diagnostic_attempted"):
         record=dict(previous)
         record.update(status="vision_diagnostic_armed_unknown",vision_diagnostic_attempted=True)
