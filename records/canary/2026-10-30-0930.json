@@ -1,6 +1,6 @@
 {
   "slot": "2026-10-30T09:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "facebook_write_calls": 0,
   "retry_allowed": false,
   "started_at": "2026-10-30T07:23:04.328332+08:00",
@@ -26,5 +26,10 @@
     "scene": "A hand-painted book illustration of Mibao, a playful tabby cat, leaping mid-air in a lush, sun-drenched garden. Her eyes are wide with intense focus, and her paws are outstretched toward a single, floating dandelion seed. Soft natural light filters through green leaves, highlighting her precise markings and whiskers.",
     "topic": "Playful garden adventures"
   },
-  "language": "en"
+  "language": "en",
+  "image_sha256": "f0f947f91966a981473d113185ee29e868a28f27ecb3313c8c074292ba80e455",
+  "image_path": "docs/assets/f0f947f91966a981473d113185ee29e868a28f27ecb3313c8c074292ba80e455.jpg",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it"
 }
