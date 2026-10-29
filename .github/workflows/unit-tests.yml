@@ -13,6 +13,12 @@ name: Cat Page Python Safety Tests
       - scripts/test_meta_graph_publish.py
       - .github/workflows/meta-graph-publish.yml
   workflow_dispatch:
+    inputs:
+      generate_canary:
+        description: 'One original Cloudflare generation on feature branch only; no Facebook writes'
+        type: boolean
+        required: true
+        default: false
 permissions:
   contents: read
 jobs:
@@ -44,3 +50,30 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         run: python3 scripts/cloudflare_ai.py --audit
+  cloudflare-original-canary:
+    if: github.event_name == 'workflow_dispatch' && inputs.generate_canary == true
+    needs: [safety-tests, cloudflare-read-only-audit]
+    permissions:
+      contents: write
+    concurrency:
+      group: cat-cloudflare-single-canary
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m pip install 'Pillow>=11,<13'
+      - name: Single original generation and vision acceptance (no Meta credentials)
+        env:
+          CF_CANARY_ENABLED: 'true'
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python3 scripts/cloudflare_canary.py
+      - name: Preserve recovery evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-original-canary-${{ github.run_id }}
+          path: |
+            records/canary/
+          retention-days: 7

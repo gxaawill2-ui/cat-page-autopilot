@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-30T07:16:35.913307+08:00",
+  "evidence_type": "user-provided screenshot of official Cloudflare Workers plans",
+  "source_filename": "image(20261029-231522).png",
+  "source_sha256": "198ee51ac93b1220ffc8386986d366d82be6e1b3c65b0dd8817a9feb6390dfac",
+  "visible_current_plan": "Free",
+  "visible_price": "$0",
+  "visible_badge": "Current plan",
+  "paid_button_not_clicked": true,
+  "account_matches_previous_account_details": true,
+  "provider_hard_stop_basis": "Workers AI official Free daily allocation; requests fail on exhaustion; direct REST only, no gateway billing or upgrades",
+  "pricing_source": "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+  "inference_verified": false
+}

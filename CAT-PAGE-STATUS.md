@@ -1,3 +1,9 @@
+## 2026-10-30 已確認帳戶Workers Free，開始單篇真生成驗收（最新）
+- 使用者正式Workers plans截圖明確顯示Free/$0/Current plan；同帳戶對應。證據records/autopilot/2026-10-30-cloudflare-free.json，只記畫面事實與圖片SHA，不公開含個人資訊原圖。
+- 指定Cloudflare Secret真GET與87項CI已通過，不重做授權。PR免費門檻核實，直接Workers AI已審模型、無Gateway付費回退或升級；14天或方案變更需重核。
+- 單次生成驗收僅既有PR分支，無Meta憑證與FB呼叫；文案意圖、真JPEG及QA分段CAS保存，unknown不重生。正式仍未啟用、不合併。
+- 下一步實跑單篇新文案/圖片/視覺，目視後main只提交素材/queue、驗200/MIME/SHA，再用既有main原生scheduler排下一空白未來正常slot與Planner核實。無新Post ID前不宣稱預約成功。
+
 ## 2026-10-29 Cloudflare Secret已真保存，Actions實際連線＋87項安全CI通過（最新）
 - GitHub清單已真讀回CLOUDFLARE_ACCOUNT_ID、CLOUDFLARE_API_TOKEN、META_PAGE_ACCESS_TOKEN。先前Secret名稱格式錯誤已解決，不再要求重建Token或重新貼對話。
 - 既有unit-tests.yml在原PR分支單次workflow_dispatch實跑40866626967，source e565c848；audit job123422913427與safety job123422913861均success。真GET指定帳戶Workers AI模型清單成功，Gemma 4與FLUX.1 schnell均存在。憑證只由Actions Secret注入，全程不讀出值。

@@ -1,0 +1,68 @@
+"""Single original generation acceptance. Feature branch only; zero Meta calls."""
+import datetime as dt
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import auto_replenish as auto
+import cloudflare_ai as cf
+
+ROOT = Path(__file__).resolve().parents[1]
+BRANCH = "feat/20261029-unattended-autopilot"
+
+
+def persist(paths, message):
+    auto.base.git("add", *[str(p.relative_to(ROOT)) for p in paths])
+    auto.base.git("-c", "user.name=cat-canary[bot]", "-c",
+                  "user.email=cat-canary@users.noreply.github.com", "commit", "-m", message)
+    auto.base.git("push", "origin", "HEAD:" + BRANCH)
+
+
+def run():
+    if os.environ.get("GITHUB_REF") != "refs/heads/" + BRANCH:
+        raise ValueError("Canary must use existing feature branch; no production write")
+    if os.environ.get("CF_CANARY_ENABLED") != "true":
+        raise ValueError("Canary not explicitly requested")
+    cf.budget_gate(ROOT, dt.datetime.now(auto.TZ))
+    _, key = cf.credentials()
+    targets = list(auto.slots_to_fill(dt.datetime.now(auto.TZ)))
+    if not targets:
+        raise ValueError("No future normal slot")
+    day, slot = targets[0]
+    path = ROOT / "records/canary" / (str(day) + "-" + slot.replace(":", "") + ".json")
+    if path.exists():
+        raise ValueError("Existing canary intent; reconcile, never regenerate")
+    record = {"slot": str(day) + "T" + slot, "status": "content_armed_unknown",
+              "facebook_write_calls": 0, "retry_allowed": False,
+              "started_at": dt.datetime.now(auto.TZ).isoformat()}
+    auto.base.write(path, record)
+    persist([path], "Persist original canary generation intent before inference")
+    item, language = auto.content(day, slot, key)
+    record.update(status="image_armed_unknown", content=item, language=language)
+    auto.base.write(path, record)
+    persist([path], "Persist real AI caption before single image call")
+    jpg = auto.make_image(item["scene"], key)
+    digest = hashlib.sha256(jpg).hexdigest()
+    image_path = ROOT / "docs/assets" / (digest + ".jpg")
+    image_path.write_bytes(jpg)
+    record.update(status="jpeg_durable_qa_pending", image_sha256=digest,
+                  image_path=str(image_path.relative_to(ROOT)),
+                  image_model=cf.IMAGE, text_model=cf.TEXT, vision_model=cf.VISION)
+    auto.base.write(path, record)
+    persist([path, image_path], "Persist actual original canary JPEG before visual QA")
+    passed = auto.qa_image(jpg, item["scene"], key)
+    record.update(status="qa_pass_needs_human_visual_acceptance" if passed else "qa_failed_held",
+                  image_qa=passed, completed_at=dt.datetime.now(auto.TZ).isoformat())
+    auto.base.write(path, record)
+    persist([path], "Persist actual canary vision decision; no Meta writes")
+    print(json.dumps(record, ensure_ascii=False))
+
+
+if __name__ == "__main__":
+    import sys
+    try:
+        run()
+    except Exception as exc:
+        print("CANARY_STOP " + type(exc).__name__ + ": " + str(exc)[:180], file=sys.stderr)
+        sys.exit(1)
