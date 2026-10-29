@@ -127,7 +127,11 @@
     "Existing Graph credential expiry prevents API field verification; does not block authenticated official UI readback."
   ],
   "library_sync": {
+    "status": "succeeded",
     "file_id": "libfile_eb843306062c81919a18f9a9efc211f9",
-    "status": "pending"
+    "current_version": 26,
+    "guarded_previous_version": 25,
+    "status_commit": "c4b38536ac0c14018d4e1f8b94b102fd898e46a4",
+    "evidence_commit": "59efb09014aa78f0e1341f8e667339da2431d2cb"
   }
 }
