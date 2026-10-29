@@ -1,3 +1,27 @@
+## 2026-10-30 07:46 Asia/Taipei — Cloudflare 免費 AI → Meta API 原生預約已實測；到點發布待驗收
+
+- NT$0、無新增信用卡：帳號 Free / $0 / Current plan 證據已保存。新英文文案、原創圖片、結構化五項 QA 與 Work 目視均已完成；未重用事故內容。
+- 真正 Meta 預約 Post ID：`1346385028565797_122107140849515576`，photo `122107140813515576`；Actions run **40974894704** 單次 schedule 成功，15 項原生安全測試通過。回讀 `is_published=false`、`scheduled_publish_time=1793323800`（**2026-10-30 09:30 Asia/Taipei**），完整文案與圖片附件一致。
+- 官方 Planner 已確認週五30日上午9:30、有相同貓咪圖片與完整英文文案，顯示「由 Cat Page Autopilot 排程」。Planner 預覽編號1696925965336707另存，不冒充 API Post ID。未點「立即發佈」。
+- 影像公開 URL 已真實匿名200/image/jpeg/SHA一致；資產SHA `3d42d781b3f67d5bb3271d2e7afa9e547ba53fc140842ef988f2619037744d92`。
+- 狀態 `state/meta_native/2026-10-30-0930.json` 與 `records/acceptance/meta-native-2026-10-30-0930.json` 保存 API/UI 證據；截圖 `records/acceptance/2026-10-30-0930-planner.jpg`。
+- **到點發布未驗收**。PR #1 保持未合併，Production `CAT_AUTOPILOT_ENABLED` 未啟用；不能把本次手動觸發 canary 說成連續無人值守成功。
+- 沿用既有一次性只讀驗收任務 `6ad6ec1845d48191938f06790c91fe8a`，改為10/30 09:40台北時間，回讀 `is_enabled=true`；工具當時回傳 `next_run_time=null`，不得保證平台準時執行。未新增重複任務。
+- 下一個精確步驟：09:30後既有 `meta-graph-publish.yml` **mode=verify**、queue=`queue/meta/2026-10-30/0930.json`；只核對真 Post ID、is_published、文案、圖片與 Planner。禁止再次 schedule、補發或重送。真發布驗收後再處理 PR 正式部署及三日補充；任何未知保持原鎖。
+
+## 2026-10-30 逐項視覺QA已真PASS／Pages200-MIME-SHA已真驗，準備原生預約（最新）
+- 同一第二張3d42d781...未重新生圖。舊PASS/FAIL提示只回FAIL，完整保留；新嚴格JSON檢查run40974116474取得PASS，cat_visible/coherent_anatomy/safe_content/no_text_or_signature/no_watermark全部true，理由明示無文字簽名浮水印。Work目視同圖亦無問題，不偽造舊判定。
+- 原創文案、FLUX圖片與Gemma視覺均已真呼叫；總文案2次、圖片2張上限不增加。Pages probe40973767485實測匿名200/image/jpeg/140817bytes/SHA完全一致。
+- queue/meta/2026-10-30/0930.json準備同一新內容，只進今日09:30正常英文slot。下步既有main原生scheduler先真remote核Page/上限/占用/去重，再CAS/單次提交；無真Post ID前不稱預約成功。
+- PR未合併、CAT_AUTOPILOT_ENABLED未啟用。到期發布全鏈仍待驗收；不重送10/26–28事故，不新增每日排程。
+
+## 2026-10-30 真文案與兩張原創圖已生成；視覺QA明確FAIL，安全保留草稿（最新）
+- Workers Free/$0/Current plan已由使用者官方帳戶截圖確認。Cloudflare真GET及原有87項CI通過，無信用卡/升級/付費服務。
+- 首次run40972350958在文案JSON解析失敗，無圖片或FB呼叫；修正response_format=json_object、fenced JSON及回應先持久化後，run40972725863已真生成英文文案與FLUX JPEG f0f947f9...，右下有生成簽名、QA false。
+- 僅重做第二張圖片，run40973099586真生成3d42d781...、JPEG1024x1024，原文案不重生。第二張目視無簽名但QA仍false；run40973485029只對同一張圖補取原始視覺回應，確實為FAIL，非PASS格式誤判。達每篇兩張上限，保留qa_failed_held，不再生圖、不越過QA、不將job success冒充圖像驗收成功。
+- 全程FB寫入0，沒有新Post ID或原生預約；PR未合併/CAT_AUTOPILOT_ENABLED未啟用，不能稱全自動已恢復。兩張原圖/歷史文案與生成階段都已在原PR分支持久保存。
+- 下一步：保留本篇為草稿；先將視覺QA輸出改為可稽核理由/檢查項目，查明拒絕原因，再決定未來新內容的畫風/模型；不得強制PASS或重新生成本篇。原生API/Planner/到點發布全鏈仍未驗收。
+
 ## 2026-10-30 已確認帳戶Workers Free，開始單篇真生成驗收（最新）
 - 使用者正式Workers plans截圖明確顯示Free/$0/Current plan；同帳戶對應。證據records/autopilot/2026-10-30-cloudflare-free.json，只記畫面事實與圖片SHA，不公開含個人資訊原圖。
 - 指定Cloudflare Secret真GET與87項CI已通過，不重做授權。PR免費門檻核實，直接Workers AI已審模型、無Gateway付費回退或升級；14天或方案變更需重核。
