@@ -13,7 +13,7 @@ name: Cat Page Unattended AI Replenishment (opt-in, future-only)
 permissions:
   contents: write
 concurrency:
-  group: cat-page-native-post-writer
+  group: cat-page-meta-official-publisher
   cancel-in-progress: false
 jobs:
   replenish:
@@ -26,11 +26,14 @@ jobs:
       AI_GATEWAY_API_KEY: ${{ secrets.AI_GATEWAY_API_KEY }}
       AUTOPILOT_TEXT_MODEL: nvidia/nemotron-3.5-lightning-free
       AUTOPILOT_IMAGE_MODEL: bfl/flux-3-image-klein
-      AUTOPILOT_VISION_MODEL: inclusionai/ling-3.0-flash-vl-free
+      AUTOPILOT_VISION_MODEL: openai/gpt-5-nano
     steps:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
+      - name: Refuse production writes from a PR checkout
+        if: github.ref != 'refs/heads/main' && inputs.dry_run != true
+        run: echo 'Live preparation requires an accepted main checkout; no writes attempted'; exit 1
       - name: Install image validator
         run: python3 -m pip install 'Pillow>=11,<13'
       - name: Run no-write safety tests

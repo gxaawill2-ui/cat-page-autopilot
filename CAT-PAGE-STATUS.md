@@ -1,3 +1,20 @@
+## 2026-10-29 PR #1 實際檢查與修復／外部登入尚待完成（最新）
+- 只修改既有 feat/20261029-unattended-autopilot，未合併 main、未開 CAT_AUTOPILOT_ENABLED。原 CI40844219881 success 只證明9項模擬測試，不等於真 AI/API 發布驗收。
+- 修正 JPEG 目錄 assets→docs/assets，兩種原生寫入流程共用 concurrency，保留11/3及11/6晚日文。真查 Gateway 499個模型，原視覺模型 inclusionai/ling-3.0-flash-vl-free 不存在；換成實際有圖像輸入的 openai/gpt-5-nano，並加即時型態/價格門檻。尚未真呼叫生成。
+- 加零付費證據門檻（預設不通過），Vercel 官方 budget 是 soft cap，不能當硬性免扣款證據；必須核實免費點數、無自動加值/付費餘額/帳單/BYOK及供應端停止。未完成前所有AI請求停止。
+- 文案/生圖意圖先持久保存，JPEG在視覺QA前先提交；QA未PASS不可排程，不明生成結果不重生圖。PR checkout禁止向main做正式發布交易。新增本機測試16項+既有原生15項通過，待新CI實際回讀。
+- 官方Meta同範圍刷新後 GET me 確認 Page仍1346385028565797（實際回傳名稱 Daily Purr 喵喵日常；本輪未改品牌）。Debugger為Page/三scope同Page；到期值1793268000卻顯示有效是，不採為長效證明。官方延展要求管理員重新輸入密碼，尚未完成，GitHub Secret未更換。
+- Vercel connector確認既有team；瀏覽器需登入，使用者安全表單選ChatGPT後停OpenAI登入畫面。額度/免費資格/API key尚未取得，不猜測。需要本人完成這一次正常登入，以及Meta官方安全再驗證；不要把密碼/Token貼聊天。
+- Facebook寫入0、新預約ID無。今天既有4篇、兩筆歷史unknown、即時Actions退役狀態均保留。完整證據 records/autopilot/2026-10-29-review.json；真AI→新原生預約→到期發布仍未驗收，不能稱全自動。
+
+## 2026-10-29 全自動化請求：新安全分支已實作並通過無寫入CI，但正式尚未啟用（最新）
+- 使用者要求一步到位：AI 自動選題+文案+全新原創生圖+視覺QA+GitHub Pages驗證+自動交Meta原生預約+由Facebook到點配送，目標提前3天、每天四時段、零額外支出。
+- 新分支 feat/20261029-unattended-autopilot，Draft PR #1 https://github.com/gxaawill2-ui/cat-page-autopilot/pull/1；新增 scripts/auto_replenish.py、.github/workflows/cat-unattended-replenish.yml、scripts/test_auto_replenish.py、純安全CI與 docs/full-auto-activation-20261029.md。
+- PR真CI run40844219881/job123347665052 **success**，只驗證 no-write/憑證缺失/舊slot鎖/AI QA 等測試，並不代表 Meta 或 AI Gateway 真實串接成功。發布腳本每12小時只補充未來幾天（GitHub延誤非精確發文時間），需官方Meta Page API正常且所有安全門檻均通過才會真的預約。
+- **此分支未合併main；CAT_AUTOPILOT_ENABLED無正式開啟。** 既有10/29 Meta Business Suite四篇預約不動、不重送舊事故，正式仍是「互動批次備稿＋Meta本身定時發布」半自動。
+- 明確阻礙：舊 META_PAGE_ACCESS_TOKEN HTTP401 code190/subcode463 已過期（未補發憑證），AI_GATEWAY_API_KEY 尚未設定/驗證；Vercel AI Gateway免費額度/模型供應非永久承諾，使用者要求零額外支出，須先完成硬支出上限並驗證實際憑證，否則不允許啟用。
+- 下一步需要可合法使用的 Meta Page Token、AI Gateway Key 與已證明不可能額外扣費的帳務限制→單篇真圖文生成+原生預約ID/Planner+真正到點發布連續驗收→merge並開CAT_AUTOPILOT_ENABLED。不得因代碼/CI通過就稱完全自動已上線。
+
 ## 2026-10-29 09:30 Meta原生配送已發布／純讀取驗收通過（最新）
 - 觀測時間2026-10-29T09:43:20.496743+08:00；先以真UTC時鐘01:39:44（台北09:39:44）確認已過09:30。正式Business Suite指定asset_id=1346385028565797、「已發佈」分頁與「已發佈的貼文」清單均見新英文紙袋貓，發佈日期10月29日9:30；詳情明示「貼文 ·發佈時間：10月29日 9:30」。
 - 真發布Post ID **122106746697515576**，來源官方已發佈清單checkbox ID及object_insights content_id；原預約預覽Post ID812374491970657、原Business Suite內容ID1128212423131470完整保留，不改寫或混同。原預約photo122106718473515576；發布圖片link fbid=122106746685515576，均不是Post ID。

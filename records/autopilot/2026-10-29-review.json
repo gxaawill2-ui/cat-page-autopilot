@@ -1,0 +1,227 @@
+{
+  "checked_at": "2026-10-29T09:27:26.701766+00:00",
+  "pr": 1,
+  "original_head": "309005e3f26afba4e41e3f88aeb5cfe7adb2c8c7",
+  "original_ci": 40844219881,
+  "original_ci_result": "success; nine mocked replenishment tests only",
+  "new_local_tests": {
+    "replenishment": 16,
+    "native": 15
+  },
+  "model_catalog_source": "https://ai-gateway.vercel.sh/v1/models",
+  "models": {
+    "bfl/flux-3-image-klein": {
+      "id": "bfl/flux-3-image-klein",
+      "object": "model",
+      "created": 1755815280,
+      "released": 1792022400,
+      "owned_by": "bfl",
+      "name": "FLUX 3 Image Klein",
+      "description": "FLUX 3 Image Klein is Black Forest Labs’ smaller, faster image generation and editing model, with 5.6 billion parameters and open weights. It supports text-to-image generation, image editing, multiple reference images, and layouts specified with bounding boxes. The hosted API produces images across five resolution classes from 768 × 768 to 4K.",
+      "context_window": 0,
+      "max_tokens": 0,
+      "type": "image",
+      "zdr": "none",
+      "no_training": "none",
+      "tags": [
+        "image-generation",
+        "open-weights"
+      ],
+      "supported_specifications": [
+        "v3",
+        "v4"
+      ],
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "image"
+        ]
+      },
+      "pricing": {
+        "image": "0.009",
+        "image_dimension_quality_pricing": [
+          {
+            "size": "768x768",
+            "cost": "0.008"
+          },
+          {
+            "size": "1024x1024",
+            "cost": "0.009"
+          },
+          {
+            "size": "1536x1536",
+            "cost": "0.011"
+          },
+          {
+            "size": "2048x2048",
+            "cost": "0.014"
+          },
+          {
+            "size": "4096x4096",
+            "cost": "0.036"
+          }
+        ]
+      }
+    },
+    "nvidia/nemotron-3.5-lightning-free": {
+      "id": "nvidia/nemotron-3.5-lightning-free",
+      "object": "model",
+      "created": 1755815280,
+      "released": 1791936000,
+      "owned_by": "nvidia",
+      "name": "Nemotron 3.5 Lightning Free",
+      "description": "Nemotron 3.5 Lightning is an open-weight reasoning and chat model for long-running agents, sub-agent work, chatbots, and RAG systems. The model has 30B parameters with 3B active per token, in a hybrid Mixture-of-Experts design that interleaves Mamba-2 and MoE layers with a few attention layers. It has a 1M token context window and supports tool calling and structured outputs. The provider may retain prompts and responses for model improvement.",
+      "context_window": 1000000,
+      "max_tokens": 65000,
+      "type": "language",
+      "zdr": "none",
+      "no_training": "none",
+      "tags": [
+        "reasoning",
+        "tool-use",
+        "structured-output",
+        "implicit-caching",
+        "open-weights"
+      ],
+      "supported_specifications": [
+        "v2",
+        "v3",
+        "v4"
+      ],
+      "modalities": {
+        "input": [
+          "text"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "supported_parameters": [
+        "max_tokens",
+        "temperature",
+        "stop",
+        "tools",
+        "tool_choice",
+        "reasoning",
+        "include_reasoning",
+        "response_format",
+        "structured_outputs"
+      ],
+      "temperature": true,
+      "reasoning_options": [
+        {
+          "type": "toggle"
+        },
+        {
+          "type": "effort",
+          "values": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "pricing": {
+        "input": "0",
+        "output": "0"
+      }
+    },
+    "openai/gpt-5-nano": {
+      "id": "openai/gpt-5-nano",
+      "object": "model",
+      "created": 1755815280,
+      "released": 1754524800,
+      "owned_by": "openai",
+      "name": "GPT-5 nano",
+      "description": "GPT-5 nano is a high throughput model that excels at simple instruction or classification tasks.",
+      "context_window": 400000,
+      "max_tokens": 128000,
+      "type": "language",
+      "zdr": "all",
+      "no_training": "all",
+      "tags": [
+        "file-input",
+        "implicit-caching",
+        "reasoning",
+        "tool-use",
+        "vision",
+        "web-search",
+        "structured-output"
+      ],
+      "supported_specifications": [
+        "v2",
+        "v3",
+        "v4"
+      ],
+      "modalities": {
+        "input": [
+          "text",
+          "image",
+          "pdf"
+        ],
+        "output": [
+          "text"
+        ]
+      },
+      "supported_parameters": [
+        "max_tokens",
+        "stop",
+        "tools",
+        "tool_choice",
+        "reasoning",
+        "include_reasoning",
+        "response_format",
+        "structured_outputs"
+      ],
+      "temperature": false,
+      "reasoning_options": [
+        {
+          "type": "effort",
+          "values": [
+            "minimal",
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      ],
+      "knowledge": "2024-05-31",
+      "pricing": {
+        "input": "0.00000005",
+        "output": "0.0000004",
+        "input_cache_read": "0.000000005",
+        "web_search": "10",
+        "service_tiers": {
+          "flex": {
+            "input": "0.000000025",
+            "output": "0.0000002",
+            "input_cache_read": "0.0000000025"
+          }
+        },
+        "varies_by_provider": true
+      }
+    }
+  },
+  "missing_old_vision_model": "inclusionai/ling-3.0-flash-vl-free",
+  "vercel_account": "gxaawill2-7073s-projects",
+  "vercel_login": "user selected ChatGPT; OpenAI login pending",
+  "credit_balance": null,
+  "api_key_created": false,
+  "budget_verified": false,
+  "meta_page_id": "1346385028565797",
+  "meta_official_get_name": "Daily Purr 喵喵日常",
+  "meta_get_identity_succeeded": true,
+  "meta_debugger_type": "Page",
+  "meta_debugger_expiry_epoch": 1793268000,
+  "meta_debugger_valid_label": "yes; inconsistent with past expiry, not accepted as long-lived proof",
+  "meta_extension": "official password reauthentication pending",
+  "github_secret_updated": false,
+  "facebook_write_calls": 0,
+  "new_scheduled_post_id": null,
+  "production_merged": false,
+  "production_enabled": false,
+  "next_step": "Complete Vercel sign-in and Meta official reauthentication through secure UI, verify free-only billing, store keys only in GitHub Secrets, then true generation/native-schedule/due-time acceptance before merge."
+}

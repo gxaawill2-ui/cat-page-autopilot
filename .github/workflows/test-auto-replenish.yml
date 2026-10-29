@@ -6,6 +6,7 @@ name: Cat Autopilot No-Write Safety CI
       - 'scripts/test_auto_replenish.py'
       - '.github/workflows/cat-unattended-replenish.yml'
       - '.github/workflows/test-auto-replenish.yml'
+      - 'state/autopilot_budget.json'
 permissions:
   contents: read
 jobs:
@@ -19,3 +20,4 @@ jobs:
         run: |
           python3 -m py_compile scripts/auto_replenish.py scripts/meta_native_schedule.py
           python3 -m unittest discover -s scripts -p test_auto_replenish.py -v
+          python3 -m unittest discover -s scripts -p test_meta_native_schedule.py -v

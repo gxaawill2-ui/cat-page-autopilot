@@ -13,6 +13,63 @@ from PIL import Image
 import auto_replenish as a
 
 class ReplenishSafetyTest(unittest.TestCase):
+    def test_budget_proof_missing_or_unverified_blocks_spend(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.object(a,"ROOT",Path(tmp)):
+            with self.assertRaisesRegex(ValueError,"ZERO_PAID_SPEND_NOT_VERIFIED"):
+                a.budget_gate(dt.datetime.now(a.TZ))
+            a.base.write(Path(tmp)/"state/autopilot_budget.json",{"verified":True})
+            with self.assertRaisesRegex(ValueError,"ZERO_PAID_SPEND_NOT_VERIFIED"):
+                a.budget_gate(dt.datetime.now(a.TZ))
+
+    def test_budget_proof_expiry_blocks_spend(self):
+        with tempfile.TemporaryDirectory() as tmp, patch.object(a,"ROOT",Path(tmp)):
+            b={k:True for k in ("verified","free_credits_only","auto_topup_disabled",
+               "no_paid_balance","no_invoice_billing","no_byok","provider_hard_stop")}
+            b.update(evidence_record="actual-account-check.json",valid_until="2026-10-01T00:00:00+08:00")
+            a.base.write(Path(tmp)/"state/autopilot_budget.json",b)
+            with self.assertRaisesRegex(ValueError,"EXPIRED"):
+                a.budget_gate(dt.datetime(2026,10,29,tzinfo=a.TZ))
+
+    def test_japanese_test_dates_are_preserved(self):
+        for day in (dt.date(2026,11,3),dt.date(2026,11,6)):
+            self.assertEqual(a.slot_language(day,"19:30"),"ja")
+            self.assertEqual(a.slot_language(day,"09:30"),"en")
+
+    def test_invalid_model_stops_before_generation(self):
+        class Response:
+            def __enter__(self):return self
+            def __exit__(self,*args):pass
+            def read(self,*args):return b'{"data":[]}'
+        with patch.object(a.urllib.request,"urlopen",return_value=Response()):
+            with self.assertRaisesRegex(ValueError,"MODEL_UNAVAILABLE"):
+                a.model_gate()
+
+    def test_real_jpeg_saved_under_deployed_docs_before_qa(self):
+        with tempfile.TemporaryDirectory() as tmp,patch.object(a,"ROOT",Path(tmp)), \
+             patch.object(a.subprocess,"run") as run:
+            run.return_value.returncode=0
+            data=b"mock-jpeg-content"
+            q=a.commit_queue(dt.date(2026,11,1),"09:30",{"caption":"A brand new cat adventure", "scene":"Original cat scene", "topic":"play"},"en",data)
+            self.assertEqual((Path(tmp)/"docs/assets"/(q["image_sha256"]+".jpg")).read_bytes(),data)
+            self.assertFalse(q["image_qa"])
+            self.assertIn("scene",q)
+
+    def test_unknown_generation_is_not_paid_for_twice(self):
+        with tempfile.TemporaryDirectory() as tmp,patch.object(a,"ROOT",Path(tmp)), \
+             patch.dict(os.environ,{"CAT_AUTOPILOT_ENABLED":"true","META_PAGE_ACCESS_TOKEN":"fixture","AI_GATEWAY_API_KEY":"fixture"},clear=True), \
+             patch.object(a.native,"remote"),patch.object(a,"budget_gate"),patch.object(a,"model_gate"), \
+             patch.object(a,"slots_to_fill",return_value=[(dt.date(2026,11,1),"09:30")]), \
+             patch.object(a,"content",side_effect=AssertionError("No paid replay")):
+            a.base.write(a.generation_file(dt.date(2026,11,1),"09:30"),{"status":"image_armed_unknown"})
+            a.run()
+
+    def test_unverified_budget_prevents_all_ai_calls(self):
+        with tempfile.TemporaryDirectory() as tmp,patch.object(a,"ROOT",Path(tmp)), \
+             patch.dict(os.environ,{"CAT_AUTOPILOT_ENABLED":"true","META_PAGE_ACCESS_TOKEN":"fixture","AI_GATEWAY_API_KEY":"fixture"},clear=True), \
+             patch.object(a.native,"remote"),patch.object(a,"ai",side_effect=AssertionError("No paid calls")):
+            with self.assertRaisesRegex(ValueError,"ZERO_PAID_SPEND_NOT_VERIFIED"):
+                a.run()
+
     def test_preview_calls_no_external_provider(self):
         with patch.object(a,"ai",side_effect=AssertionError("AI must not run")), \
              patch.object(a.native,"remote",side_effect=AssertionError("Meta must not run")):
