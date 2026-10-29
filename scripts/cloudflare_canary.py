@@ -31,14 +31,22 @@ def run():
         raise ValueError("No future normal slot")
     day, slot = targets[0]
     path = ROOT / "records/canary" / (str(day) + "-" + slot.replace(":", "") + ".json")
-    if path.exists():
+    previous = auto.base.read(path) if path.exists() else None
+    if previous and not (previous.get("status")=="caption_response_parse_failed" and
+                         previous.get("caption_attempts")==1 and
+                         previous.get("image_calls_confirmed")==0):
         raise ValueError("Existing canary intent; reconcile, never regenerate")
     record = {"slot": str(day) + "T" + slot, "status": "content_armed_unknown",
               "facebook_write_calls": 0, "retry_allowed": False,
-              "started_at": dt.datetime.now(auto.TZ).isoformat()}
+              "started_at": dt.datetime.now(auto.TZ).isoformat(),
+              "caption_attempts":2 if previous else 1, "previous_attempt":previous}
     auto.base.write(path, record)
     persist([path], "Persist original canary generation intent before inference")
-    item, language = auto.content(day, slot, key)
+    def save_raw(raw):
+        record.update(status="caption_response_durable", generated_text=raw)
+        auto.base.write(path,record)
+        persist([path],"Persist actual model content before JSON parsing; never discard response")
+    item, language = auto.content(day, slot, key,raw_sink=save_raw)
     record.update(status="image_armed_unknown", content=item, language=language)
     auto.base.write(path, record)
     persist([path], "Persist real AI caption before single image call")

@@ -1,7 +1,15 @@
 {
   "slot": "2026-10-30T09:30",
-  "status": "content_armed_unknown",
+  "status": "caption_response_parse_failed",
   "facebook_write_calls": 0,
   "retry_allowed": false,
-  "started_at": "2026-10-30T07:19:50.565414+08:00"
+  "started_at": "2026-10-30T07:19:50.565414+08:00",
+  "caption_attempts": 1,
+  "image_calls_confirmed": 0,
+  "actual_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+  "evidence_run": 40972350958,
+  "evidence_job": 123792000636,
+  "original_response": "Not retained by old parser; do not invent content",
+  "caption_retry_limit": 2,
+  "reconciliation": "Failure occurred before make_image or Meta access; permit one bounded caption-only retry with structured output and durable response capture."
 }

@@ -33,14 +33,16 @@ def slot_language(day,slot):
 def ai(endpoint, body, key):
     return cloudflare.request(endpoint,body,key)
 
-def chat(messages,key,model):
-    r=ai("/chat/completions",{"model":model,"messages":messages,"max_completion_tokens":1000},key)
+def chat(messages,key,model,json_object=False):
+    body={"model":model,"messages":messages,"max_completion_tokens":1000}
+    if json_object: body["response_format"]={"type":"json_object"}
+    r=ai("/chat/completions",body,key)
     value=(r.get("choices") or [{}])[0].get("message",{}).get("content")
     if not isinstance(value,str) or not value.strip():
         raise ValueError("No usable generated text")
     return value.strip()
 
-def content(day,slot,key):
+def content(day,slot,key,raw_sink=None):
     language=slot_language(day,slot)
     actor,appearance=(
         ("阿橘","orange tabby"),("小雪","white longhair"),
@@ -53,9 +55,10 @@ def content(day,slot,key):
         "hand-painted book illustration, natural lighting, precise anatomy, no typography. "
         f"Taipei date {day} time {slot}. Caption language={language}. Character={actor}, {appearance}.")
     raw=chat([{"role":"system","content":"Produce one original family-friendly social post as JSON."},
-              {"role":"user","content":request}],key,TEXT)
-    if raw.startswith("```json\n") and raw.endswith("```"):
-        raw=raw[8:-3].strip()
+              {"role":"user","content":request}],key,TEXT,json_object=True)
+    if raw_sink is not None: raw_sink(raw)
+    fence=re.fullmatch(r"```(?:json)?\s*([\s\S]*?)\s*```",raw.strip())
+    if fence: raw=fence.group(1).strip()
     item=json.loads(raw)
     if not isinstance(item,dict) or not all(isinstance(item.get(k),str) for k in ("caption","scene","topic")):
         raise ValueError("AI content is not the required JSON object")
