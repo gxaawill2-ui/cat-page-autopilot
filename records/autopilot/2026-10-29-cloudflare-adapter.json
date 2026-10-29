@@ -1,0 +1,44 @@
+{
+  "scope": "Cloudflare no-card adapter; existing PR only",
+  "github_secret_inventory": [
+    "CLOUDFLARE_ACCOUNT_ID",
+    "META_PAGE_ACCESS_TOKEN"
+  ],
+  "cloudflare_api_token_present": false,
+  "user_screenshot_error": "Secret names can only contain alphanumeric characters or underscores. Spaces are not allowed. Must start with a letter or underscore.",
+  "root_cause_confirmed": "GitHub rejected the Secret NAME; no CLOUDFLARE_API_TOKEN saved. Token validity not tested.",
+  "changes": [
+    "scripts/cloudflare_ai.py",
+    "scripts/auto_replenish.py",
+    "state/cloudflare_free.json",
+    ".github/workflows/cat-unattended-replenish.yml",
+    "scripts/test_cloudflare_ai.py",
+    "scripts/test_auto_replenish.py",
+    ".github/workflows/test-auto-replenish.yml"
+  ],
+  "local_safety_tests": {
+    "auto_replenish": 16,
+    "cloudflare_ai": 8,
+    "status": "pass; no network",
+    "meta_native_schedule": 15
+  },
+  "production_enabled": false,
+  "pr_merged": false,
+  "ai_inference_calls": 0,
+  "facebook_write_calls": 0,
+  "new_post_id": null,
+  "live_acceptance": "not tested",
+  "sources": [
+    "https://developers.cloudflare.com/workers-ai/platform/pricing/",
+    "https://developers.cloudflare.com/workers-ai/models/flux-1-schnell/",
+    "https://developers.cloudflare.com/workers-ai/models/gemma-4-26b-a4b-it/",
+    "https://developers.cloudflare.com/workers-ai/configuration/open-ai-compatibility/"
+  ],
+  "next_steps": [
+    "User saves Name=CLOUDFLARE_API_TOKEN and Secret=existing token in official GitHub form; no token in chat.",
+    "Verify secret inventory, actual Workers Free plan and no paid/gateway billing; record evidence before enabling free-plan gate.",
+    "Single live caption/image/vision canary, persist JPEG and anonymous Pages 200/MIME/SHA; no automatic retry after unknown generation.",
+    "Use next empty future normal slot with existing native scheduler; verify true Page Post ID and Planner; wait actual due delivery before merge/enable."
+  ],
+  "recorded_at": "2026-10-29T11:27:16.661262+00:00"
+}
