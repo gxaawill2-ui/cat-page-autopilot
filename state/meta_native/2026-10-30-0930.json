@@ -24,6 +24,22 @@
   "attachment_photo_id_matches": true,
   "caption_matches": true,
   "checked_at": "2026-10-30T07:42:17.639781+08:00",
-  "planner_verified": false,
-  "visual_review": "pending"
+  "planner_verified": true,
+  "visual_review": "Work agent: Planner rendered the same original tabby garden JPEG and full caption; no manual publish",
+  "planner_evidence": {
+    "checked_at": "2026-10-29T23:46:53.759Z",
+    "url": "https://business.facebook.com/latest/content_calendar?nav_ref=internal_nav&asset_id=1346385028565797",
+    "page_id": "1346385028565797",
+    "calendar_date": "2026-10-30",
+    "calendar_time": "09:30",
+    "timezone": "Asia/Taipei",
+    "caption_matches": true,
+    "image_visually_matches": true,
+    "scheduled_by": "Cat Page Autopilot",
+    "relative_time_shown": "約 1 小時後",
+    "planner_preview_id": "1696925965336707",
+    "screenshot": "records/acceptance/2026-10-30-0930-planner.jpg",
+    "not_immediately_published": true
+  },
+  "published_delivery_verified": false
 }

@@ -103,5 +103,23 @@
     "validator": "github-actions-pages-probe",
     "run_id": "40973767485",
     "source_commit": "ba5883bf73b8b2fa8467ff97e7e659f41bbdcb07"
+  },
+  "native_scheduling": {
+    "status": "scheduled_api_verified",
+    "run_id": "40974894704",
+    "meta_post_id": "1346385028565797_122107140849515576",
+    "photo_id": "122107140813515576",
+    "scheduled_publish_time": 1793323800,
+    "is_published": false,
+    "caption_matches": true,
+    "attachment_photo_id_matches": true,
+    "planner_verified": true,
+    "published_delivery_verified": false
+  },
+  "production": {
+    "pr_number": 1,
+    "merged": false,
+    "CAT_AUTOPILOT_ENABLED": false,
+    "reason": "Wait for genuine scheduled delivery acceptance before production merge/enable. One dispatched canary is not continuous unattended operation."
   }
 }
