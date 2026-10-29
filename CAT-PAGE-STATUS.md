@@ -1,3 +1,11 @@
+## 2026-10-29 全自動化請求：新安全分支已實作並通過無寫入CI，但正式尚未啟用（最新）
+- 使用者要求一步到位：AI 自動選題+文案+全新原創生圖+視覺QA+GitHub Pages驗證+自動交Meta原生預約+由Facebook到點配送，目標提前3天、每天四時段、零額外支出。
+- 新分支 feat/20261029-unattended-autopilot，Draft PR #1 https://github.com/gxaawill2-ui/cat-page-autopilot/pull/1；新增 scripts/auto_replenish.py、.github/workflows/cat-unattended-replenish.yml、scripts/test_auto_replenish.py、純安全CI與 docs/full-auto-activation-20261029.md。
+- PR真CI run40844219881/job123347665052 **success**，只驗證 no-write/憑證缺失/舊slot鎖/AI QA 等測試，並不代表 Meta 或 AI Gateway 真實串接成功。發布腳本每12小時只補充未來幾天（GitHub延誤非精確發文時間），需官方Meta Page API正常且所有安全門檻均通過才會真的預約。
+- **此分支未合併main；CAT_AUTOPILOT_ENABLED無正式開啟。** 既有10/29 Meta Business Suite四篇預約不動、不重送舊事故，正式仍是「互動批次備稿＋Meta本身定時發布」半自動。
+- 明確阻礙：舊 META_PAGE_ACCESS_TOKEN HTTP401 code190/subcode463 已過期（未補發憑證），AI_GATEWAY_API_KEY 尚未設定/驗證；Vercel AI Gateway免費額度/模型供應非永久承諾，使用者要求零額外支出，須先完成硬支出上限並驗證實際憑證，否則不允許啟用。
+- 下一步需要可合法使用的 Meta Page Token、AI Gateway Key 與已證明不可能額外扣費的帳務限制→單篇真圖文生成+原生預約ID/Planner+真正到點發布連續驗收→merge並開CAT_AUTOPILOT_ENABLED。不得因代碼/CI通過就稱完全自動已上線。
+
 ## 2026-10-29 09:30 Meta原生配送已發布／純讀取驗收通過（最新）
 - 觀測時間2026-10-29T09:43:20.496743+08:00；先以真UTC時鐘01:39:44（台北09:39:44）確認已過09:30。正式Business Suite指定asset_id=1346385028565797、「已發佈」分頁與「已發佈的貼文」清單均見新英文紙袋貓，發佈日期10月29日9:30；詳情明示「貼文 ·發佈時間：10月29日 9:30」。
 - 真發布Post ID **122106746697515576**，來源官方已發佈清單checkbox ID及object_insights content_id；原預約預覽Post ID812374491970657、原Business Suite內容ID1128212423131470完整保留，不改寫或混同。原預約photo122106718473515576；發布圖片link fbid=122106746685515576，均不是Post ID。
