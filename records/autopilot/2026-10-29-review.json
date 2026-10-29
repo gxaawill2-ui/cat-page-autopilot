@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-29T09:27:26.701766+00:00",
+  "checked_at": "2026-10-29T09:50:57.539685+00:00",
   "pr": 1,
   "original_head": "309005e3f26afba4e41e3f88aeb5cfe7adb2c8c7",
   "original_ci": 40844219881,
@@ -207,8 +207,8 @@
   },
   "missing_old_vision_model": "inclusionai/ling-3.0-flash-vl-free",
   "vercel_account": "gxaawill2-7073s-projects",
-  "vercel_login": "user selected ChatGPT; OpenAI login pending",
-  "credit_balance": null,
+  "vercel_login": "success: existing team Hobby",
+  "credit_balance": 0,
   "api_key_created": false,
   "budget_verified": false,
   "meta_page_id": "1346385028565797",
@@ -217,11 +217,29 @@
   "meta_debugger_type": "Page",
   "meta_debugger_expiry_epoch": 1793268000,
   "meta_debugger_valid_label": "yes; inconsistent with past expiry, not accepted as long-lived proof",
-  "meta_extension": "official password reauthentication pending",
-  "github_secret_updated": false,
+  "meta_extension": "completed official password verification; debugged exact same long-lived Page token before secret save",
+  "github_secret_updated": true,
   "facebook_write_calls": 0,
   "new_scheduled_post_id": null,
   "production_merged": false,
   "production_enabled": false,
-  "next_step": "Complete Vercel sign-in and Meta official reauthentication through secure UI, verify free-only billing, store keys only in GitHub Secrets, then true generation/native-schedule/due-time acceptance before merge."
+  "next_step": "Complete Vercel sign-in and Meta official reauthentication through secure UI, verify free-only billing, store keys only in GitHub Secrets, then true generation/native-schedule/due-time acceptance before merge.",
+  "meta_long_lived_debugger": {
+    "type": "Page",
+    "page_id": "1346385028565797",
+    "expires": "Never",
+    "data_access_expires": 1801040326,
+    "scopes": [
+      "pages_show_list",
+      "pages_read_engagement",
+      "pages_manage_posts"
+    ]
+  },
+  "meta_audit_run": 40851675898,
+  "meta_audit_job": 123372424831,
+  "meta_audit_success": true,
+  "free_credit_activation": "requires Add a Card; card not entered; no payment authorization submitted",
+  "free_credit_advertised_usd_per_month": 5,
+  "scheduled_posts_api_empty": true,
+  "existing_1930_official_ui": "confirmed present 2026-10-29 19:30; never replay based on empty API edge"
 }

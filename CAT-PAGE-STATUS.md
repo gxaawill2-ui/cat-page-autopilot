@@ -1,3 +1,12 @@
+## 2026-10-29 長效Meta Secret已修復並真Actions GET通過／Vercel免費額度卡驗證待本人（最新）
+- 官方密碼再驗證完成，新長效Page Token再次偵錯為Page1346385028565797、有效是、到期永不、三scope同Page；資料存取期限1801040326仍存在。將同一枚長效Token直接填GitHub指定Secret後，正常郵件OTP完成，真正更新回條及列時間均已讀回；無Token進對話或repo。
+- 真Actions audit40851675898/job123372424831成功，15安全測試及GET Page/posts/scheduled_posts通過；日誌META_NATIVE_AUDIT_OK_PAGE=1346385028565797; FACEBOOK_WRITE_CALLS=0，無寫入。原始真回條已自存main records/meta-native/audit-40851675898.json。
+- API已讀到10/29 09:30:03、12:30:06、16:30:03的三篇is_published=true（Post IDs尾碼122106746697515576、122106782931515576、122106850785515576）。不是本輪新生成/API預約驗收。
+- API scheduled_posts=[]，但本輪官方Business Suite已排定分頁確見今晚19:30「Some days, the best part...」既有貼文；此差異原因未查明。以既有state/meta_native鎖和官方UI防重複，不可因API空就再排同篇/時段。
+- 已本人正常登入既有Vercel Hobby team；真餘額$0.00。Use Free AI Gateway Credit明示每月$5/限部分模型/限速，點擊後要求Add a Card，Stripe表單列明同意未來付款。未輸入卡片、未購點、未啟用加值、未建立API key；零付費硬條件仍不通過。
+- 必要下一步：本人在Vercel官方Add a Card完成願意接受的免費資格卡驗證（不得把卡號/CVC貼聊天；不買點數/升級/開自動加值），之後核真免費資格/模型可用性/扣款停止條件，再安全建立專用key並只存GitHub Secret。若不願綁卡，這個Vercel方案當前不能零成本啟用，保持關閉。
+- PR #1保留draft，正式不合併/不啟用；新AI文案/生圖/QA/API原生預約與到期發布全鏈仍未驗收，新scheduled Post ID無。品牌本輪未改，既有四篇與歷史unknown未動。
+
 ## 2026-10-29 PR #1 實際檢查與修復／外部登入尚待完成（最新）
 - 只修改既有 feat/20261029-unattended-autopilot，未合併 main、未開 CAT_AUTOPILOT_ENABLED。原 CI40844219881 success 只證明9項模擬測試，不等於真 AI/API 發布驗收。
 - 修正 JPEG 目錄 assets→docs/assets，兩種原生寫入流程共用 concurrency，保留11/3及11/6晚日文。真查 Gateway 499個模型，原視覺模型 inclusionai/ling-3.0-flash-vl-free 不存在；換成實際有圖像輸入的 openai/gpt-5-nano，並加即時型態/價格門檻。尚未真呼叫生成。
