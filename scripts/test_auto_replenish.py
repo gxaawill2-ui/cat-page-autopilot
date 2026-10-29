@@ -102,6 +102,22 @@ class ReplenishSafetyTest(unittest.TestCase):
             result,language=a.content(dt.date(2026,11,1),"16:30","key")
             self.assertEqual(language,"zh-Hant")
 
+    def test_fenced_caption_response_is_preserved_before_parse(self):
+        item={"caption":"The cat inspected the empty breakfast bowl again.","scene":"An orange cat peering into a ceramic breakfast bowl in a sunlit kitchen with a skeptical expression and coherent anatomy.","topic":"breakfast"}
+        raw="```json\r\n"+json.dumps(item)+"\r\n```"
+        saved=[]
+        with patch.object(a,"chat",return_value=raw):
+            result,_=a.content(dt.date(2026,10,30),"09:30","fixture",raw_sink=saved.append)
+        self.assertEqual(saved,[raw])
+        self.assertEqual(result,item)
+
+    def test_malformed_caption_keeps_actual_response_for_recovery(self):
+        saved=[]
+        with patch.object(a,"chat",return_value="No valid JSON returned"):
+            with self.assertRaises(json.JSONDecodeError):
+                a.content(dt.date(2026,10,30),"09:30","fixture",raw_sink=saved.append)
+        self.assertEqual(saved,["No valid JSON returned"])
+
     def test_bad_image_rejected(self):
         image=Image.new("RGB",(64,64),color="white")
         buf=io.BytesIO();image.save(buf,format="PNG")

@@ -32,25 +32,34 @@ def run():
     day, slot = targets[0]
     path = ROOT / "records/canary" / (str(day) + "-" + slot.replace(":", "") + ".json")
     previous = auto.base.read(path) if path.exists() else None
-    if previous and not (previous.get("status")=="caption_response_parse_failed" and
-                         previous.get("caption_attempts")==1 and
-                         previous.get("image_calls_confirmed")==0):
+    retry_image = bool(previous and previous.get("status")=="qa_failed_held" and
+                       previous.get("image_attempts",1)==1 and previous.get("image_sha256"))
+    retry_caption = bool(previous and previous.get("status")=="caption_response_parse_failed" and
+                         previous.get("caption_attempts")==1 and previous.get("image_calls_confirmed")==0)
+    if previous and not (retry_image or retry_caption):
         raise ValueError("Existing canary intent; reconcile, never regenerate")
     record = {"slot": str(day) + "T" + slot, "status": "content_armed_unknown",
               "facebook_write_calls": 0, "retry_allowed": False,
               "started_at": dt.datetime.now(auto.TZ).isoformat(),
-              "caption_attempts":2 if previous else 1, "previous_attempt":previous}
+              "caption_attempts":previous["caption_attempts"] if retry_image else (2 if previous else 1),
+              "image_attempts":2 if retry_image else 1, "previous_attempt":previous}
     auto.base.write(path, record)
     persist([path], "Persist original canary generation intent before inference")
     def save_raw(raw):
         record.update(status="caption_response_durable", generated_text=raw)
         auto.base.write(path,record)
         persist([path],"Persist actual model content before JSON parsing; never discard response")
-    item, language = auto.content(day, slot, key,raw_sink=save_raw)
+    if retry_image:
+        item,language=previous["content"],previous["language"]
+    else:
+        item,language=auto.content(day, slot, key,raw_sink=save_raw)
     record.update(status="image_armed_unknown", content=item, language=language)
     auto.base.write(path, record)
-    persist([path], "Persist real AI caption before single image call")
-    jpg = auto.make_image(item["scene"], key)
+    persist([path], "Persist real AI caption before bounded image call")
+    scene=item["scene"]
+    if retry_image:
+        scene += " Clean empty margins. Absolutely no signature, autograph, monogram, lettering, artist mark or watermark anywhere, including all corners."
+    jpg = auto.make_image(scene, key)
     digest = hashlib.sha256(jpg).hexdigest()
     image_path = ROOT / "docs/assets" / (digest + ".jpg")
     image_path.write_bytes(jpg)
