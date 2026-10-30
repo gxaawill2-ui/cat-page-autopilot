@@ -1,16 +1,17 @@
 {
   "page_id": "1346385028565797",
   "slot": "2026-11-01T18:00",
-  "status": "schedule_armed_unknown",
+  "status": "scheduled_unverified",
   "caption_sha256": "72693b4579206a6463f61b3a1c5bf56b242fd9565c67a8f8acf2502f45b2828b",
   "image_sha256": "071a665783e151283d680e4a5ef6f3dd5356a688e005a4d98875bd41d8db355d",
   "scheduled_publish_time": 1793527200,
   "armed_at": "2026-10-31T00:08:29.449808+08:00",
   "photo_id": "122107426815515576",
-  "meta_post_id": null,
+  "meta_post_id": "1346385028565797_122107426863515576",
   "retry_allowed": false,
   "method": "Meta unpublished photo -> scheduled Page feed",
   "run_id": "41087010316",
   "curated_id": "chatgpt-selected-20261030-3",
-  "source_png_sha256": "09287cfc9e54e7f85f5452ab0a7d8d237d57de369913becb2375f845102f6710"
+  "source_png_sha256": "09287cfc9e54e7f85f5452ab0a7d8d237d57de369913becb2375f845102f6710",
+  "response_at": "2026-10-31T00:08:38.378848+08:00"
 }
