@@ -1,0 +1,18 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-02T12:30",
+  "caption": "阿斑今日巡查報告：發現廚房角落藏著一個神祕的、會滾動的毛茸茸球體。經過嚴密觀察，確定這是一顆失蹤已久的襪子。任務達成！",
+  "language": "zh-Hant",
+  "image_sha256": "72c52fb25c4ed49a1dee1e86e3a6c404d94e413da3fcdb95534a43ad87e94d26",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/72c52fb25c4ed49a1dee1e86e3a6c404d94e413da3fcdb95534a43ad87e94d26.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A tuxedo cat named Ah Ban with bright yellow eyes, a crisp white bib, and white paws, crouches low on a sunlit wooden floor. He is peering intensely into a dark corner behind a chair, his tail twitching with focus. He has just discovered a colorful, crumpled wool sock, treating it like a rare archaeological find in a hand-painted book illustration style.",
+  "prepared_at": "2026-10-31T01:59:52.741274+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "A curious tuxedo cat discovers a lost sock during his daily household inspection",
+  "image_attempts": 1
+}
