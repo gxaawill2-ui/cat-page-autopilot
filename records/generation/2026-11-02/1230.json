@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-10-31T01:59:46.438562+08:00"
+  "started_at": "2026-10-31T01:59:46.438562+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"阿斑今日巡查報告：發現廚房角落藏著一個神祕的、會滾動的毛茸茸球體。經過嚴密觀察，確定這是一顆失蹤已久的襪子。任務達成！\",\n  \"scene\": \"A tuxedo cat named Ah Ban with bright yellow eyes, a crisp white bib, and white paws, crouches low on a sunlit wooden floor. He is peering intensely into a dark corner behind a chair, his tail twitching with focus. He has just discovered a colorful, crumpled wool sock, treating it like a rare archaeological find in a hand-painted book illustration style.\",\n  \"topic\": \"A curious tuxedo cat discovers a lost sock during his daily household inspection.\"\n}"
 }
