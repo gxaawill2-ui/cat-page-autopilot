@@ -12,6 +12,7 @@ name: Cat Page Unattended AI Replenishment (opt-in, future-only)
         default: true
 permissions:
   contents: write
+  pages: write
 concurrency:
   group: cat-page-meta-official-publisher
   cancel-in-progress: false
@@ -21,6 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 90
     env:
+      GH_TOKEN: ${{ github.token }}
       CAT_AUTOPILOT_ENABLED: ${{ vars.CAT_AUTOPILOT_ENABLED }}
       META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
       CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}

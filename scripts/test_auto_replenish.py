@@ -52,9 +52,10 @@ class ReplenishSafetyTest(unittest.TestCase):
     def test_unknown_generation_is_not_paid_for_twice(self):
         with tempfile.TemporaryDirectory() as tmp,patch.object(a,"ROOT",Path(tmp)), \
              patch.dict(os.environ,{"CAT_AUTOPILOT_ENABLED":"true","META_PAGE_ACCESS_TOKEN":"fixture","CLOUDFLARE_API_TOKEN":"fixture","CLOUDFLARE_ACCOUNT_ID":"a"*32},clear=True), \
-             patch.object(a.native,"remote"),patch.object(a,"budget_gate"),patch.object(a,"model_gate"), \
+             patch.object(a.native,"remote",return_value=({}, {"posts":[],"scheduled_posts":[]})),patch.object(a.native,"remote_guard"),patch.object(a,"checkpoint"),patch.object(a,"budget_gate"),patch.object(a,"model_gate"), \
              patch.object(a,"slots_to_fill",return_value=[(dt.date(2026,11,1),"09:30")]), \
              patch.object(a,"content",side_effect=AssertionError("No paid replay")):
+            a.base.write(Path(tmp)/"state/policy.json",{"daily_limit":4})
             a.base.write(a.generation_file(dt.date(2026,11,1),"09:30"),{"status":"image_armed_unknown"})
             a.run()
 
@@ -158,6 +159,24 @@ class ReplenishSafetyTest(unittest.TestCase):
                 self.assertNotIn((dt.date(2026,11,1),"09:30"),list(a.slots_to_fill(now)))
             finally:
                 a.ROOT=old_root
+
+    def test_missing_pages_build_credential_stops_before_http(self):
+        with patch.dict(os.environ,{},clear=True), patch.object(a.urllib.request,"urlopen",side_effect=AssertionError("no HTTP")):
+            with self.assertRaisesRegex(ValueError,"credential missing"):
+                a.request_pages_build()
+
+    def test_pages_build_rejection_is_not_retried(self):
+        from urllib.error import HTTPError
+        with patch.dict(os.environ,{"GH_TOKEN":"fixture"}), patch.object(a.urllib.request,"urlopen",side_effect=HTTPError("https://api.github.com",403,"denied",{},None)) as call:
+            with self.assertRaisesRegex(ValueError,"PAGES_BUILD_HTTP_403"):
+                a.request_pages_build()
+            self.assertEqual(call.call_count,1)
+
+    def test_character_profiles_have_stable_distinct_appearances(self):
+        chars=a.base.read(a.ROOT/"state/characters.json")["characters"]
+        self.assertEqual([c["name"] for c in chars],["阿橘","小雪","小夜","阿斑","咪寶"])
+        self.assertEqual(len({c["appearance"] for c in chars}),5)
+        self.assertTrue(all(c["personality"] and c["story_style"] for c in chars))
 
 if __name__=="__main__":
     unittest.main()

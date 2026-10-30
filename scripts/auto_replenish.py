@@ -3,7 +3,7 @@
 Fail closed; never post immediately and never replay uncertain writes.
 """
 import base64, datetime as dt, hashlib, io, json, os, re, subprocess, sys
-import urllib.request, urllib.error
+import urllib.request, urllib.error, time
 import cloudflare_ai as cloudflare
 from pathlib import Path
 from PIL import Image, ImageOps
@@ -44,16 +44,17 @@ def chat(messages,key,model,json_object=False):
 
 def content(day,slot,key,raw_sink=None):
     language=slot_language(day,slot)
-    actor,appearance=(
-        ("阿橘","orange tabby"),("小雪","white longhair"),
-        ("小夜","black cat"),("阿斑","tuxedo cat"),("咪寶","playful tabby")
-    )[(day.toordinal()+SLOTS.index(slot))%5]
+    characters=base.read(ROOT/"state/characters.json")["characters"]
+    character=characters[(day.toordinal()+SLOTS.index(slot))%len(characters)]
+    actor,appearance=character["name"],character["appearance"]
     request=("Return JSON only with keys caption, scene, topic. Original funny or heartwarming "
         "fictional cat slice-of-life. No market/news claims, quotations, copyrighted characters, "
         "text in images, promotions or personal data. Caption at most 240 characters. "
         "Scene in English 30-70 words: one expressive cat, unique situation and pose, "
         "hand-painted book illustration, natural lighting, precise anatomy, no typography. "
-        f"Taipei date {day} time {slot}. Caption language={language}. Character={actor}, {appearance}.")
+        f"Taipei date {day} time {slot}. Caption language={language}. Character={actor}, {appearance}. "
+        f"Personality: {character['personality']}. Story angle: {character['story_style']}. "
+        "Use a specific setup and an unexpected punchline or emotional payoff; no generic descriptions or hashtags.")
     raw=chat([{"role":"system","content":"Produce one original family-friendly social post as JSON."},
               {"role":"user","content":request}],key,TEXT,json_object=True)
     if raw_sink is not None: raw_sink(raw)
@@ -161,49 +162,130 @@ def run(dry=False):
     native.remote(meta)
     budget_gate(now)
     model_gate()
-    for day,slot in targets:
-        qpath=ROOT/"queue/meta"/str(day)/(slot.replace(":","")+".json")
-        if qpath.exists():
-            q=base.read(qpath)
-        else:
-            gp=generation_file(day,slot)
-            if gp.exists():
-                print("GENERATION_NEEDS_RECONCILIATION "+str(day)+" "+slot,flush=True)
-                continue
-            stage={"slot":str(day)+"T"+slot,"status":"content_armed_unknown",
-                   "attempts":1,"retry_allowed":False,"started_at":dt.datetime.now(TZ).isoformat()}
-            checkpoint(gp,stage,"Save AI generation intent "+stage["slot"])
-            item,language=content(day,slot,key)
-            stage.update(status="image_armed_unknown",content=item,language=language)
-            checkpoint(gp,stage,"Save caption and original scene before image request")
-            existing=[base.norm(base.read(p).get("caption",""))
-                      for p in (ROOT/"queue/meta").glob("*/*.json")]
-            if base.norm(item["caption"]) in existing:
-                raise ValueError("AI generated duplicate caption")
-            image=make_image(item["scene"],key)
-            q=commit_queue(day,slot,item,language,image)
-            # Persist the actual JPEG before another external request can interrupt Work.
-            stage.update(status="jpeg_durable_qa_pending",image_sha256=q["image_sha256"])
-            checkpoint(gp,stage,"Record durable original image before visual QA")
-        if q.get("image_qa") is not True:
-            if q.get("image_qa_method")=="vision FAIL; held":
-                continue
-            image_path=ROOT/"docs/assets"/(q["image_sha256"]+".jpg")
-            image=image_path.read_bytes()
-            if base.sha(image)!=q["image_sha256"]: raise ValueError("Persisted image SHA mismatch")
-            passed=qa_image(image,q["scene"],key)
-            q.update(image_qa=passed,image_qa_method="vision PASS + JPEG integrity" if passed else "vision FAIL; held")
-            checkpoint(qpath,q,"Save actual visual QA decision "+q["slot"])
-            if not passed:
-                print("VISUAL_QA_REJECTED "+str(day)+" "+slot,flush=True)
-                continue
-        try:
-            base.verify_image(q)
-        except Exception:
-            print("PUBLIC_IMAGE_NOT_READY: retry same queue on next replenishment",flush=True)
+    # Persist read-only inventory and verify every known due native post; never recreate it.
+    inventory = native.remote(meta)[1]
+    for path in (ROOT/"state/meta_native").glob("*.json"):
+        old=base.read(path)
+        if not old.get("meta_post_id") or not old.get("slot"):
             continue
-        native.schedule(q,meta,dt.datetime.now(TZ))
-        print("META_NATIVE_SCHEDULED "+q["slot"],flush=True)
+        if native.stamp(old["slot"])>now or old.get("status")=="published_api_verified":
+            continue
+        qp=ROOT/"queue/meta"/old["slot"][:10]/(old["slot"][11:].replace(":","")+".json")
+        if qp.exists():
+            native.reconcile(base.read(qp),old,meta)
+    report={"run_id":os.environ.get("GITHUB_RUN_ID"),"started_at":now.isoformat(),
+            "prepared":[],"scheduled":[],"held":[],"errors":[],"immediate_publish_calls":0}
+    for day,slot in targets:
+        slotkey=str(day)+"T"+slot
+        planned=dt.datetime.fromisoformat(slotkey).replace(tzinfo=TZ)
+        # Before inference, count remote schedules/published and all local uncertain slots.
+        try:
+            native.remote_guard({"slot":slotkey,"caption":"[inventory-only "+slotkey+"]"},
+                                planned,base.read(ROOT/"state/policy.json")["daily_limit"],inventory)
+            if any(x.get("slot")==slotkey for x in native.entries()):
+                report["held"].append({"slot":slotkey,"reason":"occupied local state"})
+                continue
+        except ValueError as exc:
+            report["held"].append({"slot":slotkey,"reason":str(exc)})
+            continue
+        qpath=ROOT/"queue/meta"/str(day)/(slot.replace(":","")+".json")
+        try:
+            if qpath.exists():
+                q=base.read(qpath)
+            else:
+                gp=generation_file(day,slot)
+                if gp.exists():
+                    report["held"].append({"slot":slotkey,"reason":"generation requires reconciliation"})
+                    continue
+                stage={"slot":slotkey,"status":"content_armed_unknown","attempts":1,
+                       "retry_allowed":False,"started_at":dt.datetime.now(TZ).isoformat()}
+                checkpoint(gp,stage,"Save AI generation intent "+slotkey)
+                def raw_caption(raw):
+                    stage["raw_caption_response"]=raw
+                    checkpoint(gp,stage,"Preserve actual caption response before parsing")
+                item,language=content(day,slot,key,raw_sink=raw_caption)
+                stage.update(status="image_armed_unknown",content=item,language=language)
+                checkpoint(gp,stage,"Save caption and original scene before image request")
+                existing=[base.norm(base.read(p).get("caption",""))
+                          for p in (ROOT/"queue/meta").glob("*/*.json")]
+                if base.norm(item["caption"]) in existing:
+                    raise ValueError("AI generated duplicate caption")
+                image=make_image(item["scene"]+" No signature, no watermark, no writing in any corner.",key)
+                q=commit_queue(day,slot,item,language,image)
+                stage.update(status="jpeg_durable_qa_pending",image_sha256=q["image_sha256"])
+                checkpoint(gp,stage,"Record durable original image before visual QA")
+            if q.get("image_qa") is not True:
+                if q.get("image_qa_method") in ("vision FAIL; held","vision armed unknown"):
+                    report["held"].append({"slot":slotkey,"reason":q["image_qa_method"]})
+                    continue
+                image=(ROOT/"docs/assets"/(q["image_sha256"]+".jpg")).read_bytes()
+                if base.sha(image)!=q["image_sha256"]:
+                    raise ValueError("Persisted image SHA mismatch")
+                q["image_qa_method"]="vision armed unknown"
+                checkpoint(qpath,q,"Arm single visual QA request "+slotkey)
+                def raw_qa(raw):
+                    q["image_qa_response"]=raw
+                    checkpoint(qpath,q,"Preserve actual visual QA response "+slotkey)
+                passed=qa_image(image,q["scene"],key,raw_sink=raw_qa)
+                q.update(image_qa=passed,image_qa_method="vision PASS + JPEG integrity" if passed else "vision FAIL; held")
+                checkpoint(qpath,q,"Save actual visual QA decision "+slotkey)
+                if not passed:
+                    report["held"].append({"slot":slotkey,"reason":"visual quality rejected"})
+                    continue
+            report["prepared"].append(slotkey)
+        except (ValueError,RuntimeError) as exc:
+            report["errors"].append({"slot":slotkey,"type":type(exc).__name__,"reason":str(exc)[:160]})
+            # CAS failures and provider quota/transport failures stop all additional inference.
+            if isinstance(exc,RuntimeError):
+                break
+    ready=[]
+    for day,slot in targets:
+        qp=ROOT/"queue/meta"/str(day)/(slot.replace(":","")+".json")
+        rp=ROOT/"state/meta_native"/(str(day)+"-"+slot.replace(":","")+".json")
+        if qp.exists() and not rp.exists():
+            q=base.read(qp)
+            if q.get("image_qa") is True: ready.append(q)
+    if ready:
+        request_pages_build()
+    for q in ready:
+        proof={"slot":q["slot"],"image_sha256":q["image_sha256"],"verified":False}
+        for attempt in range(3):
+            try:
+                base.verify_image(q)
+                proof.update(verified=True,http_status=200,mime="image/jpeg",sha_matches=True,
+                             checked_at=dt.datetime.now(TZ).isoformat())
+                break
+            except Exception as exc:
+                proof["last_error"]=type(exc).__name__
+                if attempt<2: time.sleep(40)
+        checkpoint(ROOT/"records/pages-proofs"/(q["image_sha256"]+".json"),proof,"Save anonymous public JPEG validation")
+        if not proof["verified"]:
+            report["held"].append({"slot":q["slot"],"reason":"public URL failed HTTP/MIME/SHA"})
+            continue
+        try:
+            result=native.schedule(q,meta,dt.datetime.now(TZ))
+            report["scheduled"].append({"slot":q["slot"],"post_id":result["meta_post_id"],"status":result["status"]})
+        except Exception as exc:
+            report["errors"].append({"slot":q["slot"],"type":type(exc).__name__,"reason":str(exc)[:160]})
+            # A CAS/network/unknown write stops this batch; its exact record stays armed.
+            if not isinstance(exc,(ValueError,native.Rejected)): break
+    report["completed_at"]=dt.datetime.now(TZ).isoformat()
+    checkpoint(ROOT/"records/autopilot-runs"/(str(os.environ.get("GITHUB_RUN_ID","local"))+".json"),report,"Save actual unattended replenishment result")
+    print(json.dumps(report,ensure_ascii=False),flush=True)
+    if report["errors"]: raise ValueError("Batch contains recorded failures; review durable run evidence")
+
+def request_pages_build():
+    """Bot pushes do not automatically build Pages. Explicit existing branch build only."""
+    token=os.environ.get("GH_TOKEN")
+    if not token: raise ValueError("Pages build credential missing; no Meta write")
+    req=urllib.request.Request("https://api.github.com/repos/gxaawill2-ui/cat-page-autopilot/pages/builds",
+        data=b"{}",method="POST",headers={"Authorization":"Bearer "+token,
+        "Accept":"application/vnd.github+json","Content-Type":"application/json"})
+    try:
+        with urllib.request.urlopen(req,timeout=30) as response:
+            if response.status!=201: raise ValueError("Pages build not accepted")
+    except urllib.error.HTTPError as exc:
+        raise ValueError("PAGES_BUILD_HTTP_"+str(exc.code)+"; no Facebook write") from None
 
 if __name__=="__main__":
     try: run("--dry-run" in sys.argv)

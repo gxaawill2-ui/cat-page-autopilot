@@ -1,0 +1,34 @@
+{
+  "characters": [
+    {
+      "name": "阿橘",
+      "appearance": "orange short-haired tabby, amber eyes, cream muzzle and paws",
+      "personality": "food-loving optimistic troublemaker",
+      "story_style": "small grand plans with a gentle comic reversal"
+    },
+    {
+      "name": "小雪",
+      "appearance": "white long-haired cat, blue eyes, pink nose",
+      "personality": "elegant and quietly stubborn",
+      "story_style": "graceful appearance versus ordinary household chaos"
+    },
+    {
+      "name": "小夜",
+      "appearance": "solid black short-haired cat, green eyes, small white chest patch",
+      "personality": "quiet, observant and secretly affectionate",
+      "story_style": "warm homecoming moments and dry humor"
+    },
+    {
+      "name": "阿斑",
+      "appearance": "black-and-white tuxedo cat, yellow eyes, white bib and socks",
+      "personality": "curious self-appointed household inspector",
+      "story_style": "earnest investigations with unexpected everyday discoveries"
+    },
+    {
+      "name": "咪寶",
+      "appearance": "brown short-haired tabby kitten, hazel eyes, white chin",
+      "personality": "energetic and brave about very small things",
+      "story_style": "tiny garden or household adventures with an emotional or funny payoff"
+    }
+  ]
+}
