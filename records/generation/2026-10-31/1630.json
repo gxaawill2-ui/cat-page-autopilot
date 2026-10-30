@@ -15,5 +15,6 @@
     "evidence_run_id": "41024168989",
     "error": "No usable generated text",
     "recovery_note": "Completed durable run proves text rejected before image call. One corrected-request caption retry, max total text attempts2; keep original evidence. Unknown Facebook/image attempts remain untouched."
-  }
+  },
+  "raw_caption_response": "{\n  \"caption\": \"本以為小夜是在深沉地凝視窗外的落葉，沒想到牠只是在盯著那隻剛掉在地上的麵包屑。那一刻，牠的眼神比哲學家還要嚴肅。\",\n  \"scene\": \"In a cozy sunlit living room, 小夜, a solid black short-haired cat with bright green eyes and a tiny white chest patch, sits in a regal, upright pose on a wooden floor. She stares with intense, scholarly gravity at a single breadcrumb. The hand-painted book illustration style uses warm, natural golden hour lighting to highlight her sleek fur.\",\n  \"topic\": \"The dramatic seriousness of a cat observing a tiny snack.\"\n}"
 }
