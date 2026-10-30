@@ -9,8 +9,8 @@
       "19:30"
     ],
     "enabled": false,
-    "release_gate": "queue-only enabled; Work must never publish. Official Actions live gates apply independently.",
-    "observed_at": "2026-10-30T09:10:32.941Z",
+    "release_gate": "retired disabled ChatGPT daily task; GitHub ahead-of-time replenishment now independent",
+    "observed_at": "2026-10-30T17:23:00+08:00",
     "last_runtime_run": "860cdd3e-f0b4-8329-8e46-dea410639282",
     "runtime_requires_user_action": true,
     "disabled_reason": "unknown; platform offers flag but no offending tool trace. Not blindly re-enabled.",
@@ -19,7 +19,7 @@
     "next_configured_slot": "2026-10-28T19:30:00+08:00",
     "next_run_time_from_platform": null,
     "legacy_quarantine_path": "state/legacy_quarantine.json",
-    "quarantine_rollout": "2026-10-27 new future slots only; unattended post success not yet proven",
+    "quarantine_rollout": "Historical exact isolation retained; new Meta native schedules verified separately.",
     "binary_bridge": "connector_bundle.js loadConnectorBundle → connector_commit.js expected blob SHA + CAS",
     "latest_repair_commit": "085a51454de5c936f157a259f781ba5481db3915",
     "unattended_acceptance": "pending_first_Meta_Graph_scheduled_post",
@@ -61,18 +61,22 @@
     "no_duplicate_workflow_created": true,
     "preflight_run_id": "40646935634",
     "credential_lifecycle": "Refreshed via official authorization; never expose Secret; previous expiration retained in history",
-    "observed_at": "2026-10-29T07:19:40.698136+08:00",
+    "observed_at": "2026-10-30T17:23:00+08:00",
     "workflow_state": "manual native future preparation/audit only; no immediate publication branch",
-    "switch_ui_receipt": "Repository variables table: META_PUBLISH_ENABLED true",
-    "next_prepared_queue": "queue/meta/2026-10-28/1930.json",
-    "first_scheduled_acceptance": "pending_1630_run_not_yet_observed_at_1640",
-    "next_expected_nominal_slot": "2026-10-28T19:30:00+08:00",
-    "note": "GitHub cron best effort; no genuine Meta post yet. No backfill beyond existing 45 minute window.",
-    "queue_proof": "records/url-checks/meta-20261028-1930.json",
-    "queue_commit": "064dfcb604af6683476722250148d8445efd7e73",
     "immediate_publish_retired": true,
     "cron_removed": true,
-    "legacy_variable_actual_value": "false (official GitHub Variables table after successful sudo verification)"
+    "legacy_variable_actual_value": "false (official GitHub Variables table after successful sudo verification)",
+    "historical_2026_10_28": {
+      "switch_ui_receipt": "Repository variables table: META_PUBLISH_ENABLED true",
+      "next_prepared_queue": "queue/meta/2026-10-28/1930.json",
+      "first_scheduled_acceptance": "pending_1630_run_not_yet_observed_at_1640",
+      "next_expected_nominal_slot": "2026-10-28T19:30:00+08:00",
+      "note": "GitHub cron best effort; no genuine Meta post yet. No backfill beyond existing 45 minute window.",
+      "queue_proof": "records/url-checks/meta-20261028-1930.json",
+      "queue_commit": "064dfcb604af6683476722250148d8445efd7e73"
+    },
+    "switch_ui_receipt": "Official Variables table META_PUBLISH_ENABLED=false; old immediate path remains retired.",
+    "note": "Use cat-unattended-replenish.yml for future Meta native scheduling; no immediate cron route."
   },
   "meta_native": {
     "status": "four_new_scheduled_api_verified_and_Planner_seen",
@@ -119,12 +123,14 @@
   "native_readback_acceptance": {
     "task_id": "6ad6ec1845d48191938f06790c91fe8a",
     "reused_existing_completed_one_off": true,
-    "scheduled_for": "2026-10-30T09:40:00+08:00",
-    "enabled": false,
-    "role": "read-only Facebook check + GitHub receipt; all Facebook writes forbidden",
+    "scheduled_for": "2026-10-30T20:45:00+08:00",
+    "enabled": true,
+    "role": "read-only natural event=schedule audit; no generation/Facebook writes/manual dispatch",
     "actual_next_run_time_from_platform": null,
-    "acceptance": "completed official UI; later API verify40993880904 passed",
-    "note": "Configured once, not proof of execution; old Oct25 acceptance preserved"
+    "acceptance": "pending natural cron observation",
+    "note": "Existing single task reused; platform accepted update but next_run_time null, delivery not proven",
+    "prior_scheduled_for": "2026-10-30T09:40:00+08:00",
+    "prior_acceptance": "completed official UI; later API verify40993880904 passed"
   },
   "github_replenishment": {
     "workflow": ".github/workflows/cat-unattended-replenish.yml",
@@ -148,8 +154,20 @@
     "anchor": "2026-10-27",
     "days": 3,
     "latest_completed_period": "2026-10-27/2026-10-29",
-    "status": "implemented and 3 boundary/missing-data tests passed; actual read-only run pending",
+    "status": "actual_read_only_run_succeeded_metrics_limited",
     "creates_new_schedule": false,
-    "missing_metrics": "null / N/A, never zero"
+    "missing_metrics": "null / N/A, never zero",
+    "actual_run_id": "41031758313",
+    "report": "records/reviews/2026-10-27_2026-10-29.json",
+    "actual_published_samples": 5,
+    "mature_samples": 4,
+    "followers_observed_now": 0,
+    "metrics_permission_error": {
+      "code": 10,
+      "required": "pages_read_user_content or Page Public Content Access",
+      "impact": "interaction/reach/overseas data unavailable; publication permission unaffected"
+    },
+    "next_period": "2026-10-30/2026-11-01",
+    "next_report_eligible_at": "2026-11-02T00:00:00+08:00"
   }
 }

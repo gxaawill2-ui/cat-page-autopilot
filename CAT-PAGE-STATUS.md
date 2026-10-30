@@ -1,3 +1,16 @@
+## 2026-10-30 17:23 續作保存：四篇真預約／檢討實跑／自然cron連續運作未驗收（最新）
+- PR#1已正式合併至main（2ea78b53375ec42c1e6bce197a1c79dbe12d84ed）。GitHub Variables官方表格再次實讀CAT_AUTOPILOT_ENABLED=true、META_PUBLISH_ENABLED=false；本人郵件驗證已完成，不需再提供Token/驗證碼。
+- 完整補稿run41029967122成功，4篇真Meta原生Feed預約；API is_published=false、全文/附件/預定時間一致，官方Planner已看到。10/31 09:30=1346385028565797_122107291635515576；12:30=1346385028565797_122107291869515576；16:30=1346385028565797_122107292013515576；11/1 09:30=1346385028565797_122107292295515576。未到時間不能稱這4篇已發布，禁止重送。
+- 今日09:30舊成功1346385028565797_122107140849515576已真API驗證is_published=true（run40993880904），不重送。歷史10/26–28未知事故隔離與品牌暫停維持不變。
+- 5個時段品質留稿：今日19:30兩次圖片FAIL已達上限，禁止第3次；10/31 19:30及11/1 12:30/16:30/19:30各首次FAIL，僅容許既有程式的一次第二張。三日緩衝未填滿，不可宣稱12篇全部完成。實際JPEG目視尚見部分圖文細節、中文量詞、英文重複詞需改善；模型QA通過不等於內容完美，未偽改QA或重送既有預約。
+- 三天檢討真run41031758313成功，生成步驟skipped，AI calls=0、Facebook writes=0；records/reviews/2026-10-27_2026-10-29.json有5篇真已發布樣本、4篇滿24h，followers_observed_now API真回0。新增追蹤歸因仍N/A。
+- 互動查詢Meta HTTP400/code10，需pages_read_user_content或Page Public Content Access。退回基本貼文清單成功；互動、分享、觸及、海外數據保留null/N/A，不填0、不宣稱語言/題材勝出。這不影響已驗證發布權限，未擅自擴權。
+- 首輪成功是workflow_dispatch，自然event=schedule與下一輪持續成功仍未驗收。現有cron UTC17 0,12 * * *，台北08:17/20:17；下一名義補稿10/30 20:17，GitHub可能延遲。Meta掌管到點發文；第一篇新預約10/31 09:30之後才可驗收配送。
+- 舊ChatGPT每日6add4bc872c88191bea8e6d2cf3dc016仍disabled，新流程不依賴它。週日20:00既有分析保留enabled。重用既有單次驗收6ad6ec1845d48191938f06790c91fe8a於10/30 20:45只讀核對自然cron，平台回傳enabled=true但next_run_time=null，不能保證已送達；沒有新增重複任務。
+- 69項scripts＋30項根目錄測試通過；真review-only亦跑69 scripts通過。額外NT$0，Workers Free 10,000 Neurons/day，用盡停止、無付費回退/卡片；當日已用Neurons未取得。免費方案證據2026-11-13T07:16:35.913307+08:00到期會安全停止待重新核實，非永久零維護。
+- 下一精確步驟：20:17後查真正event=schedule/run結論/durable report，確認只補真空缺、不重送4篇；活躍publisher運作時不得寫main干擾CAS。10/31 09:30後GET真Post核對配送。下一三天報告10/30–11/1於11/2既有工作到期產生。
+- 續作：本檔→state/schedules.json→records/acceptance/2026-10-30-live-batch.json→records/autopilot-runs/41029967122.json→records/reviews/2026-10-27_2026-10-29.json；保留全部歷史，同步唯一Library入口。
+
 ## 2026-10-30 17:05 原生預約正式完整批次已成功／自然cron連續驗收待觀察（最新）
 - PR#1已合併；GitHub官方Variables清單真CAT_AUTOPILOT_ENABLED=true、META_PUBLISH_ENABLED=false；本人郵件再驗證已完成，不需再索取Token。舊ChatGPT每日disabled、週日20:00分析enabled，無重複新任務。
 - 真正式workflow run41029967122成功：8篇已證實文字失敗/未生圖的草稿限次恢復；4篇通過原創JPEG/逐項QA/匿名Pages 200-MIME-SHA/完整CAS/單次Meta未發布照片→Feed預約，真Post IDs及slot見下列state，無立即發布。

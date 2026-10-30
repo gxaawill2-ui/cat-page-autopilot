@@ -80,5 +80,27 @@
   ],
   "natural_cron_acceptance": false,
   "next_nominal_taipei": "2026-10-30T20:17:00+08:00",
-  "cost": "NT$0 additional; no upgrade/card; usage Neurons unknown"
+  "cost": "NT$0 additional; no upgrade/card; usage Neurons unknown",
+  "review_acceptance": {
+    "run_id": "41031758313",
+    "report": "records/reviews/2026-10-27_2026-10-29.json",
+    "status": "success_metrics_limited",
+    "actual_samples": 5,
+    "mature_samples": 4,
+    "ai_calls": 0,
+    "facebook_write_calls": 0,
+    "metrics_unavailable_reason": "Meta HTTP400/code10 requires pages_read_user_content or Page Public Content Access"
+  },
+  "variables_observed": {
+    "checked_at": "2026-10-30T17:23:00+08:00",
+    "CAT_AUTOPILOT_ENABLED": true,
+    "META_PUBLISH_ENABLED": false,
+    "source": "Official GitHub Repository Variables UI"
+  },
+  "continuous_unattended_acceptance": "not yet verified; first full replenishment was workflow_dispatch",
+  "next_actual_native_delivery": "2026-10-31T09:30:00+08:00",
+  "quality_limitations": [
+    "Five slots held on explicit image QA failures; daily maximum is a cap, not quota.",
+    "Copy naturalness and exact scene-caption detail consistency still need improvement; no perfect-quality claim."
+  ]
 }
