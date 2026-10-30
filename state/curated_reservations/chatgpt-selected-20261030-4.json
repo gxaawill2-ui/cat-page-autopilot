@@ -1,0 +1,27 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-01T11:00",
+  "caption": "Today’s investment strategy:\n\nStep 1: Spot a butterfly.\nStep 2: Forget everything else.\nStep 3: Chase happiness instead. 🦋🐾\n\nZero profits.\nMaximum joy.\n\nSometimes the best things in life aren’t on a chart.",
+  "language": "en",
+  "image_sha256": "17011b169ca991d780c71014372cf279247b5009647465b57c65da0c295346fa",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/17011b169ca991d780c71014372cf279247b5009647465b57c65da0c295346fa.jpg",
+  "image_qa": true,
+  "image_qa_method": "Original manually visually inspected: character/scene/anatomy/clarity; fictional screen graphics are not market data",
+  "curated_id": "chatgpt-selected-20261030-4",
+  "source_png_sha256": "1b6dc54b09e62c290e338785d29483634ecbb7d38fac303f6db84d54d72efea1",
+  "source_library_file_id": "libfile_321ef99420e0819196cca8c6cf1da253",
+  "source_library_filename": "image-gen-4(3).png",
+  "source": "ChatGPT original; user-selected",
+  "title": "陽光花園裡的小貓追蝶",
+  "jpeg_conversion": {
+    "quality": 95,
+    "subsampling": 0,
+    "regenerated": false,
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "original_png_retained": "Exact original retained in Library under source_library_file_id",
+  "status": "reserved"
+}

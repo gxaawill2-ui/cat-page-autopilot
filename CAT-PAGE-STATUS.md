@@ -1,3 +1,10 @@
+## 2026-10-31 00:05 精選ChatGPT原圖預約：名額及安全修正已備妥，尚未提交Meta（最新）
+- 使用者指定4張原圖已從Library取回並逐張目視：image-gen-1(4)=阿橘工作室；2(4)=小雪記帳；3(4)=雨夜黑貓；4(3)=花園追蝶。原PNG保留原Library ID與SHA，轉JPEG品質94–95/subsampling0，無Cloudflare或ImageGen呼叫。
+- 官方Planner重新核對10/31既有09:30/12:30/16:30共3篇、11/1既有09:30共1篇。候選精選：10/31 18:00；11/1 11:00/15:00/18:00，尚未當成Meta成功。
+- 新增state/curated_reservations逐篇不可變保留，接入原native.entries/remote_guard：所有來源每日最多4篇、至少90分鐘、未知占位、自己的保留只在內容/原PNG SHA完全匹配時豁免；真native意圖取代保留計數，避免雙算。既有共享concurrency與每次外部寫前CAS繼續有效，舊即時路徑仍關閉。
+- 不新增每日排程；既有手動Meta Native Scheduler增curated批次模式，只用既有Token Secret、Pages驗證、photo->Feed未來預約、回讀與持久回條，AI calls=0。
+- 81項scripts安全測試通過，其中12項新保留/90分鐘/額度/防篡改/未知鎖/不補發測試。下一步：CAS提交本輪保留與JPEG→既有workflow audit核對真Meta清單→curated批次單次執行→逐篇真ID/API/Planner驗證，沒有回條不宣稱成功。
+
 ## 2026-10-30 17:23 續作保存：四篇真預約／檢討實跑／自然cron連續運作未驗收（最新）
 - PR#1已正式合併至main（2ea78b53375ec42c1e6bce197a1c79dbe12d84ed）。GitHub Variables官方表格再次實讀CAT_AUTOPILOT_ENABLED=true、META_PUBLISH_ENABLED=false；本人郵件驗證已完成，不需再提供Token/驗證碼。
 - 完整補稿run41029967122成功，4篇真Meta原生Feed預約；API is_published=false、全文/附件/預定時間一致，官方Planner已看到。10/31 09:30=1346385028565797_122107291635515576；12:30=1346385028565797_122107291869515576；16:30=1346385028565797_122107292013515576；11/1 09:30=1346385028565797_122107292295515576。未到時間不能稱這4篇已發布，禁止重送。

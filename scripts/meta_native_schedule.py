@@ -48,6 +48,30 @@ def entries():
     for folder in ("state/posts", "state/meta_dispatch", "state/meta_native"):
         for p in (ROOT / folder).glob("*.json"):
             yield load(p)
+    # A durable curated reservation consumes capacity before any external write.
+    # Once its native attempt exists, that exact attempt owns the slot instead.
+    for p in (ROOT / "state/curated_reservations").glob("*.json"):
+        reservation = load(p)
+        if not record_file(reservation).exists():
+            yield reservation
+
+def curated_reservation(q):
+    identity = q.get("curated_id")
+    if not isinstance(identity, str) or not re.fullmatch(r"[a-z0-9-]{1,80}", identity):
+        return None
+    path = ROOT / "state/curated_reservations" / (identity + ".json")
+    if not path.exists():
+        return None
+    r = load(path)
+    keys = ("page_id", "slot", "caption", "language", "image_sha256", "image_url", "curated_id", "source_png_sha256")
+    if (r.get("status") != "reserved" or r.get("source") != "ChatGPT original; user-selected"
+            or not re.fullmatch(r"[0-9a-f]{64}", str(r.get("source_png_sha256", "")))
+            or any(r.get(k) != q.get(k) for k in keys)):
+        return None
+    return r
+
+def owns_reservation(q, old):
+    return curated_reservation(q) is not None and old.get("curated_id") == q.get("curated_id") and old.get("status") == "reserved"
 
 def stamp(value):
     if isinstance(value, (int, float)) or (isinstance(value,str) and value.isdigit()):
@@ -65,7 +89,21 @@ def record_file(q):
 
 def validate(q, now):
     planned = stamp(q["slot"])
-    base.validate(q, planned.date().isoformat(), planned.strftime("%H:%M"))
+    reserved = curated_reservation(q)
+    if q.get("curated_id") and reserved is None:
+        raise ValueError("Curated content must match its immutable authorized reservation")
+    if reserved:
+        # Reuse ordinary payload validation without changing the standard language slots.
+        # Only the exact durable curated reservation authorizes a different future time.
+        validation_slot = "09:30" if q["language"] == "en" else "12:30"
+        if q["language"] not in ("en", "zh-Hant"):
+            raise ValueError("Curated language not authorized")
+        copy = dict(q, slot=planned.date().isoformat()+"T"+validation_slot)
+        base.validate(copy, planned.date().isoformat(), validation_slot)
+    else:
+        if planned.strftime("%H:%M") not in base.SLOTS:
+            raise ValueError("Nonstandard slot requires curated reservation")
+        base.validate(q, planned.date().isoformat(), planned.strftime("%H:%M"))
     if q.get("image_qa") is not True:
         raise ValueError("Original image visual QA required")
     if not 15*60 <= (planned-now).total_seconds() <= 3*86400:
@@ -78,6 +116,8 @@ def validate(q, now):
     if record_file(q).exists():
         raise ValueError("Native slot already attempted; never replay unknown or completed")
     for old in entries():
+        if owns_reservation(q, old):
+            continue
         if old.get("slot") == q["slot"]:
             raise ValueError("Slot already occupied")
         if (old.get("caption_sha256") == base.sha(base.norm(q["caption"]).encode())
@@ -112,12 +152,19 @@ def remote_guard(q, planned, cap, lists):
     actual = set()
     for x in all_remote:
         when = x.get("scheduled_publish_time") or x.get("created_time")
+        if when and abs((stamp(when)-planned).total_seconds()) < 90*60:
+            raise ValueError("Minimum 90-minute separation from a real Meta post")
         if when and stamp(when).date() == day:
             actual.add(x["id"])
         if x.get("scheduled_publish_time") and stamp(x["scheduled_publish_time"]) == planned:
             raise ValueError("Meta native slot already occupied")
     potential = set()
     for old in entries():
+        if owns_reservation(q, old):
+            continue
+        if old.get("slot") and old.get("status") not in ("upload_rejected", "schedule_rejected"):
+            if abs((stamp(old["slot"])-planned).total_seconds()) < 90*60:
+                raise ValueError("Minimum 90-minute separation from a reserved or uncertain slot")
         if old.get("slot") and stamp(old["slot"]).date() == day:
             oid = old.get("meta_post_id") or old.get("post_id")
             if oid not in actual and old.get("status") not in ("upload_rejected", "schedule_rejected"):
@@ -173,6 +220,8 @@ def schedule(q, token, now):
               "scheduled_publish_time":int(planned.timestamp()), "armed_at":now.isoformat(),
               "photo_id":None, "meta_post_id":None, "retry_allowed":False,
               "method":"Meta unpublished photo -> scheduled Page feed", "run_id":os.environ.get("GITHUB_RUN_ID")}
+    if q.get("curated_id"):
+        record.update(curated_id=q["curated_id"], source_png_sha256=q["source_png_sha256"])
     save(record_file(q), record, "Arm unpublished photo for future Meta slot "+q["slot"])
     try:
         photo = api(PAGE+"/photos", token, {"url":q["image_url"], "published":"false"}, method="POST")
@@ -204,7 +253,7 @@ def schedule(q, token, now):
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument("--mode", choices=["audit","dry-run","schedule","verify"], default="dry-run")
+    parser.add_argument("--mode", choices=["audit","dry-run","schedule","verify","curated"], default="dry-run")
     parser.add_argument("--queue", default="")
     args=parser.parse_args()
     token=os.environ.get("META_PAGE_ACCESS_TOKEN")
@@ -214,6 +263,9 @@ def main():
         raise ValueError("META_PAGE_ACCESS_TOKEN missing; no write possible")
     if args.mode == "audit":
         audit(token);return
+    if args.mode == "curated":
+        from curated_schedule import run
+        run(token);return
     q=load(queue_file(args.queue))
     if args.mode == "verify":
         reconcile(q, load(record_file(q)), token)

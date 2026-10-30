@@ -1,0 +1,27 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-10-31T18:00",
+  "caption": "阿橘今天的盤前會議只有三件事\n\n第一 先把心情顧好\n\n第二 看到紅紅綠綠不要先嚇到\n\n第三 罐罐沒到手之前 都不算真的獲利\n\n今天的投資心得\n\n可以錯過行情 但絕對不能錯過晚餐 😼📈",
+  "language": "zh-Hant",
+  "image_sha256": "a8a3adf88c04903aeb93f4380fb78eb8099d005137d442eccc25a318cc6e4320",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/a8a3adf88c04903aeb93f4380fb78eb8099d005137d442eccc25a318cc6e4320.jpg",
+  "image_qa": true,
+  "image_qa_method": "Original manually visually inspected: character/scene/anatomy/clarity; fictional screen graphics are not market data",
+  "curated_id": "chatgpt-selected-20261030-1",
+  "source_png_sha256": "9dea73bd998b07e6440dcc7092f1eb4eb4bd6159d1af13c73d4e0c61f855a8dd",
+  "source_library_file_id": "libfile_f61eee4ef0e8819191c208a6f811f213",
+  "source_library_filename": "image-gen-1(4).png",
+  "source": "ChatGPT original; user-selected",
+  "title": "阿橘的陽光交易工作室",
+  "jpeg_conversion": {
+    "quality": 95,
+    "subsampling": 0,
+    "regenerated": false,
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "original_png_retained": "Exact original retained in Library under source_library_file_id",
+  "status": "reserved"
+}

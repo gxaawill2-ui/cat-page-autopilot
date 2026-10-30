@@ -7,7 +7,7 @@ name: Meta Native Scheduler (manual preparation - no cron)
         required: true
         type: choice
         default: audit
-        options: ['audit', 'dry-run', 'schedule', 'verify']
+        options: ['audit', 'dry-run', 'schedule', 'verify', 'curated']
       queue:
         description: 'Canonical queue/meta/YYYY-MM-DD/HHMM.json; empty only for audit'
         required: false
@@ -15,21 +15,29 @@ name: Meta Native Scheduler (manual preparation - no cron)
         default: ''
 permissions:
   contents: write
+  pages: write
 concurrency:
   group: cat-page-meta-official-publisher
   cancel-in-progress: false
 jobs:
   prepare_meta_native:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     env:
+      GH_TOKEN: ${{ github.token }}
+      CAT_AUTOPILOT_ENABLED: ${{ vars.CAT_AUTOPILOT_ENABLED }}
       META_PAGE_ACCESS_TOKEN: ${{ secrets.META_PAGE_ACCESS_TOKEN }}
       NATIVE_MODE: ${{ inputs.mode }}
       NATIVE_QUEUE: ${{ inputs.queue }}
     steps:
       - uses: actions/checkout@v4
+      - name: Refuse writes outside main
+        if: github.ref != 'refs/heads/main' && (inputs.mode == 'schedule' || inputs.mode == 'curated')
+        run: echo 'Live native scheduling requires main'; exit 1
+      - name: Install existing JPEG validator
+        run: python3 -m pip install 'Pillow>=11,<13'
       - name: Native scheduling safety tests - mocked writes only
-        run: python3 -m unittest discover -s scripts -p test_meta_native_schedule.py -v
+        run: python3 -m unittest discover -s scripts -p 'test_*.py' -v
       - name: Prepare Meta native schedule or read-only audit - never immediate publish
         shell: bash
         run: python3 scripts/meta_native_schedule.py --mode "$NATIVE_MODE" --queue "$NATIVE_QUEUE"

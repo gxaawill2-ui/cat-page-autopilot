@@ -93,3 +93,12 @@ protocol2工具整合：bundle.py對JSON使用utf-8，供publish_once.js核對CA
 需要使用者在原已登入ChatGPT的Scheduled→原任務→10/27 16:30紀錄查看待處理工具名稱/提示。不要批准過期貼文。只有畫面明確證明Windsor呼叫尚待執行時，拒絕/取消該待批准動作並保存真實否決回條，才可作結案證據；若無該提示，請OpenAI/Windsor提供原始工具trace/後端action audit。拒絕pending並非刪鎖；仍須依真實回條CAS結案，保留hash/slot，禁止歷史重送。
 未確認需要重新OAuth時不盲目重連。Windsor目前Use default/低風險，若要改成Allow all actions，需使用者明確指定該模式；它會擴及該外掛全部動作，不能保證覆蓋provider/platform必需確認。只在實際權限問題處理且未知紀錄安全處置後，恢復原四時段。
 Metricool未連接且Free20篇/月不承接4篇/日；Meta官方排程僅見入口，未成功建立或驗收。沒有免費替代已部署，不能宣稱半自動也已成功。每週日分析仍保留enabled；每日停用期間三天檢討設定保留但依賴daily的執行會受阻，10/29前仍需恢復或由使用者明確發起檢討，不偷偷建立重複任務。
+
+
+## User-selected ChatGPT originals (2026-10-30)
+- Original PNGs remain in their exact Library identities; records/curated/2026-10-30/source-manifest.json binds original PNG SHA to publication JPEG SHA and unchanged user caption. No AI regeneration.
+- CAS commit every state/curated_reservations/*.json with its queue and JPEG before dispatch. Native inventory counts these reservations along with scheduled/published/unknown attempts; an existing native attempt supersedes the same reservation, never clears it.
+- Every newly created schedule must remain at least90minutes from real/reserved/unknown posts. Exact90minutes is allowed. All-source cap is four per Taipei date; reservations consume capacity before auto-replenishment spends AI calls. Existing successful schedules are never moved.
+- Use existing Meta Native Scheduler workflow, mode=curated, main only. It shares cat-page-meta-official-publisher concurrency with replenishment, audits exact Page, requests the existing Pages build, verifies anonymous200/image/jpeg/SHA, CAS-arms once, schedules unpublished photo->future Feed, immediately saves real Post ID and readback. No new cron and no immediate publish.
+- Already attempted native records are read-only reconciled if they have real IDs; no-ID unknowns are held. Never retry a write on missing response. Stop on CAS/network unknowns.
+- Keep CAT_AUTOPILOT_ENABLED=true and old META_PUBLISH_ENABLED=false; standard09:30/12:30/16:30/19:30 language trials remain unchanged. Curated content only authorizes exact additional times bound in reservations, with the same four/day cap.

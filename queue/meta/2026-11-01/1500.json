@@ -1,0 +1,26 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-01T15:00",
+  "caption": "小雪今天主動幫忙管理家庭開銷\n\n結果算到一半突然發現\n\n這個月最大的支出\n\n竟然是自己的罐罐跟零食\n\n小雪沉默了三秒\n\n然後決定把這筆費用改列「必要生活開支」🤍\n\n你家的貓也是財務黑洞嗎？",
+  "language": "zh-Hant",
+  "image_sha256": "3592493f409835593e675fdfbd0eae3268b5447264e1d5537be59d862134ca08",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/3592493f409835593e675fdfbd0eae3268b5447264e1d5537be59d862134ca08.jpg",
+  "image_qa": true,
+  "image_qa_method": "Original manually visually inspected: character/scene/anatomy/clarity; fictional screen graphics are not market data",
+  "curated_id": "chatgpt-selected-20261030-2",
+  "source_png_sha256": "bbec8b6df70d105422542c00d30b9ad2419a6c7ec225dcffb4cb00f568f783b7",
+  "source_library_file_id": "libfile_9f392f71b2988191a5053580ce1ba111",
+  "source_library_filename": "image-gen-2(4).png",
+  "source": "ChatGPT original; user-selected",
+  "title": "小雪的暖心家庭記帳時光",
+  "jpeg_conversion": {
+    "quality": 95,
+    "subsampling": 0,
+    "regenerated": false,
+    "dimensions": [
+      1254,
+      1254
+    ]
+  },
+  "original_png_retained": "Exact original retained in Library under source_library_file_id"
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "title": "阿橘的陽光交易工作室",
+    "slot": "2026-10-31T18:00",
+    "source_library_file_id": "libfile_f61eee4ef0e8819191c208a6f811f213",
+    "source_png_sha256": "9dea73bd998b07e6440dcc7092f1eb4eb4bd6159d1af13c73d4e0c61f855a8dd",
+    "jpeg_sha256": "a8a3adf88c04903aeb93f4380fb78eb8099d005137d442eccc25a318cc6e4320",
+    "jpeg_bytes": 775789,
+    "queue": "queue/meta/2026-10-31/1800.json",
+    "reservation": "state/curated_reservations/chatgpt-selected-20261030-1.json"
+  },
+  {
+    "title": "陽光花園裡的小貓追蝶",
+    "slot": "2026-11-01T11:00",
+    "source_library_file_id": "libfile_321ef99420e0819196cca8c6cf1da253",
+    "source_png_sha256": "1b6dc54b09e62c290e338785d29483634ecbb7d38fac303f6db84d54d72efea1",
+    "jpeg_sha256": "17011b169ca991d780c71014372cf279247b5009647465b57c65da0c295346fa",
+    "jpeg_bytes": 761767,
+    "queue": "queue/meta/2026-11-01/1100.json",
+    "reservation": "state/curated_reservations/chatgpt-selected-20261030-4.json"
+  },
+  {
+    "title": "小雪的暖心家庭記帳時光",
+    "slot": "2026-11-01T15:00",
+    "source_library_file_id": "libfile_9f392f71b2988191a5053580ce1ba111",
+    "source_png_sha256": "bbec8b6df70d105422542c00d30b9ad2419a6c7ec225dcffb4cb00f568f783b7",
+    "jpeg_sha256": "3592493f409835593e675fdfbd0eae3268b5447264e1d5537be59d862134ca08",
+    "jpeg_bytes": 672449,
+    "queue": "queue/meta/2026-11-01/1500.json",
+    "reservation": "state/curated_reservations/chatgpt-selected-20261030-2.json"
+  },
+  {
+    "title": "雨夜窗邊的黑貓交易室",
+    "slot": "2026-11-01T18:00",
+    "source_library_file_id": "libfile_c3188e85307881919a905c3afc18b7af",
+    "source_png_sha256": "09287cfc9e54e7f85f5452ab0a7d8d237d57de369913becb2375f845102f6710",
+    "jpeg_sha256": "071a665783e151283d680e4a5ef6f3dd5356a688e005a4d98875bd41d8db355d",
+    "jpeg_bytes": 743552,
+    "queue": "queue/meta/2026-11-01/1800.json",
+    "reservation": "state/curated_reservations/chatgpt-selected-20261030-3.json"
+  }
+]
