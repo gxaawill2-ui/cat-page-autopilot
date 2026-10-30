@@ -1,0 +1,30 @@
+{
+  "run_id": "41087010316",
+  "ai_calls": 0,
+  "immediate_publish_calls": 0,
+  "scheduled": [
+    {
+      "slot": "2026-10-31T18:00",
+      "post_id": "1346385028565797_122107426365515576",
+      "status": "scheduled_api_verified"
+    },
+    {
+      "slot": "2026-11-01T11:00",
+      "post_id": "1346385028565797_122107426509515576",
+      "status": "scheduled_api_verified"
+    },
+    {
+      "slot": "2026-11-01T15:00",
+      "post_id": "1346385028565797_122107426677515576",
+      "status": "scheduled_api_verified"
+    },
+    {
+      "slot": "2026-11-01T18:00",
+      "post_id": "1346385028565797_122107426863515576",
+      "status": "scheduled_api_verified"
+    }
+  ],
+  "held": [],
+  "started_at": "2026-10-31T00:07:44.470799+08:00",
+  "completed_at": "2026-10-31T00:08:41.206047+08:00"
+}
