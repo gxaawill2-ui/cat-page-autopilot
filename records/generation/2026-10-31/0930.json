@@ -1,6 +1,6 @@
 {
   "slot": "2026-10-31T09:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 2,
   "retry_allowed": false,
   "started_at": "2026-10-30T16:57:56.452826+08:00",
@@ -23,5 +23,6 @@
     "scene": "阿橘, an orange short-haired tabby with amber eyes and cream paws, sits upright on a polished wooden floor. He wears a look of profound betrayal, staring intensely at an empty ceramic bowl. A single, solitary piece of kibble sits just out of his reach, framed by soft morning sunlight streaming through a nearby window.",
     "topic": "A failed culinary heist"
   },
-  "language": "en"
+  "language": "en",
+  "image_sha256": "2f3458afee3e3d442ac2afa4c28fd9a71487ce882b916ae9ac9c68556bd03141"
 }
