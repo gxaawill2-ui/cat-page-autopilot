@@ -1,0 +1,18 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-10-31T16:30",
+  "caption": "本以為小夜是在深沉地凝視窗外的落葉，沒想到牠只是在盯著那隻剛掉在地上的麵包屑。那一刻，牠的眼神比哲學家還要嚴肅。",
+  "language": "zh-Hant",
+  "image_sha256": "79431e50eefff866a3dee1d7df8ccc02b478f227958330b70c82f4403402977c",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/79431e50eefff866a3dee1d7df8ccc02b478f227958330b70c82f4403402977c.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "In a cozy sunlit living room, 小夜, a solid black short-haired cat with bright green eyes and a tiny white chest patch, sits in a regal, upright pose on a wooden floor. She stares with intense, scholarly gravity at a single breadcrumb. The hand-painted book illustration style uses warm, natural golden hour lighting to highlight her sleek fur.",
+  "prepared_at": "2026-10-30T16:58:39.833240+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "The dramatic seriousness of a cat observing a tiny snack.",
+  "image_attempts": 1
+}
