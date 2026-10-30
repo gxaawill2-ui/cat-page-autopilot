@@ -1,0 +1,63 @@
+{
+  "slot": "2026-10-30T09:30",
+  "status": "qa_pass_needs_human_visual_acceptance",
+  "facebook_write_calls": 0,
+  "retry_allowed": false,
+  "started_at": "2026-10-30T07:26:15.297579+08:00",
+  "caption_attempts": 2,
+  "image_attempts": 2,
+  "previous_attempt": {
+    "slot": "2026-10-30T09:30",
+    "status": "qa_failed_held",
+    "facebook_write_calls": 0,
+    "retry_allowed": false,
+    "started_at": "2026-10-30T07:23:04.328332+08:00",
+    "caption_attempts": 2,
+    "previous_attempt": {
+      "slot": "2026-10-30T09:30",
+      "status": "caption_response_parse_failed",
+      "facebook_write_calls": 0,
+      "retry_allowed": false,
+      "started_at": "2026-10-30T07:19:50.565414+08:00",
+      "caption_attempts": 1,
+      "image_calls_confirmed": 0,
+      "actual_error": "JSONDecodeError: Expecting value: line 1 column 1 (char 0)",
+      "evidence_run": 40972350958,
+      "evidence_job": 123792000636,
+      "original_response": "Not retained by old parser; do not invent content",
+      "caption_retry_limit": 2,
+      "reconciliation": "Failure occurred before make_image or Meta access; permit one bounded caption-only retry with structured output and durable response capture."
+    },
+    "generated_text": "{\n  \"caption\": \"Target locked! 🐾 Mibao has officially declared war on the fluffiest enemy in the garden. Wish us luck! #CatLife #GardenAdventures\",\n  \"scene\": \"A hand-painted book illustration of Mibao, a playful tabby cat, leaping mid-air in a lush, sun-drenched garden. Her eyes are wide with intense focus, and her paws are outstretched toward a single, floating dandelion seed. Soft natural light filters through green leaves, highlighting her precise markings and whiskers.\",\n  \"topic\": \"Playful garden adventures\"\n}",
+    "content": {
+      "caption": "Target locked! 🐾 Mibao has officially declared war on the fluffiest enemy in the garden. Wish us luck! #CatLife #GardenAdventures",
+      "scene": "A hand-painted book illustration of Mibao, a playful tabby cat, leaping mid-air in a lush, sun-drenched garden. Her eyes are wide with intense focus, and her paws are outstretched toward a single, floating dandelion seed. Soft natural light filters through green leaves, highlighting her precise markings and whiskers.",
+      "topic": "Playful garden adventures"
+    },
+    "language": "en",
+    "image_sha256": "f0f947f91966a981473d113185ee29e868a28f27ecb3313c8c074292ba80e455",
+    "image_path": "docs/assets/f0f947f91966a981473d113185ee29e868a28f27ecb3313c8c074292ba80e455.jpg",
+    "image_model": "@cf/black-forest-labs/flux-1-schnell",
+    "text_model": "@cf/google/gemma-4-26b-a4b-it",
+    "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+    "image_qa": false,
+    "completed_at": "2026-10-30T07:23:33.097159+08:00"
+  },
+  "content": {
+    "caption": "Target locked! 🐾 Mibao has officially declared war on the fluffiest enemy in the garden. Wish us luck! #CatLife #GardenAdventures",
+    "scene": "A hand-painted book illustration of Mibao, a playful tabby cat, leaping mid-air in a lush, sun-drenched garden. Her eyes are wide with intense focus, and her paws are outstretched toward a single, floating dandelion seed. Soft natural light filters through green leaves, highlighting her precise markings and whiskers.",
+    "topic": "Playful garden adventures"
+  },
+  "language": "en",
+  "image_sha256": "3d42d781b3f67d5bb3271d2e7afa9e547ba53fc140842ef988f2619037744d92",
+  "image_path": "docs/assets/3d42d781b3f67d5bb3271d2e7afa9e547ba53fc140842ef988f2619037744d92.jpg",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "image_qa": true,
+  "completed_at": "2026-10-30T07:26:34.233140+08:00",
+  "vision_diagnostic_attempted": true,
+  "vision_response": "FAIL",
+  "structured_qa_attempted": true,
+  "structured_qa_response": "{\n  \"decision\": \"PASS\",\n  \"reason\": \"The image is a coherent, stylized illustration of a kitten jumping in a garden. All anatomical features are correctly placed for this style, and there are no visible watermarks, text, or signatures.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": true,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
+}

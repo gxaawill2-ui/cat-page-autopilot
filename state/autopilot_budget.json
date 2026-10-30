@@ -1,0 +1,12 @@
+{
+  "verified": false,
+  "free_credits_only": false,
+  "auto_topup_disabled": false,
+  "no_paid_balance": false,
+  "no_invoice_billing": false,
+  "no_byok": false,
+  "provider_hard_stop": false,
+  "evidence_record": null,
+  "valid_until": null,
+  "reason": "Account login pending. Vercel budget is a soft cap, not evidence of zero extra payment. Keep live generation disabled."
+}

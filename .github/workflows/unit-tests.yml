@@ -13,6 +13,12 @@ name: Cat Page Python Safety Tests
       - scripts/test_meta_graph_publish.py
       - .github/workflows/meta-graph-publish.yml
   workflow_dispatch:
+    inputs:
+      generate_canary:
+        description: 'One original Cloudflare generation on feature branch only; no Facebook writes'
+        type: boolean
+        required: true
+        default: false
 permissions:
   contents: read
 jobs:
@@ -30,3 +36,44 @@ jobs:
         run: |
           python -m unittest discover -v -p 'test_*.py'
           python -m unittest discover -v -s scripts -p 'test_meta_graph_publish.py'
+          python -m unittest discover -v -s scripts -p 'test_auto_replenish.py'
+          python -m unittest discover -v -s scripts -p 'test_meta_native_schedule.py'
+          python -m unittest discover -v -s scripts -p 'test_cloudflare_ai.py'
+  cloudflare-read-only-audit:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check actual Workers AI model-list access (GET only; no inference or Facebook writes)
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python3 scripts/cloudflare_ai.py --audit
+  cloudflare-original-canary:
+    if: github.event_name == 'workflow_dispatch' && inputs.generate_canary == true
+    needs: [safety-tests, cloudflare-read-only-audit]
+    permissions:
+      contents: write
+    concurrency:
+      group: cat-cloudflare-single-canary
+      cancel-in-progress: false
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 -m pip install 'Pillow>=11,<13'
+      - name: Single original generation and vision acceptance (no Meta credentials)
+        env:
+          CF_CANARY_ENABLED: 'true'
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: python3 scripts/cloudflare_canary.py
+      - name: Preserve recovery evidence even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cloudflare-original-canary-${{ github.run_id }}
+          path: |
+            records/canary/
+          retention-days: 7

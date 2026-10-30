@@ -1,0 +1,10 @@
+{
+  "verified": true,
+  "workers_free": true,
+  "no_paid_upgrade": true,
+  "no_gateway_billing": true,
+  "provider_hard_stop": true,
+  "evidence_record": "records/autopilot/2026-10-30-cloudflare-free.json",
+  "valid_until": "2026-11-13T07:16:35.913307+08:00",
+  "reason": "Official account screenshot shows Free $0 Current plan. Direct reviewed Workers AI models only; no billing upgrade. Reverify if account plan changes; provider quota failure stops, never buys credits."
+}
