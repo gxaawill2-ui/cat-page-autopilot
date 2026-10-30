@@ -15,5 +15,6 @@
     "evidence_run_id": "41024168989",
     "error": "No usable generated text",
     "recovery_note": "Completed durable run proves text rejected before image call. One corrected-request caption retry, max total text attempts2; keep original evidence. Unknown Facebook/image attempts remain untouched."
-  }
+  },
+  "raw_caption_response": "{\n  \"caption\": \"阿斑今日巡邏任務：發現書桌底下的神秘「毛球領地」，原來不是外星入侵，只是昨晚的小紙條被捲成了球。\",\n  \"scene\": \"A tuxedo cat named A-Ban with bright yellow eyes, a crisp white bib, and white socks, crouched low in a sunlit study. He is peering intensely under a dark wooden desk, one paw lifted mid-air in a cautious investigative pose. The scene is a hand-painted book illustration with soft, natural afternoon light filtering through a nearby window.\",\n  \"topic\": \"A curious cat's unexpected discovery during a household inspection.\"\n}"
 }
