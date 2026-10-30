@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-10-31T01:59:24.346867+08:00"
+  "started_at": "2026-10-31T01:59:24.346867+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"Xiaoye spent three hours staring intensely at the empty cardboard box, waiting for a grand entrance. Instead, he just realized he forgot where he put his favorite catnip mouse.\",\n  \"scene\": \"A hand-painted book illustration of Xiaoye, a solid black short-haired cat with bright green eyes and a tiny white chest patch, sitting upright in a sunlit living room. He looks startled yet dignified, staring blankly at an empty, crumpled delivery box. Natural morning light streams through a nearby window, highlighting his sleek fur and precise anatomy.\",\n  \"topic\": \"The quiet dignity of a lost toy\"\n}"
 }
