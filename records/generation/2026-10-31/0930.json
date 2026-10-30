@@ -16,5 +16,6 @@
     "evidence_run_id": "41024168989",
     "error": "Unterminated string starting at: line 3 column 12 (char 228)",
     "recovery_note": "Completed durable run proves text rejected before image call. One corrected-request caption retry, max total text attempts2; keep original evidence. Unknown Facebook/image attempts remain untouched."
-  }
+  },
+  "raw_caption_response": "{\n  \"caption\": \"Operation: Midnight Snack was a tactical masterpiece. Or so I thought, until the 'giant mountain of kibble' turned out to be a very empty bowl.\",\n  \"scene\": \"阿橘, an orange short-haired tabby with amber eyes and cream paws, sits upright on a polished wooden floor. He wears a look of profound betrayal, staring intensely at an empty ceramic bowl. A single, solitary piece of kibble sits just out of his reach, framed by soft morning sunlight streaming through a nearby window.\",\n  \"topic\": \"A failed culinary heist\"\n}"
 }
