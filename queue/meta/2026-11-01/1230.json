@@ -6,7 +6,7 @@
   "image_sha256": "29c28f11111fa4693a0be3aeafc2a65788a3a55af3df895a6021ec169666bf7d",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/29c28f11111fa4693a0be3aeafc2a65788a3a55af3df895a6021ec169666bf7d.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "In a sun-drenched living room, 小夜, a solid black cat with a tiny white chest patch, is captured mid-stretch. Instead of sitting regally, she is awkwardly sprawled across a person's lap like a melted puddle of ink. Her bright green eyes look slightly judging yet peaceful, illuminated by soft afternoon light in a delicate, hand-painted watercolor style.",
   "prepared_at": "2026-10-30T16:59:29.388817+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
