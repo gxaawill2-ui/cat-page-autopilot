@@ -14,5 +14,6 @@
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
   "topic": "The dramatic seriousness of a cat observing a tiny snack.",
-  "image_attempts": 1
+  "image_attempts": 1,
+  "image_qa_response": "{\n  \"decision\": \"PASS\",\n  \"reason\": \"The image is a clear illustration of a black cat with a white patch, matching the description. The anatomy is coherent, there is no text or watermarks, and the content is safe.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": true,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
