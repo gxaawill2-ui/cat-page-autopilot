@@ -1,0 +1,18 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-01T19:30",
+  "caption": "Mission Impossible: The Great Kibble Heist. 🐾 Mibao has finally breached the perimeter of the forbidden ceramic bowl. The stakes have never been higher.",
+  "language": "en",
+  "image_sha256": "728010d38a5256469bfea3356efdb0597214dafc40d511b342603300c0c110a7",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/728010d38a5256469bfea3356efdb0597214dafc40d511b342603300c0c110a7.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A hand-painted book illustration of Mibao, a tiny brown tabby kitten with hazel eyes, mid-air leap. She is lunging heroically toward a single, solitary piece of kibble resting on a vast, polished wooden floor. Natural evening light catches her white chin as she executes a dramatic, clumsy belly flop toward her prize.",
+  "prepared_at": "2026-10-30T16:59:58.585486+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "Tiny household adventures",
+  "image_attempts": 1
+}
