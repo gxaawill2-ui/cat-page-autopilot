@@ -1,0 +1,18 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-02T16:30",
+  "caption": "咪寶以為自己征服了森林，結果只是跨過了一片掉落的羅勒葉。這場冒險，真的很有成就感！",
+  "language": "zh-Hant",
+  "image_sha256": "172b3a0783f3056076e20b49c886ff749168067231d4f23fa8c2956e57d4a292",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/172b3a0783f3056076e20b49c886ff749168067231d4f23fa8c2956e57d4a292.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A hand-painted book illustration of Mibao, a tiny brown short-haired tabby kitten with hazel eyes and a white chin. She is frozen in a heroic, wide-legged pounce pose atop a single, oversized fallen basil leaf in a sun-drenched kitchen garden. Soft natural light filters through greenery, highlighting her intense, brave expression as she conquers her leafy mountain.",
+  "prepared_at": "2026-10-31T02:00:09.930631+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "A tiny garden adventure",
+  "image_attempts": 1
+}
