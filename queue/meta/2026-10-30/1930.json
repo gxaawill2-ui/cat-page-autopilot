@@ -13,5 +13,6 @@
   "image_model": "@cf/black-forest-labs/flux-1-schnell",
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
-  "topic": "The secret guardian of the living room"
+  "topic": "The secret guardian of the living room",
+  "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The image contains a watermark/signature in the bottom right corner.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": true,\n    \"safe_content\": true,\n    \"no_text_or_signature\": false,\n    \"no_watermark\": false\n  }\n}"
 }
