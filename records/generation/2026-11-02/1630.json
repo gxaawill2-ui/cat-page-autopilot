@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-10-31T02:00:02.373777+08:00"
+  "started_at": "2026-10-31T02:00:02.373777+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"咪寶以為自己征服了森林，結果只是跨過了一片掉落的羅勒葉。這場冒險，真的很有成就感！\",\n  \"scene\": \"A hand-painted book illustration of Mibao, a tiny brown short-haired tabby kitten with hazel eyes and a white chin. She is frozen in a heroic, wide-legged pounce pose atop a single, oversized fallen basil leaf in a sun-drenched kitchen garden. Soft natural light filters through greenery, highlighting her intense, brave expression as she conquers her leafy mountain.\",\n  \"topic\": \"A tiny garden adventure\"\n}"
 }
