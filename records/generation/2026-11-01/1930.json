@@ -15,5 +15,6 @@
     "evidence_run_id": "41024168989",
     "error": "No usable generated text",
     "recovery_note": "Completed durable run proves text rejected before image call. One corrected-request caption retry, max total text attempts2; keep original evidence. Unknown Facebook/image attempts remain untouched."
-  }
+  },
+  "raw_caption_response": "{\n  \"caption\": \"Mission Impossible: The Great Kibble Heist. 🐾 Mibao has finally breached the perimeter of the forbidden ceramic bowl. The stakes have never been higher.\",\n  \"scene\": \"A hand-painted book illustration of Mibao, a tiny brown tabby kitten with hazel eyes, mid-air leap. She is lunging heroically toward a single, solitary piece of kibble resting on a vast, polished wooden floor. Natural evening light catches her white chin as she executes a dramatic, clumsy belly flop toward her prize.\",\n  \"topic\": \"Tiny household adventures\"\n}"
 }
