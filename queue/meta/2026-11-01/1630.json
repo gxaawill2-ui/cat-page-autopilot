@@ -1,0 +1,18 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-01T16:30",
+  "caption": "阿斑今日巡邏任務：發現書桌底下的神秘「毛球領地」，原來不是外星入侵，只是昨晚的小紙條被捲成了球。",
+  "language": "zh-Hant",
+  "image_sha256": "3cf8e609e9e32ed62b47bc8a6cd3a5b47c559348782af4281002b41f4475d596",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/3cf8e609e9e32ed62b47bc8a6cd3a5b47c559348782af4281002b41f4475d596.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A tuxedo cat named A-Ban with bright yellow eyes, a crisp white bib, and white socks, crouched low in a sunlit study. He is peering intensely under a dark wooden desk, one paw lifted mid-air in a cautious investigative pose. The scene is a hand-painted book illustration with soft, natural afternoon light filtering through a nearby window.",
+  "prepared_at": "2026-10-30T16:59:42.890902+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "A curious cat's unexpected discovery during a household inspection.",
+  "image_attempts": 1
+}
