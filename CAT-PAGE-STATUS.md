@@ -1,3 +1,15 @@
+## 2026-10-31 00:11 四張ChatGPT精選原圖已真預約成功（最新）
+- 使用者指定原圖與原文均已完成：阿橘10/31 18:00 Post1346385028565797_122107426365515576；花園追蝶11/1 11:00 Post1346385028565797_122107426509515576；小雪記帳11/1 15:00 Post1346385028565797_122107426677515576；雨夜黑貓11/1 18:00 Post1346385028565797_122107426863515576。
+- 真run41087010316 completed/success。每張公開JPEG匿名HTTP200、image/jpeg、SHA一致，proof保存records/pages-proofs；Meta未發布照片→Feed未來預約單次呼叫，真Post ID、完整文案及圖片附件回讀全一致，is_published=false。不是只有圖片ID，也不是立即發布。
+- 官方Planner重新載入，10/31看到阿橘18:00及既有三篇；11/1看到既有09:30＋花園11:00＋小雪15:00＋黑貓18:00。原預約沒有刪除、移動或覆蓋；兩天各合計4篇，最短相隔90分鐘。官方頁面截圖永久保存records/curated/2026-10-30/，acceptance.json含精確ID與計數。
+- 原圖是Library今日4張原始PNG，已逐張目視核對角色、場景與來源；source-manifest.json保存精確Library ID、原PNG SHA、JPEG SHA。PNG原檔留在原Library，發布JPEG僅品質94–95轉碼，沒有Cloudflare、ImageGen、網路替代圖。文案保持使用者提供全文。
+- CAS提交154e4f58324e12a44efd8993bcc39a33262c7e71先持久保留4個精選名額；接入既有native.entries及remote_guard，全來源每日上限4、90分鐘、未知占位、不補發、不重試未知回應。自己的保留只對完全匹配原圖SHA/文案/slot放行；native真意圖取代同篇保留計數，沒有刪鎖。
+- 81項scripts安全測試（含12項本次新增）及30項根目錄測試通過；正式Actions亦跑81項通過。既有Meta手動工作流程新增curated選項、同一共享concurrency群組；未新增cron/ChatGPT任務。
+- 官方Variables再次實讀CAT_AUTOPILOT_ENABLED=true、META_PUBLISH_ENABLED=false。Cloudflare補稿cron與四標準時段/語言計畫未改；它會看到本次占額而略過10/31 19:30和11/1額外標準空缺，不得變成第5篇。沒有重新啟用舊即時路徑。
+- 本次AI calls=0、額外費用NT$0，沒有新Token授權或信用卡。三天與週日分析保留；歷史未知事故與品牌暫停不變。
+- 限制：目前可取得Actions歷史尚無新補稿event=schedule自然續跑證據，不用這次手動精選批次冒充永久全自動驗收。下一名義自然補稿10/31 08:17（GitHub可能延遲），必須核對新保留/真已預約不重送；10/31 18:00與11/1三篇到時後再沿既有回讀核對真正配送，不再次建立預約。
+- 續作入口：本檔→records/curated/2026-10-30/acceptance.json→records/curated-runs/41087010316.json→state/curated_reservations與state/meta_native。原精選4篇已完成預約，不得因續作重送。
+
 ## 2026-10-31 00:05 精選ChatGPT原圖預約：名額及安全修正已備妥，尚未提交Meta（最新）
 - 使用者指定4張原圖已從Library取回並逐張目視：image-gen-1(4)=阿橘工作室；2(4)=小雪記帳；3(4)=雨夜黑貓；4(3)=花園追蝶。原PNG保留原Library ID與SHA，轉JPEG品質94–95/subsampling0，無Cloudflare或ImageGen呼叫。
 - 官方Planner重新核對10/31既有09:30/12:30/16:30共3篇、11/1既有09:30共1篇。候選精選：10/31 18:00；11/1 11:00/15:00/18:00，尚未當成Meta成功。

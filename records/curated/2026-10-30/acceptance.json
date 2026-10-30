@@ -1,0 +1,110 @@
+{
+  "page_id": "1346385028565797",
+  "run_id": "41087010316",
+  "run_conclusion": "success",
+  "checked_at": "2026-10-31T00:11:20+08:00",
+  "source": "Four original ChatGPT images materialized from exact Library file IDs, individually visually inspected; no generation",
+  "source_manifest": "records/curated/2026-10-30/source-manifest.json",
+  "api_readbacks": [
+    {
+      "slot": "2026-10-31T18:00",
+      "post_id": "1346385028565797_122107426365515576",
+      "photo_id": "122107426323515576",
+      "is_published": false,
+      "scheduled_publish_time": 1793440800,
+      "caption_matches": true,
+      "attachment_photo_id_matches": true,
+      "image_sha256": "a8a3adf88c04903aeb93f4380fb78eb8099d005137d442eccc25a318cc6e4320"
+    },
+    {
+      "slot": "2026-11-01T11:00",
+      "post_id": "1346385028565797_122107426509515576",
+      "photo_id": "122107426449515576",
+      "is_published": false,
+      "scheduled_publish_time": 1793502000,
+      "caption_matches": true,
+      "attachment_photo_id_matches": true,
+      "image_sha256": "17011b169ca991d780c71014372cf279247b5009647465b57c65da0c295346fa"
+    },
+    {
+      "slot": "2026-11-01T15:00",
+      "post_id": "1346385028565797_122107426677515576",
+      "photo_id": "122107426623515576",
+      "is_published": false,
+      "scheduled_publish_time": 1793516400,
+      "caption_matches": true,
+      "attachment_photo_id_matches": true,
+      "image_sha256": "3592493f409835593e675fdfbd0eae3268b5447264e1d5537be59d862134ca08"
+    },
+    {
+      "slot": "2026-11-01T18:00",
+      "post_id": "1346385028565797_122107426863515576",
+      "photo_id": "122107426815515576",
+      "is_published": false,
+      "scheduled_publish_time": 1793527200,
+      "caption_matches": true,
+      "attachment_photo_id_matches": true,
+      "image_sha256": "071a665783e151283d680e4a5ef6f3dd5356a688e005a4d98875bd41d8db355d"
+    }
+  ],
+  "planner_verified": true,
+  "planner_images": [
+    "records/curated/2026-10-30/planner-oct31.jpg",
+    "records/curated/2026-10-30/planner-nov1.jpg"
+  ],
+  "all_source_days": {
+    "2026-11-01": [
+      {
+        "id": "1346385028565797_122107292295515576",
+        "time": "09:30",
+        "timestamp": 1793496600
+      },
+      {
+        "id": "1346385028565797_122107426509515576",
+        "time": "11:00",
+        "timestamp": 1793502000
+      },
+      {
+        "id": "1346385028565797_122107426677515576",
+        "time": "15:00",
+        "timestamp": 1793516400
+      },
+      {
+        "id": "1346385028565797_122107426863515576",
+        "time": "18:00",
+        "timestamp": 1793527200
+      }
+    ],
+    "2026-10-31": [
+      {
+        "id": "1346385028565797_122107291635515576",
+        "time": "09:30",
+        "timestamp": 1793410200
+      },
+      {
+        "id": "1346385028565797_122107291869515576",
+        "time": "12:30",
+        "timestamp": 1793421000
+      },
+      {
+        "id": "1346385028565797_122107292013515576",
+        "time": "16:30",
+        "timestamp": 1793435400
+      },
+      {
+        "id": "1346385028565797_122107426365515576",
+        "time": "18:00",
+        "timestamp": 1793440800
+      }
+    ]
+  },
+  "minimum_separation_minutes": 90,
+  "daily_limit": 4,
+  "duplicates_found": 0,
+  "existing_schedules_moved": 0,
+  "ai_calls": 0,
+  "additional_cost_ntd": 0,
+  "old_immediate_publish_enabled": false,
+  "autopilot_switch_enabled": true,
+  "natural_cron_continuation": "Still not established by currently available run history; this curated run is manual and must not substitute for natural-cron acceptance"
+}

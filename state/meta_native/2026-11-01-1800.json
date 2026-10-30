@@ -26,6 +26,11 @@
   "attachment_photo_id_matches": true,
   "caption_matches": true,
   "checked_at": "2026-10-31T00:08:39.948089+08:00",
-  "planner_verified": false,
-  "visual_review": "pending"
+  "planner_verified": true,
+  "visual_review": {
+    "original_png_manually_inspected": true,
+    "official_Planner_thumbnail_matches": true,
+    "source": "exact ChatGPT Library originals, not search samples"
+  },
+  "planner_checked_at": "2026-10-31T00:11:20+08:00"
 }

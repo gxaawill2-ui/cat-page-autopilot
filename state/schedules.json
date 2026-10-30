@@ -141,7 +141,7 @@
       "08:17",
       "20:17"
     ],
-    "next_nominal_run": "2026-10-30T20:17:00+08:00",
+    "next_nominal_run": "2026-10-31T08:17:00+08:00",
     "next_nominal_note": "GitHub best effort; no exact-time guarantee; Meta holds actual publication clocks",
     "last_manual_acceptance_run": "41029967122",
     "native_scheduled_count": 4,
@@ -169,5 +169,34 @@
     },
     "next_period": "2026-10-30/2026-11-01",
     "next_report_eligible_at": "2026-11-02T00:00:00+08:00"
+  },
+  "curated_selected_originals": {
+    "source_manifest": "records/curated/2026-10-30/source-manifest.json",
+    "acceptance": "records/curated/2026-10-30/acceptance.json",
+    "run_id": "41087010316",
+    "status": "four_native_schedules_api_and_Planner_verified",
+    "minimum_separation_minutes": 90,
+    "daily_limit_includes_all_sources": true,
+    "reservation_directory": "state/curated_reservations",
+    "posts": [
+      {
+        "slot": "2026-10-31T18:00",
+        "post_id": "1346385028565797_122107426365515576"
+      },
+      {
+        "slot": "2026-11-01T11:00",
+        "post_id": "1346385028565797_122107426509515576"
+      },
+      {
+        "slot": "2026-11-01T15:00",
+        "post_id": "1346385028565797_122107426677515576"
+      },
+      {
+        "slot": "2026-11-01T18:00",
+        "post_id": "1346385028565797_122107426863515576"
+      }
+    ],
+    "standard_autopilot_workflow_unchanged": true,
+    "legacy_immediate_publish_enabled": false
   }
 }
