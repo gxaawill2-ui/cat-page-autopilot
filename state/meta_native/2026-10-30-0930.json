@@ -71,5 +71,20 @@
     "planner_preview_id": "1696925965336707",
     "id_note": "Published UI numeric row id agrees with API post suffix. Planner preview is a separate internal id, photo is not post id."
   },
-  "published_api_verification": "pending_fresh_verify_result"
+  "published_api_verification": {
+    "status": "unknown_no_new_verify_run_receipt",
+    "is_published": null,
+    "created_time": null,
+    "permalink_url": null,
+    "message": null,
+    "attachment_photo_id": null,
+    "observed_at": "2026-10-30T09:46:26.102224+08:00",
+    "ui_verify_requests": 2,
+    "github_observation": "Workflow list remained 11 runs; latest Meta scheduler was original 40974894704. GET actions/runs?per_page=10 confirmed no new scheduler run among current latest ten. No error cause inferred.",
+    "workflow_new_run_id": null,
+    "facebook_api_write_calls": 0,
+    "note": "A button click is not proof workflow executed. One bounded retry only, both mode=verify on main; no schedule chosen. Historical readback false remains under original scheduling receipt."
+  },
+  "published_is_published_api": null,
+  "published_created_time_api": null
 }

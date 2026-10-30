@@ -112,7 +112,7 @@
     "id_note": "Published UI numeric row id agrees with API post suffix. Planner preview is a separate internal id, photo is not post id."
   },
   "published_ui_verified": true,
-  "verification_scope": "published_ui_verified; fresh API verification pending",
+  "verification_scope": "published_ui_verified; published_api verification unknown",
   "read_only_acceptance": {
     "facebook_write_calls": 0,
     "new_images": 0,
@@ -120,5 +120,37 @@
     "initial_clock_taipei": "2026-10-30T09:40:39+08:00",
     "verify_mode_ui_requests": 2,
     "verify_mode_note": "First request no run visible; one bounded read-only retry, no schedule selected; await actual run evidence"
+  },
+  "published_api_verification": {
+    "status": "unknown_no_new_verify_run_receipt",
+    "is_published": null,
+    "created_time": null,
+    "permalink_url": null,
+    "message": null,
+    "attachment_photo_id": null,
+    "observed_at": "2026-10-30T09:46:26.102224+08:00",
+    "ui_verify_requests": 2,
+    "github_observation": "Workflow list remained 11 runs; latest Meta scheduler was original 40974894704. GET actions/runs?per_page=10 confirmed no new scheduler run among current latest ten. No error cause inferred.",
+    "workflow_new_run_id": null,
+    "facebook_api_write_calls": 0,
+    "note": "A button click is not proof workflow executed. One bounded retry only, both mode=verify on main; no schedule chosen. Historical readback false remains under original scheduling receipt."
+  },
+  "published_graph_readback": null,
+  "published_api_verified": null,
+  "conclusion": "Meta delivered the scheduled post at UI 2026-10-30 09:30; complete target caption and expected garden image verified in official published list/preview. API true has not been observed in this run.",
+  "deployment": {
+    "pr_number": 1,
+    "draft": true,
+    "merged": false,
+    "head": "884cf5f52f9227542b7f82c4e4fdeeef37a199f3",
+    "CAT_AUTOPILOT_ENABLED": false,
+    "enabled_source": "Latest generation-acceptance and canonical status; setting not altered this run",
+    "next_exact_step": "First obtain successful existing main mode=verify result for queue/meta/2026-10-30/0930.json with is_published=true, exact caption and attachment photo122107140813515576; then sync fresh main evidence into PR#1, rerun safety CI, review/merge and enable native future-queue replenishment under authorized deployment scope. Do not deploy, enable, schedule or regenerate in this read-only acceptance run.",
+    "not_continuous_unattended_proof": true
+  },
+  "library_sync": {
+    "status": "pending",
+    "file_id": "libfile_eb843306062c81919a18f9a9efc211f9",
+    "expected_previous_version": 32
   }
 }
