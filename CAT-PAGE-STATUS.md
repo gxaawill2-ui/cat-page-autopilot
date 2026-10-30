@@ -1,3 +1,11 @@
+## 2026-10-30 PR已正式合併／啟用仍受GitHub身分再確認阻擋（最新）
+- PR#1已真合併main，merge commit 2ea78b53375ec42c1e6bce197a1c79dbe12d84ed。修復CI40994322660與合併後安全run40994425401成功；不是首次全自動補稿成功。
+- 真API verify run40993880904已確認既有09:30 Post1346385028565797_122107140849515576為published_api_verified、is_published=true，沒有重送。
+- 變數UI實讀舊META_PUBLISH_ENABLED仍true；CAT_AUTOPILOT_ENABLED尚未建立/啟用。嘗試把舊開關改false時GitHub要求Confirm access郵件OTP。正式補稿尚未實跑，未來三天尚未補齊，不宣稱全自動上線。
+- 最新安全表單提交回傳submitted，但官方頁隨後顯示Sudo authentication failed，驗證失敗。無驗證碼/Token進模型或repo；不重試既有碼、不繞過安全驗證。先前ChatGPT用量中斷是外部工具review失敗，不是Meta Token失效證據。
+- 唯一必要續作：本人完成GitHub官方Confirm access；成功後保存舊META_PUBLISH_ENABLED=false、新CAT_AUTOPILOT_ENABLED=true，實際讀回，再執行既有cat-unattended-replenish.yml main dry_run=false。先核當前時間/slots，不補過期、不重送unknown；觀察真原生預約Post ID與公開圖片驗證。三天/週日檢討待後續核對，不新增重複任務。
+- NT$0、無新增卡片，Free證據期限2026-11-13（到期安全停止待核）。已完成程式/圖片/授權不重建，品牌不動。
+
 ## 2026-10-30 正式部署前修復（本輪最新）
 - 真Actions verify 40993880904已回讀09:30 Post 1346385028565797_122107140849515576為published_api_verified/is_published=true，文案與photo附件吻合，未重送。
 - 修補生成前remote/local容量與slot檢查、原始文字/QA回應先保存、QA未知不重試、品質失敗留稿、主動Pages build及3次匿名HTTP/MIME/SHA核對、每輪真Post到期回讀與持久run紀錄。
