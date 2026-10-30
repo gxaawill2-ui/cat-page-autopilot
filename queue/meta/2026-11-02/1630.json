@@ -14,5 +14,6 @@
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
   "topic": "A tiny garden adventure",
-  "image_attempts": 1
+  "image_attempts": 1,
+  "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The kitten's anatomy is malformed; it has an extra set of paws/limbs appearing to emerge from its chest/neck area, and the tail is disconnected from the body structure.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": false,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
