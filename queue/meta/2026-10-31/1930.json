@@ -6,7 +6,7 @@
   "image_sha256": "1b1b42468c2238a917139037c4ae7b9e714208293cc578fff93c3c39d49c085b",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/1b1b42468c2238a917139037c4ae7b9e714208293cc578fff93c3c39d49c085b.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "A black-and-white tuxedo cat with bright yellow eyes and white socks is perched precariously atop a mountain of fluffy, white laundry. He is mid-sneeze, one paw raised in a dramatic gesture of surprise, peering intensely at a rogue colorful sock. The hand-painted illustration uses soft, warm evening light to highlight his thick fur texture.",
   "prepared_at": "2026-10-30T16:58:57.102727+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
