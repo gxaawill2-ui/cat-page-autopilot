@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-10-31T02:00:18.319562+08:00"
+  "started_at": "2026-10-31T02:00:18.319562+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"Operation Midnight Snack: Phase One complete. The lid is off, the target is sighted, and victory is mere inches away. Or so the legend says.\",\n  \"scene\": \"A plump orange tabby named 阿橘 crouches precariously on a polished wooden kitchen counter, one cream paw hovering mid-air over a ceramic jar. He is poised like a jungle predator, amber eyes wide with intense focus. Soft moonlight streams through a nearby window, illuminating his whiskers and the determined tilt of his head.\",\n  \"topic\": \"A hungry cat's failed heist\"\n}"
 }
