@@ -1,0 +1,10 @@
+{
+  "slot": "2026-10-31T09:30",
+  "image_sha256": "2f3458afee3e3d442ac2afa4c28fd9a71487ce882b916ae9ac9c68556bd03141",
+  "verified": true,
+  "last_error": "HTTPError",
+  "http_status": 200,
+  "mime": "image/jpeg",
+  "sha_matches": true,
+  "checked_at": "2026-10-30T17:00:50.422645+08:00"
+}
