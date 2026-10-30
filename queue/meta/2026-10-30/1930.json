@@ -6,7 +6,7 @@
   "image_sha256": "fbb217cda776b93be7ae58c52165c177e6d1cf300ac1da71ea11c0ccebd654a9",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/fbb217cda776b93be7ae58c52165c177e6d1cf300ac1da71ea11c0ccebd654a9.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "A hand-painted book illustration of 小夜, a solid black short-haired cat with a tiny white chest patch and bright green eyes. She is perched regally atop a high bookshelf, peering down with a judging yet protective gaze. Soft, warm evening light filters through a nearby window, illuminating her sleek fur and thoughtful expression.",
   "prepared_at": "2026-10-30T16:16:55.633919+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
