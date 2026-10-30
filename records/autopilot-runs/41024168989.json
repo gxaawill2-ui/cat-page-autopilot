@@ -1,0 +1,56 @@
+{
+  "run_id": "41024168989",
+  "started_at": "2026-10-30T16:06:04.083767+08:00",
+  "prepared": [],
+  "scheduled": [],
+  "held": [],
+  "errors": [
+    {
+      "slot": "2026-10-30T19:30",
+      "type": "ValueError",
+      "reason": "No usable generated text"
+    },
+    {
+      "slot": "2026-10-31T09:30",
+      "type": "JSONDecodeError",
+      "reason": "Unterminated string starting at: line 3 column 12 (char 228)"
+    },
+    {
+      "slot": "2026-10-31T12:30",
+      "type": "ValueError",
+      "reason": "No usable generated text"
+    },
+    {
+      "slot": "2026-10-31T16:30",
+      "type": "ValueError",
+      "reason": "No usable generated text"
+    },
+    {
+      "slot": "2026-10-31T19:30",
+      "type": "ValueError",
+      "reason": "No usable generated text"
+    },
+    {
+      "slot": "2026-11-01T09:30",
+      "type": "ValueError",
+      "reason": "No usable generated text"
+    },
+    {
+      "slot": "2026-11-01T12:30",
+      "type": "ValueError",
+      "reason": "No usable generated text"
+    },
+    {
+      "slot": "2026-11-01T16:30",
+      "type": "ValueError",
+      "reason": "No usable generated text"
+    },
+    {
+      "slot": "2026-11-01T19:30",
+      "type": "ValueError",
+      "reason": "No usable generated text"
+    }
+  ],
+  "immediate_publish_calls": 0,
+  "completed_at": "2026-10-30T16:09:13.284582+08:00"
+}
