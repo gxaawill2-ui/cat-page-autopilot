@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-01T09:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 2,
   "retry_allowed": false,
   "started_at": "2026-10-30T16:59:04.453020+08:00",
@@ -16,5 +16,11 @@
     "error": "No usable generated text",
     "recovery_note": "Completed durable run proves text rejected before image call. One corrected-request caption retry, max total text attempts2; keep original evidence. Unknown Facebook/image attempts remain untouched."
   },
-  "raw_caption_response": "{\n  \"caption\": \"Xiaoxue maintains her royal dignity even when her kingdom is currently under siege by a single, rogue piece of rogue toilet paper.\",\n  \"scene\": \"A hand-painted book illustration of Xiaoxue, a long-haired white cat with striking blue eyes, sitting regally atop a laundry basket. She stares with calm, judgmental intensity at a long trail of white toilet paper draped over her paw, her pink nose twitching slightly amidst the domestic clutter.\",\n  \"topic\": \"Graceful appearance versus ordinary household chaos\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"Xiaoxue maintains her royal dignity even when her kingdom is currently under siege by a single, rogue piece of rogue toilet paper.\",\n  \"scene\": \"A hand-painted book illustration of Xiaoxue, a long-haired white cat with striking blue eyes, sitting regally atop a laundry basket. She stares with calm, judgmental intensity at a long trail of white toilet paper draped over her paw, her pink nose twitching slightly amidst the domestic clutter.\",\n  \"topic\": \"Graceful appearance versus ordinary household chaos\"\n}",
+  "content": {
+    "caption": "Xiaoxue maintains her royal dignity even when her kingdom is currently under siege by a single, rogue piece of rogue toilet paper.",
+    "scene": "A hand-painted book illustration of Xiaoxue, a long-haired white cat with striking blue eyes, sitting regally atop a laundry basket. She stares with calm, judgmental intensity at a long trail of white toilet paper draped over her paw, her pink nose twitching slightly amidst the domestic clutter.",
+    "topic": "Graceful appearance versus ordinary household chaos"
+  },
+  "language": "en"
 }
