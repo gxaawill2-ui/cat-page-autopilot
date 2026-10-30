@@ -14,5 +14,6 @@
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
   "topic": "A curious tuxedo cat discovers a lost sock during his daily household inspection",
-  "image_attempts": 1
+  "image_attempts": 1,
+  "image_qa_response": "{\n  \"decision\": \"PASS\",\n  \"reason\": \"The image is a high-quality hand-painted style illustration of a tuxedo cat with correct anatomy, yellow eyes, and white paws, looking at a colorful sock. No text, watermarks, or anatomical malformations are present.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": true,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
