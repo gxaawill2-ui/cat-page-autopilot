@@ -15,5 +15,6 @@
     "evidence_run_id": "41024168989",
     "error": "No usable generated text",
     "recovery_note": "Completed durable run proves text rejected before image call. One corrected-request caption retry, max total text attempts2; keep original evidence. Unknown Facebook/image attempts remain untouched."
-  }
+  },
+  "raw_caption_response": "{\n  \"caption\": \"Inspector 阿斑 has concluded his investigation of the mysterious Sunken Fabric Canyon. Verdict: It is not a monster, merely a very cozy pile of freshly laundered towels. Investigation closed. Nap time initiated.\",\n  \"scene\": \"A black-and-white tuxedo cat with bright yellow eyes and white socks is perched precariously atop a mountain of fluffy, white laundry. He is mid-sneeze, one paw raised in a dramatic gesture of surprise, peering intensely at a rogue colorful sock. The hand-painted illustration uses soft, warm evening light to highlight his thick fur texture.\",\n  \"topic\": \"A curious tuxedo cat discovers the overwhelming comfort of a laundry basket.\"\n}"
 }
