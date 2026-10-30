@@ -1,6 +1,6 @@
 {
   "slot": "2026-10-31T16:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 2,
   "retry_allowed": false,
   "started_at": "2026-10-30T16:58:32.002224+08:00",
@@ -22,5 +22,6 @@
     "scene": "In a cozy sunlit living room, 小夜, a solid black short-haired cat with bright green eyes and a tiny white chest patch, sits in a regal, upright pose on a wooden floor. She stares with intense, scholarly gravity at a single breadcrumb. The hand-painted book illustration style uses warm, natural golden hour lighting to highlight her sleek fur.",
     "topic": "The dramatic seriousness of a cat observing a tiny snack."
   },
-  "language": "zh-Hant"
+  "language": "zh-Hant",
+  "image_sha256": "79431e50eefff866a3dee1d7df8ccc02b478f227958330b70c82f4403402977c"
 }
