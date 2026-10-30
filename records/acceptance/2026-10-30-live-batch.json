@@ -1,0 +1,84 @@
+{
+  "run_id": "41029967122",
+  "status": "four_native_schedules_verified",
+  "published_acceptance_prior_run": "40993880904",
+  "posts": [
+    {
+      "slot": "2026-10-31T09:30",
+      "post_id": "1346385028565797_122107291635515576",
+      "photo_id": "122107291593515576",
+      "readback": {
+        "id": "1346385028565797_122107291635515576",
+        "message": "Operation: Midnight Snack was a tactical masterpiece. Or so I thought, until the 'giant mountain of kibble' turned out to be a very empty bowl.",
+        "created_time": "2026-10-31T01:30:00+0000",
+        "is_published": false,
+        "scheduled_publish_time": 1793410200,
+        "permalink_url": "https://www.facebook.com/122106871317515576/posts/122107291635515576"
+      }
+    },
+    {
+      "slot": "2026-10-31T12:30",
+      "post_id": "1346385028565797_122107291869515576",
+      "photo_id": "122107291815515576",
+      "readback": {
+        "id": "1346385028565797_122107291869515576",
+        "message": "明明只是想優雅地午睡，為什麼這塊沾滿麵粉的桌布非要跟我玩捉迷藏呢？",
+        "created_time": "2026-10-31T04:30:00+0000",
+        "is_published": false,
+        "scheduled_publish_time": 1793421000,
+        "permalink_url": "https://www.facebook.com/122106871317515576/posts/122107291869515576"
+      }
+    },
+    {
+      "slot": "2026-10-31T16:30",
+      "post_id": "1346385028565797_122107292013515576",
+      "photo_id": "122107291953515576",
+      "readback": {
+        "id": "1346385028565797_122107292013515576",
+        "message": "本以為小夜是在深沉地凝視窗外的落葉，沒想到牠只是在盯著那隻剛掉在地上的麵包屑。那一刻，牠的眼神比哲學家還要嚴肅。",
+        "created_time": "2026-10-31T08:30:00+0000",
+        "is_published": false,
+        "scheduled_publish_time": 1793435400,
+        "permalink_url": "https://www.facebook.com/122106871317515576/posts/122107292013515576"
+      }
+    },
+    {
+      "slot": "2026-11-01T09:30",
+      "post_id": "1346385028565797_122107292295515576",
+      "photo_id": "122107292241515576",
+      "readback": {
+        "id": "1346385028565797_122107292295515576",
+        "message": "Xiaoxue maintains her royal dignity even when her kingdom is currently under siege by a single, rogue piece of rogue toilet paper.",
+        "created_time": "2026-11-01T01:30:00+0000",
+        "is_published": false,
+        "scheduled_publish_time": 1793496600,
+        "permalink_url": "https://www.facebook.com/122106871317515576/posts/122107292295515576"
+      }
+    }
+  ],
+  "held": [
+    {
+      "slot": "2026-10-30T19:30",
+      "reason": "vision FAIL; held"
+    },
+    {
+      "slot": "2026-10-31T19:30",
+      "reason": "visual quality rejected"
+    },
+    {
+      "slot": "2026-11-01T12:30",
+      "reason": "visual quality rejected"
+    },
+    {
+      "slot": "2026-11-01T16:30",
+      "reason": "visual quality rejected"
+    },
+    {
+      "slot": "2026-11-01T19:30",
+      "reason": "visual quality rejected"
+    }
+  ],
+  "natural_cron_acceptance": false,
+  "next_nominal_taipei": "2026-10-30T20:17:00+08:00",
+  "cost": "NT$0 additional; no upgrade/card; usage Neurons unknown"
+}

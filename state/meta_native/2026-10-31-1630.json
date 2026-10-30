@@ -24,6 +24,8 @@
   "attachment_photo_id_matches": true,
   "caption_matches": true,
   "checked_at": "2026-10-30T17:01:31.512266+08:00",
-  "planner_verified": false,
-  "visual_review": "pending"
+  "planner_verified": true,
+  "visual_review": "Work agent inspected actual scheduled JPEG from exact original hash; API photo attachment identity matched",
+  "planner_checked_at": "2026-10-30T09:10:34.926Z",
+  "planner_verification": "Official Planner Oct31 and Nov1 calendars: exact caption and authorized slot visible"
 }
