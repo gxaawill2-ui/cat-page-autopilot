@@ -14,5 +14,6 @@
     "recovery_allowed_once": true,
     "evidence_run_id": "41024168989",
     "error": "Actual completed run: No usable generated text; content phase failed before image stage. One bounded corrected-request text retry only; no image replay."
-  }
+  },
+  "raw_caption_response": "{\n  \"caption\": \"I spent three hours observing the vacuum cleaner to ensure it wasn't planning an uprising. It remains idle, but I'll keep my eyes on it. You're welcome, human.\",\n  \"scene\": \"A hand-painted book illustration of 小夜, a solid black short-haired cat with a tiny white chest patch and bright green eyes. She is perched regally atop a high bookshelf, peering down with a judging yet protective gaze. Soft, warm evening light filters through a nearby window, illuminating her sleek fur and thoughtful expression.\",\n  \"topic\": \"The secret guardian of the living room\"\n}"
 }
