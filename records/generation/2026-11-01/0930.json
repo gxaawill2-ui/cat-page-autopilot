@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-01T09:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 2,
   "retry_allowed": false,
   "started_at": "2026-10-30T16:59:04.453020+08:00",
@@ -22,5 +22,6 @@
     "scene": "A hand-painted book illustration of Xiaoxue, a long-haired white cat with striking blue eyes, sitting regally atop a laundry basket. She stares with calm, judgmental intensity at a long trail of white toilet paper draped over her paw, her pink nose twitching slightly amidst the domestic clutter.",
     "topic": "Graceful appearance versus ordinary household chaos"
   },
-  "language": "en"
+  "language": "en",
+  "image_sha256": "3c7af7e96f1a041aa41e3e1917bd8b88bb6a8ec56ffa3495609f0e6835a708f9"
 }
