@@ -14,5 +14,6 @@
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
   "topic": "A curious tuxedo cat discovers the overwhelming comfort of a laundry basket.",
-  "image_attempts": 1
+  "image_attempts": 1,
+  "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The cat's anatomy is malformed; the raised right limb lacks a paw/hand structure, ending abruptly as a thin, tapered tube.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": false,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
