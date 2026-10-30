@@ -1,7 +1,7 @@
 {
   "page_id": "1346385028565797",
   "slot": "2026-11-01T18:00",
-  "status": "photo_uploaded_not_scheduled",
+  "status": "schedule_armed_unknown",
   "caption_sha256": "72693b4579206a6463f61b3a1c5bf56b242fd9565c67a8f8acf2502f45b2828b",
   "image_sha256": "071a665783e151283d680e4a5ef6f3dd5356a688e005a4d98875bd41d8db355d",
   "scheduled_publish_time": 1793527200,
