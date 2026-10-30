@@ -1,7 +1,12 @@
 {
   "slot": "2026-11-01T12:30",
-  "status": "content_armed_unknown",
+  "status": "content_response_rejected_no_image",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-10-30T16:08:04.229526+08:00"
+  "started_at": "2026-10-30T16:08:04.229526+08:00",
+  "no_image_request_verified": true,
+  "recovery_allowed_once": true,
+  "evidence_run_id": "41024168989",
+  "error": "No usable generated text",
+  "recovery_note": "Completed durable run proves text rejected before image call. One corrected-request caption retry, max total text attempts2; keep original evidence. Unknown Facebook/image attempts remain untouched."
 }

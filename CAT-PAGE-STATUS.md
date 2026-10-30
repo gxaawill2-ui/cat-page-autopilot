@@ -1,3 +1,9 @@
+## 2026-10-30 16:21 中斷續作／品質擋下兩張圖，沒有新預約（最新）
+- run41025833778已完成success，但實際prepared=[]、scheduled=[]；不能把工作綠燈稱發布成功。19:30兩張新圖均明確QA FAIL，保留JPEG/完整理由與前次歷史；已到2張上限，留稿不再生圖、不送Meta。
+- 修正thinking參數後run41025343440已真產生完整自然英文文案及原創JPEG，文字故障有改善，但整套自動補充仍未驗收。09:30真已發布Post不重送。
+- 其餘8個10/31–11/1時段：依run41024168989完整錯誤回條，確認文案解析/空回應失敗、從未進入image；只准每篇一次修正後文字重試（attempts最多2），原始意圖與截斷回應保留。沒有把未知圖像/FB鎖放行。
+- 下一步：沿用既有main補稿workflow真跑其餘空缺→品質過關才Pages驗證/Meta原生預約→逐篇核實真ID；有配額/未知立即停止。不宣稱已上線或三天緩衝已滿。額外NT$0、無付費回退。
+
 ## 2026-10-30 16:13 真補稿失敗已安全暫停／修正Gemma請求待單篇驗證（最新）
 - 本人郵件OTP已成功；舊META_PUBLISH_ENABLED=false。CAT_AUTOPILOT_ENABLED曾真true並實跑，但run41024168989失敗後已改false，清單讀回兩者false，不宣稱上線。
 - run41024168989真22安全測試通過，9筆文字回應8筆No usable generated text、1筆JSON截斷；新圖片0、新預約0。完整durable report records/autopilot-runs/41024168989.json與各generation意圖均保留。
