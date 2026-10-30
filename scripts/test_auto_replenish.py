@@ -199,5 +199,22 @@ class ReplenishSafetyTest(unittest.TestCase):
                 a.chat([],"fixture",a.TEXT)
         self.assertEqual(a.LAST_CHAT_METADATA["finish_reason"],"length")
 
+    def test_existing_queue_cannot_be_overwritten_without_explicit_rejected_image_intent(self):
+        with tempfile.TemporaryDirectory() as tmp,patch.object(a,"ROOT",Path(tmp)), patch.object(a.subprocess,"run") as run:
+            run.return_value.returncode=0
+            day=dt.date(2026,11,1)
+            item={"caption":"A unique original kitty adventure","scene":"An original cat in a clean room","topic":"test"}
+            q=a.commit_queue(day,"09:30",item,"en",b"first")
+            with self.assertRaisesRegex(ValueError,"Never overwrite"):
+                a.commit_queue(day,"09:30",item,"en",b"second")
+            q["image_qa_method"]="image retry armed unknown"
+            qp=Path(tmp)/"queue/meta/2026-11-01/0930.json"
+            a.base.write(qp,q)
+            second=a.commit_queue(day,"09:30",item,"en",b"second",previous=q)
+            self.assertEqual(second["image_attempts"],2)
+            self.assertEqual(second["previous_image_attempts"][0]["image_sha256"],q["image_sha256"])
+            with self.assertRaisesRegex(ValueError,"Never overwrite"):
+                a.commit_queue(day,"09:30",item,"en",b"third",previous=second)
+
 if __name__=="__main__":
     unittest.main()

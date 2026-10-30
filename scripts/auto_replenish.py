@@ -128,11 +128,18 @@ def checkpoint(path,value,message):
     base.write(path,value)
     base.persist(path,message)
 
-def commit_queue(day,slot,item,language,jpg):
+def commit_queue(day,slot,item,language,jpg,previous=None):
     digest=hashlib.sha256(jpg).hexdigest()
     image_file=ROOT/"docs/assets"/(digest+".jpg")
     queue_file=ROOT/"queue/meta"/str(day)/(slot.replace(":","")+".json")
-    if queue_file.exists(): raise ValueError("Never overwrite queued post")
+    if queue_file.exists():
+        current=base.read(queue_file)
+        record=ROOT/"state/meta_native"/(str(day)+"-"+slot.replace(":","")+".json")
+        if (previous is None or current!=previous or record.exists()
+                or current.get("image_qa") is not False
+                or current.get("image_qa_method")!="image retry armed unknown"
+                or current.get("image_attempts",1)!=1):
+            raise ValueError("Never overwrite queued post")
     image_file.parent.mkdir(parents=True,exist_ok=True)
     queue_file.parent.mkdir(parents=True,exist_ok=True)
     image_file.write_bytes(jpg)
@@ -143,6 +150,9 @@ def commit_queue(day,slot,item,language,jpg):
         "scene":item["scene"],"prepared_at":dt.datetime.now(TZ).isoformat(),
         "source_record":"Cloudflare Workers AI original from prompt","image_model":IMAGE,
         "text_model":TEXT,"vision_model":VISION,"topic":str(item.get("topic",""))[:80]}
+    record["image_attempts"]=2 if previous is not None else 1
+    if previous is not None:
+        record["previous_image_attempts"]=[previous]
     base.write(queue_file,record)
     for args in (["add",str(image_file.relative_to(ROOT)),str(queue_file.relative_to(ROOT))],
         ["-c","user.name=cat-autopilot[bot]","-c","user.email=cat-autopilot@users.noreply.github.com",
@@ -228,8 +238,17 @@ def run(dry=False):
                 q=commit_queue(day,slot,item,language,image)
                 stage.update(status="jpeg_durable_qa_pending",image_sha256=q["image_sha256"])
                 checkpoint(gp,stage,"Record durable original image before visual QA")
+            if (q.get("image_qa_method")=="vision FAIL; held" and q.get("image_attempts",1)==1):
+                # Exactly one new image only after an explicit quality rejection, never unknown.
+                if (ROOT/"state/meta_native"/(str(day)+"-"+slot.replace(":","")+".json")).exists():
+                    raise ValueError("Native attempt exists; no image replacement")
+                q["image_qa_method"]="image retry armed unknown"
+                checkpoint(qpath,q,"Arm second and final image after explicit QA rejection")
+                scene=q["scene"].replace("hand-painted book illustration","original cinematic 3D illustration").replace("hand-painted book","original cinematic 3D")
+                image=make_image(scene+" Clean unmarked scene. No signature, no watermark, no lettering or logos anywhere.",key)
+                q=commit_queue(day,slot,{"caption":q["caption"],"scene":scene,"topic":q.get("topic","")},q["language"],image,previous=q)
             if q.get("image_qa") is not True:
-                if q.get("image_qa_method") in ("vision FAIL; held","vision armed unknown"):
+                if q.get("image_qa_method") in ("vision FAIL; held","vision armed unknown","image retry armed unknown"):
                     report["held"].append({"slot":slotkey,"reason":q["image_qa_method"]})
                     continue
                 image=(ROOT/"docs/assets"/(q["image_sha256"]+".jpg")).read_bytes()
