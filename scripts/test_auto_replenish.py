@@ -178,5 +178,11 @@ class ReplenishSafetyTest(unittest.TestCase):
         self.assertEqual(len({c["appearance"] for c in chars}),5)
         self.assertTrue(all(c["personality"] and c["story_style"] for c in chars))
 
+    def test_planner_and_photo_ids_are_not_graph_feed_post_ids(self):
+        self.assertFalse(a.genuine_graph_post_id("1135613809012719"))
+        self.assertFalse(a.genuine_graph_post_id("122107140813515576"))
+        self.assertFalse(a.genuine_graph_post_id("999_122107140849515576"))
+        self.assertTrue(a.genuine_graph_post_id("1346385028565797_122107140849515576"))
+
 if __name__=="__main__":
     unittest.main()

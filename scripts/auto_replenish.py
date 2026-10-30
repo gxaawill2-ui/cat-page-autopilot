@@ -146,6 +146,9 @@ def commit_queue(day,slot,item,language,jpg):
         if cmd.returncode: raise RuntimeError("Git commit/push conflict; Meta untouched")
     return record
 
+def genuine_graph_post_id(value):
+    return isinstance(value,str) and re.fullmatch(base.PAGE_ID+r"_\d+",value) is not None
+
 def run(dry=False):
     now=dt.datetime.now(TZ)
     targets=list(slots_to_fill(now))
@@ -166,7 +169,7 @@ def run(dry=False):
     inventory = native.remote(meta)[1]
     for path in (ROOT/"state/meta_native").glob("*.json"):
         old=base.read(path)
-        if not old.get("meta_post_id") or not old.get("slot"):
+        if not genuine_graph_post_id(old.get("meta_post_id")) or not old.get("slot"):
             continue
         if native.stamp(old["slot"])>now or old.get("status")=="published_api_verified":
             continue

@@ -1,3 +1,9 @@
+## 2026-10-30 正式開關已真啟用／首次補稿因舊UI ID回讀停止（最新）
+- 本次本人GitHub郵件OTP正式驗證成功；Variables清單真讀回CAT_AUTOPILOT_ENABLED=true、META_PUBLISH_ENABLED=false。PR#1已合併，既有每日兩輪08:17/20:17台北補稿cron部署，不新增FB到點即發路徑。
+- 首次正式補稿run41023762597/job123956924058，安全測試通過；Meta連線GET通過後，在舊19:30 UI預覽ID1135613809012719的GET回讀失敗：HTTP400/code100/subcode33 GraphMethodException。尚未AI生成/新Meta寫入，不能算補稿成功。
+- 最小修復：到期API回讀只接受指定Page的PageID_postID形狀，裸Planner/Photo ID保持原UI紀錄，不送Graph猜測、不解鎖、不重送。新增測試包含正確Feed ID、裸UI/Photo ID與錯Page ID。本機22項補稿測試通過。
+- 下一步讀回main安全CI，沿用原workflow單次dry_run=false重跑（上輪未生圖/未新發文），保存真原生預約與Pages結果。開關啟用不等於已全自動驗收成功，三日緩衝仍待建立。
+
 ## 2026-10-30 PR已正式合併／啟用仍受GitHub身分再確認阻擋（最新）
 - PR#1已真合併main，merge commit 2ea78b53375ec42c1e6bce197a1c79dbe12d84ed。修復CI40994322660與合併後安全run40994425401成功；不是首次全自動補稿成功。
 - 真API verify run40993880904已確認既有09:30 Post1346385028565797_122107140849515576為published_api_verified、is_published=true，沒有重送。
