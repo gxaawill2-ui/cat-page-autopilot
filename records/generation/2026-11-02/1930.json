@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-02T19:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-10-31T02:00:18.319562+08:00",
@@ -10,5 +10,6 @@
     "scene": "A plump orange tabby named 阿橘 crouches precariously on a polished wooden kitchen counter, one cream paw hovering mid-air over a ceramic jar. He is poised like a jungle predator, amber eyes wide with intense focus. Soft moonlight streams through a nearby window, illuminating his whiskers and the determined tilt of his head.",
     "topic": "A hungry cat's failed heist"
   },
-  "language": "en"
+  "language": "en",
+  "image_sha256": "19907762a412f98833d1382810697715cffb1c5b2313148a5ed704986bfb24f2"
 }
