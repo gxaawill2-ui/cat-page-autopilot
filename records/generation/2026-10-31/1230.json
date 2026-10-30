@@ -15,5 +15,6 @@
     "evidence_run_id": "41024168989",
     "error": "No usable generated text",
     "recovery_note": "Completed durable run proves text rejected before image call. One corrected-request caption retry, max total text attempts2; keep original evidence. Unknown Facebook/image attempts remain untouched."
-  }
+  },
+  "raw_caption_response": "{\n  \"caption\": \"明明只是想優雅地午睡，為什麼這塊沾滿麵粉的桌布非要跟我玩捉迷藏呢？\",\n  \"scene\": \"In a sunlit kitchen, 小雪, a white long-haired cat with striking blue eyes, sits atop a wooden table. She maintains a regal, upright posture despite being partially draped in a messy, flour-dusted tablecloth. Her pink nose is twitching slightly as she stares with dignified disapproval at a spilled bowl of dough nearby. Hand-painted book illustration style with soft, natural light.\",\n  \"topic\": \"Graceful appearance versus ordinary household chaos\"\n}"
 }
