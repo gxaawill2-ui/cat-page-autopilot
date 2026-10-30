@@ -1,0 +1,18 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-10-31T09:30",
+  "caption": "Operation: Midnight Snack was a tactical masterpiece. Or so I thought, until the 'giant mountain of kibble' turned out to be a very empty bowl.",
+  "language": "en",
+  "image_sha256": "2f3458afee3e3d442ac2afa4c28fd9a71487ce882b916ae9ac9c68556bd03141",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/2f3458afee3e3d442ac2afa4c28fd9a71487ce882b916ae9ac9c68556bd03141.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "阿橘, an orange short-haired tabby with amber eyes and cream paws, sits upright on a polished wooden floor. He wears a look of profound betrayal, staring intensely at an empty ceramic bowl. A single, solitary piece of kibble sits just out of his reach, framed by soft morning sunlight streaming through a nearby window.",
+  "prepared_at": "2026-10-30T16:58:03.279512+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "A failed culinary heist",
+  "image_attempts": 1
+}
