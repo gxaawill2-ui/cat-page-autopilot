@@ -6,7 +6,7 @@
   "image_sha256": "3cf8e609e9e32ed62b47bc8a6cd3a5b47c559348782af4281002b41f4475d596",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/3cf8e609e9e32ed62b47bc8a6cd3a5b47c559348782af4281002b41f4475d596.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "A tuxedo cat named A-Ban with bright yellow eyes, a crisp white bib, and white socks, crouched low in a sunlit study. He is peering intensely under a dark wooden desk, one paw lifted mid-air in a cautious investigative pose. The scene is a hand-painted book illustration with soft, natural afternoon light filtering through a nearby window.",
   "prepared_at": "2026-10-30T16:59:42.890902+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
