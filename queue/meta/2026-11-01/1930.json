@@ -6,7 +6,7 @@
   "image_sha256": "728010d38a5256469bfea3356efdb0597214dafc40d511b342603300c0c110a7",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/728010d38a5256469bfea3356efdb0597214dafc40d511b342603300c0c110a7.jpg",
   "image_qa": false,
-  "image_qa_method": "vision armed unknown",
+  "image_qa_method": "vision FAIL; held",
   "scene": "A hand-painted book illustration of Mibao, a tiny brown tabby kitten with hazel eyes, mid-air leap. She is lunging heroically toward a single, solitary piece of kibble resting on a vast, polished wooden floor. Natural evening light catches her white chin as she executes a dramatic, clumsy belly flop toward her prize.",
   "prepared_at": "2026-10-30T16:59:58.585486+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
