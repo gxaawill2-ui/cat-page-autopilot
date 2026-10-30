@@ -14,5 +14,6 @@
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
   "topic": "The quiet dignity of a lost toy",
-  "image_attempts": 1
+  "image_attempts": 1,
+  "image_qa_response": "{\"decision\": \"PASS\", \"reason\": \"The illustration clearly depicts the black cat with green eyes and the white chest patch as described. The anatomy is coherent, the content is safe, and there is no text, signature, or watermark present.\", \"checks\": {\"cat_visible\": true, \"coherent_anatomy\": true, \"safe_content\": true, \"no_text_or_signature\": true, \"no_watermark\": true}}"
 }
