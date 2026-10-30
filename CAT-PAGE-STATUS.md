@@ -1,3 +1,13 @@
+## 2026-10-30 09:30原生配送實際已發佈／UI驗收通過、API本輪待核（最新）
+- 觀測2026-10-30T09:46:26.102224+08:00；真時鐘初查台北09:40:39已過09:30。指定Page1346385028565797官方「已發佈」清單出現Post列122107140849515576，詳情明示「貼文 ·發佈時間：10月30日 9:30」、由Cat Page Autopilot發佈。
+- 真API Post ID沿用1346385028565797_122107140849515576；UI列/insights content_id為122107140849515576。原Planner預覽1696925965336707另存，不混同；圖片link photo122107140813515576吻合預約附件。
+- 全文Target locked! 🐾 Mibao has officially declared war on the fluffiest enemy in the garden. Wish us luck! #CatLife #GardenAdventures與queue逐字核對；花園躍起橘虎斑圖已現場目視與原JPEG3d42d781...一致，原圖SHA真核。UI既有名稱Daily Purr 喵喵日常僅觀察，本輪無品牌操作。
+- 官方UI真permalink：https://facebook.com/permalink.php?story_fbid=pfbid02AWwDChzxdPZAYk2WZuSpAtHKcqqFKazFWebLqAhzffgJ5skGzTPSW1nSmtGUrij4l&id=61595467295507 。原API預約回條permalink另存https://www.facebook.com/122106871317515576/posts/122107140849515576；不把先前scheduled is_published=false當本輪實發API證據。
+- 狀態published_ui_verified，published_delivery_verified=true（明示UI來源）。本輪GitHub官方UI main mode=verify/同queue送出後查不到新run，一次有界只讀重試亦未得新回條；UI清單仍11輪，GET最新十輪也無新scheduler。無明確錯誤原因，不猜測權限或Token失效。published API is_published/created_time均null、API驗收unknown，不能標published_api_verified。
+- 原09:30 API預約回條、Planner與歷史FAIL完整保留；state/meta_native/2026-10-30-0930.json與records/acceptance/meta-native-2026-10-30-0930.json補本輪證據。FB/Windsor/Meta寫入0、重送0、生圖0、新任務0；舊事故、其他時段與鎖均未動。額外NT$0。
+- PR#1真GET仍draft/open/unmerged，head884cf5f52f9227542b7f82c4e4fdeeef37a199f3；CAT_AUTOPILOT_ENABLED仍未啟用，本輪不合併不部署，不把手動workflow_dispatch當持續無人值守。
+- 精確下一步：先取得既有main verify真run，確認同Post is_published=true＋全文＋photo附件匹配；再將fresh main驗收證據同步PR#1、重跑安全CI、審核合併及啟用未來Meta佇列補充。這些部署動作不屬本輪純讀取範圍；禁止重送本篇或重啟舊立即發文路徑。
+
 ## 2026-10-30 07:46 Asia/Taipei — Cloudflare 免費 AI → Meta API 原生預約已實測；到點發布待驗收
 
 - NT$0、無新增信用卡：帳號 Free / $0 / Current plan 證據已保存。新英文文案、原創圖片、結構化五項 QA 與 Work 目視均已完成；未重用事故內容。
