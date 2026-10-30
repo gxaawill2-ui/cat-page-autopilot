@@ -1,0 +1,18 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-10-31T12:30",
+  "caption": "明明只是想優雅地午睡，為什麼這塊沾滿麵粉的桌布非要跟我玩捉迷藏呢？",
+  "language": "zh-Hant",
+  "image_sha256": "e62d9a719c643f8fa8bc848c8709547a2fc46fd2bb1bcd2bf4a332eca4c34fba",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/e62d9a719c643f8fa8bc848c8709547a2fc46fd2bb1bcd2bf4a332eca4c34fba.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "In a sunlit kitchen, 小雪, a white long-haired cat with striking blue eyes, sits atop a wooden table. She maintains a regal, upright posture despite being partially draped in a messy, flour-dusted tablecloth. Her pink nose is twitching slightly as she stares with dignified disapproval at a spilled bowl of dough nearby. Hand-painted book illustration style with soft, natural light.",
+  "prepared_at": "2026-10-30T16:58:23.696250+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "Graceful appearance versus ordinary household chaos",
+  "image_attempts": 1
+}
