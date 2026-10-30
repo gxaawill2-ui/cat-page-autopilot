@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-10-30T16:06:13.936529+08:00"
+  "started_at": "2026-10-30T16:06:13.936529+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"Operation Tuna Conquest is in full effect. I have conquered the pillow mountain and prepared for the final leap. Wait... these freshly dried towels are far more strategic for a nap. Mission aborted.\",\n  \"scene\": \"A"
 }
