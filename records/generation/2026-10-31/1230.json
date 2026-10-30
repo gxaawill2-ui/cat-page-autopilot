@@ -1,6 +1,6 @@
 {
   "slot": "2026-10-31T12:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 2,
   "retry_allowed": false,
   "started_at": "2026-10-30T16:58:12.587037+08:00",
@@ -22,5 +22,6 @@
     "scene": "In a sunlit kitchen, 小雪, a white long-haired cat with striking blue eyes, sits atop a wooden table. She maintains a regal, upright posture despite being partially draped in a messy, flour-dusted tablecloth. Her pink nose is twitching slightly as she stares with dignified disapproval at a spilled bowl of dough nearby. Hand-painted book illustration style with soft, natural light.",
     "topic": "Graceful appearance versus ordinary household chaos"
   },
-  "language": "zh-Hant"
+  "language": "zh-Hant",
+  "image_sha256": "e62d9a719c643f8fa8bc848c8709547a2fc46fd2bb1bcd2bf4a332eca4c34fba"
 }
