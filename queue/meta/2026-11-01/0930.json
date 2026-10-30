@@ -6,7 +6,7 @@
   "image_sha256": "3c7af7e96f1a041aa41e3e1917bd8b88bb6a8ec56ffa3495609f0e6835a708f9",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/3c7af7e96f1a041aa41e3e1917bd8b88bb6a8ec56ffa3495609f0e6835a708f9.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "A hand-painted book illustration of Xiaoxue, a long-haired white cat with striking blue eyes, sitting regally atop a laundry basket. She stares with calm, judgmental intensity at a long trail of white toilet paper draped over her paw, her pink nose twitching slightly amidst the domestic clutter.",
   "prepared_at": "2026-10-30T16:59:11.784331+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
