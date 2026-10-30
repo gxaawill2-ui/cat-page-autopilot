@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-02T12:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-10-31T01:59:46.438562+08:00",
@@ -10,5 +10,6 @@
     "scene": "A tuxedo cat named Ah Ban with bright yellow eyes, a crisp white bib, and white paws, crouches low on a sunlit wooden floor. He is peering intensely into a dark corner behind a chair, his tail twitching with focus. He has just discovered a colorful, crumpled wool sock, treating it like a rare archaeological find in a hand-painted book illustration style.",
     "topic": "A curious tuxedo cat discovers a lost sock during his daily household inspection."
   },
-  "language": "zh-Hant"
+  "language": "zh-Hant",
+  "image_sha256": "72c52fb25c4ed49a1dee1e86e3a6c404d94e413da3fcdb95534a43ad87e94d26"
 }
