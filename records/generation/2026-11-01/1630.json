@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-01T16:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 2,
   "retry_allowed": false,
   "started_at": "2026-10-30T16:59:36.241815+08:00",
@@ -22,5 +22,6 @@
     "scene": "A tuxedo cat named A-Ban with bright yellow eyes, a crisp white bib, and white socks, crouched low in a sunlit study. He is peering intensely under a dark wooden desk, one paw lifted mid-air in a cautious investigative pose. The scene is a hand-painted book illustration with soft, natural afternoon light filtering through a nearby window.",
     "topic": "A curious cat's unexpected discovery during a household inspection."
   },
-  "language": "zh-Hant"
+  "language": "zh-Hant",
+  "image_sha256": "3cf8e609e9e32ed62b47bc8a6cd3a5b47c559348782af4281002b41f4475d596"
 }
