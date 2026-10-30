@@ -14,5 +14,6 @@
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
   "topic": "A curious cat's unexpected discovery during a household inspection.",
-  "image_attempts": 1
+  "image_attempts": 1,
+  "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The cat has a malformed anatomy with a visible extra limb/deformed shoulder area connecting the head to the body, and there is a signature in the bottom left corner.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": false,\n    \"safe_content\": true,\n    \"no_text_or_signature\": false,\n    \"no_watermark\": true\n  }\n}"
 }
