@@ -33,11 +33,17 @@ def slot_language(day,slot):
 def ai(endpoint, body, key):
     return cloudflare.request(endpoint,body,key)
 
+LAST_CHAT_METADATA={}
+
 def chat(messages,key,model,json_object=False):
-    body={"model":model,"messages":messages,"max_completion_tokens":1000}
+    LAST_CHAT_METADATA.clear()
+    body={"model":model,"messages":messages,"max_completion_tokens":1500,
+          "stream":False,"chat_template_kwargs":{"enable_thinking":False}}
     if json_object: body["response_format"]={"type":"json_object"}
     r=ai("/chat/completions",body,key)
-    value=(r.get("choices") or [{}])[0].get("message",{}).get("content")
+    choice=(r.get("choices") or [{}])[0]
+    LAST_CHAT_METADATA.update(finish_reason=choice.get("finish_reason"), usage=r.get("usage"),model=r.get("model"))
+    value=choice.get("message",{}).get("content")
     if not isinstance(value,str) or not value.strip():
         raise ValueError("No usable generated text")
     return value.strip()
@@ -197,11 +203,16 @@ def run(dry=False):
                 q=base.read(qpath)
             else:
                 gp=generation_file(day,slot)
-                if gp.exists():
+                prior=base.read(gp) if gp.exists() else None
+                recovery=(prior is not None and prior.get("status")=="content_response_rejected_no_image"
+                          and prior.get("recovery_allowed_once") is True and prior.get("attempts")==1
+                          and prior.get("no_image_request_verified") is True)
+                if prior is not None and not recovery:
                     report["held"].append({"slot":slotkey,"reason":"generation requires reconciliation"})
                     continue
-                stage={"slot":slotkey,"status":"content_armed_unknown","attempts":1,
+                stage={"slot":slotkey,"status":"content_armed_unknown","attempts":2 if recovery else 1,
                        "retry_allowed":False,"started_at":dt.datetime.now(TZ).isoformat()}
+                if recovery: stage["previous_attempt"]=prior
                 checkpoint(gp,stage,"Save AI generation intent "+slotkey)
                 def raw_caption(raw):
                     stage["raw_caption_response"]=raw
@@ -238,8 +249,16 @@ def run(dry=False):
             report["prepared"].append(slotkey)
         except (ValueError,RuntimeError) as exc:
             report["errors"].append({"slot":slotkey,"type":type(exc).__name__,"reason":str(exc)[:160]})
+            gp=generation_file(day,slot)
+            if isinstance(exc,ValueError) and gp.exists() and not qpath.exists():
+                failed=base.read(gp)
+                if failed.get("status")=="content_armed_unknown":
+                    failed.update(status="content_response_rejected_no_image",retry_allowed=False,
+                                  no_image_request_verified=True,error=str(exc)[:160],
+                                  response_metadata=dict(LAST_CHAT_METADATA))
+                    checkpoint(gp,failed,"Save explicit rejected text response; never retry unknown image")
             # CAS failures and provider quota/transport failures stop all additional inference.
-            if isinstance(exc,RuntimeError):
+            if isinstance(exc,RuntimeError) or len(report["errors"])>=2:
                 break
     ready=[]
     for day,slot in targets:

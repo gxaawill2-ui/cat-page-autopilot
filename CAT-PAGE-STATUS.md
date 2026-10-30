@@ -1,3 +1,10 @@
+## 2026-10-30 16:13 真補稿失敗已安全暫停／修正Gemma請求待單篇驗證（最新）
+- 本人郵件OTP已成功；舊META_PUBLISH_ENABLED=false。CAT_AUTOPILOT_ENABLED曾真true並實跑，但run41024168989失敗後已改false，清單讀回兩者false，不宣稱上線。
+- run41024168989真22安全測試通過，9筆文字回應8筆No usable generated text、1筆JSON截斷；新圖片0、新預約0。完整durable report records/autopilot-runs/41024168989.json與各generation意圖均保留。
+- 官方Workers Gemma教學示範chat_template_kwargs.enable_thinking=false。依官方參數停用thinking、保持非串流JSON並保存finish_reason/usage；先前沒保存metadata，不能斷言思考token就是已證實根因。新增安全測試，本機24項通過。
+- 僅今晚19:30，依權威run證明content失敗且從未進入image，准一次修正後文字重試（attempts上限2），保留完整前次紀錄；其他8筆保持待核，不重送未知圖像或Facebook。後續同輪累積2筆文字錯誤即停止，不再耗9次。
+- 下一步：既有workflow單次受控正式驗收→若失敗保持CAT開關false；若新圖文真成功預約、回讀及Planner通過，再啟用每日無人補稿。NT$0，無卡/付費回退。每週任務enabled，舊ChatGPT每日任務disabled；三天檢討整合仍未驗收。
+
 ## 2026-10-30 正式開關已真啟用／首次補稿因舊UI ID回讀停止（最新）
 - 本次本人GitHub郵件OTP正式驗證成功；Variables清單真讀回CAT_AUTOPILOT_ENABLED=true、META_PUBLISH_ENABLED=false。PR#1已合併，既有每日兩輪08:17/20:17台北補稿cron部署，不新增FB到點即發路徑。
 - 首次正式補稿run41023762597/job123956924058，安全測試通過；Meta連線GET通過後，在舊19:30 UI預覽ID1135613809012719的GET回讀失敗：HTTP400/code100/subcode33 GraphMethodException。尚未AI生成/新Meta寫入，不能算補稿成功。

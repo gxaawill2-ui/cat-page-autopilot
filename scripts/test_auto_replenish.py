@@ -184,5 +184,20 @@ class ReplenishSafetyTest(unittest.TestCase):
         self.assertFalse(a.genuine_graph_post_id("999_122107140849515576"))
         self.assertTrue(a.genuine_graph_post_id("1346385028565797_122107140849515576"))
 
+    def test_direct_gemma_request_disables_thinking_and_keeps_real_metadata(self):
+        result={"model":a.TEXT,"usage":{"completion_tokens":42},"choices":[{"finish_reason":"stop","message":{"content":"actual answer"}}]}
+        with patch.object(a,"ai",return_value=result) as req:
+            self.assertEqual(a.chat([],"fixture",a.TEXT),"actual answer")
+        body=req.call_args.args[1]
+        self.assertIs(body["chat_template_kwargs"]["enable_thinking"],False)
+        self.assertIs(body["stream"],False)
+        self.assertEqual(a.LAST_CHAT_METADATA["finish_reason"],"stop")
+
+    def test_empty_answer_preserves_finish_reason_without_claiming_root_cause(self):
+        with patch.object(a,"ai",return_value={"choices":[{"finish_reason":"length","message":{"content":None}}]}):
+            with self.assertRaisesRegex(ValueError,"No usable"):
+                a.chat([],"fixture",a.TEXT)
+        self.assertEqual(a.LAST_CHAT_METADATA["finish_reason"],"length")
+
 if __name__=="__main__":
     unittest.main()
