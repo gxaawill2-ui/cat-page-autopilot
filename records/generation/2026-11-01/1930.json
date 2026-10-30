@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-01T19:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 2,
   "retry_allowed": false,
   "started_at": "2026-10-30T16:59:51.640674+08:00",
@@ -22,5 +22,6 @@
     "scene": "A hand-painted book illustration of Mibao, a tiny brown tabby kitten with hazel eyes, mid-air leap. She is lunging heroically toward a single, solitary piece of kibble resting on a vast, polished wooden floor. Natural evening light catches her white chin as she executes a dramatic, clumsy belly flop toward her prize.",
     "topic": "Tiny household adventures"
   },
-  "language": "en"
+  "language": "en",
+  "image_sha256": "728010d38a5256469bfea3356efdb0597214dafc40d511b342603300c0c110a7"
 }
