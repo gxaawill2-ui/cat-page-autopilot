@@ -109,7 +109,9 @@
     "permalink_from_official_preview": "https://facebook.com/permalink.php?story_fbid=pfbid02AWwDChzxdPZAYk2WZuSpAtHKcqqFKazFWebLqAhzffgJ5skGzTPSW1nSmtGUrij4l&id=61595467295507",
     "api_post_id": "1346385028565797_122107140849515576",
     "planner_preview_id": "1696925965336707",
-    "id_note": "Published UI numeric row id agrees with API post suffix. Planner preview is a separate internal id, photo is not post id."
+    "id_note": "Published UI numeric row id agrees with API post suffix. Planner preview is a separate internal id, photo is not post id.",
+    "opened_post_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02AWwDChzxdPZAYk2WZuSpAtHKcqqFKazFWebLqAhzffgJ5skGzTPSW1nSmtGUrij4l&id=61595467295507",
+    "opened_post_target_text_present": true
   },
   "published_ui_verified": true,
   "verification_scope": "published_ui_verified; published_api verification unknown",
@@ -149,8 +151,10 @@
     "not_continuous_unattended_proof": true
   },
   "library_sync": {
-    "status": "pending",
+    "status": "succeeded",
+    "version": 33,
     "file_id": "libfile_eb843306062c81919a18f9a9efc211f9",
-    "expected_previous_version": 32
+    "status_commit": "5219ea3fca851654ba6aaa2dbb0f87f9fe8325ae",
+    "previous_version_guard": 32
   }
 }
