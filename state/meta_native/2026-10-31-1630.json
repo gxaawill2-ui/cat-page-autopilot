@@ -1,14 +1,15 @@
 {
   "page_id": "1346385028565797",
   "slot": "2026-10-31T16:30",
-  "status": "schedule_armed_unknown",
+  "status": "scheduled_unverified",
   "caption_sha256": "f5f93fa8dce9a5d19e0b97533487ae03b24577eb866ae5f6608ed9fbf43d82c8",
   "image_sha256": "79431e50eefff866a3dee1d7df8ccc02b478f227958330b70c82f4403402977c",
   "scheduled_publish_time": 1793435400,
   "armed_at": "2026-10-30T17:01:20.133150+08:00",
   "photo_id": "122107291953515576",
-  "meta_post_id": null,
+  "meta_post_id": "1346385028565797_122107292013515576",
   "retry_allowed": false,
   "method": "Meta unpublished photo -> scheduled Page feed",
-  "run_id": "41029967122"
+  "run_id": "41029967122",
+  "response_at": "2026-10-30T17:01:29.948662+08:00"
 }
