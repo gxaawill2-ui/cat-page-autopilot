@@ -1,6 +1,6 @@
 {
   "slot": "2026-10-31T12:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 2,
   "retry_allowed": false,
   "started_at": "2026-10-30T16:58:12.587037+08:00",
@@ -16,5 +16,11 @@
     "error": "No usable generated text",
     "recovery_note": "Completed durable run proves text rejected before image call. One corrected-request caption retry, max total text attempts2; keep original evidence. Unknown Facebook/image attempts remain untouched."
   },
-  "raw_caption_response": "{\n  \"caption\": \"明明只是想優雅地午睡，為什麼這塊沾滿麵粉的桌布非要跟我玩捉迷藏呢？\",\n  \"scene\": \"In a sunlit kitchen, 小雪, a white long-haired cat with striking blue eyes, sits atop a wooden table. She maintains a regal, upright posture despite being partially draped in a messy, flour-dusted tablecloth. Her pink nose is twitching slightly as she stares with dignified disapproval at a spilled bowl of dough nearby. Hand-painted book illustration style with soft, natural light.\",\n  \"topic\": \"Graceful appearance versus ordinary household chaos\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"明明只是想優雅地午睡，為什麼這塊沾滿麵粉的桌布非要跟我玩捉迷藏呢？\",\n  \"scene\": \"In a sunlit kitchen, 小雪, a white long-haired cat with striking blue eyes, sits atop a wooden table. She maintains a regal, upright posture despite being partially draped in a messy, flour-dusted tablecloth. Her pink nose is twitching slightly as she stares with dignified disapproval at a spilled bowl of dough nearby. Hand-painted book illustration style with soft, natural light.\",\n  \"topic\": \"Graceful appearance versus ordinary household chaos\"\n}",
+  "content": {
+    "caption": "明明只是想優雅地午睡，為什麼這塊沾滿麵粉的桌布非要跟我玩捉迷藏呢？",
+    "scene": "In a sunlit kitchen, 小雪, a white long-haired cat with striking blue eyes, sits atop a wooden table. She maintains a regal, upright posture despite being partially draped in a messy, flour-dusted tablecloth. Her pink nose is twitching slightly as she stares with dignified disapproval at a spilled bowl of dough nearby. Hand-painted book illustration style with soft, natural light.",
+    "topic": "Graceful appearance versus ordinary household chaos"
+  },
+  "language": "zh-Hant"
 }
