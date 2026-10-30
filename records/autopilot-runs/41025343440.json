@@ -1,0 +1,47 @@
+{
+  "run_id": "41025343440",
+  "started_at": "2026-10-30T16:16:43.377411+08:00",
+  "prepared": [],
+  "scheduled": [],
+  "held": [
+    {
+      "slot": "2026-10-30T19:30",
+      "reason": "visual quality rejected"
+    },
+    {
+      "slot": "2026-10-31T09:30",
+      "reason": "generation requires reconciliation"
+    },
+    {
+      "slot": "2026-10-31T12:30",
+      "reason": "generation requires reconciliation"
+    },
+    {
+      "slot": "2026-10-31T16:30",
+      "reason": "generation requires reconciliation"
+    },
+    {
+      "slot": "2026-10-31T19:30",
+      "reason": "generation requires reconciliation"
+    },
+    {
+      "slot": "2026-11-01T09:30",
+      "reason": "generation requires reconciliation"
+    },
+    {
+      "slot": "2026-11-01T12:30",
+      "reason": "generation requires reconciliation"
+    },
+    {
+      "slot": "2026-11-01T16:30",
+      "reason": "generation requires reconciliation"
+    },
+    {
+      "slot": "2026-11-01T19:30",
+      "reason": "generation requires reconciliation"
+    }
+  ],
+  "errors": [],
+  "immediate_publish_calls": 0,
+  "completed_at": "2026-10-30T16:17:04.529044+08:00"
+}
