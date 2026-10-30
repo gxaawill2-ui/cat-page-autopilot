@@ -6,7 +6,7 @@
   "image_sha256": "80b14b53abaa93a33517d0019ad9811f94470687b1b8d63d3f1978d5bd51ca36",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/80b14b53abaa93a33517d0019ad9811f94470687b1b8d63d3f1978d5bd51ca36.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "A hand-painted book illustration of Xiaoye, a solid black short-haired cat with bright green eyes and a tiny white chest patch, sitting upright in a sunlit living room. He looks startled yet dignified, staring blankly at an empty, crumpled delivery box. Natural morning light streams through a nearby window, highlighting his sleek fur and precise anatomy.",
   "prepared_at": "2026-10-31T01:59:36.966025+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
