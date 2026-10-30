@@ -1,0 +1,47 @@
+{
+  "run_id": "41102943594",
+  "started_at": "2026-10-31T01:59:22.821036+08:00",
+  "prepared": [
+    "2026-11-02T09:30",
+    "2026-11-02T12:30",
+    "2026-11-02T19:30"
+  ],
+  "scheduled": [],
+  "held": [
+    {
+      "slot": "2026-10-31T19:30",
+      "reason": "Daily cap reached including scheduled, published and uncertain attempts"
+    },
+    {
+      "slot": "2026-11-01T12:30",
+      "reason": "Daily cap reached including scheduled, published and uncertain attempts"
+    },
+    {
+      "slot": "2026-11-01T16:30",
+      "reason": "Daily cap reached including scheduled, published and uncertain attempts"
+    },
+    {
+      "slot": "2026-11-01T19:30",
+      "reason": "Daily cap reached including scheduled, published and uncertain attempts"
+    },
+    {
+      "slot": "2026-11-02T16:30",
+      "reason": "visual quality rejected"
+    },
+    {
+      "slot": "2026-11-02T09:30",
+      "reason": "public URL failed HTTP/MIME/SHA"
+    },
+    {
+      "slot": "2026-11-02T12:30",
+      "reason": "public URL failed HTTP/MIME/SHA"
+    },
+    {
+      "slot": "2026-11-02T19:30",
+      "reason": "public URL failed HTTP/MIME/SHA"
+    }
+  ],
+  "errors": [],
+  "immediate_publish_calls": 0,
+  "completed_at": "2026-10-31T02:04:48.778123+08:00"
+}
