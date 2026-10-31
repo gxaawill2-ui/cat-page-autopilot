@@ -1,3 +1,12 @@
+## 2026-10-31 18:24 萬聖節單篇立即發布成功／使用者當日第5篇例外（最新）
+- 使用者明確要求當天直接發布指定原圖與全文，今天僅此一篇破例第5篇，不排明天、不新增排程、不重複。標準daily_limit=4、CAT_AUTOPILOT與舊即時發布開關均未變更。
+- 原圖本機/mnt/data路徑不存在，依精確檔名從既有Library libfile_53ee0a8f3008819187c5fd1905247e27取得真正PNG，1254x1254，SHA256 7b345f1382bf5f6446919afd5715f9f45e73b8dc98ce5bb97737b4aa547389f6；已目視，無重新生成或換圖。
+- Meta Business Suite指定asset1346385028565797、實際名稱Daily Purr 喵喵日常，已發布清單先確認今天4篇且沒有本篇；CAS意圖5ea4eef1620bd24e318b261683898ab4f9fa5b01先保存，再上傳一張原PNG與指定完整文案，立即發布只按一次。
+- 官方明確回覆「你的貼文已發佈」，2026/10/31 18:24，真UI Post ID=122107681881515576（不是照片ID）。官方已發布清單重讀共5篇、本篇僅1筆；公開Facebook實頁已讀到完整文字與正確原圖，照片ID=122107681671515576。這是UI驗證，不冒稱Graph API GET已驗證。
+- 真公開網址：https://www.facebook.com/permalink.php?story_fbid=pfbid02bzL7DdhDT3Sh7iCk63LMR827ZABvEF2ZSYEvb3aXGR3fyCJEasTa4ZriEyTxko3ml&id=61595467295507
+- state/posts/320caf3fcf8988adee03319e1069d86a5035146f89234c443df37acc4a4a7967.json與records/manual/2026-10-31/halloween.json保存原文、原圖SHA、當日例外、單次提交、真ID與回讀。未知事故不清除、不重發；本篇已成功，任何續作禁止重新送出。
+- 本次沒有開廣告、付費服務或變更正式自動化，額外NT$0。明日起標準最多4篇不變；本次不宣稱自動補稿的自然cron驗收已完成。
+
 ## 2026-10-31 00:11 四張ChatGPT精選原圖已真預約成功（最新）
 - 使用者指定原圖與原文均已完成：阿橘10/31 18:00 Post1346385028565797_122107426365515576；花園追蝶11/1 11:00 Post1346385028565797_122107426509515576；小雪記帳11/1 15:00 Post1346385028565797_122107426677515576；雨夜黑貓11/1 18:00 Post1346385028565797_122107426863515576。
 - 真run41087010316 completed/success。每張公開JPEG匿名HTTP200、image/jpeg、SHA一致，proof保存records/pages-proofs；Meta未發布照片→Feed未來預約單次呼叫，真Post ID、完整文案及圖片附件回讀全一致，is_published=false。不是只有圖片ID，也不是立即發布。

@@ -39,6 +39,19 @@
     "full_caption_matches": true,
     "post_number": "122107681881515576"
   },
-  "permalink_url": null,
-  "api_verified": false
+  "permalink_url": "https://www.facebook.com/permalink.php?story_fbid=pfbid02bzL7DdhDT3Sh7iCk63LMR827ZABvEF2ZSYEvb3aXGR3fyCJEasTa4ZriEyTxko3ml&id=61595467295507",
+  "api_verified": false,
+  "photo_id": "122107681671515576",
+  "full_caption_public_readback": true,
+  "actual_image_visually_confirmed": true,
+  "duplicate_count_public_list": 1,
+  "today_actual_published_count": 5,
+  "evidence": {
+    "official_publish_message": "你的貼文已發佈",
+    "official_ui_post_id": "122107681881515576",
+    "official_page_asset_id": "1346385028565797",
+    "public_permalink": "https://www.facebook.com/permalink.php?story_fbid=pfbid02bzL7DdhDT3Sh7iCk63LMR827ZABvEF2ZSYEvb3aXGR3fyCJEasTa4ZriEyTxko3ml&id=61595467295507",
+    "public_photo_id": "122107681671515576",
+    "screenshot_path": "records/manual/2026-10-31/halloween-published.jpg"
+  }
 }
