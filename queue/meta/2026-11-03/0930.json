@@ -6,7 +6,7 @@
   "image_sha256": "707c01f2e25c8e29fbe74a1e867a260d699cf71b4a3c37ffa7ababa3399c3a8b",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/707c01f2e25c8e29fbe74a1e867a260d699cf71b4a3c37ffa7ababa3399c3a8b.jpg",
   "image_qa": false,
-  "image_qa_method": "vision armed unknown",
+  "image_qa_method": "vision FAIL; held",
   "scene": "A hand-painted book illustration of 阿斑, a tuxedo cat with bright yellow eyes, lying flat on his belly. He is peeking intensely under a wooden kitchen cabinet, one white paw extended as if investigating a clue. Soft morning sunlight streams across the checkered floor, highlighting his crisp white bib.",
   "prepared_at": "2026-11-01T01:14:50.364689+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
