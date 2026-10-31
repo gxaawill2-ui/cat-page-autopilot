@@ -6,7 +6,7 @@
   "image_sha256": "99fd23e2017f2f9bcc222ca13699554ea66d0143451e2977e9972b6e9b351afd",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/99fd23e2017f2f9bcc222ca13699554ea66d0143451e2977e9972b6e9b351afd.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "A original cinematic 3D illustration of Mibao, a tiny brown short-haired tabby kitten with hazel eyes and a white chin. She is frozen in a heroic, wide-legged pounce pose atop a single, oversized fallen basil leaf in a sun-drenched kitchen garden. Soft natural light filters through greenery, highlighting her intense, brave expression as she conquers her leafy mountain.",
   "prepared_at": "2026-10-31T13:34:26.727850+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
