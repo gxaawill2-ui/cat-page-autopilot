@@ -1,0 +1,14 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-02T19:30",
+  "status": "upload_armed_unknown",
+  "caption_sha256": "bd19902e194ad2eb10f9680dccb9e851460633c2d26d0448a986ada9dc3ac764",
+  "image_sha256": "19907762a412f98833d1382810697715cffb1c5b2313148a5ed704986bfb24f2",
+  "scheduled_publish_time": 1793619000,
+  "armed_at": "2026-10-31T13:34:59.731002+08:00",
+  "photo_id": null,
+  "meta_post_id": null,
+  "retry_allowed": false,
+  "method": "Meta unpublished photo -> scheduled Page feed",
+  "run_id": "41173117540"
+}
