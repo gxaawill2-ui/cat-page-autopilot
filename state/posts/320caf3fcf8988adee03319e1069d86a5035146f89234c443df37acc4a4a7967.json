@@ -1,0 +1,33 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-10-31T18:23",
+  "status": "publishing",
+  "method": "Meta Business Suite official UI; one-off immediate post explicitly requested",
+  "caption": "🎃【萬聖節最恐怖的事情】\n\n主人本來說\n今晚只是一起應景一下\n戴帽子 拍張照 裝可愛就好\n\n結果阿橘一看到南瓜桶裡的糖果\n整隻貓直接進入搶劫模式 👻🐱\n\n萬聖節最可怕的不是鬼\n是你家的貓明明剛吃飽\n還能再為零食拚一次命\n\nHappy Halloween 🎃\n今晚罐罐跟糖果 都不准少！",
+  "caption_sha256": "320caf3fcf8988adee03319e1069d86a5035146f89234c443df37acc4a4a7967",
+  "image_sha256": "7b345f1382bf5f6446919afd5715f9f45e73b8dc98ce5bb97737b4aa547389f6",
+  "source_library_file_id": "libfile_53ee0a8f3008819187c5fd1905247e27",
+  "source_filename": "南瓜糖果桶旁的萬聖節貓咪.png",
+  "original_png": true,
+  "armed_at": "2026-10-31T18:23:13.916379+08:00",
+  "post_id": null,
+  "submission_count": 0,
+  "retry_allowed": false,
+  "user_exception": {
+    "date": "2026-10-31",
+    "maximum_today": 5,
+    "immediate_publication": true,
+    "scope": "this exact Halloween caption and original image only; regular cap and cron unchanged"
+  },
+  "dedup_before_write": {
+    "official_published_list_checked": true,
+    "today_published_count": 4,
+    "today_post_ids": [
+      "122107426365515576",
+      "122107292013515576",
+      "122107291869515576",
+      "122107291635515576"
+    ],
+    "same_caption_seen": false
+  }
+}
