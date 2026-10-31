@@ -1,7 +1,7 @@
 {
   "page_id": "1346385028565797",
   "slot": "2026-11-03T19:30",
-  "status": "scheduled_unverified",
+  "status": "scheduled_api_verified",
   "caption_sha256": "6d374f3ac0aae9bf0cfddd3ad263546d8b6b918c90e5b7af72b32218c2b9863c",
   "image_sha256": "01cdd9a8cff6c3eab8809a62f97584a93fe440fa209b8ece20f0209721e78a85",
   "scheduled_publish_time": 1793705400,
@@ -11,5 +11,19 @@
   "retry_allowed": false,
   "method": "Meta unpublished photo -> scheduled Page feed",
   "run_id": "41223538886",
-  "response_at": "2026-11-01T01:16:47.021112+08:00"
+  "response_at": "2026-11-01T01:16:47.021112+08:00",
+  "readback": {
+    "id": "1346385028565797_122107804551515576",
+    "message": "優雅な日常の裏側。完璧な毛並みも、お気に入りの毛糸玉の前では無力です。",
+    "created_time": "2026-11-03T11:30:00+0000",
+    "is_published": false,
+    "scheduled_publish_time": 1793705400,
+    "permalink_url": "https://www.facebook.com/122106871317515576/posts/122107804551515576"
+  },
+  "full_picture_present": true,
+  "attachment_photo_id_matches": true,
+  "caption_matches": true,
+  "checked_at": "2026-11-01T01:16:48.420308+08:00",
+  "planner_verified": false,
+  "visual_review": "pending"
 }
