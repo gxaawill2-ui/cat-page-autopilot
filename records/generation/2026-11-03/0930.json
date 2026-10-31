@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-03T09:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-01T01:14:41.368339+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"After a rigorous inspection of the kitchen floor, Inspector 阿斑 has discovered a devastating security breach: a single, rogue piece of kibble hiding under the fridge. The investigation is ongoing.\",\n  \"scene\": \"A hand-painted book illustration of 阿斑, a tuxedo cat with bright yellow eyes, lying flat on his belly. He is peeking intensely under a wooden kitchen cabinet, one white paw extended as if investigating a clue. Soft morning sunlight streams across the checkered floor, highlighting his crisp white bib.\",\n  \"topic\": \"A curious tuxedo cat conducting a serious investigation into a lost snack.\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"After a rigorous inspection of the kitchen floor, Inspector 阿斑 has discovered a devastating security breach: a single, rogue piece of kibble hiding under the fridge. The investigation is ongoing.\",\n  \"scene\": \"A hand-painted book illustration of 阿斑, a tuxedo cat with bright yellow eyes, lying flat on his belly. He is peeking intensely under a wooden kitchen cabinet, one white paw extended as if investigating a clue. Soft morning sunlight streams across the checkered floor, highlighting his crisp white bib.\",\n  \"topic\": \"A curious tuxedo cat conducting a serious investigation into a lost snack.\"\n}",
+  "content": {
+    "caption": "After a rigorous inspection of the kitchen floor, Inspector 阿斑 has discovered a devastating security breach: a single, rogue piece of kibble hiding under the fridge. The investigation is ongoing.",
+    "scene": "A hand-painted book illustration of 阿斑, a tuxedo cat with bright yellow eyes, lying flat on his belly. He is peeking intensely under a wooden kitchen cabinet, one white paw extended as if investigating a clue. Soft morning sunlight streams across the checkered floor, highlighting his crisp white bib.",
+    "topic": "A curious tuxedo cat conducting a serious investigation into a lost snack."
+  },
+  "language": "en"
 }
