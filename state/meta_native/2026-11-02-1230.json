@@ -1,7 +1,7 @@
 {
   "page_id": "1346385028565797",
   "slot": "2026-11-02T12:30",
-  "status": "scheduled_unverified",
+  "status": "scheduled_api_verified",
   "caption_sha256": "db23d0f2996e5eaa8df72f17b1cae0378ed734678ea963fbd9464303e5d856ba",
   "image_sha256": "72c52fb25c4ed49a1dee1e86e3a6c404d94e413da3fcdb95534a43ad87e94d26",
   "scheduled_publish_time": 1793593800,
@@ -11,5 +11,19 @@
   "retry_allowed": false,
   "method": "Meta unpublished photo -> scheduled Page feed",
   "run_id": "41173117540",
-  "response_at": "2026-10-31T13:34:56.054463+08:00"
+  "response_at": "2026-10-31T13:34:56.054463+08:00",
+  "readback": {
+    "id": "1346385028565797_122107598787515576",
+    "message": "阿斑今日巡查報告：發現廚房角落藏著一個神祕的、會滾動的毛茸茸球體。經過嚴密觀察，確定這是一顆失蹤已久的襪子。任務達成！",
+    "created_time": "2026-11-02T04:30:00+0000",
+    "is_published": false,
+    "scheduled_publish_time": 1793593800,
+    "permalink_url": "https://www.facebook.com/122106871317515576/posts/122107598787515576"
+  },
+  "full_picture_present": true,
+  "attachment_photo_id_matches": true,
+  "caption_matches": true,
+  "checked_at": "2026-10-31T13:34:57.539625+08:00",
+  "planner_verified": false,
+  "visual_review": "pending"
 }
