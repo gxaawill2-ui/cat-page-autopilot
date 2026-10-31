@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-11-01T01:14:59.931018+08:00"
+  "started_at": "2026-11-01T01:14:59.931018+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"咪寶宣布：這片「綠色森林」已經被我征服了！其實...那只不過是一盆新買的小多肉。\",\n  \"scene\": \"A tiny brown tabby kitten with hazel eyes and a white chin stands heroically atop a ceramic pot. She is posed like a mountain climber, one paw raised high, staring intensely at a single succulent leaf. The scene is rendered in a hand-painted book illustration style with soft natural sunlight filtering through a window, highlighting her energetic stance.\",\n  \"topic\": \"A brave kitten's tiny jungle adventure\"\n}"
 }
