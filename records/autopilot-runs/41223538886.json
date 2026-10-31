@@ -1,0 +1,47 @@
+{
+  "run_id": "41223538886",
+  "started_at": "2026-11-01T01:14:35.589247+08:00",
+  "prepared": [
+    "2026-11-03T19:30"
+  ],
+  "scheduled": [
+    {
+      "slot": "2026-11-03T19:30",
+      "post_id": "1346385028565797_122107804551515576",
+      "status": "scheduled_api_verified"
+    }
+  ],
+  "held": [
+    {
+      "slot": "2026-11-01T12:30",
+      "reason": "Daily cap reached including scheduled, published and uncertain attempts"
+    },
+    {
+      "slot": "2026-11-01T16:30",
+      "reason": "Daily cap reached including scheduled, published and uncertain attempts"
+    },
+    {
+      "slot": "2026-11-01T19:30",
+      "reason": "Daily cap reached including scheduled, published and uncertain attempts"
+    },
+    {
+      "slot": "2026-11-02T16:30",
+      "reason": "vision FAIL; held"
+    },
+    {
+      "slot": "2026-11-03T09:30",
+      "reason": "visual quality rejected"
+    },
+    {
+      "slot": "2026-11-03T12:30",
+      "reason": "visual quality rejected"
+    },
+    {
+      "slot": "2026-11-03T16:30",
+      "reason": "visual quality rejected"
+    }
+  ],
+  "errors": [],
+  "immediate_publish_calls": 0,
+  "completed_at": "2026-11-01T01:16:49.527649+08:00"
+}
