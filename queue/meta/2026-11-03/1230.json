@@ -1,0 +1,18 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-03T12:30",
+  "caption": "咪寶宣布：這片「綠色森林」已經被我征服了！其實...那只不過是一盆新買的小多肉。",
+  "language": "zh-Hant",
+  "image_sha256": "687f31fef0892ba5fa20dfb11d42b8cc86ad4c4a7339c7b03ae301095bcf16b5",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/687f31fef0892ba5fa20dfb11d42b8cc86ad4c4a7339c7b03ae301095bcf16b5.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A tiny brown tabby kitten with hazel eyes and a white chin stands heroically atop a ceramic pot. She is posed like a mountain climber, one paw raised high, staring intensely at a single succulent leaf. The scene is rendered in a hand-painted book illustration style with soft natural sunlight filtering through a window, highlighting her energetic stance.",
+  "prepared_at": "2026-11-01T01:15:07.097763+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "A brave kitten's tiny jungle adventure",
+  "image_attempts": 1
+}
