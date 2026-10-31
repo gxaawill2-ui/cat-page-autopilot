@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-03T19:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-01T01:15:36.750871+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"優雅な日常の裏側。完璧な毛並みも、お気に入りの毛糸玉の前では無力です。\",\n  \"scene\": \"A hand-painted book illustration of 小雪, a white long-haired cat with striking blue eyes and a pink nose. She is sitting regally amidst a chaotic swirl of colorful yarn, looking dignified despite having a single strand of pink wool tangled perfectly around her ear. Soft evening light filters through a window, highlighting her silky fur.\",\n  \"topic\": \"Elegant cat vs. household chaos\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"優雅な日常の裏側。完璧な毛並みも、お気に入りの毛糸玉の前では無力です。\",\n  \"scene\": \"A hand-painted book illustration of 小雪, a white long-haired cat with striking blue eyes and a pink nose. She is sitting regally amidst a chaotic swirl of colorful yarn, looking dignified despite having a single strand of pink wool tangled perfectly around her ear. Soft evening light filters through a window, highlighting her silky fur.\",\n  \"topic\": \"Elegant cat vs. household chaos\"\n}",
+  "content": {
+    "caption": "優雅な日常の裏側。完璧な毛並みも、お気に入りの毛糸玉の前では無力です。",
+    "scene": "A hand-painted book illustration of 小雪, a white long-haired cat with striking blue eyes and a pink nose. She is sitting regally amidst a chaotic swirl of colorful yarn, looking dignified despite having a single strand of pink wool tangled perfectly around her ear. Soft evening light filters through a window, highlighting her silky fur.",
+    "topic": "Elegant cat vs. household chaos"
+  },
+  "language": "ja"
 }
