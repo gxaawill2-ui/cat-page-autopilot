@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-03T12:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-01T01:14:59.931018+08:00",
@@ -10,5 +10,6 @@
     "scene": "A tiny brown tabby kitten with hazel eyes and a white chin stands heroically atop a ceramic pot. She is posed like a mountain climber, one paw raised high, staring intensely at a single succulent leaf. The scene is rendered in a hand-painted book illustration style with soft natural sunlight filtering through a window, highlighting her energetic stance.",
     "topic": "A brave kitten's tiny jungle adventure"
   },
-  "language": "zh-Hant"
+  "language": "zh-Hant",
+  "image_sha256": "687f31fef0892ba5fa20dfb11d42b8cc86ad4c4a7339c7b03ae301095bcf16b5"
 }
