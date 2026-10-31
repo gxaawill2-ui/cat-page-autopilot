@@ -14,5 +14,6 @@
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
   "topic": "A brave kitten's tiny jungle adventure",
-  "image_attempts": 1
+  "image_attempts": 1,
+  "image_qa_response": "{\"decision\": \"FAIL\", \"reason\": \"The kitten's anatomy is malformed; the left paw/arm structure is fused with the plant stem, and the placement of the paws and limbs does not follow a coherent skeletal structure.\", \"cat_visible\": true, \"coherent_anatomy\": false, \"safe_content\": true, \"no_text_or_signature\": true, \"no_watermark\": true}"
 }
