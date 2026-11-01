@@ -35,5 +35,6 @@
       "image_attempts": 1,
       "image_qa_response": "{\"decision\": \"FAIL\", \"reason\": \"The kitten's anatomy is malformed; the left paw/arm structure is fused with the plant stem, and the placement of the paws and limbs does not follow a coherent skeletal structure.\", \"cat_visible\": true, \"coherent_anatomy\": false, \"safe_content\": true, \"no_text_or_signature\": true, \"no_watermark\": true}"
     }
-  ]
+  ],
+  "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The kitten's anatomy is malformed; it has an extra/disembodied limb/paw emerging from its side to grasp the leaf, and its hind legs/body structure are anatomically incorrect for a standing animal.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": false,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
