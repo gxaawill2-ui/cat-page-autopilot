@@ -6,7 +6,7 @@
   "image_sha256": "c1454a91795db8c5253500957d1542f46b69b063f69554225d52333097370593",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/c1454a91795db8c5253500957d1542f46b69b063f69554225d52333097370593.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "A original cinematic 3D illustration of 阿橘, an orange short-haired tabby with amber eyes and cream paws, sitting upright on a wooden kitchen floor. He is puffing out his cheeks and squeezing his eyes shut in extreme concentration, attempting to use 'mind powers' to move a tuna can. Soft afternoon sunlight streams through a nearby window, highlighting his fuzzy texture.",
   "prepared_at": "2026-11-01T13:57:34.468384+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
