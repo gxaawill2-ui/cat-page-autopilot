@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "report_type": "weekly_baseline",
+  "cycle_id": "weekly-2026-11-01-week1",
+  "checked_at": "2026-11-01T12:12:11.359Z",
+  "page_id": "1346385028565797",
+  "week1_start": "2026-10-26",
+  "week1_end": "2026-11-01",
+  "comparison_start": "2026-10-19",
+  "comparison_end": "2026-10-25",
+  "next_comparison_due": "2026-11-08",
+  "snapshot_path": "records/insights/2026-11-01-week1-windsor.json",
+  "source": "Windsor.ai facebook_organic; Page posts verified is_published=True and exact Page ID; GitHub state/meta_native/records/manual independently support selected published IDs",
+  "previous_window": {
+    "published_posts": 23,
+    "days": 7,
+    "page_profile_views_total": 19,
+    "page_post_engagements_total": 7,
+    "daily_follows_total": 0,
+    "daily_unfollows_total": 0,
+    "page_follows_end": 0,
+    "page_fans_end": 0,
+    "unique_media_viewers_7d": null,
+    "reach_7d": null,
+    "daily_unique_media_viewer_values": [
+      {
+        "date": "2026-10-19",
+        "viewers": 1
+      },
+      {
+        "date": "2026-10-20",
+        "viewers": 3
+      },
+      {
+        "date": "2026-10-21",
+        "viewers": 2
+      },
+      {
+        "date": "2026-10-22",
+        "viewers": 2
+      },
+      {
+        "date": "2026-10-23",
+        "viewers": 2
+      },
+      {
+        "date": "2026-10-24",
+        "viewers": 2
+      },
+      {
+        "date": "2026-10-25",
+        "viewers": 1
+      }
+    ]
+  },
+  "week1_window": {
+    "published_posts": 16,
+    "days": 7,
+    "page_profile_views_total": 40,
+    "page_post_engagements_total": 6,
+    "daily_follows_total": 0,
+    "daily_unfollows_total": 0,
+    "page_follows_end": 0,
+    "page_fans_end": 0,
+    "unique_media_viewers_7d": null,
+    "reach_7d": null,
+    "daily_unique_media_viewer_values": [
+      {
+        "date": "2026-10-26",
+        "viewers": 1
+      },
+      {
+        "date": "2026-10-27",
+        "viewers": 1
+      },
+      {
+        "date": "2026-10-28",
+        "viewers": 2
+      },
+      {
+        "date": "2026-10-29",
+        "viewers": 2
+      },
+      {
+        "date": "2026-10-30",
+        "viewers": 2
+      },
+      {
+        "date": "2026-10-31",
+        "viewers": 2
+      },
+      {
+        "date": "2026-11-01",
+        "viewers": 1
+      }
+    ],
+    "post_reactions_cumulative_to_observation": 3,
+    "post_shares_cumulative_to_observation": 0,
+    "post_comments_cumulative_to_observation": 0,
+    "post_impressions_cumulative_to_observation": 232,
+    "post_viewers_unique_7d": null,
+    "post_reach_7d": null,
+    "posts_at_least_48h": 7,
+    "posts_at_least_168h": 0,
+    "posts_48h_ids": [
+      "1346385028565797_122105388507515576",
+      "1346385028565797_122106471645515576",
+      "1346385028565797_122106946275515576",
+      "1346385028565797_122106850785515576",
+      "1346385028565797_122106782931515576",
+      "1346385028565797_122106746697515576",
+      "1346385028565797_122107140849515576"
+    ],
+    "posts_168h_ids": [],
+    "curated_posts_verified_published": [
+      "1346385028565797_122107426365515576",
+      "1346385028565797_122107426863515576",
+      "1346385028565797_122107426677515576",
+      "1346385028565797_122107426509515576"
+    ],
+    "halloween_manual_fifth_post_verified_published": "1346385028565797_122107681881515576"
+  },
+  "changes": {
+    "page_profile_views_difference": 21,
+    "page_post_engagements_difference": -1,
+    "page_new_follows_difference": 0,
+    "interpretation": "Page daily view counts increased, but not post reach or follower growth; 11/1 partial, and publication mix, time, language, frequency changed."
+  },
+  "metrics_definitions": {
+    "page_views_total": "Daily Page profile views; NOT post reach",
+    "page_post_engagements": "Daily Page engagement events",
+    "page_total_media_view_unique": "Estimated unique Page media viewers per day; not 7-day reach and not post reach",
+    "post_impressions": "Cumulative post impressions at observation; not unique reach and not window-specific",
+    "post_total_media_view_unique": "Unique media viewers for an individual post; NOT reach",
+    "post_reactions_total": "Cumulative reactions at observation",
+    "post_activity_by_action_type_share": "Cumulative shares at observation"
+  },
+  "country_delivery": {
+    "overseas_share": null,
+    "US_reach": null,
+    "JP_reach": null,
+    "PH_reach": null,
+    "source": null
+  },
+  "attribution": {
+    "new_follows_by_language": null,
+    "new_follows_by_post": null
+  },
+  "topic_style_copy_language": {
+    "curated_image_style": "Four hand-painted ChatGPT originals verified by provenance; image QA not a controlled comparison",
+    "halloween": "Manual Halloween one-day fifth-post exception, excluded from normal daily frequency comparisons",
+    "source_type_counts": {
+      "curated": 4,
+      "manual_halloween": 1,
+      "other": 11
+    },
+    "language_vs_slot": "09:30/19:30 English and 12:30/16:30 Chinese are confounded with time; not a causal language test",
+    "topic_winner": null,
+    "style_winner": null,
+    "copy_winner": null,
+    "time_winner": null,
+    "language_winner": null
+  },
+  "equal_age": {
+    "target_hours": [
+      48,
+      168
+    ],
+    "status": "Not available: current cumulative values are not captured at exact post age; 48h-eligible counts are maturity eligibility only, 168h current cohort has zero eligible posts",
+    "prior_snapshot_at_exact_48h": false,
+    "prior_snapshot_at_exact_168h": false
+  },
+  "pipeline": {
+    "old_chatgpt_daily": "disabled queue-only historical",
+    "production": "GitHub Actions ahead-of-time Meta native scheduling; Meta performs due-time delivery",
+    "windsor_writes": 0,
+    "meta_writes": 0,
+    "old_unknown_cases": [
+      "2026-10-26 f269",
+      "2026-10-27 16:30 8b6"
+    ],
+    "unknown_cases_unmodified": true,
+    "autopilot_recent_scheduled_post_ids": [
+      "1346385028565797_122107598703515576",
+      "1346385028565797_122107598787515576",
+      "1346385028565797_122107598895515576",
+      "1346385028565797_122107804551515576",
+      "1346385028565797_122107970307515576"
+    ],
+    "natural_cron_continuation": "not independently established from accessible run event metadata; do not equate successful manual/dynamic run with schedule trigger"
+  },
+  "limitations": [
+    "No actual post reach or country-specific reach observed",
+    "No verified 48h/168h exact-age paired snapshots",
+    "11/1 Page daily figures incomplete/cached freshness unknown",
+    "Post impressions cannot be added to estimate distinct reach",
+    "Previous window 23 posts vs current 16, different publication and topic mix; no causal comparison",
+    "Direct Meta comment/insight permission earlier HTTP 400/code10",
+    "Week1 has no current-cohort posts aged 168h; no 168h performance winner"
+  ],
+  "decision": "Do not claim improved distribution, overseas penetration or winning language/style. Followers remained 0. Page profile views 19→40 but engagements 7→6. Record a single reversible copy-format experiment only in future unoccupied slots; do not change daily cap, language plan, times or brand.",
+  "next_experiment_path": "records/experiments/copy-format-20261104-3d.json",
+  "next_3day_review": "2026-10-30_2026-11-01 due after 2026-11-02 00:00 Asia/Taipei via existing performance_review.py; do not preempt or duplicate",
+  "cost_ntd": 0,
+  "facebook_write_calls": 0,
+  "ai_calls": 0
+}
