@@ -35,5 +35,6 @@
       "image_attempts": 1,
       "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The image contains a watermark/signature in the bottom left corner.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": true,\n    \"safe_content\": true,\n    \"no_text_or_signature\": false,\n    \"no_watermark\": false\n  }\n}"
     }
-  ]
+  ],
+  "image_qa_response": "{\n  \"decision\": \"PASS\",\n  \"reason\": \"The image is a well-executed 3D illustration of a tuxedo cat. The anatomy is coherent, the lighting is consistent with the scene description, and there are no visible watermarks, text, or anatomical deformities.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": true,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
