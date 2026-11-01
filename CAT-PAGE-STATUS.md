@@ -1,3 +1,12 @@
+## 2026-11-01 20:12 第一週成效基準／唯讀分析完成（最新）
+- Windsor facebook_organic只讀取得指定Page 1346385028565797兩個7日日期範圍：10/19–10/25真已發布23篇、10/26–11/1真已發布16篇（11/1尚未結束）。Page每日「個人檔案瀏覽」加總19→40；Page貼文互動事件7→6；兩窗每日新增追蹤均0、目前Page追蹤0。瀏覽量不是貼文reach，不能據此聲稱觸及成長。
+- 本週16篇截至觀測時的累計post_impressions合計232、累計reaction 3、share 0；這不是7日不重複觸及，也不是各篇同齡數據。post_total_media_view_unique是viewers而非reach；Page每日unique viewers不能相加成7日reach。
+- 本週真貼文達48小時者7篇、達168小時者0篇；尚無同篇精確48h/168h成對快照，不比較題材、畫風、文案、時段或語言勝負。海外及US/JP/PH實際觸及、語言新增追蹤歸因均null/N/A，絕不以英文或粉絲國籍推算。
+- 四張ChatGPT精選圖及10/31萬聖節當日破例第5篇已由Windsor回讀為is_published=True、各有真Post ID；本輪沒有發文或改既有預約。舊ChatGPT daily仍disabled；現有GitHub Actions提前備稿＋Meta官方原生到點配送，Windsor只讀。10/26 f269與10/27 16:30 8b6歷史未知鎖原封不動；自然event=schedule連續運作尚無足夠獨立證據，不冒稱驗收完成。
+- 單變因內容策略僅規劃：11/4起未占用時段，短三句反轉文案對照5–7行小故事，題材/語言/時間/畫風盡量匹配；已預約內容不改，11/6日文試驗不混入對照，每組至少5篇成熟樣本後再評估。這是planned_only，不冒稱已部署或有效。
+- 原始快照records/insights/2026-11-01-week1-windsor.json；完整週報records/reviews/2026-11-01-week1.json；實驗records/experiments/copy-format-20261104-3d.json；國際14日實驗已CAS更新。11/8再做第二週比較；既有每3天檢討10/30–11/1應於11/2由performance_review.py依cycle判斷，不預先重複寫入。
+- 本輪Facebook/Meta/Windsor寫入0、AI生成0、額外NT$0；不更名、不改頭貼封面簡介、不新增取消任務、不動其他repo。
+
 ## 2026-10-31 18:24 萬聖節單篇立即發布成功／使用者當日第5篇例外（最新）
 - 使用者明確要求當天直接發布指定原圖與全文，今天僅此一篇破例第5篇，不排明天、不新增排程、不重複。標準daily_limit=4、CAT_AUTOPILOT與舊即時發布開關均未變更。
 - 原圖本機/mnt/data路徑不存在，依精確檔名從既有Library libfile_53ee0a8f3008819187c5fd1905247e27取得真正PNG，1254x1254，SHA256 7b345f1382bf5f6446919afd5715f9f45e73b8dc98ce5bb97737b4aa547389f6；已目視，無重新生成或換圖。
