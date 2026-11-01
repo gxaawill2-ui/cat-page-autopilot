@@ -1,0 +1,42 @@
+{
+  "id": "copy-format-20261104-3d",
+  "created_at": "2026-11-01T12:12:11.359Z",
+  "status": "planned_only_not_yet_executed",
+  "reason": "First-week data shows no new followers or post shares; reach and equal-age metrics missing. Explore only one copy-form variable without claiming efficacy.",
+  "single_changed_variable": "caption_structure",
+  "control": "Short three-line setup/punchline (existing concise style)",
+  "variant": "Five-to-seven-line micro-story with one clear comic twist",
+  "unchanged": [
+    "same cat everyday-life topic within matched pair",
+    "same verified image style/provenance within matched pair",
+    "same language",
+    "same clock slot where possible",
+    "same daily cap 4 and no extra post",
+    "same brand/avatar/cover/bio",
+    "same no-paid policy"
+  ],
+  "eligible_new_slots_from": "2026-11-04",
+  "planned_window_end": "2026-11-06",
+  "exclude_from_comparison": [
+    "already scheduled posts",
+    "2026-10-31 fifth-post Halloween exception",
+    "Japanese trial slot on 2026-11-03 and 2026-11-06",
+    "unpublished or unknown attempts"
+  ],
+  "assignment": "Alternate caption format only for newly unoccupied, normal-authorized slots; if automated generator cannot honor without a separate implementation, leave planned and do not claim active. Preserve existing scheduled content.",
+  "min_mature_per_arm": 5,
+  "measurement_ages_hours": [
+    48,
+    168
+  ],
+  "evaluation": "Compare equal-age verified impressions and interactions; reach-based rates only when actual reach is available. Without five mature posts per arm or matching image/topic/time, label inconclusive and extend observation.",
+  "guardrails": [
+    "No posting or scheduling in this analysis run",
+    "No retroactive editing of already scheduled posts",
+    "No extra daily fifth posts",
+    "No new automation",
+    "No Meta or Windsor write calls",
+    "Unknown f269 and 8b6 remain locked"
+  ],
+  "result": null
+}
