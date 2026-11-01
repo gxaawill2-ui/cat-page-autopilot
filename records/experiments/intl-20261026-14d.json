@@ -2,7 +2,7 @@
   "id": "intl-20261026-14d",
   "start": "2026-10-26",
   "end": "2026-11-08",
-  "status": "scheduled_not_results",
+  "status": "week1_baseline_recorded_awaiting_equal_age_and_country_reach",
   "week1": "baseline: 7 zh-Hant and up to 7 en; quality failures may reduce posts",
   "week2": "7 zh-Hant; up to 5 en and 2 ja replacing en on experiment days9,12; never add slots",
   "confounding": "language initially coupled to slot; observational comparison, not causal language effect. No time changes during baseline. Hold topic/style comparable where possible.",
@@ -26,5 +26,26 @@
   },
   "missing_display": "N/A",
   "two_week_rule": "If two comparable mature weeks show no material growth, inspect distribution/data then change one variable. Insufficient sample means extend observation, not invent success.",
-  "brand": "keep name; no full rebrand based on a single post"
+  "brand": "keep name; no full rebrand based on a single post",
+  "week1_observation": {
+    "as_of": "2026-11-01T20:12:11+08:00",
+    "review_path": "records/reviews/2026-11-01-week1.json",
+    "snapshot_path": "records/insights/2026-11-01-week1-windsor.json",
+    "previous_7d_page_profile_views": 19,
+    "week1_7d_page_profile_views_partial": 40,
+    "previous_7d_page_engagements": 7,
+    "week1_7d_page_engagements_partial": 6,
+    "previous_7d_posts_published": 23,
+    "week1_7d_posts_published": 16,
+    "week1_new_follows": 0,
+    "week1_posts_48h_eligible": 7,
+    "week1_posts_168h_eligible": 0,
+    "observed_US_reach": null,
+    "observed_JP_reach": null,
+    "observed_PH_reach": null,
+    "observed_overseas_reach_share": null,
+    "winning_language": null,
+    "interpretation": "Not a causal result: time-language and publication-frequency confounding; Nov 1 incomplete; equal-age and reach missing."
+  },
+  "next_content_experiment": "records/experiments/copy-format-20261104-3d.json"
 }
