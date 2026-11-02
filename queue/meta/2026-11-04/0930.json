@@ -1,0 +1,18 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-04T09:30",
+  "caption": "Mission Impossible: The Great Living Room Jungle. 🌿 Target acquired: the mysterious green monster under the sofa. Proceed with extreme caution, brave warrior!",
+  "language": "en",
+  "image_sha256": "a90485e7eef4d023a4983e400d075794d90fddc2271f9e45d69742e2ea039b6d",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/a90485e7eef4d023a4983e400d075794d90fddc2271f9e45d69742e2ea039b6d.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A tiny brown tabby kitten with hazel eyes and a white chin crouches low in a sunlit living room. She is posed in a dramatic tactical crawl through a forest of tall blades of grass from a fallen potted plant. The warm morning light highlights her intense, focused expression as she stalks a rogue dust bunny.",
+  "prepared_at": "2026-11-03T05:42:05.174539+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "Tiny garden adventures",
+  "image_attempts": 1
+}
