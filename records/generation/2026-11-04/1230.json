@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-04T12:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-03T05:42:18.116616+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"阿橘本以為這是一個足以載入史冊的偉大捕獵行動，結果發現，那只是他昨天自己掉在地上的小零食。\",\n  \"scene\": \"A wide-angle, hand-painted book illustration of 阿橘, an orange tabby with amber eyes and cream paws, crouched low in a heroic stalking pose on a sunlit wooden floor. His tail is poised for action, but his intense gaze is fixed on a single, lonely piece of kibble resting near a table leg. Soft afternoon sunlight streams through a window, casting gentle shadows.\",\n  \"topic\": \"A failed epic hunt\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"阿橘本以為這是一個足以載入史冊的偉大捕獵行動，結果發現，那只是他昨天自己掉在地上的小零食。\",\n  \"scene\": \"A wide-angle, hand-painted book illustration of 阿橘, an orange tabby with amber eyes and cream paws, crouched low in a heroic stalking pose on a sunlit wooden floor. His tail is poised for action, but his intense gaze is fixed on a single, lonely piece of kibble resting near a table leg. Soft afternoon sunlight streams through a window, casting gentle shadows.\",\n  \"topic\": \"A failed epic hunt\"\n}",
+  "content": {
+    "caption": "阿橘本以為這是一個足以載入史冊的偉大捕獵行動，結果發現，那只是他昨天自己掉在地上的小零食。",
+    "scene": "A wide-angle, hand-painted book illustration of 阿橘, an orange tabby with amber eyes and cream paws, crouched low in a heroic stalking pose on a sunlit wooden floor. His tail is poised for action, but his intense gaze is fixed on a single, lonely piece of kibble resting near a table leg. Soft afternoon sunlight streams through a window, casting gentle shadows.",
+    "topic": "A failed epic hunt"
+  },
+  "language": "zh-Hant"
 }
