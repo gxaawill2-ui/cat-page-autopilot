@@ -6,7 +6,7 @@
   "image_sha256": "34396d71becd76fb4c5ba43d48e44c629555e501d100967bcdd1bd81753bc932",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/34396d71becd76fb4c5ba43d48e44c629555e501d100967bcdd1bd81753bc932.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "A wide-angle, hand-painted book illustration of 阿橘, an orange tabby with amber eyes and cream paws, crouched low in a heroic stalking pose on a sunlit wooden floor. His tail is poised for action, but his intense gaze is fixed on a single, lonely piece of kibble resting near a table leg. Soft afternoon sunlight streams through a window, casting gentle shadows.",
   "prepared_at": "2026-11-03T05:42:26.838188+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
