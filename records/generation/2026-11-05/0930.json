@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-11-03T05:43:12.926553+08:00"
+  "started_at": "2026-11-03T05:43:12.926553+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"Operation: Golden Cracker is a go! Step one: climb the mountain of cushions. Step two: reach the snack bowl. Current status: I have successfully become a very round, very stuck orange ball.\",\n  \"scene\": \"A chubby orange tabby named 阿橘 is wedged halfway between two velvet sofa cushions, his hind legs kicking playfully in the air while his cream-colored paws grasp at nothingness. Hand-painted book illustration style with soft, natural morning sunlight filtering through a window, highlighting his amber eyes and textured fur.\",\n  \"topic\": \"A tiny mission to reach a snack bowl ends in a cozy, accidental trap.\"\n}"
 }
