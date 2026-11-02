@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-11-03T05:42:34.542451+08:00"
+  "started_at": "2026-11-03T05:42:34.542451+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"就算家裡鬧翻天，小雪也堅持要維持她的優雅儀式感。哪怕只是為了守護那一塊完美的陽光，她也絕不妥協。\",\n  \"scene\": \"A fluffy white long-haired cat with bright blue eyes and a pink nose sits atop a pile of scattered, colorful laundry. Despite the chaotic mess surrounding her, she maintains a regal, upright posture, gazing serenely toward a single, golden beam of afternoon sunlight hitting a specific spot on the floor. Hand-painted book illustration style with soft, natural lighting.\",\n  \"topic\": \"Graceful cat vs. household laundry chaos\"\n}"
 }
