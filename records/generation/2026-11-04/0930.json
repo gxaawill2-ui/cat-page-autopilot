@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-04T09:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-03T05:41:55.804583+08:00",
@@ -10,5 +10,6 @@
     "scene": "A tiny brown tabby kitten with hazel eyes and a white chin crouches low in a sunlit living room. She is posed in a dramatic tactical crawl through a forest of tall blades of grass from a fallen potted plant. The warm morning light highlights her intense, focused expression as she stalks a rogue dust bunny.",
     "topic": "Tiny garden adventures"
   },
-  "language": "en"
+  "language": "en",
+  "image_sha256": "a90485e7eef4d023a4983e400d075794d90fddc2271f9e45d69742e2ea039b6d"
 }
