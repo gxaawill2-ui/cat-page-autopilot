@@ -1,0 +1,18 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-04T16:30",
+  "caption": "就算家裡鬧翻天，小雪也堅持要維持她的優雅儀式感。哪怕只是為了守護那一塊完美的陽光，她也絕不妥協。",
+  "language": "zh-Hant",
+  "image_sha256": "cb4209984a6b9d96bea857a2ebf9c2a7ef2a14c2c9e927628e8311f5cef6d145",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/cb4209984a6b9d96bea857a2ebf9c2a7ef2a14c2c9e927628e8311f5cef6d145.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A fluffy white long-haired cat with bright blue eyes and a pink nose sits atop a pile of scattered, colorful laundry. Despite the chaotic mess surrounding her, she maintains a regal, upright posture, gazing serenely toward a single, golden beam of afternoon sunlight hitting a specific spot on the floor. Hand-painted book illustration style with soft, natural lighting.",
+  "prepared_at": "2026-11-03T05:42:44.600687+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "Graceful cat vs. household laundry chaos",
+  "image_attempts": 1
+}
