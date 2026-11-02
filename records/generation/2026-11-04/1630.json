@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-04T16:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-03T05:42:34.542451+08:00",
@@ -10,5 +10,6 @@
     "scene": "A fluffy white long-haired cat with bright blue eyes and a pink nose sits atop a pile of scattered, colorful laundry. Despite the chaotic mess surrounding her, she maintains a regal, upright posture, gazing serenely toward a single, golden beam of afternoon sunlight hitting a specific spot on the floor. Hand-painted book illustration style with soft, natural lighting.",
     "topic": "Graceful cat vs. household laundry chaos"
   },
-  "language": "zh-Hant"
+  "language": "zh-Hant",
+  "image_sha256": "cb4209984a6b9d96bea857a2ebf9c2a7ef2a14c2c9e927628e8311f5cef6d145"
 }
