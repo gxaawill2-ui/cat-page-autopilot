@@ -14,5 +14,6 @@
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
   "topic": "The struggle of maintaining dignity while being easily distracted by boxes.",
-  "image_attempts": 1
+  "image_attempts": 1,
+  "image_qa_response": "{\"decision\": \"PASS\", \"reason\": \"The image matches the description of a black cat in a cardboard box. Anatomy is stylized but coherent within the illustration style, and no prohibited text, watermarks, or unsafe content are present.\", \"checks\": {\"cat_visible\": true, \"coherent_anatomy\": true, \"safe_content\": true, \"no_text_or_signature\": true, \"no_watermark\": true}}"
 }
