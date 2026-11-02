@@ -1,0 +1,47 @@
+{
+  "run_id": "41530652197",
+  "started_at": "2026-11-03T05:41:44.542472+08:00",
+  "prepared": [
+    "2026-11-04T09:30",
+    "2026-11-04T19:30"
+  ],
+  "scheduled": [
+    {
+      "slot": "2026-11-04T09:30",
+      "post_id": "1346385028565797_122108573565515576",
+      "status": "scheduled_api_verified"
+    },
+    {
+      "slot": "2026-11-04T19:30",
+      "post_id": "1346385028565797_122108573661515576",
+      "status": "scheduled_api_verified"
+    }
+  ],
+  "held": [
+    {
+      "slot": "2026-11-03T12:30",
+      "reason": "vision FAIL; held"
+    },
+    {
+      "slot": "2026-11-03T16:30",
+      "reason": "vision FAIL; held"
+    },
+    {
+      "slot": "2026-11-04T12:30",
+      "reason": "visual quality rejected"
+    },
+    {
+      "slot": "2026-11-04T16:30",
+      "reason": "visual quality rejected"
+    }
+  ],
+  "errors": [
+    {
+      "slot": "2026-11-05T09:30",
+      "type": "RuntimeError",
+      "reason": "CLOUDFLARE_HTTP_400"
+    }
+  ],
+  "immediate_publish_calls": 0,
+  "completed_at": "2026-11-03T05:45:07.828172+08:00"
+}
