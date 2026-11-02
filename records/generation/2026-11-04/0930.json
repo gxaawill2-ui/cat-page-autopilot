@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-04T09:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-03T05:41:55.804583+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"Mission Impossible: The Great Living Room Jungle. 🌿 Target acquired: the mysterious green monster under the sofa. Proceed with extreme caution, brave warrior!\",\n  \"scene\": \"A tiny brown tabby kitten with hazel eyes and a white chin crouches low in a sunlit living room. She is posed in a dramatic tactical crawl through a forest of tall blades of grass from a fallen potted plant. The warm morning light highlights her intense, focused expression as she stalks a rogue dust bunny.\",\n  \"topic\": \"Tiny garden adventures\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"Mission Impossible: The Great Living Room Jungle. 🌿 Target acquired: the mysterious green monster under the sofa. Proceed with extreme caution, brave warrior!\",\n  \"scene\": \"A tiny brown tabby kitten with hazel eyes and a white chin crouches low in a sunlit living room. She is posed in a dramatic tactical crawl through a forest of tall blades of grass from a fallen potted plant. The warm morning light highlights her intense, focused expression as she stalks a rogue dust bunny.\",\n  \"topic\": \"Tiny garden adventures\"\n}",
+  "content": {
+    "caption": "Mission Impossible: The Great Living Room Jungle. 🌿 Target acquired: the mysterious green monster under the sofa. Proceed with extreme caution, brave warrior!",
+    "scene": "A tiny brown tabby kitten with hazel eyes and a white chin crouches low in a sunlit living room. She is posed in a dramatic tactical crawl through a forest of tall blades of grass from a fallen potted plant. The warm morning light highlights her intense, focused expression as she stalks a rogue dust bunny.",
+    "topic": "Tiny garden adventures"
+  },
+  "language": "en"
 }
