@@ -119,34 +119,49 @@ def can_image(angle=0):
     return im.resize((170,150),Image.Resampling.LANCZOS)
 CAN=can_image()
 
+def can_roll(t):
+    # Quintic onset is smooth, the travel settles before the reaction resolves.
+    return 48*(1-(1-ramp(t,9.20,9.95))**2)
+
 def pose(t):
     walk=180*ramp(t,4.35,8.05)
     startle=(ramp(t,9.28,9.43)-ramp(t,10.7,11.3))
-    stretch=ramp(t,11.55,12.65)*(1-.2*ramp(t,13.3,14.4))
+    stretch=.68*ramp(t,11.55,12.65)*(1-.2*ramp(t,13.3,14.4))
     root=350+walk-15*startle-10*stretch
     bob=4*math.sin(walk/90*math.pi*2)*math.sin(math.pi*min(walk/180,1))
-    hip=np.array([root-112,1190+bob-48*stretch-6*startle])
-    shoulder=np.array([root+120,1180+bob+39*stretch-9*startle])
+    breath=2.0*math.sin(t*2.1)
+    hip=np.array([root-112,1190+bob-48*stretch-6*startle+breath*.5])
+    shoulder=np.array([root+120,1180+bob+39*stretch-9*startle+breath])
     feet={};contacts={}
     for k,offset,phase in [('near_fore',132,0),('far_fore',164,.5),('near_hind',-130,.5),('far_hind',-83,0)]:
         feet[k],contacts[k]=foot_motion(t,offset,phase)
         if k.startswith('far'): feet[k][1]-=18
-    reach=ramp(t,8.05,9.18)*(1-ramp(t,10.7,11.55))
-    feet['near_fore']=lerp(feet['near_fore'],(790,1365),reach)
-    contacts['near_fore']=contacts['near_fore'] and reach<.001
-    place=ramp(t,10.7,11.55)
-    for key,offset in [('near_fore',132),('far_fore',164)]:
-        end=np.array([350+180+offset+70,GROUND-(18 if key.startswith('far') else 0)])
+    # Paw makes contact before the can moves, follows the push, then recoils.
+    reach=ramp(t,8.05,9.18)
+    roll=can_roll(t)
+    pushed=np.array([790+roll*.7,1365.])
+    recoil=ramp(t,9.38,9.85)
+    target=lerp(pushed,(715,1336),recoil)
+    feet['near_fore']=lerp(feet['near_fore'],target,reach)
+    contacts['near_fore']=contacts['near_fore'] and reach<.000001
+    # Stagger the two landing steps; each foot stops moving after contact.
+    for key,offset,a,b,extension in [('far_fore',164,10.40,11.08,30),
+                                    ('near_fore',132,10.78,11.52,64)]:
+        place=ramp(t,a,b)
+        end=np.array([350+180+offset+extension,GROUND-(18 if key.startswith('far') else 0)])
         feet[key]=lerp(feet[key],end,place)
-        feet[key][1]-=22*math.sin(math.pi*place)
+        feet[key][1]-=24*math.sin(math.pi*place)
         if 0<place<1:contacts[key]=False
+        elif place==1:contacts[key]=True
     return dict(root=root,hip=hip,shoulder=shoulder,feet=feet,contacts=contacts,shock=startle,stretch=stretch)
 
 def render(t,debug=False):
     canvas=BG.copy();p=pose(t);hip,sh=p['hip'],p['shoulder']
     shadow=Image.new('RGBA',(W,H));sd=ImageDraw.Draw(shadow)
     sd.ellipse((p['root']-240,GROUND-13,p['root']+300,GROUND+21),fill=(44,28,22,43))
-    for f in p['feet'].values():sd.ellipse((f[0]-29,GROUND-5,f[0]+51,GROUND+10),fill=(38,24,20,42))
+    for f in p['feet'].values():
+        opacity=round(42*max(.12,1-abs(GROUND-f[1])/90))
+        sd.ellipse((f[0]-29,GROUND-5,f[0]+51,GROUND+10),fill=(38,24,20,opacity))
     shadow=shadow.filter(ImageFilter.GaussianBlur(9));canvas.alpha_composite(shadow)
     tail=SPRITES['tail'];rotated(canvas,tail,(35,278),hip+(-45,-75),.56,-7+6*math.sin(t*1.8)+8*p['shock'])
     metadata={'time':t,'feet':{},'joints':{}}
@@ -160,7 +175,9 @@ def render(t,debug=False):
         segment(canvas,'fore_lower' if fore else 'shin',knee,ankle,.39 if near else .35,not near)
         paw=SPRITES[('fore_paw' if fore else 'hind_paw') if near else ('far_fore_paw' if fore else 'far_hind_paw')]
         if not near:paw=ImageEnhance.Brightness(paw).enhance(.79)
-        rotated(canvas,paw,(paw.width*.37,paw.height*.91),foot,.40 if near else .35,0)
+        lift=max(0,(GROUND-(18 if not near else 0))-foot[1])
+        paw_angle=-min(12,lift*.24) if t<8.05 else (-7*p['shock'] if key=='near_fore' else 0)
+        rotated(canvas,paw,(paw.width*.37,paw.height*.91),foot,.40 if near else .35,paw_angle)
         metadata['feet'][key]={'x':float(foot[0]),'y':float(foot[1]),'contact':bool(p['contacts'][key])}
         metadata['joints'][key]=[a.tolist(),knee.tolist(),ankle.tolist()]
         if debug:
@@ -171,14 +188,16 @@ def render(t,debug=False):
     affine_sprite(canvas,body,(75,164),hip+(-5,-25),M)
     leg('near_hind',True,False);leg('near_fore',True,True)
     # Can is stationary until contact, then decelerates rolling with angle=s/r.
-    roll=48*(1-(1-ramp(t,9.2,9.95))**2)
+    roll=can_roll(t)
     cpos=np.array([885+roll,GROUND-52*.86])
     sd2=Image.new('RGBA',(W,H));dd=ImageDraw.Draw(sd2);dd.ellipse((cpos[0]-54,GROUND-5,cpos[0]+50,GROUND+12),fill=(39,26,16,70))
     canvas.alpha_composite(sd2.filter(ImageFilter.GaussianBlur(5)))
     rotated(canvas,can_image(roll/(52*.86)*180/math.pi),(105,73),cpos,.86,0)
     head=head_sprite(t,p['shock'])
     angle=-7*ramp(t,.4,1.8)+5*ramp(t,2.1,3.2)+8*ramp(t,8,9.1)-9*p['shock']+10*p['stretch']-8*ramp(t,13.1,14.5)
-    neck=sh+np.array([5,-20])
+    flinch=math.exp(-max(0,t-9.30)*8)*math.sin(max(0,t-9.30)*26) if t>=9.30 else 0
+    neck=sh+np.array([5-5*p['shock'],-20-7*p['shock']])
+    angle+=2.5*flinch
     rotated(canvas,head,(100,300),neck,.87,angle,1-.035*ramp(t,13,14.3))
     # Continuous gentle camera movement, not the source of character motion.
     zoom=1+.035*ramp(t,0,4)+.025*ramp(t,8.8,10)
@@ -188,7 +207,7 @@ def render(t,debug=False):
     overlay=Image.new('RGBA',(W,H));d=ImageDraw.Draw(overlay)
     d.text((76,94),'DAILY PURR',font=SMALL,fill=(255,242,211,230),stroke_width=1,stroke_fill=(34,27,30,150))
     d.text((73,134),'阿橘的深夜罐罐任務',font=TITLE,fill=(255,244,221,255),stroke_width=2,stroke_fill=(31,29,37,170))
-    text=('主人以為阿橘睡著了……' if t<4 else '其實牠正在執行秘密任務。' if t<9 else '任務失敗，啟動裝無辜模式。')
+    text=('主人以為阿橘睡著了……' if t<4 else '其實牠正在執行秘密任務。' if t<9.45 else '任務失敗，啟動裝無辜模式。')
     d.rounded_rectangle((65,1535,1015,1645),radius=22,fill=(25,28,39,210),outline=(239,208,145,90),width=1)
     box=d.textbbox((0,0),text,font=CAPTION);width=box[2]-box[0]
     d.text(((W-width)/2,1558),text,font=CAPTION,fill=(255,246,222,255),stroke_width=1,stroke_fill=(22,25,35,255))
@@ -219,7 +238,7 @@ def main():
         for t in [0,1.7,3.3,4.8,6.2,8.5,9.3,9.7,11.5,12.6,14.1,14.8]:
             im,_=render(t);im.resize((540,960)).save(ROOT/'qa'/('key-%04d.jpg'%int(t*10)),quality=92)
         return
-    audio();out=ROOT/'ajiu-midnight-mission-v1.mp4'
+    audio();out=ROOT/'ajiu-midnight-mission-v2.mp4'
     cmd=['ffmpeg','-y','-loglevel','error','-f','rawvideo','-vcodec','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','-','-i',str(ROOT/'original-sound.wav'),'-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-movflags','+faststart','-shortest',str(out)]
     pipe=subprocess.Popen(cmd,stdin=subprocess.PIPE);track=[]
     try:

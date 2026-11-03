@@ -1,6 +1,6 @@
 {
   "title": "阿橘的深夜罐罐任務",
-  "phase": "full_render_in_progress_not_approved",
+  "phase": "v2_render_in_progress_not_approved",
   "spec": {
     "width": 1080,
     "height": 1920,
@@ -20,5 +20,15 @@
   "do_not_publish_before_full_QA": true,
   "cost_twd": 0,
   "source_atlas": "exec-05938067-46e3-4713-934c-b6dad8ea5bcb.png",
-  "source_background": "exec-d03f6eac-39d9-4374-bec3-a961bb30a04c.png"
+  "source_background": "exec-d03f6eac-39d9-4374-bec3-a961bb30a04c.png",
+  "resumed_from": "841aa02010c505fdac497cfa58e916cdf43d27a8",
+  "existing_v1_found_complete": true,
+  "existing_v1_sha256": "5d676e7370802f53a6bcf2ed56fe80d4e9ff37fa48c320b99f9fd81797595b1b",
+  "changes": [
+    "Paw follows can push before recoiling",
+    "Stagger front paw landing and lock after contact",
+    "Subtle breathing and damped head startle",
+    "Lift-aware paw rotation and contact shadows",
+    "Subtitle waits until can rolls"
+  ]
 }
