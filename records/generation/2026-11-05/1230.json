@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-05T12:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-03T10:02:44.678622+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"雪白的毛髮\\n依舊保持優雅\\n即便身處戰場\\n她依然神情莊重\\n直到發現\\n那塊掉在地上的\\n小魚乾\",\n  \"scene\": \"A hand-painted book illustration of 小雪, an elegant white long-haired cat with striking blue eyes and a tiny pink nose. She is sitting poised atop a chaotic mountain of colorful laundry, looking regal and dignified despite the mess, until she spots a single dried fish snack wedged deep in a stray sock.\",\n  \"topic\": \"Graceful appearance versus ordinary household chaos\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"雪白的毛髮\\n依舊保持優雅\\n即便身處戰場\\n她依然神情莊重\\n直到發現\\n那塊掉在地上的\\n小魚乾\",\n  \"scene\": \"A hand-painted book illustration of 小雪, an elegant white long-haired cat with striking blue eyes and a tiny pink nose. She is sitting poised atop a chaotic mountain of colorful laundry, looking regal and dignified despite the mess, until she spots a single dried fish snack wedged deep in a stray sock.\",\n  \"topic\": \"Graceful appearance versus ordinary household chaos\"\n}",
+  "content": {
+    "caption": "雪白的毛髮\n依舊保持優雅\n即便身處戰場\n她依然神情莊重\n直到發現\n那塊掉在地上的\n小魚乾",
+    "scene": "A hand-painted book illustration of 小雪, an elegant white long-haired cat with striking blue eyes and a tiny pink nose. She is sitting poised atop a chaotic mountain of colorful laundry, looking regal and dignified despite the mess, until she spots a single dried fish snack wedged deep in a stray sock.",
+    "topic": "Graceful appearance versus ordinary household chaos"
+  },
+  "language": "zh-Hant"
 }
