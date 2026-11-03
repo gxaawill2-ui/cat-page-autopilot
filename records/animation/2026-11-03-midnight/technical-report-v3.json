@@ -1,0 +1,57 @@
+{
+  "movie_sha256": "c2fce2b6e6e9051853b3b240c5b8c90ab43ff462e939b47e1d0385cef3e93a3f",
+  "bytes": 6031582,
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 1080,
+      "height": 1920,
+      "r_frame_rate": "24/1",
+      "duration": "15.000000",
+      "nb_frames": "360"
+    },
+    {
+      "codec_name": "aac",
+      "width": null,
+      "height": null,
+      "r_frame_rate": "0/0",
+      "duration": "15.000000",
+      "nb_frames": "705"
+    }
+  ],
+  "duration": "15.000000",
+  "all_frames_decoded": 360,
+  "unique_character_crop_frames": 360,
+  "max_stance_paw_drift_world_px": 0.0,
+  "max_two_link_bone_length_error_px": 2.1316282072803006e-13,
+  "max_swing_paw_step_px": 20.295955035419713,
+  "audio": {
+    "seconds": 15.0,
+    "channels": 2,
+    "sample_rate": 48000,
+    "peak": 0.24908447265625,
+    "origin": "original deterministic synthesis, no samples"
+  },
+  "all_frame_review_sheets": [
+    "all-frames-00.jpg",
+    "all-frames-01.jpg",
+    "all-frames-02.jpg",
+    "all-frames-03.jpg",
+    "all-frames-04.jpg",
+    "all-frames-05.jpg",
+    "all-frames-06.jpg",
+    "all-frames-07.jpg",
+    "all-frames-08.jpg",
+    "all-frames-09.jpg",
+    "all-frames-10.jpg",
+    "all-frames-11.jpg",
+    "all-frames-12.jpg",
+    "all-frames-13.jpg",
+    "all-frames-14.jpg"
+  ],
+  "technical_pass": true,
+  "artistic_quality": "Anatomy revised and keyframes plus temporal sheets 05,07,09,11,14 visually reviewed; pending user playback acceptance; not approved for Facebook",
+  "facebook_write_calls": 0,
+  "full_quality_approved": false,
+  "realtime_av_playback_verified": false
+}
