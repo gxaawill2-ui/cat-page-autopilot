@@ -1,7 +1,7 @@
 {
   "page_id": "1346385028565797",
   "slot": "2026-11-03T16:30",
-  "status": "scheduled_ui_confirmed_id_pending",
+  "status": "scheduled_ui_verified",
   "content_type": "reel",
   "caption": "新貓床還沒躺熱，阿橘已經驗收完紙箱。\n結論：五星好評，床只是運費。\nThe bed was just the delivery fee. 📦🐾",
   "caption_sha256": "c4ac90945b47a463e4b6332cd92614bc5aeb4e21060199c7d81c9ec1f43e494f",
@@ -23,5 +23,18 @@
   "meta_ui_response": "已排定 Reel：你的 Reel 排定在處理完成後於2026年11月3日發佈。",
   "planner_seen": true,
   "schedule_time": "2026-11-03T16:30:00+08:00",
-  "published_delivery_verified": false
+  "published_delivery_verified": false,
+  "planner_content_id": "4393896547526740",
+  "canonical_meta_post_id": null,
+  "identity_note": "Official Planner and scheduled list verified. Preview Reel URLs/boost target IDs differed between detail renders; neither is promoted to a canonical API Post ID. Copy Reel ID UI toast did not yield an ID in the accessible clipboard. Never resubmit this scheduled content.",
+  "full_caption_ui_verified": true,
+  "duration_ui_verified": 12,
+  "scheduled_list_ui_verified": true,
+  "scheduled_list_count_matching_caption": 1,
+  "reels_sharing_to_groups": false,
+  "sharing_to_story": false,
+  "verified_at": "2026-11-03T02:23:46.595Z",
+  "next_delivery_check": "2026-11-03T16:30:00+08:00",
+  "next_equal_age_review": "2026-11-05T16:30:00+08:00",
+  "proof": "Meta Business Suite scheduled_posts row and Planner Nov3 16:30; UI explicit 已排定 Reel"
 }

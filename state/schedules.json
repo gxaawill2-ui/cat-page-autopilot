@@ -34,7 +34,11 @@
     "day": "SU",
     "time": "20:00",
     "timing_mode": "flexible_schedule",
-    "enabled": true
+    "enabled": false,
+    "last_actual_check": "2026-11-03",
+    "last_run_time": "2026-11-01T12:13:30.506409+00:00",
+    "platform_disabled_reason": "unknown; automation listing supplies no disabling cause",
+    "recovery_status": "Not blindly re-enabled; existing three-day GitHub review remains active. Weekly full-analysis continuity is not verified."
   },
   "one_off_acceptance": {
     "task_id": "6ad6ec1845d48191938f06790c91fe8a",
@@ -198,5 +202,23 @@
     ],
     "standard_autopilot_workflow_unchanged": true,
     "legacy_immediate_publish_enabled": false
+  },
+  "quality_pilot": {
+    "pr": 2,
+    "merge_commit": "691e7344aa59c9bf7eb4496f235ffa1b570945d5",
+    "effective": "2026-11-04",
+    "new_generation_slots": [
+      "12:30",
+      "19:30"
+    ],
+    "max_daily_all_sources": 4,
+    "preserve_existing_schedules": true,
+    "actual_production_run": "41563566823",
+    "run_result": "success; zero new schedules, image QA holds",
+    "natural_run_after_merge": "not yet observed",
+    "next_nominal_replenishment": "2026-11-03T20:17:00+08:00",
+    "cron_precision": "best effort, actual start can drift",
+    "next_three_day_period_end": "2026-11-04",
+    "next_three_day_report_due": "2026-11-05"
   }
 }
