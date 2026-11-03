@@ -1,7 +1,7 @@
 {
   "page_id": "1346385028565797",
   "slot": "2026-11-03T16:30",
-  "status": "publishing",
+  "status": "scheduled_ui_confirmed_id_pending",
   "content_type": "reel",
   "caption": "新貓床還沒躺熱，阿橘已經驗收完紙箱。\n結論：五星好評，床只是運費。\nThe bed was just the delivery fee. 📦🐾",
   "caption_sha256": "c4ac90945b47a463e4b6332cd92614bc5aeb4e21060199c7d81c9ec1f43e494f",
@@ -19,5 +19,9 @@
   "submission_started_at": "2026-11-03T02:16:04.324Z",
   "ui_confirmed_schedule": "2026-11-03T16:30:00+08:00",
   "ui_timezone_label": "Asia/Shanghai (UTC+08:00, same offset as Asia/Taipei for this date)",
-  "audience": "Public"
+  "audience": "Public",
+  "meta_ui_response": "已排定 Reel：你的 Reel 排定在處理完成後於2026年11月3日發佈。",
+  "planner_seen": true,
+  "schedule_time": "2026-11-03T16:30:00+08:00",
+  "published_delivery_verified": false
 }
