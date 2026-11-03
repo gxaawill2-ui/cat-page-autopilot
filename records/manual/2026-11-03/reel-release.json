@@ -26,7 +26,7 @@
   "published_delivery_verified": true,
   "planner_content_id": "4393896547526740",
   "canonical_meta_post_id": null,
-  "identity_note": "Official Planner and scheduled list verified. Preview Reel URLs/boost target IDs differed between detail renders; neither is promoted to a canonical API Post ID. Copy Reel ID UI toast did not yield an ID in the accessible clipboard. Never resubmit this scheduled content.",
+  "identity_note": "Publication resolved by official published-list Post ID 122108629089515576 and actual Facebook Reel 1849971583114298, matching Page and caption. Previous preview-only IDs remain non-authoritative. Graph API readback not claimed.",
   "full_caption_ui_verified": true,
   "duration_ui_verified": 12,
   "scheduled_list_ui_verified": true,
@@ -34,9 +34,9 @@
   "reels_sharing_to_groups": false,
   "sharing_to_story": false,
   "verified_at": "2026-11-03T02:23:46.595Z",
-  "next_delivery_check": "2026-11-03T16:30:00+08:00",
-  "next_equal_age_review": "2026-11-05T16:30:00+08:00",
-  "proof": "Meta Business Suite scheduled_posts row and Planner Nov3 16:30; UI explicit 已排定 Reel",
+  "next_delivery_check": "completed_ui_verified",
+  "next_equal_age_review": "2026-11-05T10:51:00+08:00",
+  "proof": "records/manual/2026-11-03/reel-published.jpg",
   "latest_feed_audit": {
     "run_id": 41567733171,
     "checked_at": "2026-11-03T10:42:24.356001+08:00",
@@ -71,5 +71,11 @@
   "actual_time_precision": "minute",
   "released_original_schedule": true,
   "original_schedule_removed": true,
-  "matching_published_reels": 1
+  "matching_published_reels": 1,
+  "permalink_url": "https://www.facebook.com/reel/1849971583114298",
+  "reel_id": "1849971583114298",
+  "public_ui_verified": true,
+  "visual_review": "PASS; actual public Reel shows the original jumping-cat/box animation",
+  "verification_source": "Official published list, content insights timestamp and actual public Facebook Reel",
+  "do_not_recreate_original_1630": true
 }
