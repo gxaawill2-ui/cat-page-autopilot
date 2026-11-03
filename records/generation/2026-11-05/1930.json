@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-05T19:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-03T10:03:05.296739+08:00",
@@ -10,5 +10,6 @@
     "scene": "A hand-painted book illustration of 阿斑, a tuxedo cat with bright yellow eyes, peering intently into a narrow gap behind a wooden kitchen chair. He is mid-stretch, one white-socked paw reaching forward with intense focus. Warm evening sunlight filters through a window, casting soft shadows and highlighting his sleek black fur and snowy white bib.",
     "topic": "A curious tuxedo cat's serious investigation into a mysterious sound ends in a snack discovery."
   },
-  "language": "en"
+  "language": "en",
+  "image_sha256": "a271cd389b3055b7c0927caebfbc61de509e7b0053eb134f4f45978c5c164a81"
 }
