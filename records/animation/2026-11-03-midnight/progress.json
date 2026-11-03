@@ -1,0 +1,24 @@
+{
+  "title": "阿橘的深夜罐罐任務",
+  "phase": "full_render_in_progress_not_approved",
+  "spec": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 24,
+    "seconds": 15
+  },
+  "character_setting": {
+    "name": "阿橘",
+    "appearance": "orange short-haired tabby, amber eyes, cream muzzle and paws",
+    "personality": "food-loving optimistic troublemaker",
+    "story_style": "small grand plans with a gentle comic reversal"
+  },
+  "method": "ImageGen original painted parts + original kitchen plate; deterministic skeletal affine parts, two-link inverse kinematics and stance-locked paws; procedural original can rolling and synthesized audio",
+  "assets_generated": 2,
+  "visual_keyframe_review": "Iterated limb anatomical anchors and can center-of-rotation; full film QA not yet done",
+  "facebook_writes": 0,
+  "do_not_publish_before_full_QA": true,
+  "cost_twd": 0,
+  "source_atlas": "exec-05938067-46e3-4713-934c-b6dad8ea5bcb.png",
+  "source_background": "exec-d03f6eac-39d9-4374-bec3-a961bb30a04c.png"
+}
