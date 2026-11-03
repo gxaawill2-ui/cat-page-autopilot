@@ -37,5 +37,6 @@
       "image_attempts": 1,
       "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The cat's anatomy is incoherent; the front left leg appears to be emerging from the middle of its chest/stomach area rather than a shoulder joint, and the connection between the torso and the rear of the cat is anatomically impossible.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": false,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
     }
-  ]
+  ],
+  "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The cat has an extra limb/paw appearing on the left wooden frame that is not anatomically connected to its body, and the tail/body connection appears physically impossible/distorted.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": false,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
