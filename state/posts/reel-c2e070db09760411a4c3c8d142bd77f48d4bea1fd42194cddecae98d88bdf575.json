@@ -1,7 +1,7 @@
 {
   "page_id": "1346385028565797",
   "slot": "2026-11-03T16:30",
-  "status": "scheduled_ui_verified",
+  "status": "publishing",
   "content_type": "reel",
   "caption": "新貓床還沒躺熱，阿橘已經驗收完紙箱。\n結論：五星好評，床只是運費。\nThe bed was just the delivery fee. 📦🐾",
   "caption_sha256": "c4ac90945b47a463e4b6332cd92614bc5aeb4e21060199c7d81c9ec1f43e494f",
@@ -45,5 +45,22 @@
     "matching_reel_caption_in_scheduled_posts": 0,
     "canonical_meta_post_id": null,
     "result": "Official UI scheduled row exists but this read-only Graph feed inventory does not return the Reel. Cause unknown. Keep exact reservation and never resubmit."
+  },
+  "immediate_release": {
+    "user_instruction": "現在就發布一個 貓咪短影片 Reels",
+    "method": "Release exact existing scheduled Reel via official Publish Now; never create or upload a second Reel",
+    "original_scheduled_time": "2026-11-03T16:30:00+08:00",
+    "armed_at": "2026-11-03T02:50:35.895Z",
+    "publish_now_calls": 0,
+    "retry_allowed": false,
+    "scope": "One-off user-directed immediate release; global schedules, cap and spacing rules unchanged",
+    "preflight": {
+      "page_confirmed": true,
+      "published_today": 1,
+      "matching_published_reels": 0,
+      "matching_scheduled_reels": 1,
+      "planned_total_today_including_evening": 3,
+      "max_daily": 4
+    }
   }
 }

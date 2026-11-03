@@ -1,0 +1,22 @@
+{
+  "user_instruction": "現在就發布一個 貓咪短影片 Reels",
+  "method": "Release exact existing scheduled Reel via official Publish Now; never create or upload a second Reel",
+  "original_scheduled_time": "2026-11-03T16:30:00+08:00",
+  "armed_at": "2026-11-03T02:50:35.895Z",
+  "publish_now_calls": 0,
+  "retry_allowed": false,
+  "scope": "One-off user-directed immediate release; global schedules, cap and spacing rules unchanged",
+  "preflight": {
+    "page_confirmed": true,
+    "published_today": 1,
+    "matching_published_reels": 0,
+    "matching_scheduled_reels": 1,
+    "planned_total_today_including_evening": 3,
+    "max_daily": 4
+  },
+  "video_sha256": "c2e070db09760411a4c3c8d142bd77f48d4bea1fd42194cddecae98d88bdf575",
+  "caption": "新貓床還沒躺熱，阿橘已經驗收完紙箱。\n結論：五星好評，床只是運費。\nThe bed was just the delivery fee. 📦🐾",
+  "planner_content_id": "4393896547526740",
+  "status": "armed_release_existing_scheduled_reel",
+  "post_id": null
+}
