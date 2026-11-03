@@ -88,8 +88,9 @@ if __name__=='__main__':
  if '--keys' in sys.argv:
   for t in [0,5.5,8.8,9.5,12]:frame(t).save(R/f'key-{t}.jpg')
  else:
-  music();out=R/'daily-purr-2d-cartoon-v4.mp4';p=subprocess.Popen(['ffmpeg','-y','-v','error','-f','rawvideo','-pix_fmt','rgb24','-s','1080x1920','-r','24','-i','-','-i',str(R/'original-bgm.wav'),'-c:v','libx264','-crf','18','-preset','fast','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart','-shortest',str(out)],stdin=subprocess.PIPE)
+  music();out=R/'daily-purr-2d-cartoon-v4.mp4';p=subprocess.Popen(['ffmpeg','-y','-v','error','-f','rawvideo','-pix_fmt','rgb24','-s','1080x1920','-r','24','-i','-','-i',str(R/'original-bgm.wav'),'-af','volume=12dB','-c:v','libx264','-crf','18','-preset','fast','-pix_fmt','yuv420p','-c:a','aac','-b:a','192k','-movflags','+faststart','-shortest',str(out)],stdin=subprocess.PIPE)
   for i in range(360):
    p.stdin.write(frame(i/24).tobytes())
    if i%48==0:print(i,flush=True)
   p.stdin.close();assert p.wait()==0;print(hashlib.sha256(out.read_bytes()).hexdigest())
+
