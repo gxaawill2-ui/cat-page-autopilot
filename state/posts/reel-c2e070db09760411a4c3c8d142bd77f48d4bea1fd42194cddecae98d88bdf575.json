@@ -36,5 +36,14 @@
   "verified_at": "2026-11-03T02:23:46.595Z",
   "next_delivery_check": "2026-11-03T16:30:00+08:00",
   "next_equal_age_review": "2026-11-05T16:30:00+08:00",
-  "proof": "Meta Business Suite scheduled_posts row and Planner Nov3 16:30; UI explicit 已排定 Reel"
+  "proof": "Meta Business Suite scheduled_posts row and Planner Nov3 16:30; UI explicit 已排定 Reel",
+  "latest_feed_audit": {
+    "run_id": 41567733171,
+    "checked_at": "2026-11-03T10:42:24.356001+08:00",
+    "facebook_write_calls": 0,
+    "matching_reel_caption_in_posts": 0,
+    "matching_reel_caption_in_scheduled_posts": 0,
+    "canonical_meta_post_id": null,
+    "result": "Official UI scheduled row exists but this read-only Graph feed inventory does not return the Reel. Cause unknown. Keep exact reservation and never resubmit."
+  }
 }

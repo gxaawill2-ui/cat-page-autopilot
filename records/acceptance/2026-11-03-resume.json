@@ -1,0 +1,37 @@
+{
+  "checked_at": "2026-11-03T02:44:28.074Z",
+  "page_id": "1346385028565797",
+  "resume_from": "169194697c948fb79d914a2eeddfd3e94889072f",
+  "weekly_recovery": {
+    "code_commit": "3c3576a86f95782f19a9b525939886c7b592e17e",
+    "run": 41567490323,
+    "result": "success",
+    "scripts_tests": 99,
+    "facebook_writes": 0,
+    "ai_calls": 0,
+    "existing_cron_only": true,
+    "old_chatgpt_weekly_enabled": false,
+    "next_cutoff": "2026-11-08T20:00:00+08:00"
+  },
+  "feed_audit": {
+    "run": 41567733171,
+    "result": "success",
+    "reel_caption_found": false,
+    "existing_photo_reservations_unchanged": true
+  },
+  "reel": {
+    "ui_scheduled_time": "2026-11-03T16:30:00+08:00",
+    "ui_confirmed_after_reload": true,
+    "planner_content_id": "4393896547526740",
+    "canonical_meta_post_id": null,
+    "never_resubmit": true,
+    "delivery_not_yet_due": true
+  },
+  "limitations": [
+    "Graph feed inventory and official UI disagree on the scheduled Reel; reason unknown",
+    "Detailed interaction permission missing (Meta code 10)",
+    "Natural Sunday analysis and post-PR2 natural replenishment remain pending",
+    "Image QA holds and prior Cloudflare HTTP400 still limit three-day buffer"
+  ],
+  "extra_twd": 0
+}

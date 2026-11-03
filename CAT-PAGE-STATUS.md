@@ -1,3 +1,10 @@
+## 2026-11-03 10:44 續作已保存：週報真API成功／Reel UI與Feed清單差異保留
+- 本輪修復週日分析執行缺口並真驗收run41567490323 success；新code3c3576a、99項scripts tests成功。只讀16/23篇真已發清單、generation skipped、AI0、Facebook writes0；具體互動權限code10仍待合法擴權，沒有假成效。舊週任務未盲目重啟，由原GitHub同cron接手到期分析，下一11/8 20:00截止後首輪runner。
+- 另單次既有Meta Native audit run41567733171 success，指定Page與名稱正確、Token基本讀取有效、writes0；3篇既有未來相片預約均在，今天09:30真is_published=true。audit回條records/meta-native/audit-41567733171.json。
+- **Reel不可重送**：官方已排定清單重載明確11/3 16:30公開一筆，但Graph本次/posts與/scheduled_posts清單沒有同文Reel，原因unknown；不因清單缺失判空缺、不偽造Post ID。保留state/posts/reel-c2e070...json scheduled_ui_verified及占額，canonical_meta_post_id仍null。尚未到16:30，配送驗收pending，之後先查官方已發清單及實際影片。
+- 沒有新增或移動任何Meta預約、沒有新生圖／發文，沒有新增cron／ChatGPT任務。現有補稿不受本輪只讀分析影響，下一名義11/3 20:17（可能延遲）；新PR2規則自然續跑仍待核。11/5三天報告到期，Reel48h驗收11/5 16:30後；不把新分析綠燈當發文成功。
+- 本輪交接records/acceptance/2026-11-03-resume.json；延續所有既有安全鎖、NT$0與品牌暫停。下一精確步驟：16:30後只讀查既有Reel配送並取真ID，不重建；20:17後查event=schedule採PR2，11/5比較同齡真外部數據，缺項N/A。
+
 ## 2026-11-03 10:41 週日分析替代執行已真驗收／Reel仍保持原預約
 - 新GitHub唯讀run41567490323（job125692429520）success，main3c3576a，99項tests通過，generation完全skipped、AI calls0、Facebook writes0。不是新補稿／發文驗收。
 - records/reviews/weekly-2026-11-01.json真回讀兩個完整7日已發清單：10/25 20:00–11/1 20:00共16篇；前窗10/18 20:00–10/25 20:00共23篇。當前followers真0，非歷史截止followers，不能歸因語言或名稱。觀察時10/31萬聖節已滿64.25h，known_owner_reactions=1，未把本人讚算外部互動。
