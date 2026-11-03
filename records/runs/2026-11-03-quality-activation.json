@@ -1,0 +1,21 @@
+{
+  "pr": 2,
+  "merge_sha": "691e7344aa59c9bf7eb4496f235ffa1b570945d5",
+  "tests": {
+    "scripts": 88,
+    "root": 30,
+    "pass": true
+  },
+  "planner_preserved": [
+    "2026-11-03T19:30",
+    "2026-11-04T09:30",
+    "2026-11-04T19:30"
+  ],
+  "natural_run": {
+    "id": 41530652197,
+    "conclusion": "failure",
+    "real_scheduled": 2,
+    "later_error": "CLOUDFLARE_HTTP_400"
+  },
+  "budget_ntd": 0
+}
