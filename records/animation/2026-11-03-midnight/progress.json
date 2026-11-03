@@ -1,25 +1,21 @@
 {
   "title": "阿橘深夜罐罐任務",
-  "phase": "v4_flat_2d_cartoon_delivered_for_review",
+  "phase": "PUBLISHED_DO_NOT_RESEND",
+  "version": "v4-2d-cartoon-audiofixed",
+  "page_id": "1346385028565797",
+  "post_id": "122108795187515576",
+  "reel_id": "2909190106127714",
+  "permalink": "https://www.facebook.com/reel/2909190106127714",
+  "published_at_taipei": "2026-11-03T21:35:00+08:00",
+  "user_approval": "User explicitly requested 發到我的reels after reviewing audiofixed version",
+  "method": "Meta Business Suite official Reel composer, one Share submission; verified in Published list and public Reel page",
+  "movie_library_file_id": "libfile_b1edacf6188481918bf690ce9c494523",
+  "music_gain_db": 12,
+  "facebook_publish_submissions": 1,
+  "cost_twd": 0,
   "rejected_versions": [
     "v2",
     "v3"
   ],
-  "method": "Original code-drawn flat 2D cartoon; continuous rounded limb paths, concealed roots, planted-paw gait; no painted skeletal cutouts",
-  "spec": {
-    "width": 1080,
-    "height": 1920,
-    "fps": 24,
-    "seconds": 15
-  },
-  "music": "Original synthesized pentatonic melody and warm chord accompaniment, 48kHz stereo AAC; no external recordings",
-  "movie_library_file_id": "libfile_b1edacf6188481918bf690ce9c494523",
-  "movie_sha256": "c4e98ab827683fdb77060e0c137aacc845061eb8a7f3b32b316ef15579575722",
-  "verification": "360 frames decoded without error; 30 timeline samples and keyframes visually inspected; normal-speed audiovisual subjective acceptance pending",
-  "full_quality_approved": false,
-  "facebook_writes": 0,
-  "cost_twd": 0,
-  "do_not_publish_before_full_QA": true,
-  "render": "cd media/reels/2026-11-03-cartoon && python animate.py",
-  "resume_branch": "work/20261103-midnight-resume"
+  "do_not_resend": true
 }
