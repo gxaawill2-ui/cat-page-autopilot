@@ -1,3 +1,9 @@
+## 2026-11-03 10:40 中斷續作：週日分析已接入既有 GitHub 流程，實際 API 驗收待執行
+- fresh main1691946確認 PR2、Reels真預約與歷史紀錄均已保存。官方已排定清單重新從伺服器載入，11/3 16:30本Reel仍只有一筆、公開；19:30日文與11/4兩篇不變。尚未到點，不重送、不稱已發布。
+- 舊 ChatGPT weekly 真false、原因平台未提供；不反覆重啟。新增唯讀 weekly_performance_review.py，使用現有 cat-unattended-replenish.yml 同一cron與concurrency，不新增任務。週日20:00台北為資料截止，既有runner首次於截止後啟動即執行；GitHub延遲時明示實際時間，不保證20:00準點。
+- 兩個7日窗口只用真已發文章，保留每篇觀察年齡；已知本人按讚排除，缺值N/A、沒有同齡證據不判題材/語言勝負。當前followers不是歷史截止followers。舊週報不覆蓋，新結構化報告保留來源與混雜限制。
+- 新增6項安全測試；全部99 scripts測試通過。沒有AI生成或Facebook寫入。下一步僅用既有workflow review_only=true真跑報告，禁止重新補稿／發文來測分析。
+
 ## 2026-11-03 10:25 新規則已部署／首支原創 Reels 真預約（優先於歷史）
 
 - PR #2 已合併 main：691e7344aa59c9bf7eb4496f235ffa1b570945d5。93 scripts＋30 root 測試通過；新 Reels 占額／同時段阻擋整合測試 2 項通過。正式補稿真 run41563566823 success，content_strategy 回條已記新規則；本輪新預約 0，因圖片 QA FAIL 安全留稿，不把綠燈冒充發布成功。

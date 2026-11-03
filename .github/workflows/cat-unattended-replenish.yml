@@ -6,7 +6,7 @@ name: Cat Page Unattended AI Replenishment (opt-in, future-only)
   workflow_dispatch:
     inputs:
       review_only:
-        description: 'Read-only three-day performance review; no AI or Facebook writes'
+        description: 'Read-only due three-day and weekly reviews; no AI or Facebook writes'
         type: boolean
         required: true
         default: false
@@ -58,3 +58,6 @@ jobs:
       - name: Record due three-day performance review using actual Page posts only
         if: always() && github.ref == 'refs/heads/main' && (inputs.dry_run != true || inputs.review_only == true)
         run: python3 scripts/performance_review.py
+      - name: Record due Sunday-20h review using existing schedule (read-only Facebook)
+        if: always() && github.ref == 'refs/heads/main' && (inputs.dry_run != true || inputs.review_only == true)
+        run: python3 scripts/weekly_performance_review.py
