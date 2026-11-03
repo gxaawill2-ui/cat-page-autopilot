@@ -102,3 +102,8 @@ Metricool未連接且Free20篇/月不承接4篇/日；Meta官方排程僅見入�
 - Use existing Meta Native Scheduler workflow, mode=curated, main only. It shares cat-page-meta-official-publisher concurrency with replenishment, audits exact Page, requests the existing Pages build, verifies anonymous200/image/jpeg/SHA, CAS-arms once, schedules unpublished photo->future Feed, immediately saves real Post ID and readback. No new cron and no immediate publish.
 - Already attempted native records are read-only reconciled if they have real IDs; no-ID unknowns are held. Never retry a write on missing response. Stop on CAS/network unknowns.
 - Keep CAT_AUTOPILOT_ENABLED=true and old META_PUBLISH_ENABLED=false; standard09:30/12:30/16:30/19:30 language trials remain unchanged. Curated content only authorizes exact additional times bound in reservations, with the same four/day cap.
+
+
+## 2026-11-03 週日分析執行修復
+舊ChatGPT週任務實際停用，原因平台未提供。週日完整結構化回讀改由現有cat-unattended-replenish.yml的weekly_performance_review.py接手，無新cron／task、無AI／Facebook寫入。Asia/Taipei週日20:00作固定資料截止；GitHub首次於截止後執行，可能延遲，不宣稱準點。只接受指定Page；兩個7日窗完整分頁，缺Token／錯Page／不完整清單停止。每個weekly-日期.json存在即跳過，CAS/non-force push及原concurrency不變。舊手動週報保留，新回條有legacy reference，不覆蓋歷史。
+真唯讀驗收run41567490323成功；基本清單可讀、擴充互動code10權限不足記N/A。本人已知讚排除，未確認外部互動不算外部成長；未具同齡與reach證據不選題材／畫風／語言勝負。下次11/8 20:00截止後驗自然續跑，三天週期保持原樣。

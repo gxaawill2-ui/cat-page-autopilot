@@ -38,7 +38,14 @@
     "last_actual_check": "2026-11-03",
     "last_run_time": "2026-11-01T12:13:30.506409+00:00",
     "platform_disabled_reason": "unknown; automation listing supplies no disabling cause",
-    "recovery_status": "Not blindly re-enabled; existing three-day GitHub review remains active. Weekly full-analysis continuity is not verified."
+    "recovery_status": "Weekly analysis migrated to existing GitHub runner; old ChatGPT task remains disabled. Natural Sunday continuation not yet observed.",
+    "github_executor": ".github/workflows/cat-unattended-replenish.yml -> scripts/weekly_performance_review.py",
+    "github_configured": true,
+    "actual_read_only_acceptance_run": "41567490323",
+    "actual_read_only_acceptance": "success; two complete published inventories, engagement metrics permission-limited",
+    "next_cutoff": "2026-11-08T20:00:00+08:00",
+    "next_execution_note": "first existing GitHub runner after cutoff; nominal 20:17 Asia/Taipei, best effort",
+    "report": "records/reviews/weekly-2026-11-01.json"
   },
   "one_off_acceptance": {
     "task_id": "6ad6ec1845d48191938f06790c91fe8a",

@@ -1,0 +1,35 @@
+{
+  "run_id": 41567490323,
+  "head_sha": "3c3576a86f95782f19a9b525939886c7b592e17e",
+  "conclusion": "success",
+  "job_id": 125692429520,
+  "inputs": {
+    "review_only": true,
+    "dry_run": true
+  },
+  "generation_step": "skipped",
+  "facebook_write_calls": 0,
+  "ai_calls": 0,
+  "scripts_tests": 99,
+  "report": "records/reviews/weekly-2026-11-01.json",
+  "current_samples": 16,
+  "previous_samples": 23,
+  "followers_observed_now": 0,
+  "metrics_permission_error": {
+    "code": 10,
+    "required": "pages_read_user_content or Page Public Content Access",
+    "effect": "Detailed reaction/comment/share metrics unavailable; fallback basic published inventory succeeded"
+  },
+  "known_owner_halloween_reactions": 1,
+  "verified_external_interactions": null,
+  "non_follower_reach": null,
+  "scheduled_reel": {
+    "date": "2026-11-03",
+    "time": "16:30",
+    "ui_reloaded": true,
+    "matching_scheduled_rows": 1,
+    "delivery_not_due": true
+  },
+  "natural_sunday_execution_verified": false,
+  "next_cutoff": "2026-11-08T20:00:00+08:00"
+}

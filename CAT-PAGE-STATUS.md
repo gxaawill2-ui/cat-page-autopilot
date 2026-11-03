@@ -1,3 +1,10 @@
+## 2026-11-03 10:41 週日分析替代執行已真驗收／Reel仍保持原預約
+- 新GitHub唯讀run41567490323（job125692429520）success，main3c3576a，99項tests通過，generation完全skipped、AI calls0、Facebook writes0。不是新補稿／發文驗收。
+- records/reviews/weekly-2026-11-01.json真回讀兩個完整7日已發清單：10/25 20:00–11/1 20:00共16篇；前窗10/18 20:00–10/25 20:00共23篇。當前followers真0，非歷史截止followers，不能歸因語言或名稱。觀察時10/31萬聖節已滿64.25h，known_owner_reactions=1，未把本人讚算外部互動。
+- 互動擴充欄位真HTTP400/code10，需要pages_read_user_content或Page Public Content Access；退回基本已發清單成功。reaction/comment/share/外部互動/海外/非追蹤reach仍null/N/A。未索取新權限、沒有把缺值填0，沒有宣稱找到成長題材。
+- weekly分析現由既有GitHub同一workflow接手，不新增cron。舊ChatGPT weekly仍false、停用原因unknown，不冒稱舊任務已恢復。下一截止11/8 20:00台北，由之後第一個原有runner補跑，名義20:17、不保證準點。自然週日續跑尚待觀測；三天既有流程保留。
+- Meta官方清單刷新後，本Reel11/3 16:30仍一筆公開、日文19:30與11/4兩篇均不變。現在未到發文時，不重送、不清鎖；正式Post ID與到點配送仍待核。
+
 ## 2026-11-03 10:40 中斷續作：週日分析已接入既有 GitHub 流程，實際 API 驗收待執行
 - fresh main1691946確認 PR2、Reels真預約與歷史紀錄均已保存。官方已排定清單重新從伺服器載入，11/3 16:30本Reel仍只有一筆、公開；19:30日文與11/4兩篇不變。尚未到點，不重送、不稱已發布。
 - 舊 ChatGPT weekly 真false、原因平台未提供；不反覆重啟。新增唯讀 weekly_performance_review.py，使用現有 cat-unattended-replenish.yml 同一cron與concurrency，不新增任務。週日20:00台北為資料截止，既有runner首次於截止後啟動即執行；GitHub延遲時明示實際時間，不保證20:00準點。
