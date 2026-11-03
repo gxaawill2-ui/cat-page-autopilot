@@ -6,7 +6,7 @@
   "image_sha256": "a271cd389b3055b7c0927caebfbc61de509e7b0053eb134f4f45978c5c164a81",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/a271cd389b3055b7c0927caebfbc61de509e7b0053eb134f4f45978c5c164a81.jpg",
   "image_qa": false,
-  "image_qa_method": "vision FAIL; held",
+  "image_qa_method": "image retry armed unknown",
   "scene": "A hand-painted book illustration of 阿斑, a tuxedo cat with bright yellow eyes, peering intently into a narrow gap behind a wooden kitchen chair. He is mid-stretch, one white-socked paw reaching forward with intense focus. Warm evening sunlight filters through a window, casting soft shadows and highlighting his sleek black fur and snowy white bib.",
   "prepared_at": "2026-11-03T10:03:14.032634+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
