@@ -5,6 +5,7 @@ Fail closed; never post immediately and never replay uncertain writes.
 import base64, datetime as dt, hashlib, io, json, os, re, subprocess, sys
 import urllib.request, urllib.error, time
 import cloudflare_ai as cloudflare
+import content_strategy as strategy
 from pathlib import Path
 from PIL import Image, ImageOps
 import meta_native_schedule as native
@@ -50,6 +51,7 @@ def chat(messages,key,model,json_object=False):
 
 def content(day,slot,key,raw_sink=None):
     language=slot_language(day,slot)
+    variant=strategy.caption_variant(day,slot,language)
     characters=base.read(ROOT/"state/characters.json")["characters"]
     character=characters[(day.toordinal()+SLOTS.index(slot))%len(characters)]
     actor,appearance=character["name"],character["appearance"]
@@ -61,6 +63,7 @@ def content(day,slot,key,raw_sink=None):
         f"Taipei date {day} time {slot}. Caption language={language}. Character={actor}, {appearance}. "
         f"Personality: {character['personality']}. Story angle: {character['story_style']}. "
         "Use a specific setup and an unexpected punchline or emotional payoff; no generic descriptions or hashtags.")
+    request+=strategy.caption_guidance(variant)
     raw=chat([{"role":"system","content":"Produce one original family-friendly social post as JSON."},
               {"role":"user","content":request}],key,TEXT,json_object=True)
     if raw_sink is not None: raw_sink(raw)
@@ -73,6 +76,7 @@ def content(day,slot,key,raw_sink=None):
         raise ValueError("AI content failed length checks")
     if "http" in item["caption"].lower():
         raise ValueError("Unapproved link")
+    strategy.require_caption_format(item["caption"],variant)
     return item,language
 
 def make_image(scene,key):
@@ -118,7 +122,7 @@ def slots_to_fill(now):
             due=dt.datetime.fromisoformat(str(day)+"T"+slot).replace(tzinfo=TZ)
             lead=(due-now).total_seconds()
             record=ROOT/"state/meta_native"/(str(day)+"-"+slot.replace(":","")+".json")
-            if 3600<lead<2.9*86400 and not record.exists():
+            if 3600<lead<2.9*86400 and not record.exists() and strategy.should_generate(day,slot):
                 yield day,slot
 
 def generation_file(day,slot):
@@ -149,6 +153,7 @@ def commit_queue(day,slot,item,language,jpg,previous=None):
         "image_qa":False,"image_qa_method":"pending; never schedule before vision PASS",
         "scene":item["scene"],"prepared_at":dt.datetime.now(TZ).isoformat(),
         "source_record":"Cloudflare Workers AI original from prompt","image_model":IMAGE,
+        "caption_format":strategy.caption_variant(day,slot,language),
         "text_model":TEXT,"vision_model":VISION,"topic":str(item.get("topic",""))[:80]}
     record["image_attempts"]=2 if previous is not None else 1
     if previous is not None:
