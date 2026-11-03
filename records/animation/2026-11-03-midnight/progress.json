@@ -1,6 +1,6 @@
 {
   "title": "阿橘的深夜罐罐任務",
-  "phase": "v2_render_in_progress_not_approved",
+  "phase": "v2_delivered_for_user_review_NOT_APPROVED_FOR_PUBLISHING",
   "spec": {
     "width": 1080,
     "height": 1920,
@@ -30,5 +30,24 @@
     "Subtle breathing and damped head startle",
     "Lift-aware paw rotation and contact shadows",
     "Subtitle waits until can rolls"
-  ]
+  ],
+  "movie": "ajiu-midnight-mission-v2.mp4",
+  "movie_sha256": "49561cee0bcb97489db929ceeac2eac6653b440db4ad7f7dcae68c92bbf8cf29",
+  "movie_library_file_id": "libfile_7363005c15748191b50de1d9d67af34b",
+  "all_frames_decoded": 360,
+  "technical_pass": true,
+  "full_quality_approved": false,
+  "realtime_av_playback_verified": false,
+  "visual_review": [
+    "Original character and kitchen preserved; no regeneration",
+    "No obvious missing limbs or abrupt dislocation in reviewed sheets",
+    "Can push followed by recoil is more readable than v1",
+    "Walking still has visible cutout/rig characteristics",
+    "Facial acting uses head motion, ears and blink only; no new hand-drawn expression frames"
+  ],
+  "review_method": "Decoded all 360 frames; visually inspected temporal sheets 00 through 14 and keyframes. This is not a claim of real-time audiovisual playback.",
+  "next_step": "Review delivered MP4 at normal speed with sound; do not publish. If animation quality is insufficient, continue existing rig/assets and address cutout motion and facial acting.",
+  "render_command": "python media/reels/2026-11-03-midnight/animate.py",
+  "qa_command": "python media/reels/2026-11-03-midnight/qa_movie.py",
+  "resume_branch": "work/20261103-midnight-resume"
 }
