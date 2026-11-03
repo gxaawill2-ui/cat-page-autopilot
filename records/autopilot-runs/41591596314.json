@@ -1,0 +1,44 @@
+{
+  "run_id": "41591596314",
+  "started_at": "2026-11-03T14:42:44.273772+08:00",
+  "prepared": [
+    "2026-11-05T12:30"
+  ],
+  "scheduled": [
+    {
+      "slot": "2026-11-05T12:30",
+      "post_id": "1346385028565797_122108679219515576",
+      "status": "scheduled_api_verified"
+    }
+  ],
+  "held": [
+    {
+      "slot": "2026-11-03T16:30",
+      "reason": "Minimum 90-minute separation from a reserved or uncertain slot"
+    },
+    {
+      "slot": "2026-11-04T12:30",
+      "reason": "vision FAIL; held"
+    },
+    {
+      "slot": "2026-11-05T19:30",
+      "reason": "visual quality rejected"
+    }
+  ],
+  "errors": [],
+  "immediate_publish_calls": 0,
+  "content_strategy": {
+    "effective": "2026-11-04",
+    "pilot_slots": [
+      "12:30",
+      "19:30"
+    ],
+    "targets": [
+      "2026-11-03T16:30",
+      "2026-11-04T12:30",
+      "2026-11-05T12:30",
+      "2026-11-05T19:30"
+    ]
+  },
+  "completed_at": "2026-11-03T14:44:44.938289+08:00"
+}
