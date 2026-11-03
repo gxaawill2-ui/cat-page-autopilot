@@ -126,12 +126,12 @@ def can_roll(t):
 def pose(t):
     walk=180*ramp(t,4.35,8.05)
     startle=(ramp(t,9.28,9.43)-ramp(t,10.7,11.3))
-    stretch=.68*ramp(t,11.55,12.65)*(1-.2*ramp(t,13.3,14.4))
+    stretch=.25*ramp(t,11.55,12.65)*(1-.2*ramp(t,13.3,14.4))
     root=350+walk-15*startle-10*stretch
     bob=4*math.sin(walk/90*math.pi*2)*math.sin(math.pi*min(walk/180,1))
     breath=2.0*math.sin(t*2.1)
-    hip=np.array([root-112,1190+bob-48*stretch-6*startle+breath*.5])
-    shoulder=np.array([root+120,1180+bob+39*stretch-9*startle+breath])
+    hip=np.array([root-112,1258+bob-15*stretch-4*startle+breath*.5])
+    shoulder=np.array([root+120,1250+bob+12*stretch-5*startle+breath])
     feet={};contacts={}
     for k,offset,phase in [('near_fore',132,0),('far_fore',164,.5),('near_hind',-130,.5),('far_hind',-83,0)]:
         feet[k],contacts[k]=foot_motion(t,offset,phase)
@@ -141,7 +141,7 @@ def pose(t):
     roll=can_roll(t)
     pushed=np.array([790+roll*.7,1365.])
     recoil=ramp(t,9.38,9.85)
-    target=lerp(pushed,(715,1336),recoil)
+    target=lerp(pushed,(735,1380),recoil)
     feet['near_fore']=lerp(feet['near_fore'],target,reach)
     contacts['near_fore']=contacts['near_fore'] and reach<.000001
     # Stagger the two landing steps; each foot stops moving after contact.
@@ -169,10 +169,10 @@ def render(t,debug=False):
         foot=p['feet'][key];a=(sh if fore else hip).copy()
         if not near:a+=np.array([18,-12])
         ankle=foot+np.array([-6,-34 if near else -29])
-        l1,l2=(116,146) if fore else (136,142)
+        l1,l2=(82,102) if fore else (93,106)
         knee=ik(a,ankle,l1,l2,1 if fore else -1)
-        segment(canvas,'fore_upper' if fore else 'thigh',a,knee,.43 if near else .38,not near)
-        segment(canvas,'fore_lower' if fore else 'shin',knee,ankle,.39 if near else .35,not near)
+        segment(canvas,'fore_upper' if fore else 'thigh',a,knee,.35 if near else .31,not near)
+        segment(canvas,'fore_lower' if fore else 'shin',knee,ankle,.33 if near else .29,not near)
         paw=SPRITES[('fore_paw' if fore else 'hind_paw') if near else ('far_fore_paw' if fore else 'far_hind_paw')]
         if not near:paw=ImageEnhance.Brightness(paw).enhance(.79)
         lift=max(0,(GROUND-(18 if not near else 0))-foot[1])
@@ -183,10 +183,10 @@ def render(t,debug=False):
         if debug:
             d=ImageDraw.Draw(canvas);d.line([tuple(a),tuple(knee),tuple(ankle)],fill='cyan',width=3)
     leg('far_hind',False,False);leg('far_fore',False,True)
+    leg('near_hind',True,False);leg('near_fore',True,True)
     body=SPRITES['body'];v=sh-hip;u=v/np.linalg.norm(v)
     M=np.column_stack((v/235,np.array([-u[1],u[0]])*.86))
     affine_sprite(canvas,body,(75,164),hip+(-5,-25),M)
-    leg('near_hind',True,False);leg('near_fore',True,True)
     # Can is stationary until contact, then decelerates rolling with angle=s/r.
     roll=can_roll(t)
     cpos=np.array([885+roll,GROUND-52*.86])
@@ -238,7 +238,7 @@ def main():
         for t in [0,1.7,3.3,4.8,6.2,8.5,9.3,9.7,11.5,12.6,14.1,14.8]:
             im,_=render(t);im.resize((540,960)).save(ROOT/'qa'/('key-%04d.jpg'%int(t*10)),quality=92)
         return
-    audio();out=ROOT/'ajiu-midnight-mission-v2.mp4'
+    audio();out=ROOT/'ajiu-midnight-mission-v3.mp4'
     cmd=['ffmpeg','-y','-loglevel','error','-f','rawvideo','-vcodec','rawvideo','-pix_fmt','rgb24','-s',f'{W}x{H}','-r',str(FPS),'-i','-','-i',str(ROOT/'original-sound.wav'),'-c:v','libx264','-preset','fast','-crf','18','-pix_fmt','yuv420p','-c:a','aac','-b:a','160k','-movflags','+faststart','-shortest',str(out)]
     pipe=subprocess.Popen(cmd,stdin=subprocess.PIPE);track=[]
     try:

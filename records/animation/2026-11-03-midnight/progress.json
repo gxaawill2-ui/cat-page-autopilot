@@ -1,6 +1,6 @@
 {
   "title": "阿橘的深夜罐罐任務",
-  "phase": "v2_delivered_for_user_review_NOT_APPROVED_FOR_PUBLISHING",
+  "phase": "v3_anatomy_repair_rendering",
   "spec": {
     "width": 1080,
     "height": 1920,
@@ -49,5 +49,13 @@
   "next_step": "Review delivered MP4 at normal speed with sound; do not publish. If animation quality is insufficient, continue existing rig/assets and address cutout motion and facial acting.",
   "render_command": "python media/reels/2026-11-03-midnight/animate.py",
   "qa_command": "python media/reels/2026-11-03-midnight/qa_movie.py",
-  "resume_branch": "work/20261103-midnight-resume"
+  "resume_branch": "work/20261103-midnight-resume",
+  "user_rejected_v2": true,
+  "changes_v3": [
+    "Shorten forelimb bones from 116/146 to 82/102 px, hindlimb from 136/142 to 93/106 px",
+    "Lower torso and shoulders to maintain natural limb proportions",
+    "Render all upper limbs behind torso so thigh roots do not bulge in front of body",
+    "Narrow limb artwork and reduce exaggerated stretching",
+    "Recoil paw kept lower and closer to natural joint range"
+  ]
 }

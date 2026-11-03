@@ -4,7 +4,7 @@ import subprocess,json,hashlib,wave
 import numpy as np
 from PIL import Image,ImageDraw
 ROOT=Path(__file__).resolve().parent
-movie=ROOT/'ajiu-midnight-mission-v2.mp4'
+movie=ROOT/'ajiu-midnight-mission-v3.mp4'
 probe=json.loads(subprocess.check_output(['ffprobe','-v','error','-show_format','-show_streams','-of','json',str(movie)]))
 subprocess.run(['ffmpeg','-v','error','-i',str(movie),'-f','null','-'],check=True)
 track=json.loads((ROOT/'qa/motion-track.json').read_text())
@@ -17,7 +17,7 @@ for a,b in zip(track,track[1:]):
         if x['contact'] and y['contact']:drift.append(step)
 for row in track:
     for key,(a,k,b) in row['joints'].items():
-        expected=(116,146) if 'fore' in key else (136,142)
+        expected=(82,102) if 'fore' in key else (93,106)
         bone_error.extend([abs(np.linalg.norm(np.array(k)-a)-expected[0]),abs(np.linalg.norm(np.array(b)-k)-expected[1])])
 # Inspect all 360 output frames, grouped into 24-frame temporal sheets.
 cmd=['ffmpeg','-v','error','-i',str(movie),'-vf','crop=980:650:70:820,scale=240:160','-f','rawvideo','-pix_fmt','rgb24','-']
