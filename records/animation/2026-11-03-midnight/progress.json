@@ -1,55 +1,25 @@
 {
-  "title": "阿橘的深夜罐罐任務",
-  "phase": "v3_anatomy_revision_delivered_for_user_review",
+  "title": "阿橘深夜罐罐任務",
+  "phase": "v4_flat_2d_cartoon_delivered_for_review",
+  "rejected_versions": [
+    "v2",
+    "v3"
+  ],
+  "method": "Original code-drawn flat 2D cartoon; continuous rounded limb paths, concealed roots, planted-paw gait; no painted skeletal cutouts",
   "spec": {
     "width": 1080,
     "height": 1920,
     "fps": 24,
     "seconds": 15
   },
-  "character_setting": {
-    "name": "阿橘",
-    "appearance": "orange short-haired tabby, amber eyes, cream muzzle and paws",
-    "personality": "food-loving optimistic troublemaker",
-    "story_style": "small grand plans with a gentle comic reversal"
-  },
-  "method": "ImageGen original painted parts + original kitchen plate; deterministic skeletal affine parts, two-link inverse kinematics and stance-locked paws; procedural original can rolling and synthesized audio",
-  "assets_generated": 2,
-  "visual_keyframe_review": "Iterated limb anatomical anchors and can center-of-rotation; full film QA not yet done",
-  "facebook_writes": 0,
-  "do_not_publish_before_full_QA": true,
-  "cost_twd": 0,
-  "source_atlas": "exec-05938067-46e3-4713-934c-b6dad8ea5bcb.png",
-  "source_background": "exec-d03f6eac-39d9-4374-bec3-a961bb30a04c.png",
-  "resumed_from": "841aa02010c505fdac497cfa58e916cdf43d27a8",
-  "existing_v1_found_complete": true,
-  "existing_v1_sha256": "5d676e7370802f53a6bcf2ed56fe80d4e9ff37fa48c320b99f9fd81797595b1b",
-  "changes": [
-    "Paw follows can push before recoiling",
-    "Stagger front paw landing and lock after contact",
-    "Subtle breathing and damped head startle",
-    "Lift-aware paw rotation and contact shadows",
-    "Subtitle waits until can rolls"
-  ],
-  "movie": "ajiu-midnight-mission-v3.mp4",
-  "movie_sha256": "c2fce2b6e6e9051853b3b240c5b8c90ab43ff462e939b47e1d0385cef3e93a3f",
-  "movie_library_file_id": "libfile_5a518727fb1881919a82094925e2b1f1",
-  "all_frames_decoded": 360,
-  "technical_pass": true,
+  "music": "Original synthesized pentatonic melody and warm chord accompaniment, 48kHz stereo AAC; no external recordings",
+  "movie_library_file_id": "libfile_b1edacf6188481918bf690ce9c494523",
+  "movie_sha256": "c4e98ab827683fdb77060e0c137aacc845061eb8a7f3b32b316ef15579575722",
+  "verification": "360 frames decoded without error; 30 timeline samples and keyframes visually inspected; normal-speed audiovisual subjective acceptance pending",
   "full_quality_approved": false,
-  "realtime_av_playback_verified": false,
-  "visual_review": "Reviewed standing, stride, reach, recoil and settle poses. Upper thigh no longer rendered over body. Full normal-speed audiovisual review not claimed.",
-  "review_method": "Decoded all 360 frames; visually inspected temporal sheets 00 through 14 and keyframes. This is not a claim of real-time audiovisual playback.",
-  "next_step": "Await user feedback on delivered v3 proportions and movement. Keep Facebook publishing on hold.",
-  "render_command": "python media/reels/2026-11-03-midnight/animate.py",
-  "qa_command": "python media/reels/2026-11-03-midnight/qa_movie.py",
-  "resume_branch": "work/20261103-midnight-resume",
-  "user_rejected_v2": true,
-  "changes_v3": [
-    "Shorten forelimb bones from 116/146 to 82/102 px, hindlimb from 136/142 to 93/106 px",
-    "Lower torso and shoulders to maintain natural limb proportions",
-    "Render all upper limbs behind torso so thigh roots do not bulge in front of body",
-    "Narrow limb artwork and reduce exaggerated stretching",
-    "Recoil paw kept lower and closer to natural joint range"
-  ]
+  "facebook_writes": 0,
+  "cost_twd": 0,
+  "do_not_publish_before_full_QA": true,
+  "render": "cd media/reels/2026-11-03-cartoon && python animate.py",
+  "resume_branch": "work/20261103-midnight-resume"
 }
