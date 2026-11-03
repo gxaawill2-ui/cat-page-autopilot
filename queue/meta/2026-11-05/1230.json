@@ -37,5 +37,6 @@
       "image_attempts": 1,
       "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The image contains text/calligraphy in the upper left corner.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": true,\n    \"safe_content\": true,\n    \"no_text_or_signature\": false,\n    \"no_watermark\": true\n  }\n}"
     }
-  ]
+  ],
+  "image_qa_response": "{\"decision\": \"PASS\", \"reason\": \"The image clearly shows a white cat with blue eyes sitting on a pile of laundry, with anatomy appearing consistent and no visible text, watermarks, or safety issues.\", \"checks\": {\"cat_visible\": true, \"coherent_anatomy\": true, \"safe_content\": true, \"no_text_or_signature\": true, \"no_watermark\": true}}"
 }
