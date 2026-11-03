@@ -1,0 +1,30 @@
+{
+  "weekly_target": [
+    2,
+    3
+  ],
+  "suggested_days": [
+    "TU",
+    "TH",
+    "SA"
+  ],
+  "suggested_time": "16:30",
+  "timezone": "Asia/Taipei",
+  "daily_all_format_cap": 4,
+  "minimum_spacing_minutes": 90,
+  "first_video": "c2e070db09760411a4c3c8d142bd77f48d4bea1fd42194cddecae98d88bdf575",
+  "next_episodes": [
+    {
+      "date": "2026-11-05",
+      "topic": "小雪與突然滾走的毛線：觀察、追逐、抱球假裝沒事",
+      "status": "planned_not_generated_not_reserved"
+    },
+    {
+      "date": "2026-11-07",
+      "topic": "小夜值夜班：守門、聽見鑰匙、蹭人回家",
+      "status": "planned_not_generated_not_reserved"
+    }
+  ],
+  "production_mode": "Original authored animation, normal Work production; unattended Reels generation/publication not implemented",
+  "publish_only_after_quality_and_real_inventory": true
+}

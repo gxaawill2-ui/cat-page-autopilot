@@ -1,0 +1,19 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-03T16:30",
+  "status": "publishing",
+  "content_type": "reel",
+  "caption": "新貓床還沒躺熱，阿橘已經驗收完紙箱。\n結論：五星好評，床只是運費。\nThe bed was just the delivery fee. 📦🐾",
+  "caption_sha256": "c4ac90945b47a463e4b6332cd92614bc5aeb4e21060199c7d81c9ec1f43e494f",
+  "image_sha256": "c2e070db09760411a4c3c8d142bd77f48d4bea1fd42194cddecae98d88bdf575",
+  "video_sha256": "c2e070db09760411a4c3c8d142bd77f48d4bea1fd42194cddecae98d88bdf575",
+  "duration_seconds": 12,
+  "source": "media/reels/2026-11-03/render_box_story.py",
+  "submission_count": 0,
+  "post_id": null,
+  "retry_allowed": false,
+  "planned_daily_total": 3,
+  "maximum_daily": 4,
+  "method": "Official Meta Business Suite future scheduling; never immediate publish without slot check",
+  "quality_manifest": "media/reels/2026-11-03/manifest.json"
+}

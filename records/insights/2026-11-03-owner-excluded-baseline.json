@@ -1,0 +1,20 @@
+{
+  "checked_at": "2026-11-03T10:07:49.716393+08:00",
+  "source": "Official Meta Business Suite 2026-10-05 through 2026-11-01, observed UI; not a fresh same-age cohort",
+  "views": 1045,
+  "viewers": 8,
+  "non_follower_view_percentage": 100,
+  "non_follower_unique_reach": null,
+  "followers_observed": 0,
+  "content_interactions_total": 6,
+  "verified_external_interactions": null,
+  "known_owner_halloween_reactions": 1,
+  "halloween_example_total_1": {
+    "known_owner_reactions": 1,
+    "reactions_after_known_owner_exclusion": 0,
+    "verified_external_reactions": 0,
+    "reactor_attribution_complete": false,
+    "external_engagement_note": "Positive residual is unverified; never label aggregate likes as outside engagement."
+  },
+  "warning": "Non-follower views are not unique non-follower reach. Aggregates may include owner/admin viewing. No external growth claim."
+}

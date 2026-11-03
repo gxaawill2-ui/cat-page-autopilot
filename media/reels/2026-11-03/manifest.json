@@ -1,0 +1,49 @@
+{
+  "title": "The Box Test",
+  "duration_seconds": 12,
+  "fps": 24,
+  "size": [
+    720,
+    1280
+  ],
+  "shots": [
+    {
+      "seconds": [
+        0,
+        4
+      ],
+      "action": "Cat taps expensive bed; moving paw, tail, blink"
+    },
+    {
+      "seconds": [
+        4,
+        8
+      ],
+      "action": "Cat runs/leaps into cardboard packaging; moving limbs and impact"
+    },
+    {
+      "seconds": [
+        8,
+        12
+      ],
+      "action": "Cat peeks, grips rim, blinks and settles to sleep"
+    }
+  ],
+  "not_static_zoom": true,
+  "art": "All original vector-like shapes authored in this script; no stock or generated still image",
+  "sound": "Original synthesized marimba and paper rustle; no external samples",
+  "cost_ntd": 0,
+  "sha256": "c2e070db09760411a4c3c8d142bd77f48d4bea1fd42194cddecae98d88bdf575",
+  "qa": {
+    "decision": "PASS",
+    "three_shots_manually_inspected": true,
+    "twelve_motion_samples_inspected": true,
+    "distinct_articulated_paw_leap_and_sleep": true,
+    "static_pan_zoom_only": false,
+    "video_codec": "h264",
+    "audio_codec": "aac",
+    "duration_seconds": 12,
+    "rights": "All shapes and music synthesized by repository source; no outside assets",
+    "not_full_naturalistic_motion": "Deliberately stylized original 2D character animation"
+  }
+}
