@@ -9,11 +9,15 @@
   "video_sha256": "c2e070db09760411a4c3c8d142bd77f48d4bea1fd42194cddecae98d88bdf575",
   "duration_seconds": 12,
   "source": "media/reels/2026-11-03/render_box_story.py",
-  "submission_count": 0,
+  "submission_count": 1,
   "post_id": null,
   "retry_allowed": false,
   "planned_daily_total": 3,
   "maximum_daily": 4,
   "method": "Official Meta Business Suite future scheduling; never immediate publish without slot check",
-  "quality_manifest": "media/reels/2026-11-03/manifest.json"
+  "quality_manifest": "media/reels/2026-11-03/manifest.json",
+  "submission_started_at": "2026-11-03T02:16:04.324Z",
+  "ui_confirmed_schedule": "2026-11-03T16:30:00+08:00",
+  "ui_timezone_label": "Asia/Shanghai (UTC+08:00, same offset as Asia/Taipei for this date)",
+  "audience": "Public"
 }
