@@ -6,7 +6,7 @@
   "image_sha256": "7b62cc1968b84b04d8d92ba2aab84b9e93ea59df18bcb8149fe2566c607f0fb0",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/7b62cc1968b84b04d8d92ba2aab84b9e93ea59df18bcb8149fe2566c607f0fb0.jpg",
   "image_qa": false,
-  "image_qa_method": "vision armed unknown",
+  "image_qa_method": "vision FAIL; held",
   "scene": "A original cinematic 3D illustration of 阿斑, a tuxedo cat with bright yellow eyes, peering intently into a narrow gap behind a wooden kitchen chair. He is mid-stretch, one white-socked paw reaching forward with intense focus. Warm evening sunlight filters through a window, casting soft shadows and highlighting his sleek black fur and snowy white bib.",
   "prepared_at": "2026-11-03T14:43:03.233319+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
