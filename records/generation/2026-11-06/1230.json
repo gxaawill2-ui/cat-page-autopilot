@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-06T12:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-04T03:28:43.285371+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"出門工作八小時。\\n回家看到牠坐著不動。\\n原來是在等我開罐頭，不是想我。\",\n  \"scene\": \"In a cozy, sun-drenched living room, 小夜, a solid black short-haired cat with striking green eyes and a small white chest patch, sits perfectly upright on a wooden floor. He maintains a dignified, observant pose, staring intensely at a closed tin can rather than the door, his expression one of dry, judgmental patience. Hand-painted book illustration style with soft, natural light.\",\n  \"topic\": \"Homecoming irony\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"出門工作八小時。\\n回家看到牠坐著不動。\\n原來是在等我開罐頭，不是想我。\",\n  \"scene\": \"In a cozy, sun-drenched living room, 小夜, a solid black short-haired cat with striking green eyes and a small white chest patch, sits perfectly upright on a wooden floor. He maintains a dignified, observant pose, staring intensely at a closed tin can rather than the door, his expression one of dry, judgmental patience. Hand-painted book illustration style with soft, natural light.\",\n  \"topic\": \"Homecoming irony\"\n}",
+  "content": {
+    "caption": "出門工作八小時。\n回家看到牠坐著不動。\n原來是在等我開罐頭，不是想我。",
+    "scene": "In a cozy, sun-drenched living room, 小夜, a solid black short-haired cat with striking green eyes and a small white chest patch, sits perfectly upright on a wooden floor. He maintains a dignified, observant pose, staring intensely at a closed tin can rather than the door, his expression one of dry, judgmental patience. Hand-painted book illustration style with soft, natural light.",
+    "topic": "Homecoming irony"
+  },
+  "language": "zh-Hant"
 }
