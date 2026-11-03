@@ -8,6 +8,22 @@ import meta_native_schedule as native
 ROOT=base.ROOT
 ANCHOR=dt.date(2026,10,27)
 
+def external_reactions(post_id,total):
+    """Known owner actions are never presented as audience growth.
+
+    Without complete reactor attribution, aggregate positive counts cannot prove
+    outside engagement. Never read or publish private owner identifiers.
+    """
+    path=ROOT/'state/engagement_exclusions.json'
+    exclusions=base.read(path).get('known_owner_reactions',{}) if path.exists() else {}
+    known=count(exclusions.get(str(post_id),{}).get('count')) or 0
+    residual=max(total-known,0) if total is not None else None
+    verified=0 if residual==0 and total is not None else None
+    return {'known_owner_reactions':known,'reactions_after_known_owner_exclusion':residual,
+            'verified_external_reactions':verified,
+            'reactor_attribution_complete':False,
+            'external_engagement_note':'Positive residual is unverified; never label aggregate likes as outside engagement.'}
+
 def completed_period(now):
     index=(now.astimezone(base.TZ).date()-ANCHOR).days//3-1
     if index<0: return None
@@ -19,7 +35,7 @@ def count(value):
 
 def row(post,now):
     age=(now-native.stamp(post['created_time'])).total_seconds()/3600
-    return {'post_id':post['id'],'created_time':post['created_time'],
+    result={'post_id':post['id'],'created_time':post['created_time'],
             'age_hours':round(age,2),'caption':post.get('message'),
             'reactions':count(post.get('reactions',{}).get('summary',{}).get('total_count')),
             'comments':count(post.get('comments',{}).get('summary',{}).get('total_count')),
@@ -27,7 +43,9 @@ def row(post,now):
             'reach':None,'impressions':None,'overseas_share':None,
             'US_reach':None,'JP_reach':None,'PH_reach':None,
             'interactions_per_1000_reach':None,'share_rate':None,
-            'attributed_new_followers':None}
+            'attributed_new_followers':None,'non_follower_reach':None}
+    result.update(external_reactions(post['id'],result['reactions']))
+    return result
 
 def run(now=None):
     now=now or dt.datetime.now(base.TZ)

@@ -153,7 +153,8 @@ def commit_queue(day,slot,item,language,jpg,previous=None):
         "image_qa":False,"image_qa_method":"pending; never schedule before vision PASS",
         "scene":item["scene"],"prepared_at":dt.datetime.now(TZ).isoformat(),
         "source_record":"Cloudflare Workers AI original from prompt","image_model":IMAGE,
-        "caption_format":strategy.caption_variant(day,slot,language),
+        "caption_format":(previous.get("caption_format","legacy_prepared") if previous is not None
+                          else strategy.caption_variant(day,slot,language)),
         "text_model":TEXT,"vision_model":VISION,"topic":str(item.get("topic",""))[:80]}
     record["image_attempts"]=2 if previous is not None else 1
     if previous is not None:
@@ -198,7 +199,9 @@ def run(dry=False):
         if qp.exists():
             native.reconcile(base.read(qp),old,meta)
     report={"run_id":os.environ.get("GITHUB_RUN_ID"),"started_at":now.isoformat(),
-            "prepared":[],"scheduled":[],"held":[],"errors":[],"immediate_publish_calls":0}
+            "prepared":[],"scheduled":[],"held":[],"errors":[],"immediate_publish_calls":0,
+            "content_strategy":{"effective":str(strategy.START),"pilot_slots":list(strategy.PILOT_SLOTS),
+                                "targets":[str(day)+"T"+slot for day,slot in targets]}}
     for day,slot in targets:
         slotkey=str(day)+"T"+slot
         planned=dt.datetime.fromisoformat(slotkey).replace(tzinfo=TZ)

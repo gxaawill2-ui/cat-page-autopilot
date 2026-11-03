@@ -60,6 +60,17 @@ class ContentStrategyTests(unittest.TestCase):
     def test_daily_safety_limit_remains_four(self):
         self.assertEqual(a.base.read(a.ROOT/"state/policy.json")["daily_limit"],4)
 
+    def test_retrying_legacy_image_does_not_relabel_old_caption_as_new_experiment(self):
+        from types import SimpleNamespace
+        with tempfile.TemporaryDirectory() as tmp,patch.object(a,"ROOT",Path(tmp)),patch.object(a.subprocess,"run",return_value=SimpleNamespace(returncode=0)):
+            day=dt.date(2026,11,4);slot="12:30"
+            path=Path(tmp)/"queue/meta"/str(day)/"1230.json"
+            old={"caption":"Old one-line caption.","image_qa":False,"image_qa_method":"image retry armed unknown","image_attempts":1}
+            a.base.write(path,old)
+            result=a.commit_queue(day,slot,{"caption":old['caption'],"scene":"original scene","topic":"test"},"zh-Hant",b'fixture-image',previous=old)
+            self.assertEqual(result['caption'],old['caption'])
+            self.assertEqual(result['caption_format'],'legacy_prepared')
+
 
 if __name__=="__main__":
     unittest.main()

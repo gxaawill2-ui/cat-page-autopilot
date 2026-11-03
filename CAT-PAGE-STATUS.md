@@ -1,3 +1,9 @@
+## 2026-11-03 本人互動排除及舊稿實驗標籤修正已部署（最新）
+- PR#2正式合併後補上真計算：已知本人萬聖節讚=1，從外部成效排除；其他正值若無完整reactor識別，不當成確定外部互動。非追蹤者reach缺值仍null/N/A；不儲存私人owner ID。
+- 修正舊稿圖像限次重試時被誤標新caption_format的風險：保留原格式，無舊標籤則legacy_prepared，不改原文，不算新試驗組。93項scripts安全測試與既有30項根目錄測試通過。
+- 真補稿報告新增content_strategy與實際targets，供正式執行驗證是否只嘗試新規則時段；不改任何已排/已發/未知內容。
+- 下一步：既有GitHub補稿workflow單次受控執行（不是自然cron驗收）；Meta品質/公開/非追蹤資料及Reels製作仍繼續。
+
 ## 2026-11-03 PR#2已正式部署／Meta與Reels檢查續作中（最新）
 - PR#2由draft轉ready後合併main，merge691e7344aa59c9bf7eb4496f235ffa1b570945d5；分支88 scripts＋30根目錄安全測試通過，GitHub validate check125674995751 success。
 - 官方Planner已核對11/3 19:30日文、11/4 09:30及19:30既有預約仍在，不取消不重排。11/5 09:30舊image_armed_unknown保留，不清鎖不重試。

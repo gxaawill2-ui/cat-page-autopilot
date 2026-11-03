@@ -1,0 +1,17 @@
+{
+  "policy": "Do not treat owner likes as external interaction; unavailable actor attribution remains N/A",
+  "known_owner_reactions": {
+    "1346385028565797_122107681881515576": {
+      "count": 1,
+      "source": "User explicitly confirmed the Halloween reaction was their own like",
+      "verified_external_reaction_count": null
+    },
+    "122107681881515576": {
+      "count": 1,
+      "source": "Same post, official UI numeric ID alias; not an additional reaction",
+      "verified_external_reaction_count": null
+    }
+  },
+  "missing_data": null,
+  "private_owner_identifiers_stored": false
+}
