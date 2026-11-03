@@ -6,7 +6,7 @@
   "image_sha256": "68524eb5a7dffb849eb0834b81897dc09dd7598df57070759a2c981a1422b7f0",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/68524eb5a7dffb849eb0834b81897dc09dd7598df57070759a2c981a1422b7f0.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "A original cinematic 3D illustration of 小雪, an elegant white long-haired cat with striking blue eyes and a tiny pink nose. She is sitting poised atop a chaotic mountain of colorful laundry, looking regal and dignified despite the mess, until she spots a single dried fish snack wedged deep in a stray sock.",
   "prepared_at": "2026-11-03T14:42:48.300040+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
