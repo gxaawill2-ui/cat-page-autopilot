@@ -51,7 +51,7 @@
     "method": "Release exact existing scheduled Reel via official Publish Now; never create or upload a second Reel",
     "original_scheduled_time": "2026-11-03T16:30:00+08:00",
     "armed_at": "2026-11-03T02:50:35.895Z",
-    "publish_now_calls": 0,
+    "publish_now_calls": 1,
     "retry_allowed": false,
     "scope": "One-off user-directed immediate release; global schedules, cap and spacing rules unchanged",
     "preflight": {
@@ -61,6 +61,7 @@
       "matching_scheduled_reels": 1,
       "planned_total_today_including_evening": 3,
       "max_daily": 4
-    }
+    },
+    "final_confirmation_armed_at": "2026-11-03T02:51:09.781Z"
   }
 }
