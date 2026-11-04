@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-06T19:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-04T14:11:02.767686+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"ミィバオ、ついに伝説の巨大モンスター（実はただの落ち葉）と対峙！勇気ある一歩の先に待っていたのは、まさかの転倒でした。🐾\",\n  \"scene\": \"A hand-painted book illustration of Mimibao, a tiny brown tabby kitten with hazel eyes and a white chin, lunging heroically toward a single dried autumn leaf on a sunlit wooden floor. She is mid-air in a clumsy pounce, limbs slightly splayed, showing a look of intense determination before an inevitable tumble.\",\n  \"topic\": \"A brave kitten's dramatic battle against a fallen leaf.\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"ミィバオ、ついに伝説の巨大モンスター（実はただの落ち葉）と対峙！勇気ある一歩の先に待っていたのは、まさかの転倒でした。🐾\",\n  \"scene\": \"A hand-painted book illustration of Mimibao, a tiny brown tabby kitten with hazel eyes and a white chin, lunging heroically toward a single dried autumn leaf on a sunlit wooden floor. She is mid-air in a clumsy pounce, limbs slightly splayed, showing a look of intense determination before an inevitable tumble.\",\n  \"topic\": \"A brave kitten's dramatic battle against a fallen leaf.\"\n}",
+  "content": {
+    "caption": "ミィバオ、ついに伝説の巨大モンスター（実はただの落ち葉）と対峙！勇気ある一歩の先に待っていたのは、まさかの転倒でした。🐾",
+    "scene": "A hand-painted book illustration of Mimibao, a tiny brown tabby kitten with hazel eyes and a white chin, lunging heroically toward a single dried autumn leaf on a sunlit wooden floor. She is mid-air in a clumsy pounce, limbs slightly splayed, showing a look of intense determination before an inevitable tumble.",
+    "topic": "A brave kitten's dramatic battle against a fallen leaf."
+  },
+  "language": "ja"
 }
