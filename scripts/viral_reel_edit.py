@@ -60,7 +60,7 @@ def overlay(im,src,label,i,frame_no):
         box=d.textbbox((0,0),text,font=font)
         bw=box[2]-box[0]
         x=max(76, (src.W-bw)//2-26)
-        d.rounded_rectangle((x,244,x+bw+52,319),radius=23,fill=(24,28,35,220),outline=(255,211,130,145),width=2)
+        d.rounded_rectangle((x,244,x+bw+52,319),radius=23,fill=(24,28,35),outline=(255,211,130),width=2)
         d.text((x+26,254),text,font=font,fill=(255,246,224),stroke_width=1,stroke_fill=(11,13,18))
     return im
 
