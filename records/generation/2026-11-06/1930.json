@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-06T19:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-04T14:11:02.767686+08:00",
@@ -10,5 +10,6 @@
     "scene": "A hand-painted book illustration of Mimibao, a tiny brown tabby kitten with hazel eyes and a white chin, lunging heroically toward a single dried autumn leaf on a sunlit wooden floor. She is mid-air in a clumsy pounce, limbs slightly splayed, showing a look of intense determination before an inevitable tumble.",
     "topic": "A brave kitten's dramatic battle against a fallen leaf."
   },
-  "language": "ja"
+  "language": "ja",
+  "image_sha256": "b5b90055a38e43f74dad2b7297e6a78727d9219dfe1429617912c853bcbc0687"
 }
