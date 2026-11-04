@@ -1,6 +1,6 @@
 {
   "title": "阿橘的深夜罐罐任務",
-  "phase": "full_render_in_progress_not_approved",
+  "phase": "rejected_by_owner_do_not_render_or_publish",
   "spec": {
     "width": 1080,
     "height": 1920,
@@ -20,5 +20,11 @@
   "do_not_publish_before_full_QA": true,
   "cost_twd": 0,
   "source_atlas": "exec-05938067-46e3-4713-934c-b6dad8ea5bcb.png",
-  "source_background": "exec-d03f6eac-39d9-4374-bec3-a961bb30a04c.png"
+  "source_background": "exec-d03f6eac-39d9-4374-bec3-a961bb30a04c.png",
+  "owner_reviewed_at": "2026-11-04",
+  "owner_review": "Existing 2D cutout/skeletal animation is poor quality and visibly not smooth; user explicitly forbids reuse.",
+  "animation_reuse_authorized": false,
+  "render_or_publish_authorized": false,
+  "quality_acceptance": "FAILED_BY_USER",
+  "next_step": "Do not resume animate.py, rig assets, video cuts, or any rendered derivative. Restart with a fundamentally different full-motion production method using new source animation, first produce and show a short MP4 proof."
 }
