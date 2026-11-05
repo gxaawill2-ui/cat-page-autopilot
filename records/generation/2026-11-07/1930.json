@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-07T19:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-06T03:54:32.040818+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"The kitchen counter was high.\\nThe tuna can was higher.\\nI calculated the perfect jump.\\nI focused my amber eyes.\\nI launched with pure grace.\\nI landed directly in the sink.\",\n  \"scene\": \"A plump orange tabby named Ah-Ju sits inside a porcelain kitchen sink, looking startled yet unbothered. His cream paws are tucked under his chest, and his amber eyes wide. The hand-painted illustration features soft evening sunlight streaming through a window, highlighting his short-haired texture and precise anatomy.\",\n  \"topic\": \"A failed attempt at a culinary heist.\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"The kitchen counter was high.\\nThe tuna can was higher.\\nI calculated the perfect jump.\\nI focused my amber eyes.\\nI launched with pure grace.\\nI landed directly in the sink.\",\n  \"scene\": \"A plump orange tabby named Ah-Ju sits inside a porcelain kitchen sink, looking startled yet unbothered. His cream paws are tucked under his chest, and his amber eyes wide. The hand-painted illustration features soft evening sunlight streaming through a window, highlighting his short-haired texture and precise anatomy.\",\n  \"topic\": \"A failed attempt at a culinary heist.\"\n}",
+  "content": {
+    "caption": "The kitchen counter was high.\nThe tuna can was higher.\nI calculated the perfect jump.\nI focused my amber eyes.\nI launched with pure grace.\nI landed directly in the sink.",
+    "scene": "A plump orange tabby named Ah-Ju sits inside a porcelain kitchen sink, looking startled yet unbothered. His cream paws are tucked under his chest, and his amber eyes wide. The hand-painted illustration features soft evening sunlight streaming through a window, highlighting his short-haired texture and precise anatomy.",
+    "topic": "A failed attempt at a culinary heist."
+  },
+  "language": "en"
 }
