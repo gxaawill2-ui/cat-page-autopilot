@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-11-06T03:54:46.775822+08:00"
+  "started_at": "2026-11-06T03:54:46.775822+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"面對茂密的草叢\\n咪寶發出戰鬥嘶吼\\n結果只是在追一隻落單的蒲公英\",\n  \"scene\": \"A tiny brown tabby kitten named Mi Bao crouches low in a lush, sun-drenched backyard garden. Her hazel eyes are wide with intense focus, her white chin tilted upward in a brave, warrior-like pose. She is mid-pounce toward a single, floating dandelion seed drifting through the natural sunlight of a golden afternoon.\",\n  \"topic\": \"A brave kitten's dramatic encounter with a dandelion\"\n}"
 }
