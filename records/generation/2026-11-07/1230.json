@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-07T12:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-06T03:54:14.273343+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"阿斑正進行例行巡邏\\n檢查沙發底部的領土\\n以及書架後的隱密角落\\n這是一場嚴肅的調查\\n直到他在地毯縫隙中\\n發現了失蹤已久的\\n那顆傳說中的毛線球\",\n  \"scene\": \"A tuxedo cat named A-Ban with bright yellow eyes, a white bib, and white paws is peering intensely into a narrow gap between a cozy rug and a wooden bookshelf. He is lying on his side in a concentrated, investigative pose, one paw reaching tentatively forward. The art style is a warm hand-painted book illustration with soft, natural sunlight streaming through a nearby window.\",\n  \"topic\": \"A curious tuxedo cat discovers a long-lost toy during his daily household inspection.\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"阿斑正進行例行巡邏\\n檢查沙發底部的領土\\n以及書架後的隱密角落\\n這是一場嚴肅的調查\\n直到他在地毯縫隙中\\n發現了失蹤已久的\\n那顆傳說中的毛線球\",\n  \"scene\": \"A tuxedo cat named A-Ban with bright yellow eyes, a white bib, and white paws is peering intensely into a narrow gap between a cozy rug and a wooden bookshelf. He is lying on his side in a concentrated, investigative pose, one paw reaching tentatively forward. The art style is a warm hand-painted book illustration with soft, natural sunlight streaming through a nearby window.\",\n  \"topic\": \"A curious tuxedo cat discovers a long-lost toy during his daily household inspection.\"\n}",
+  "content": {
+    "caption": "阿斑正進行例行巡邏\n檢查沙發底部的領土\n以及書架後的隱密角落\n這是一場嚴肅的調查\n直到他在地毯縫隙中\n發現了失蹤已久的\n那顆傳說中的毛線球",
+    "scene": "A tuxedo cat named A-Ban with bright yellow eyes, a white bib, and white paws is peering intensely into a narrow gap between a cozy rug and a wooden bookshelf. He is lying on his side in a concentrated, investigative pose, one paw reaching tentatively forward. The art style is a warm hand-painted book illustration with soft, natural sunlight streaming through a nearby window.",
+    "topic": "A curious tuxedo cat discovers a long-lost toy during his daily household inspection."
+  },
+  "language": "zh-Hant"
 }
