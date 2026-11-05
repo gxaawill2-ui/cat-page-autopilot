@@ -1,0 +1,19 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-07T12:30",
+  "caption": "阿斑正進行例行巡邏\n檢查沙發底部的領土\n以及書架後的隱密角落\n這是一場嚴肅的調查\n直到他在地毯縫隙中\n發現了失蹤已久的\n那顆傳說中的毛線球",
+  "language": "zh-Hant",
+  "image_sha256": "72cfd0bcc49180e3d43e0dbba8e31419875177b3555d82c0c884fa53c6bb643e",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/72cfd0bcc49180e3d43e0dbba8e31419875177b3555d82c0c884fa53c6bb643e.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A tuxedo cat named A-Ban with bright yellow eyes, a white bib, and white paws is peering intensely into a narrow gap between a cozy rug and a wooden bookshelf. He is lying on his side in a concentrated, investigative pose, one paw reaching tentatively forward. The art style is a warm hand-painted book illustration with soft, natural sunlight streaming through a nearby window.",
+  "prepared_at": "2026-11-06T03:54:22.875783+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "caption_format": "micro_story",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "A curious tuxedo cat discovers a long-lost toy during his daily household inspec",
+  "image_attempts": 1
+}
