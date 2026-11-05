@@ -6,7 +6,7 @@
   "image_sha256": "0e6cdce479a093afd8d4380bee15d153614062b5d03df3028c18ced417155cce",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/0e6cdce479a093afd8d4380bee15d153614062b5d03df3028c18ced417155cce.jpg",
   "image_qa": false,
-  "image_qa_method": "vision armed unknown",
+  "image_qa_method": "vision FAIL; held",
   "scene": "A plump orange tabby named Ah-Ju sits inside a porcelain kitchen sink, looking startled yet unbothered. His cream paws are tucked under his chest, and his amber eyes wide. The hand-painted illustration features soft evening sunlight streaming through a window, highlighting his short-haired texture and precise anatomy.",
   "prepared_at": "2026-11-06T03:54:39.418507+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
