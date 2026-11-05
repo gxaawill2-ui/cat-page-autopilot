@@ -6,7 +6,7 @@
   "image_sha256": "056a7c596af367c276510dab64aff46d69db2d9c2e049dfb705574ee8cb84d5e",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/056a7c596af367c276510dab64aff46d69db2d9c2e049dfb705574ee8cb84d5e.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "A original cinematic 3D illustration of Mimibao, a tiny brown tabby kitten with hazel eyes and a white chin, lunging heroically toward a single dried autumn leaf on a sunlit wooden floor. She is mid-air in a clumsy pounce, limbs slightly splayed, showing a look of intense determination before an inevitable tumble.",
   "prepared_at": "2026-11-06T03:54:05.081155+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
