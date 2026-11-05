@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-07T12:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-06T03:54:14.273343+08:00",
@@ -10,5 +10,6 @@
     "scene": "A tuxedo cat named A-Ban with bright yellow eyes, a white bib, and white paws is peering intensely into a narrow gap between a cozy rug and a wooden bookshelf. He is lying on his side in a concentrated, investigative pose, one paw reaching tentatively forward. The art style is a warm hand-painted book illustration with soft, natural sunlight streaming through a nearby window.",
     "topic": "A curious tuxedo cat discovers a long-lost toy during his daily household inspection."
   },
-  "language": "zh-Hant"
+  "language": "zh-Hant",
+  "image_sha256": "72cfd0bcc49180e3d43e0dbba8e31419875177b3555d82c0c884fa53c6bb643e"
 }
