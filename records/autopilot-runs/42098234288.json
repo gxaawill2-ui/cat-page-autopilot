@@ -1,0 +1,56 @@
+{
+  "run_id": "42098234288",
+  "started_at": "2026-11-06T03:53:57.469641+08:00",
+  "prepared": [
+    "2026-11-06T19:30",
+    "2026-11-08T12:30"
+  ],
+  "scheduled": [
+    {
+      "slot": "2026-11-06T19:30",
+      "post_id": "1346385028565797_122109632463515576",
+      "status": "scheduled_api_verified"
+    },
+    {
+      "slot": "2026-11-08T12:30",
+      "post_id": "1346385028565797_122109632739515576",
+      "status": "scheduled_api_verified"
+    }
+  ],
+  "held": [
+    {
+      "slot": "2026-11-06T12:30",
+      "reason": "generation requires reconciliation"
+    },
+    {
+      "slot": "2026-11-07T12:30",
+      "reason": "visual quality rejected"
+    },
+    {
+      "slot": "2026-11-07T19:30",
+      "reason": "visual quality rejected"
+    },
+    {
+      "slot": "2026-11-08T19:30",
+      "reason": "visual quality rejected"
+    }
+  ],
+  "errors": [],
+  "immediate_publish_calls": 0,
+  "content_strategy": {
+    "effective": "2026-11-04",
+    "pilot_slots": [
+      "12:30",
+      "19:30"
+    ],
+    "targets": [
+      "2026-11-06T12:30",
+      "2026-11-06T19:30",
+      "2026-11-07T12:30",
+      "2026-11-07T19:30",
+      "2026-11-08T12:30",
+      "2026-11-08T19:30"
+    ]
+  },
+  "completed_at": "2026-11-06T03:56:26.225946+08:00"
+}
