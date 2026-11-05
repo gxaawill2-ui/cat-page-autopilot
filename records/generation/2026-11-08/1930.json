@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-08T19:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-06T03:55:03.191003+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"She maintains her regal poise despite the storm.\\nA queen amidst the swirling wreckage.\\nShe is actually just guarding a single stray piece of kibble.\",\n  \"scene\": \"A beautiful long-haired white cat with striking blue eyes and a tiny pink nose sits atop a knocked-over bookshelf. She maintains a majestic, upright posture amidst a flurry of scattered papers and fallen books. Warm evening sunlight filters through a window, illuminating the chaotic domestic scene in a soft, hand-painted watercolor style.\",\n  \"topic\": \"Graceful appearance versus ordinary household chaos\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"She maintains her regal poise despite the storm.\\nA queen amidst the swirling wreckage.\\nShe is actually just guarding a single stray piece of kibble.\",\n  \"scene\": \"A beautiful long-haired white cat with striking blue eyes and a tiny pink nose sits atop a knocked-over bookshelf. She maintains a majestic, upright posture amidst a flurry of scattered papers and fallen books. Warm evening sunlight filters through a window, illuminating the chaotic domestic scene in a soft, hand-painted watercolor style.\",\n  \"topic\": \"Graceful appearance versus ordinary household chaos\"\n}",
+  "content": {
+    "caption": "She maintains her regal poise despite the storm.\nA queen amidst the swirling wreckage.\nShe is actually just guarding a single stray piece of kibble.",
+    "scene": "A beautiful long-haired white cat with striking blue eyes and a tiny pink nose sits atop a knocked-over bookshelf. She maintains a majestic, upright posture amidst a flurry of scattered papers and fallen books. Warm evening sunlight filters through a window, illuminating the chaotic domestic scene in a soft, hand-painted watercolor style.",
+    "topic": "Graceful appearance versus ordinary household chaos"
+  },
+  "language": "en"
 }
