@@ -1,7 +1,7 @@
 {
   "page_id": "1346385028565797",
   "slot": "2026-11-06T19:30",
-  "status": "scheduled_unverified",
+  "status": "scheduled_api_verified",
   "caption_sha256": "cb5f79a8140e272b2f7099224fcae862a1b7feb09016fe90dc9a43816627c364",
   "image_sha256": "056a7c596af367c276510dab64aff46d69db2d9c2e049dfb705574ee8cb84d5e",
   "scheduled_publish_time": 1793964600,
@@ -11,5 +11,19 @@
   "retry_allowed": false,
   "method": "Meta unpublished photo -> scheduled Page feed",
   "run_id": "42098234288",
-  "response_at": "2026-11-06T03:56:13.354881+08:00"
+  "response_at": "2026-11-06T03:56:13.354881+08:00",
+  "readback": {
+    "id": "1346385028565797_122109632463515576",
+    "message": "ミィバオ、ついに伝説の巨大モンスター（実はただの落ち葉）と対峙！勇気ある一歩の先に待っていたのは、まさかの転倒でした。🐾",
+    "created_time": "2026-11-06T11:30:00+0000",
+    "is_published": false,
+    "scheduled_publish_time": 1793964600,
+    "permalink_url": "https://www.facebook.com/122106871317515576/posts/122109632463515576"
+  },
+  "full_picture_present": true,
+  "attachment_photo_id_matches": true,
+  "caption_matches": true,
+  "checked_at": "2026-11-06T03:56:15.639440+08:00",
+  "planner_verified": false,
+  "visual_review": "pending"
 }
