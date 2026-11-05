@@ -1,0 +1,19 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-08T12:30",
+  "caption": "面對茂密的草叢\n咪寶發出戰鬥嘶吼\n結果只是在追一隻落單的蒲公英",
+  "language": "zh-Hant",
+  "image_sha256": "2882fbf5593a89ada8f79955f4a15fed7c2651282abe2ba2fd0c10b9ce190260",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/2882fbf5593a89ada8f79955f4a15fed7c2651282abe2ba2fd0c10b9ce190260.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A tiny brown tabby kitten named Mi Bao crouches low in a lush, sun-drenched backyard garden. Her hazel eyes are wide with intense focus, her white chin tilted upward in a brave, warrior-like pose. She is mid-pounce toward a single, floating dandelion seed drifting through the natural sunlight of a golden afternoon.",
+  "prepared_at": "2026-11-06T03:54:54.845194+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "caption_format": "short",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "A brave kitten's dramatic encounter with a dandelion",
+  "image_attempts": 1
+}
