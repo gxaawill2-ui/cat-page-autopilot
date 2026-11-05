@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-08T12:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-06T03:54:46.775822+08:00",
@@ -10,5 +10,6 @@
     "scene": "A tiny brown tabby kitten named Mi Bao crouches low in a lush, sun-drenched backyard garden. Her hazel eyes are wide with intense focus, her white chin tilted upward in a brave, warrior-like pose. She is mid-pounce toward a single, floating dandelion seed drifting through the natural sunlight of a golden afternoon.",
     "topic": "A brave kitten's dramatic encounter with a dandelion"
   },
-  "language": "zh-Hant"
+  "language": "zh-Hant",
+  "image_sha256": "2882fbf5593a89ada8f79955f4a15fed7c2651282abe2ba2fd0c10b9ce190260"
 }
