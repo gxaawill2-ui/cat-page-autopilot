@@ -1,0 +1,19 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-08T19:30",
+  "caption": "She maintains her regal poise despite the storm.\nA queen amidst the swirling wreckage.\nShe is actually just guarding a single stray piece of kibble.",
+  "language": "en",
+  "image_sha256": "97b171032c6619b12512bd425ccfaaea2e1b7def1e8caeb08796cf8e11e19f41",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/97b171032c6619b12512bd425ccfaaea2e1b7def1e8caeb08796cf8e11e19f41.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A beautiful long-haired white cat with striking blue eyes and a tiny pink nose sits atop a knocked-over bookshelf. She maintains a majestic, upright posture amidst a flurry of scattered papers and fallen books. Warm evening sunlight filters through a window, illuminating the chaotic domestic scene in a soft, hand-painted watercolor style.",
+  "prepared_at": "2026-11-06T03:55:10.740461+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "caption_format": "short",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "Graceful appearance versus ordinary household chaos",
+  "image_attempts": 1
+}
