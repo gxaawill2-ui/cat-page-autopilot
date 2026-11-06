@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-09T12:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-07T03:20:35.984860+08:00",
@@ -10,5 +10,6 @@
     "scene": "A hand-painted book illustration of 阿橘, an orange short-haired tabby with amber eyes and cream paws. He is precariously balanced on the very edge of a tall, wobbly wooden bookshelf, stretching one paw toward a shiny tin. Soft sunlight streams through a nearby window, highlighting his focused expression and precise fur texture.",
     "topic": "A tiny cat's epic climbing mission ends in a snackless disappointment."
   },
-  "language": "zh-Hant"
+  "language": "zh-Hant",
+  "image_sha256": "328106120db8fc54f915ff6308b8d43ea8709295beb7230b9da5149f679fed12"
 }
