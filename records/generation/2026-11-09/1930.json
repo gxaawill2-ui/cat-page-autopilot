@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-09T19:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-07T03:20:56.427574+08:00",
@@ -10,5 +10,6 @@
     "scene": "A hand-painted book illustration of Xiao Ye, a solid black short-haired cat with vibrant green eyes and a tiny white chest patch. She is sitting in a regal, upright pose on a woven rug, peering intensely from a dimly lit corner. Soft evening sunlight filters through a nearby window, highlighting her sleek fur and precise anatomy.",
     "topic": "A quiet cat's silent judgment during a homecoming."
   },
-  "language": "en"
+  "language": "en",
+  "image_sha256": "c25e8b52376e681671d387b890a8f239ae74d740169feaf4f9e46bf31022642e"
 }
