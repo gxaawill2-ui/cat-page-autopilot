@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-09T19:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-07T03:20:56.427574+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"The door creaks open.\\nXiao Ye watches from the shadows.\\nA long, silent greeting.\\nShe waits for the hug.\\nShe waits for the praise.\\nThen she remembers\\nI am sitting on her favorite rug.\",\n  \"scene\": \"A hand-painted book illustration of Xiao Ye, a solid black short-haired cat with vibrant green eyes and a tiny white chest patch. She is sitting in a regal, upright pose on a woven rug, peering intensely from a dimly lit corner. Soft evening sunlight filters through a nearby window, highlighting her sleek fur and precise anatomy.\",\n  \"topic\": \"A quiet cat's silent judgment during a homecoming.\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"The door creaks open.\\nXiao Ye watches from the shadows.\\nA long, silent greeting.\\nShe waits for the hug.\\nShe waits for the praise.\\nThen she remembers\\nI am sitting on her favorite rug.\",\n  \"scene\": \"A hand-painted book illustration of Xiao Ye, a solid black short-haired cat with vibrant green eyes and a tiny white chest patch. She is sitting in a regal, upright pose on a woven rug, peering intensely from a dimly lit corner. Soft evening sunlight filters through a nearby window, highlighting her sleek fur and precise anatomy.\",\n  \"topic\": \"A quiet cat's silent judgment during a homecoming.\"\n}",
+  "content": {
+    "caption": "The door creaks open.\nXiao Ye watches from the shadows.\nA long, silent greeting.\nShe waits for the hug.\nShe waits for the praise.\nThen she remembers\nI am sitting on her favorite rug.",
+    "scene": "A hand-painted book illustration of Xiao Ye, a solid black short-haired cat with vibrant green eyes and a tiny white chest patch. She is sitting in a regal, upright pose on a woven rug, peering intensely from a dimly lit corner. Soft evening sunlight filters through a nearby window, highlighting her sleek fur and precise anatomy.",
+    "topic": "A quiet cat's silent judgment during a homecoming."
+  },
+  "language": "en"
 }
