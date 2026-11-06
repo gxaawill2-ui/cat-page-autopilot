@@ -1,0 +1,19 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-09T19:30",
+  "caption": "The door creaks open.\nXiao Ye watches from the shadows.\nA long, silent greeting.\nShe waits for the hug.\nShe waits for the praise.\nThen she remembers\nI am sitting on her favorite rug.",
+  "language": "en",
+  "image_sha256": "c25e8b52376e681671d387b890a8f239ae74d740169feaf4f9e46bf31022642e",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/c25e8b52376e681671d387b890a8f239ae74d740169feaf4f9e46bf31022642e.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A hand-painted book illustration of Xiao Ye, a solid black short-haired cat with vibrant green eyes and a tiny white chest patch. She is sitting in a regal, upright pose on a woven rug, peering intensely from a dimly lit corner. Soft evening sunlight filters through a nearby window, highlighting her sleek fur and precise anatomy.",
+  "prepared_at": "2026-11-07T03:21:03.190340+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "caption_format": "micro_story",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "A quiet cat's silent judgment during a homecoming.",
+  "image_attempts": 1
+}
