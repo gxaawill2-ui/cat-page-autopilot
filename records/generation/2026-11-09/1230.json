@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-11-07T03:20:35.984860+08:00"
+  "started_at": "2026-11-07T03:20:35.984860+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"阿橘盯著高處的罐頭\\n展開宏大的攀爬計畫\\n屏息凝神，蓄勢待發\\n終於成功登頂那一刻\\n卻發現罐頭只是空殼\\n只剩下一陣輕蔑的風\",\n  \"scene\": \"A hand-painted book illustration of 阿橘, an orange short-haired tabby with amber eyes and cream paws. He is precariously balanced on the very edge of a tall, wobbly wooden bookshelf, stretching one paw toward a shiny tin. Soft sunlight streams through a nearby window, highlighting his focused expression and precise fur texture.\",\n  \"topic\": \"A tiny cat's epic climbing mission ends in a snackless disappointment.\"\n}"
 }
