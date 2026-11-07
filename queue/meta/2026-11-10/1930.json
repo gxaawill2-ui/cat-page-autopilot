@@ -15,5 +15,6 @@
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
   "topic": "A curious cat's serious investigation leads to a silly distraction.",
-  "image_attempts": 1
+  "image_attempts": 1,
+  "image_qa_response": "{\n  \"decision\": \"PASS\",\n  \"reason\": \"The image is a coherent illustration of a tuxedo cat with correct anatomy, bright yellow eyes, and a white bib. The cat is looking at a bunch of green grapes under a chair. There is no text, watermark, or signature present.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": true,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
