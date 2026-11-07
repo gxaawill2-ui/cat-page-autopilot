@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-10T19:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-08T01:44:18.892371+08:00",
@@ -10,5 +10,6 @@
     "scene": "A hand-painted book illustration of 阿斑, a tuxedo cat with bright yellow eyes, wearing a pristine white bib. He is frozen in a dramatic, investigative pose, peering intensely under a wooden kitchen chair. Warm, natural evening light spills across the floor, highlighting his precise anatomy as he discovers a single, shiny green grape.",
     "topic": "A curious cat's serious investigation leads to a silly distraction."
   },
-  "language": "en"
+  "language": "en",
+  "image_sha256": "9a664c44ae02d97887f3c70dc3d7d282af411be05226cf22559781d6660749c4"
 }
