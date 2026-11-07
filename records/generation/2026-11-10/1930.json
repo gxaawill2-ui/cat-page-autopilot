@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-11-08T01:44:18.892371+08:00"
+  "started_at": "2026-11-08T01:44:18.892371+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"Inspector 阿斑 on duty.\\nScanning the kitchen floor for suspicious crumbs.\\nMission failed: found a rogue grape and decided it is a new deity.\",\n  \"scene\": \"A hand-painted book illustration of 阿斑, a tuxedo cat with bright yellow eyes, wearing a pristine white bib. He is frozen in a dramatic, investigative pose, peering intensely under a wooden kitchen chair. Warm, natural evening light spills across the floor, highlighting his precise anatomy as he discovers a single, shiny green grape.\",\n  \"topic\": \"A curious cat's serious investigation leads to a silly distraction.\"\n}"
 }
