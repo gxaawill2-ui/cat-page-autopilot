@@ -6,7 +6,7 @@
   "image_sha256": "9a664c44ae02d97887f3c70dc3d7d282af411be05226cf22559781d6660749c4",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/9a664c44ae02d97887f3c70dc3d7d282af411be05226cf22559781d6660749c4.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "A hand-painted book illustration of 阿斑, a tuxedo cat with bright yellow eyes, wearing a pristine white bib. He is frozen in a dramatic, investigative pose, peering intensely under a wooden kitchen chair. Warm, natural evening light spills across the floor, highlighting his precise anatomy as he discovers a single, shiny green grape.",
   "prepared_at": "2026-11-08T01:44:27.075671+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
