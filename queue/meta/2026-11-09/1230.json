@@ -6,7 +6,7 @@
   "image_sha256": "10421f420002b675f09a058a6a9603f20cbb9d3ef880623e19f6f37a257f7a19",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/10421f420002b675f09a058a6a9603f20cbb9d3ef880623e19f6f37a257f7a19.jpg",
   "image_qa": false,
-  "image_qa_method": "vision armed unknown",
+  "image_qa_method": "vision FAIL; held",
   "scene": "A original cinematic 3D illustration of 阿橘, an orange short-haired tabby with amber eyes and cream paws. He is precariously balanced on the very edge of a tall, wobbly wooden bookshelf, stretching one paw toward a shiny tin. Soft sunlight streams through a nearby window, highlighting his focused expression and precise fur texture.",
   "prepared_at": "2026-11-07T13:53:31.574024+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
