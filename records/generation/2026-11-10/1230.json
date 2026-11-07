@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-10T12:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-08T01:44:01.953910+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"優雅的白雪公主\\n正準備迎接午后茶歇\\n結果被吸塵器嚇得原地起飛\",\n  \"scene\": \"A white long-haired cat named Xiaoxue with striking blue eyes and a tiny pink nose is captured mid-air in a frantic, graceful leap. She is jumping away from a robotic vacuum cleaner on a sunlit wooden floor. The style is a soft, hand-painted book illustration with warm natural lighting and precise anatomy, showing her flowing fur in motion.\",\n  \"topic\": \"The contrast between Xiaoxue's elegant personality and the sudden chaos caused by a vacuum cleaner.\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"優雅的白雪公主\\n正準備迎接午后茶歇\\n結果被吸塵器嚇得原地起飛\",\n  \"scene\": \"A white long-haired cat named Xiaoxue with striking blue eyes and a tiny pink nose is captured mid-air in a frantic, graceful leap. She is jumping away from a robotic vacuum cleaner on a sunlit wooden floor. The style is a soft, hand-painted book illustration with warm natural lighting and precise anatomy, showing her flowing fur in motion.\",\n  \"topic\": \"The contrast between Xiaoxue's elegant personality and the sudden chaos caused by a vacuum cleaner.\"\n}",
+  "content": {
+    "caption": "優雅的白雪公主\n正準備迎接午后茶歇\n結果被吸塵器嚇得原地起飛",
+    "scene": "A white long-haired cat named Xiaoxue with striking blue eyes and a tiny pink nose is captured mid-air in a frantic, graceful leap. She is jumping away from a robotic vacuum cleaner on a sunlit wooden floor. The style is a soft, hand-painted book illustration with warm natural lighting and precise anatomy, showing her flowing fur in motion.",
+    "topic": "The contrast between Xiaoxue's elegant personality and the sudden chaos caused by a vacuum cleaner."
+  },
+  "language": "zh-Hant"
 }
