@@ -37,5 +37,6 @@
       "image_attempts": 1,
       "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The image contains a signature/text in the bottom right corner.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": true,\n    \"safe_content\": true,\n    \"no_text_or_signature\": false,\n    \"no_watermark\": true\n  }\n}"
     }
-  ]
+  ],
+  "image_qa_response": "{\n  \"decision\": \"PASS\",\n  \"reason\": \"The image depicts a black cat with green eyes and a white chest patch as described. The anatomy is coherent, there is no text or watermark, and the content is safe.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": true,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
