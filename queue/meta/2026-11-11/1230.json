@@ -1,0 +1,19 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-11T12:30",
+  "caption": "小夜坐在門口\n靜靜守候\n聽著鑰匙轉動聲\n準備迎接溫暖\n她打算展現優雅\n結果被空掉的飯碗\n直接擊碎了尊嚴",
+  "language": "zh-Hant",
+  "image_sha256": "ad435359a757efabab2d59e5de836ac1a4eff0b6cfbe090805d75e29e97935fd",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/ad435359a757efabab2d59e5de836ac1a4eff0b6cfbe090805d75e29e97935fd.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A solid black short-haired cat named Xiaoye with striking green eyes and a tiny white chest patch sits regally by a wooden entryway. She is poised in a dignified, seated posture, looking towards the door with observant eyes. The scene is rendered as a hand-painted book illustration with soft natural sunlight streaming through a nearby window, highlighting her sleek fur texture.",
+  "prepared_at": "2026-11-09T01:54:39.659383+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "caption_format": "micro_story",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "A quiet cat's dignified welcome being interrupted by hunger.",
+  "image_attempts": 1
+}
