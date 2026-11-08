@@ -15,5 +15,6 @@
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
   "topic": "A quiet cat's dignified welcome being interrupted by hunger.",
-  "image_attempts": 1
+  "image_attempts": 1,
+  "image_qa_response": "{\n  \"decision\": \"PASS\",\n  \"reason\": \"The image clearly shows the black cat with green eyes and a white chest patch as described. The anatomy is coherent for a stylized illustration, there is no text, watermark, or unsafe content.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": true,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
