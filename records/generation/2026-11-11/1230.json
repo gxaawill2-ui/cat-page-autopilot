@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-11T12:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-09T01:54:31.723280+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"小夜坐在門口\\n靜靜守候\\n聽著鑰匙轉動聲\\n準備迎接溫暖\\n她打算展現優雅\\n結果被空掉的飯碗\\n直接擊碎了尊嚴\",\n  \"scene\": \"A solid black short-haired cat named Xiaoye with striking green eyes and a tiny white chest patch sits regally by a wooden entryway. She is poised in a dignified, seated posture, looking towards the door with observant eyes. The scene is rendered as a hand-painted book illustration with soft natural sunlight streaming through a nearby window, highlighting her sleek fur texture.\",\n  \"topic\": \"A quiet cat's dignified welcome being interrupted by hunger.\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"小夜坐在門口\\n靜靜守候\\n聽著鑰匙轉動聲\\n準備迎接溫暖\\n她打算展現優雅\\n結果被空掉的飯碗\\n直接擊碎了尊嚴\",\n  \"scene\": \"A solid black short-haired cat named Xiaoye with striking green eyes and a tiny white chest patch sits regally by a wooden entryway. She is poised in a dignified, seated posture, looking towards the door with observant eyes. The scene is rendered as a hand-painted book illustration with soft natural sunlight streaming through a nearby window, highlighting her sleek fur texture.\",\n  \"topic\": \"A quiet cat's dignified welcome being interrupted by hunger.\"\n}",
+  "content": {
+    "caption": "小夜坐在門口\n靜靜守候\n聽著鑰匙轉動聲\n準備迎接溫暖\n她打算展現優雅\n結果被空掉的飯碗\n直接擊碎了尊嚴",
+    "scene": "A solid black short-haired cat named Xiaoye with striking green eyes and a tiny white chest patch sits regally by a wooden entryway. She is poised in a dignified, seated posture, looking towards the door with observant eyes. The scene is rendered as a hand-painted book illustration with soft natural sunlight streaming through a nearby window, highlighting her sleek fur texture.",
+    "topic": "A quiet cat's dignified welcome being interrupted by hunger."
+  },
+  "language": "zh-Hant"
 }
