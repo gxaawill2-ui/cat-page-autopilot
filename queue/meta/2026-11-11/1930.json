@@ -1,0 +1,19 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-11T19:30",
+  "caption": "The Great Jungle awaits.\nOne mighty leap.\nOver the mossy canyon.\nPast the towering ferns.\nI have conquered it all.\nNow, please help me.\nI am stuck in a slipper.",
+  "language": "en",
+  "image_sha256": "5c5b45c53201ab9ddf31cce8bcf0a8e15073135a085ff26203051932ff248133",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/5c5b45c53201ab9ddf31cce8bcf0a8e15073135a085ff26203051932ff248133.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A tiny brown tabby kitten with hazel eyes and a white chin crouches heroically inside a lush indoor potted plant. The kitten is mid-pounce, front paws extended toward a single fallen leaf. Hand-painted book illustration style with soft natural sunlight filtering through leaves, showing precise fur texture and anatomy.",
+  "prepared_at": "2026-11-09T01:54:53.552761+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "caption_format": "micro_story",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "A tiny kitten's epic battle with household greenery.",
+  "image_attempts": 1
+}
