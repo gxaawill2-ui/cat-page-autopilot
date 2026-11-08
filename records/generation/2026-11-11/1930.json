@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-11-09T01:54:46.586975+08:00"
+  "started_at": "2026-11-09T01:54:46.586975+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"The Great Jungle awaits.\\nOne mighty leap.\\nOver the mossy canyon.\\nPast the towering ferns.\\nI have conquered it all.\\nNow, please help me.\\nI am stuck in a slipper.\",\n  \"scene\": \"A tiny brown tabby kitten with hazel eyes and a white chin crouches heroically inside a lush indoor potted plant. The kitten is mid-pounce, front paws extended toward a single fallen leaf. Hand-painted book illustration style with soft natural sunlight filtering through leaves, showing precise fur texture and anatomy.\",\n  \"topic\": \"A tiny kitten's epic battle with household greenery.\"\n}"
 }
