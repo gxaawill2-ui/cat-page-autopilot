@@ -6,7 +6,7 @@
   "image_sha256": "4c15c4c6a7bee4fbd84ed27d1eee6ddc154226ff070345da4e77d1e1f26f8d8a",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/4c15c4c6a7bee4fbd84ed27d1eee6ddc154226ff070345da4e77d1e1f26f8d8a.jpg",
   "image_qa": false,
-  "image_qa_method": "vision FAIL; held",
+  "image_qa_method": "image retry armed unknown",
   "scene": "A white long-haired cat named Xiaoxue with striking blue eyes and a tiny pink nose is captured mid-air in a frantic, graceful leap. She is jumping away from a robotic vacuum cleaner on a sunlit wooden floor. The style is a soft, hand-painted book illustration with warm natural lighting and precise anatomy, showing her flowing fur in motion.",
   "prepared_at": "2026-11-08T01:44:10.488862+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
