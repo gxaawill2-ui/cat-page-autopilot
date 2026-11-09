@@ -15,5 +15,6 @@
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
   "topic": "A tuxedo cat's serious investigation leads to the discovery of a single piece of",
-  "image_attempts": 1
+  "image_attempts": 1,
+  "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The cat's anatomy is malformed; the front paws/legs are fused together into a single, unnatural mass that lacks distinct limb structure, and the body connects to the legs in a way that defies biological logic.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": false,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
