@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-12T19:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-10T06:17:07.774695+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"Operation Midnight Snack is officially in motion.\\nThe heavy ceramic jar is finally within reach.\\nWait, why does the jar feel lighter than my stomach?\",\n  \"scene\": \"A wide-eyed 阿橘, an orange short-haired tabby with amber eyes, balances precariously on a wooden kitchen stool. He is stretching his cream-colored paws toward a tall ceramic jar on a high counter, his tail twitching in intense concentration. The hand-painted illustration captures the soft evening glow of a single lamp, highlighting his determined, slightly chubby expression.\",\n  \"topic\": \"A hungry cat's failed heist.\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"Operation Midnight Snack is officially in motion.\\nThe heavy ceramic jar is finally within reach.\\nWait, why does the jar feel lighter than my stomach?\",\n  \"scene\": \"A wide-eyed 阿橘, an orange short-haired tabby with amber eyes, balances precariously on a wooden kitchen stool. He is stretching his cream-colored paws toward a tall ceramic jar on a high counter, his tail twitching in intense concentration. The hand-painted illustration captures the soft evening glow of a single lamp, highlighting his determined, slightly chubby expression.\",\n  \"topic\": \"A hungry cat's failed heist.\"\n}",
+  "content": {
+    "caption": "Operation Midnight Snack is officially in motion.\nThe heavy ceramic jar is finally within reach.\nWait, why does the jar feel lighter than my stomach?",
+    "scene": "A wide-eyed 阿橘, an orange short-haired tabby with amber eyes, balances precariously on a wooden kitchen stool. He is stretching his cream-colored paws toward a tall ceramic jar on a high counter, his tail twitching in intense concentration. The hand-painted illustration captures the soft evening glow of a single lamp, highlighting his determined, slightly chubby expression.",
+    "topic": "A hungry cat's failed heist."
+  },
+  "language": "en"
 }
