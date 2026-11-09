@@ -15,5 +15,6 @@
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
   "topic": "A hungry cat's failed heist.",
-  "image_attempts": 1
+  "image_attempts": 1,
+  "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The cat has malformed anatomy: the raised right paw is a floating, detached white blob without a recognizable limb structure, and the cat's body appears to morph directly into the stool with incorrect limb positioning.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": false,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
