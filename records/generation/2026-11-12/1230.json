@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-12T12:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-10T06:16:49.733662+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"今日巡邏任務：檢查廚房角落。\\n發現疑似不明生物入侵。\\n原來只是落單的一塊起司。\",\n  \"scene\": \"A black-and-white tuxedo cat with bright yellow eyes, a white bib, and white socks, named 阿斑, leans intensely over a wooden kitchen floor. He is posed in a deep, investigative crouch, one paw lifted mid-air as if inspecting a crumb. Hand-painted book illustration style, warm natural sunlight streaming from a window, soft textures, precise feline anatomy.\",\n  \"topic\": \"A tuxedo cat's serious investigation leads to the discovery of a single piece of cheese.\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"今日巡邏任務：檢查廚房角落。\\n發現疑似不明生物入侵。\\n原來只是落單的一塊起司。\",\n  \"scene\": \"A black-and-white tuxedo cat with bright yellow eyes, a white bib, and white socks, named 阿斑, leans intensely over a wooden kitchen floor. He is posed in a deep, investigative crouch, one paw lifted mid-air as if inspecting a crumb. Hand-painted book illustration style, warm natural sunlight streaming from a window, soft textures, precise feline anatomy.\",\n  \"topic\": \"A tuxedo cat's serious investigation leads to the discovery of a single piece of cheese.\"\n}",
+  "content": {
+    "caption": "今日巡邏任務：檢查廚房角落。\n發現疑似不明生物入侵。\n原來只是落單的一塊起司。",
+    "scene": "A black-and-white tuxedo cat with bright yellow eyes, a white bib, and white socks, named 阿斑, leans intensely over a wooden kitchen floor. He is posed in a deep, investigative crouch, one paw lifted mid-air as if inspecting a crumb. Hand-painted book illustration style, warm natural sunlight streaming from a window, soft textures, precise feline anatomy.",
+    "topic": "A tuxedo cat's serious investigation leads to the discovery of a single piece of cheese."
+  },
+  "language": "zh-Hant"
 }
