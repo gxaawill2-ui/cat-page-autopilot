@@ -6,7 +6,7 @@
   "image_sha256": "0a172dc5aa455f6731500123044048da2181abf8a283614b09ef4f3a04b10f47",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/0a172dc5aa455f6731500123044048da2181abf8a283614b09ef4f3a04b10f47.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "A wide-eyed 阿橘, an orange short-haired tabby with amber eyes, balances precariously on a wooden kitchen stool. He is stretching his cream-colored paws toward a tall ceramic jar on a high counter, his tail twitching in intense concentration. The hand-painted illustration captures the soft evening glow of a single lamp, highlighting his determined, slightly chubby expression.",
   "prepared_at": "2026-11-10T06:17:15.356965+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
