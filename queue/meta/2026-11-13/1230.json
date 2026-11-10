@@ -6,7 +6,7 @@
   "image_sha256": "5a917c3091c83858d203725571aa9b669ae0207f6c4dd655474d27ea8e772a1f",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/5a917c3091c83858d203725571aa9b669ae0207f6c4dd655474d27ea8e772a1f.jpg",
   "image_qa": false,
-  "image_qa_method": "vision armed unknown",
+  "image_qa_method": "vision FAIL; held",
   "scene": "A tiny brown short-haired tabby kitten with hazel eyes and a white chin, Mimi Bao, crouches in a lush backyard garden. She is frozen in a dramatic hunting pose behind a single dandelion. Sunlight filters through blades of grass, casting a soft glow on her intense expression as she prepares to pounce on a fallen wooden toothpick.",
   "prepared_at": "2026-11-11T03:41:16.917481+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
