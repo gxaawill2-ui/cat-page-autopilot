@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-11-11T03:41:26.264112+08:00"
+  "started_at": "2026-11-11T03:41:26.264112+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"小雪 sat poised,\\na snowy mountain of fur.\\nHer gaze remained steady,\\nher dignity perfectly intact.\\nEven as the vacuum roared,\\nand the kibble bowl tumbled,\\nshe simply closed one eye\\nand refused to acknowledge\\nthe gravity of the situation.\",\n  \"scene\": \"A long-haired white cat with striking blue eyes and a soft pink nose sits atop a wobbling, overturned wooden stool in a sun-drenched kitchen. She maintains a regal, frozen posture while a single piece of spilled kibble rolls past her paw. The style is a warm, hand-painted book illustration with soft edges and natural morning light.\",\n  \"topic\": \"The contrast between a cat's regal composure and domestic clumsiness.\"\n}"
 }
