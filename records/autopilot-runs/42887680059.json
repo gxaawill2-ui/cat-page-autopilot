@@ -1,0 +1,37 @@
+{
+  "run_id": "42887680059",
+  "started_at": "2026-11-11T03:41:01.844458+08:00",
+  "prepared": [],
+  "scheduled": [],
+  "held": [
+    {
+      "slot": "2026-11-12T19:30",
+      "reason": "vision FAIL; held"
+    },
+    {
+      "slot": "2026-11-13T12:30",
+      "reason": "visual quality rejected"
+    }
+  ],
+  "errors": [
+    {
+      "slot": "2026-11-13T19:30",
+      "type": "ValueError",
+      "reason": "CAPTION_FORMAT_QA_FAILED; no image requested"
+    }
+  ],
+  "immediate_publish_calls": 0,
+  "content_strategy": {
+    "effective": "2026-11-04",
+    "pilot_slots": [
+      "12:30",
+      "19:30"
+    ],
+    "targets": [
+      "2026-11-12T19:30",
+      "2026-11-13T12:30",
+      "2026-11-13T19:30"
+    ]
+  },
+  "completed_at": "2026-11-11T03:41:33.782443+08:00"
+}
