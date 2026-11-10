@@ -6,7 +6,7 @@
   "image_sha256": "a6fc0cb0de083926e1cdc78356667f5bbdad6f9046f2a56d6c13552d8839cd14",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/a6fc0cb0de083926e1cdc78356667f5bbdad6f9046f2a56d6c13552d8839cd14.jpg",
   "image_qa": false,
-  "image_qa_method": "vision FAIL; held",
+  "image_qa_method": "image retry armed unknown",
   "scene": "A black-and-white tuxedo cat with bright yellow eyes, a white bib, and white socks, named 阿斑, leans intensely over a wooden kitchen floor. He is posed in a deep, investigative crouch, one paw lifted mid-air as if inspecting a crumb. Hand-painted book illustration style, warm natural sunlight streaming from a window, soft textures, precise feline anatomy.",
   "prepared_at": "2026-11-10T06:16:57.922981+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
