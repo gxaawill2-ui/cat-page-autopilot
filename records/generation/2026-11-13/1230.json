@@ -1,6 +1,6 @@
 {
   "slot": "2026-11-13T12:30",
-  "status": "image_armed_unknown",
+  "status": "jpeg_durable_qa_pending",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-11T03:41:07.692230+08:00",
@@ -10,5 +10,6 @@
     "scene": "A tiny brown short-haired tabby kitten with hazel eyes and a white chin, Mimi Bao, crouches in a lush backyard garden. She is frozen in a dramatic hunting pose behind a single dandelion. Sunlight filters through blades of grass, casting a soft glow on her intense expression as she prepares to pounce on a fallen wooden toothpick.",
     "topic": "A tiny kitten's dramatic encounter with a mundane household object."
   },
-  "language": "zh-Hant"
+  "language": "zh-Hant",
+  "image_sha256": "5a917c3091c83858d203725571aa9b669ae0207f6c4dd655474d27ea8e772a1f"
 }
