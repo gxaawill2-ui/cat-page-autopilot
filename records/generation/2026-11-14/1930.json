@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-11-12T03:34:11.071716+08:00"
+  "started_at": "2026-11-12T03:34:11.071716+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"I waited by the door for three hours.\\nI thought about the deep bond we share.\\nThen I realized I just wanted the treats you opened.\",\n  \"scene\": \"In a cozy dimly lit living room, 小夜 sits regally on a velvet rug. The solid black cat with a tiny white chest patch stares intensely at a pair of human feet. A hand-painted book illustration style with soft moonlight filtering through the window, highlighting her glowing green eyes and precise silhouette.\",\n  \"topic\": \"The unexpected motivations behind a quiet cat's homecoming ritual.\"\n}"
 }
