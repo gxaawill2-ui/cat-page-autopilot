@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-14T12:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-12T03:33:54.460046+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"計畫用肉球按開零食櫃。\\n精準計算角度與力度。\\n結果只按到了空空的開罐器。\",\n  \"scene\": \"A hand-painted book illustration of 阿橘, an orange short-haired tabby with amber eyes and cream paws, standing on his hind legs. He is mid-leap toward a kitchen counter, one paw stretched out with intense focus, only to realize he has accidentally landed face-first into an empty, shiny metal tuna can. Soft afternoon sunlight filters through a window, highlighting his fluffy fur.\",\n  \"topic\": \"A failed snack heist\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"計畫用肉球按開零食櫃。\\n精準計算角度與力度。\\n結果只按到了空空的開罐器。\",\n  \"scene\": \"A hand-painted book illustration of 阿橘, an orange short-haired tabby with amber eyes and cream paws, standing on his hind legs. He is mid-leap toward a kitchen counter, one paw stretched out with intense focus, only to realize he has accidentally landed face-first into an empty, shiny metal tuna can. Soft afternoon sunlight filters through a window, highlighting his fluffy fur.\",\n  \"topic\": \"A failed snack heist\"\n}",
+  "content": {
+    "caption": "計畫用肉球按開零食櫃。\n精準計算角度與力度。\n結果只按到了空空的開罐器。",
+    "scene": "A hand-painted book illustration of 阿橘, an orange short-haired tabby with amber eyes and cream paws, standing on his hind legs. He is mid-leap toward a kitchen counter, one paw stretched out with intense focus, only to realize he has accidentally landed face-first into an empty, shiny metal tuna can. Soft afternoon sunlight filters through a window, highlighting his fluffy fur.",
+    "topic": "A failed snack heist"
+  },
+  "language": "zh-Hant"
 }
