@@ -6,7 +6,7 @@
   "image_sha256": "f9f34aa4cf930e03c868db8a482f18e8ac01dae7840d0220e7093f67a62f102e",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/f9f34aa4cf930e03c868db8a482f18e8ac01dae7840d0220e7093f67a62f102e.jpg",
   "image_qa": false,
-  "image_qa_method": "vision armed unknown",
+  "image_qa_method": "vision FAIL; held",
   "scene": "A hand-painted book illustration of 阿橘, an orange short-haired tabby with amber eyes and cream paws, standing on his hind legs. He is mid-leap toward a kitchen counter, one paw stretched out with intense focus, only to realize he has accidentally landed face-first into an empty, shiny metal tuna can. Soft afternoon sunlight filters through a window, highlighting his fluffy fur.",
   "prepared_at": "2026-11-12T03:34:02.575602+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
