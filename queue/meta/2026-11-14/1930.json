@@ -6,7 +6,7 @@
   "image_sha256": "4655ee2b9439bb4cadbffd38dda5e64e641c44cf804da52c6a80aabfc4a82ff3",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/4655ee2b9439bb4cadbffd38dda5e64e641c44cf804da52c6a80aabfc4a82ff3.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "In a cozy dimly lit living room, 小夜 sits regally on a velvet rug. The solid black cat with a tiny white chest patch stares intensely at a pair of human feet. A hand-painted book illustration style with soft moonlight filtering through the window, highlighting her glowing green eyes and precise silhouette.",
   "prepared_at": "2026-11-12T03:34:35.853547+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
