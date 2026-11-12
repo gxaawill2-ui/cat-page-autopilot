@@ -6,7 +6,7 @@
   "image_sha256": "67b693843a3f2883412f19b201392b9a2ccc9deaf1395e8d4ba1760f0c4991ce",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/67b693843a3f2883412f19b201392b9a2ccc9deaf1395e8d4ba1760f0c4991ce.jpg",
   "image_qa": false,
-  "image_qa_method": "vision armed unknown",
+  "image_qa_method": "vision FAIL; held",
   "scene": "A hand-painted book illustration of 小雪, a white long-haired cat with striking blue eyes and a pink nose. She sits with regal posture on a wooden table, one paw delicately tucked, staring intensely at a wobbling cardboard box. Soft natural sunlight streams through a nearby window, highlighting her silky fur and precise anatomy against a cozy, slightly messy living room background.",
   "prepared_at": "2026-11-13T03:52:27.930519+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
