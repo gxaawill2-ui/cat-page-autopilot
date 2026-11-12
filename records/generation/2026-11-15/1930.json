@@ -3,5 +3,6 @@
   "status": "content_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
-  "started_at": "2026-11-13T03:52:36.941067+08:00"
+  "started_at": "2026-11-13T03:52:36.941067+08:00",
+  "raw_caption_response": "{\n  \"caption\": \"Inspector 阿斑 on duty.\\nChecking every corner.\\nSearching for the intruder.\\nInvestigating the suspicious noise.\\nTarget located under the sofa.\\nIt is not a monster.\\nJust a single, lonely grape.\",\n  \"scene\": \"A tuxedo cat with bright yellow eyes and white paws peeks intensely from under a low velvet sofa. The cat is stretched out in a curious, investigative pose, one white front paw extended toward a single purple grape. Hand-painted book illustration style with soft, natural evening light casting gentle shadows.\",\n  \"topic\": \"A curious tuxedo cat's dramatic investigation of a mysterious object.\"\n}"
 }
