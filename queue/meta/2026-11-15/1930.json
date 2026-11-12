@@ -6,7 +6,7 @@
   "image_sha256": "ebb1c682d46040e48cdbd5d0d69983389885633473fee690606a8672c6086d82",
   "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/ebb1c682d46040e48cdbd5d0d69983389885633473fee690606a8672c6086d82.jpg",
   "image_qa": false,
-  "image_qa_method": "pending; never schedule before vision PASS",
+  "image_qa_method": "vision armed unknown",
   "scene": "A tuxedo cat with bright yellow eyes and white paws peeks intensely from under a low velvet sofa. The cat is stretched out in a curious, investigative pose, one white front paw extended toward a single purple grape. Hand-painted book illustration style with soft, natural evening light casting gentle shadows.",
   "prepared_at": "2026-11-13T03:52:45.520129+08:00",
   "source_record": "Cloudflare Workers AI original from prompt",
