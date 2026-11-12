@@ -37,5 +37,6 @@
       "image_attempts": 1,
       "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The cat's anatomy is malformed; the front legs/paws are missing or merged into a single solid base, and the tail area lacks structural coherence.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": false,\n    \"safe_content\": true,\n    \"no_text_or_signature\": false,\n    \"no_watermark\": true\n  }\n}"
     }
-  ]
+  ],
+  "image_qa_response": "{\"decision\": \"PASS\", \"reason\": \"The image depicts a black cat with a white chest patch sitting on a rug, looking at human feet. The anatomy is coherent for a stylized illustration, no text or watermarks are present, and the content is safe.\", \"checks\": {\"cat_visible\": true, \"coherent_anatomy\": true, \"safe_content\": true, \"no_text_or_signature\": true, \"no_watermark\": true}}"
 }
