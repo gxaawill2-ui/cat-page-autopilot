@@ -1,8 +1,14 @@
 {
   "slot": "2026-11-15T12:30",
-  "status": "content_armed_unknown",
+  "status": "image_armed_unknown",
   "attempts": 1,
   "retry_allowed": false,
   "started_at": "2026-11-13T03:52:18.214759+08:00",
-  "raw_caption_response": "{\n  \"caption\": \"小雪端坐在桌邊\\n目光深邃且高雅\\n仿佛在思考人生哲理\\n其實她只是在盯著\\n那顆搖搖欲墜的\\n紙箱邊緣\\n準備發動突襲\",\n  \"scene\": \"A hand-painted book illustration of 小雪, a white long-haired cat with striking blue eyes and a pink nose. She sits with regal posture on a wooden table, one paw delicately tucked, staring intensely at a wobbling cardboard box. Soft natural sunlight streams through a nearby window, highlighting her silky fur and precise anatomy against a cozy, slightly messy living room background.\",\n  \"topic\": \"The contrast between a cat's majestic composure and their chaotic hunting instincts.\"\n}"
+  "raw_caption_response": "{\n  \"caption\": \"小雪端坐在桌邊\\n目光深邃且高雅\\n仿佛在思考人生哲理\\n其實她只是在盯著\\n那顆搖搖欲墜的\\n紙箱邊緣\\n準備發動突襲\",\n  \"scene\": \"A hand-painted book illustration of 小雪, a white long-haired cat with striking blue eyes and a pink nose. She sits with regal posture on a wooden table, one paw delicately tucked, staring intensely at a wobbling cardboard box. Soft natural sunlight streams through a nearby window, highlighting her silky fur and precise anatomy against a cozy, slightly messy living room background.\",\n  \"topic\": \"The contrast between a cat's majestic composure and their chaotic hunting instincts.\"\n}",
+  "content": {
+    "caption": "小雪端坐在桌邊\n目光深邃且高雅\n仿佛在思考人生哲理\n其實她只是在盯著\n那顆搖搖欲墜的\n紙箱邊緣\n準備發動突襲",
+    "scene": "A hand-painted book illustration of 小雪, a white long-haired cat with striking blue eyes and a pink nose. She sits with regal posture on a wooden table, one paw delicately tucked, staring intensely at a wobbling cardboard box. Soft natural sunlight streams through a nearby window, highlighting her silky fur and precise anatomy against a cozy, slightly messy living room background.",
+    "topic": "The contrast between a cat's majestic composure and their chaotic hunting instincts."
+  },
+  "language": "zh-Hant"
 }
