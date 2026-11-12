@@ -37,5 +37,6 @@
       "image_attempts": 1,
       "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The image contains a signature/text in the bottom right corner ('Pelyac').\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": true,\n    \"safe_content\": true,\n    \"no_text_or_signature\": false,\n    \"no_watermark\": true\n  }\n}"
     }
-  ]
+  ],
+  "image_qa_response": "{\n  \"decision\": \"FAIL\",\n  \"reason\": \"The cat's anatomy is malformed: the right arm/paw (viewer's right) is disconnected from the body, appearing to float near the shoulder without a proper limb structure, and the left arm/paw is abnormally positioned and shaped.\",\n  \"checks\": {\n    \"cat_visible\": true,\n    \"coherent_anatomy\": false,\n    \"safe_content\": true,\n    \"no_text_or_signature\": true,\n    \"no_watermark\": true\n  }\n}"
 }
