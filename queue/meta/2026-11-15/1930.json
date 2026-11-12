@@ -15,5 +15,6 @@
   "text_model": "@cf/google/gemma-4-26b-a4b-it",
   "vision_model": "@cf/google/gemma-4-26b-a4b-it",
   "topic": "A curious tuxedo cat's dramatic investigation of a mysterious object.",
-  "image_attempts": 1
+  "image_attempts": 1,
+  "image_qa_response": "{\"decision\": \"FAIL\", \"reason\": \"The cat has an extra white paw/limb segment appearing near its chest, creating anatomical incoherence.\", \"cat_visible\": true, \"coherent_anatomy\": false, \"safe_content\": true, \"no_text_or_signature\": true, \"no_watermark\": true}"
 }
