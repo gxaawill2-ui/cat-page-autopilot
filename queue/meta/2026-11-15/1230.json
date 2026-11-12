@@ -1,0 +1,19 @@
+{
+  "page_id": "1346385028565797",
+  "slot": "2026-11-15T12:30",
+  "caption": "小雪端坐在桌邊\n目光深邃且高雅\n仿佛在思考人生哲理\n其實她只是在盯著\n那顆搖搖欲墜的\n紙箱邊緣\n準備發動突襲",
+  "language": "zh-Hant",
+  "image_sha256": "67b693843a3f2883412f19b201392b9a2ccc9deaf1395e8d4ba1760f0c4991ce",
+  "image_url": "https://gxaawill2-ui.github.io/cat-page-autopilot/assets/67b693843a3f2883412f19b201392b9a2ccc9deaf1395e8d4ba1760f0c4991ce.jpg",
+  "image_qa": false,
+  "image_qa_method": "pending; never schedule before vision PASS",
+  "scene": "A hand-painted book illustration of 小雪, a white long-haired cat with striking blue eyes and a pink nose. She sits with regal posture on a wooden table, one paw delicately tucked, staring intensely at a wobbling cardboard box. Soft natural sunlight streams through a nearby window, highlighting her silky fur and precise anatomy against a cozy, slightly messy living room background.",
+  "prepared_at": "2026-11-13T03:52:27.930519+08:00",
+  "source_record": "Cloudflare Workers AI original from prompt",
+  "image_model": "@cf/black-forest-labs/flux-1-schnell",
+  "caption_format": "micro_story",
+  "text_model": "@cf/google/gemma-4-26b-a4b-it",
+  "vision_model": "@cf/google/gemma-4-26b-a4b-it",
+  "topic": "The contrast between a cat's majestic composure and their chaotic hunting instin",
+  "image_attempts": 1
+}
