@@ -1,8 +1,7 @@
 name: Cat Page Unattended AI Replenishment (opt-in, future-only)
 "on":
-  schedule:
-    # Scheduling can drift; posts are submitted 1-3 days in advance.
-    - cron: '17 0,12 * * *'
+  # Automatic image/caption replenishment paused by the user on 2026-11-13.
+  # Keep manual audit access; do not restore the schedule without user instruction.
   workflow_dispatch:
     inputs:
       review_only:
