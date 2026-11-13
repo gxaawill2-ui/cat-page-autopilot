@@ -92,7 +92,7 @@
   "meta_native": {
     "status": "four_new_scheduled_api_verified_and_Planner_seen",
     "scheduling_executor": "GitHub prepares ahead; Meta Graph native future queue handles delivery",
-    "production_mode": "enabled; natural cron continuation not yet observed",
+    "production_mode": "paused by user 2026-11-13; no future auto-posts",
     "page_id": "1346385028565797",
     "max_per_day": 4,
     "times": [
@@ -145,20 +145,28 @@
   },
   "github_replenishment": {
     "workflow": ".github/workflows/cat-unattended-replenish.yml",
-    "enabled": true,
+    "enabled": false,
     "variable": "CAT_AUTOPILOT_ENABLED=true",
-    "cron_utc": "17 0,12 * * *",
+    "cron_utc": null,
     "nominal_taipei_times": [
       "08:17",
       "20:17"
     ],
-    "next_nominal_run": "2026-10-31T08:17:00+08:00",
+    "next_nominal_run": null,
     "next_nominal_note": "GitHub best effort; no exact-time guarantee; Meta holds actual publication clocks",
     "last_manual_acceptance_run": "41029967122",
     "native_scheduled_count": 4,
     "natural_cron_acceptance": "pending",
     "max_posts_daily": 4,
-    "free_evidence_expires": "2026-11-13T07:16:35.913307+08:00"
+    "free_evidence_expires": "2026-11-13T07:16:35.913307+08:00",
+    "pause": {
+      "requested_at": "2026-11-13",
+      "reason": "User requested pause of automatic static image/caption posts; no automatic resume",
+      "schedule_removed_commit": "feb6f4a7c09175cded865bfaec59271827e9fdee",
+      "existing_facebook_queue": "One remaining Cat Page Autopilot post moved to draft via official Meta Business Suite; Facebook scheduled library verified empty.",
+      "draft_content_id": "1608054697228839",
+      "manual_reels_and_youtube": "unaffected"
+    }
   },
   "three_day": {
     "executor": "existing replenishment workflow invokes scripts/performance_review.py",
